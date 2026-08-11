@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>장전 브리핑 2026.08.10 월</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --paper:#faf8f3; --ink:#16150f; --sub:#6b6558; --faint:#938c7d;
+  --rule:#ddd6c8; --rule-strong:#2a2820;
+  --up:#b3261e; --down:#1a4d8f; --flat:#6b6558;
+  --mark:#f3ecd9; --warn:#8a5a00; --warnbg:#fbf1dc;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#14140f; --ink:#ece7da; --sub:#a09a8b; --faint:#7d776a;
+        --rule:#33322a; --rule-strong:#6b6558; --mark:#26241c;
+        --up:#ff6b5e; --down:#7fb2ff; --warn:#e0b060; --warnbg:#2a2317;}
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'맑은 고딕','Malgun Gothic',system-ui,-apple-system,sans-serif;
+  font-size:15px;line-height:1.65;}
+.serif{font-family:'나눔명조','Nanum Myeongjo','바탕','Batang',Georgia,'Times New Roman',serif;}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 20px 56px;}
+a{color:inherit;}
+
+/* 제호 */
+.masthead{border-bottom:3px double var(--rule-strong);padding-bottom:10px;
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.title{font-size:34px;font-weight:700;letter-spacing:.18em;margin:0;}
+.dateline{font-size:13px;color:var(--sub);text-align:right;}
+.dateline b{color:var(--ink);font-size:15px;letter-spacing:.02em;}
+
+/* 기준선 */
+.baseline{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--rule);
+  padding:9px 0;margin-bottom:20px;}
+.bl{flex:1 1 120px;padding:2px 12px;border-right:1px solid var(--rule);min-width:0;}
+.bl:last-child{border-right:none;}
+.bl .k{font-size:11.5px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bl .v{font-size:16px;font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--flat)}
+
+/* 결론 */
+.lede{border-bottom:1px solid var(--rule);padding-bottom:18px;margin-bottom:22px;}
+.lede-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+.lede h2{font-size:12px;letter-spacing:.22em;color:var(--sub);margin:0 0 6px;font-weight:600;}
+.lede .big{font-size:25px;line-height:1.35;font-weight:700;margin:0 0 8px;letter-spacing:-.01em;}
+.lede .why{font-size:13.5px;color:var(--sub);margin:0 0 10px;}
+.names{display:flex;flex-wrap:wrap;gap:6px;}
+.nm{font-size:13.5px;background:var(--mark);border-radius:3px;padding:2px 8px;
+  font-weight:600;white-space:nowrap;}
+.nm.pick{background:none;border-bottom:2px solid var(--up);border-radius:0;padding:2px 2px;}
+
+/* 섹션 */
+h3.sec{font-size:12px;letter-spacing:.2em;color:var(--sub);font-weight:600;
+  border-bottom:1px solid var(--rule-strong);padding-bottom:5px;margin:30px 0 14px;}
+
+/* 픽 카드 */
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;}
+.pick{border:1px solid var(--rule);border-top:3px solid var(--up);padding:14px 16px;
+  background:color-mix(in srgb,var(--paper) 92%,#fff);}
+.pick .ph{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:2px;}
+.pick .pn{font-size:19px;font-weight:700;}
+.pick .pc{font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;}
+.pick .pt{font-size:12px;color:var(--sub);margin-left:auto;}
+.setup{font-size:13.5px;color:var(--sub);margin:4px 0 10px;}
+.plan{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-bottom:9px;}
+.plan div{background:var(--paper);padding:6px 8px;}
+.plan .k{font-size:10.5px;color:var(--faint);letter-spacing:.04em;}
+.plan .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em;}
+.line{font-size:12.5px;color:var(--sub);margin:3px 0;}
+.line b{color:var(--ink);font-weight:600;}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:2px;
+  background:var(--warnbg);color:var(--warn);margin-right:4px;}
+
+/* 3컬럼 */
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;}
+.card{border-bottom:1px solid var(--rule);padding:11px 0;}
+.card:last-child{border-bottom:none;}
+.ch{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;}
+.ct{font-size:16px;font-weight:700;}
+.cm{font-size:12px;color:var(--faint);margin-left:auto;font-variant-numeric:tabular-nums;}
+.pool{font-size:12.5px;color:var(--sub);margin-top:5px;line-height:1.6;}
+details>summary{cursor:pointer;font-size:12px;color:var(--faint);margin-top:5px;
+  list-style:none;user-select:none;}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"▸ ";}
+details[open]>summary::before{content:"▾ ";}
+.src{font-size:12px;color:var(--faint);margin-top:5px;line-height:1.55;}
+.src a{color:var(--down);text-decoration:none;border-bottom:1px dotted var(--rule-strong);}
+.mono{font-variant-numeric:tabular-nums;}
+
+.avoid .ct{color:var(--down);}
+.foot{margin-top:34px;border-top:3px double var(--rule-strong);padding-top:12px;
+  font-size:12px;color:var(--faint);line-height:1.75;}
+.foot b{color:var(--sub);}
+.notes{font-size:11.5px;color:var(--faint);margin-top:8px;}
+.empty{font-size:13.5px;color:var(--sub);padding:12px 0;}
+
+@media (max-width:980px){
+  .cols{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  .wrap{padding:16px 14px 40px;}
+  .title{font-size:26px;letter-spacing:.12em;}
+  .masthead{flex-direction:column;align-items:flex-start;}
+  .dateline{text-align:left;}
+  .lede-grid{grid-template-columns:1fr;gap:20px;}
+  .lede .big{font-size:21px;}
+  .cols{grid-template-columns:1fr;gap:8px;}
+  .bl{flex:1 1 45%;border-right:none;padding:4px 0;}
+  .plan{grid-template-columns:repeat(2,1fr);}
+}
+</style></head><body><div class="wrap">
+
+<div class="masthead">
+  <h1 class="title serif">장전 브리핑</h1>
+  <div class="dateline"><b>2026.08.10 월 오늘 장전</b><br>
+    생성 2026-08-10 22:29 · 픽 2 / 풀 268종목 ·
+    테마 12</div>
+</div>
+
+<div class="baseline"><div class="bl"><div class="k">다우</div><div class="v">54,036.93 <span class="up">+0.28%</span></div></div><div class="bl"><div class="k">S&amp;P500</div><div class="v">7,757.64 <span class="up">+0.62%</span></div></div><div class="bl"><div class="k">나스닥</div><div class="v">26,690.62 <span class="up">+1.30%</span></div></div><div class="bl"><div class="k">필라델피아 반도체</div><div class="v">12,356.79 <span class="up">+2.56%</span></div></div><div class="bl"><div class="k">EWY(한국 ETF)</div><div class="v">166.09 <span class="up">+1.20%</span></div></div><div class="bl"><div class="k">원/달러</div><div class="v">1,417.65 <span class="down">-0.33%</span></div></div><div class="bl"><div class="k">코스피(전 거래일)</div><div class="v">6,299.66 <span class="up">+0.65%</span></div></div><div class="bl"><div class="k">코스닥(전 거래일)</div><div class="v">854.47 <span class="up">+6.97%</span></div></div></div>
+
+
+<div class="lede"><div class="lede-grid"><div><h2>해외발 (미국 → 한국)</h2><p class="big serif">희토류·핵심광물 · 우주항공 <span class="badge">선반영</span></p><p class="why">美 UUUU +9.6% · 바스켓 +7.6%</p><div class="names"><span class="nm pick">제이에스링크</span></div></div><div><h2>국내발 (뉴스·공시)</h2><p class="big serif">반도체 소부장 · 데이터센터 전력 <span class="badge">죽은테마 신호 혼재</span></p><p class="why">“한국 대통령실, 5조원 규모 신규 펀드 조성 — 반도체 소재·부품·장비 중점 투”</p><div class="names"><span class="nm pick">샘씨엔에스</span></div></div></div></div>
+
+<h3 class="sec">오늘의 픽 — 필터 통과 종목만</h3>
+<div class="picks">
+<div class="pick">
+  <div class="ph"><span class="pn serif">샘씨엔에스</span>
+    <span class="pc">252990</span>
+    <span class="pt">반도체 소부장</span></div>
+  <div class="setup">· 위치: A급 자리</div>
+  <div class="plan">
+    <div><div class="k">진입 트리거</div><div class="v">15,700</div></div>
+    <div><div class="k">손절선</div><div class="v down">13,160</div></div>
+    <div><div class="k">1차 목표</div><div class="v up">20,800</div></div>
+    <div><div class="k">2차 목표</div><div class="v up">23,300</div></div>
+  </div>
+  <div class="line">· 손익비 <b>2.0</b> · 통과 필터: A급 자리 · 거래대금 122억 · 거래량 0.9배 · 고점 대비 -8% · 이격 1.19 · RSI 63</div>
+  <div class="line">· 리스크: <span class="badge">죽은테마 신호 혼재</span></div>
+  <div class="line">· 진입 판단: 트리거 넘으면 분할 진입 검토 — <b>실행은 사용자</b></div>
+  <div class="line">· 청산 기준: 20,800 도달 시 분할 익절 ·
+    <b>13,160 이탈 시 정리</b> · 거래량 감소·장대음봉이면 모멘텀 약화로 본다</div>
+</div>
+<div class="pick">
+  <div class="ph"><span class="pn serif">제이에스링크</span>
+    <span class="pc">127120</span>
+    <span class="pt">희토류·핵심광물</span></div>
+  <div class="setup">· 위치: A급 자리</div>
+  <div class="plan">
+    <div><div class="k">진입 트리거</div><div class="v">41,800</div></div>
+    <div><div class="k">손절선</div><div class="v down">35,300</div></div>
+    <div><div class="k">1차 목표</div><div class="v up">54,800</div></div>
+    <div><div class="k">2차 목표</div><div class="v up">61,300</div></div>
+  </div>
+  <div class="line">· 손익비 <b>2.0</b> · 통과 필터: A급 자리 · 거래대금 53억 · 거래량 1.3배 · 고점 대비 -5% · 이격 1.20 · RSI 64</div>
+  <div class="line">· 리스크: <span class="badge">선반영</span></div>
+  <div class="line">· 진입 판단: 트리거 넘으면 분할 진입 검토 — <b>실행은 사용자</b></div>
+  <div class="line">· 청산 기준: 54,800 도달 시 분할 익절 ·
+    <b>35,300 이탈 시 정리</b> · 거래량 감소·장대음봉이면 모멘텀 약화로 본다</div>
+</div></div>
+
+<div class="cols">
+  <div><h3 class="sec">해외발 테마</h3><div class="card"><div class="ch"><span class="ct serif">희토류·핵심광물</span><span class="badge">선반영</span><span class="cm">美 +7.6% · 1일 등장</span></div><div class="names" style="margin-top:6px"><span class="nm pick">제이에스링크</span></div><div class="src">美 주도주 UUUU +9.6% · MP +7.6% · REMX +4.9%</div><details><summary>후보 풀 3종목</summary><div class="pool">노바텍, 삼화전자, 유니온</div></details></div><div class="card"><div class="ch"><span class="ct serif">우주항공</span><span class="badge">선반영</span><span class="cm">美 +9.5% · 3일 등장</span></div><div class="src">美 주도주 LUNR +9.8% · RKLB +9.5% · ASTS +6.8%</div><details><summary>후보 풀 10종목</summary><div class="pool">AP위성, LK삼양, 기가레인, 스피어, 쎄트렉아이, 에이치브이엠, 인텔리안테크, 제노코, 켄코아에어로스페이스, 한화시스템</div></details></div><div class="card"><div class="ch"><span class="ct serif">양자컴퓨팅</span><span class="badge">선반영</span><span class="cm">美 +8.5%</span></div><div class="src">美 주도주 IONQ +11.9% · RGTI +8.5% · QBTS +7.0%</div><details><summary>후보 풀 4종목</summary><div class="pool">엑스게이트, 우리로, 케이씨에스, 코위버</div></details></div><div class="card"><div class="ch"><span class="ct serif">제약바이오</span><span class="badge">선반영</span><span class="cm">美 +2.2% · 9일 등장</span></div><div class="src">美 주도주 IBB +2.5% · XBI +1.9%</div><details><summary>후보 풀 63종목</summary><div class="pool">CG인바이츠, HBL이노베이션, HLB, HLB글로벌, HLB바이오스텝, HLB생명과학, HLB제넥스, HLB제약, HLB테라퓨틱스, HLB파나진, JW신약, THE E&amp;M, 강스템바이오텍, 나노엔텍, 네오이뮨텍, 네이처셀, 듀켐바이오, 디앤디파마텍, 랩지노믹스, 레몬헬스케어, 로킷헬스케어, 리가켐바이오, 메드팩토, 메지온</div></details></div></div>
+  <div><h3 class="sec">국내발 테마 (뉴스·공시)</h3><div class="card"><div class="ch"><span class="ct serif">반도체 소부장</span><span class="badge">죽은테마 신호 혼재</span><span class="cm">美 +2.0% · 8일 등장</span></div><div class="names" style="margin-top:6px"><span class="nm pick">샘씨엔에스</span></div><div class="src">美 주도주 KLAC +2.5% · AMAT +2.2% · ASML +2.1%</div><div class="src">“한국 대통령실, 5조원 규모 신규 펀드 조성 — 반도체 소재·부품·장비 중점 투자” — 대통령실 발표(정보방) 2026-08-10 <a href="https://www.sedaily.com/article/20077761?ref=naver" target="_blank" rel="noopener">↗</a></div><div class="src">“[단독] 서남권 반도체 용수 공급에 1조+α…정부, 예타 면제 추진” — 서울경제 2026-08-10 <a href="https://www.sedaily.com/article/20077761?ref=naver" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 58종목</summary><div class="pool">SFA반도체, SK스퀘어, 가온칩스, 기가비스, 나노씨엠에스, 네오티스, 네패스, 네패스아크, 뉴파워프라즈마, 더코디, 덕산하이메탈, 레이저쎌, 미래산업, 범한퓨얼셀, 브이엠, 사피엔반도체, 삼성전자, 삼양엔씨켐, 세미파이브, 심텍홀딩스, 싸이맥스, 씨피시스템, 아스플로, 아이에이</div></details></div><div class="card"><div class="ch"><span class="ct serif">데이터센터 전력</span><span class="cm">美 +0.1% · 6일 등장</span></div><div class="src">美 주도주 NVT +0.8% · PWR +0.6% · ETN +0.1%</div><div class="src">“AI·데이터센터 훈풍 탄 산일전기, 5개 분기 연속 ‘역대 최대 실적’” — 매일경제 2026-08-10 <a href="https://www.mk.co.kr/news/stock/12122561" target="_blank" rel="noopener">↗</a></div><div class="src">“주가 크게 떨어진 삼전닉스…“반도체 사이클 상승 국면 종료는 아냐”” — 매일경제 2026-08-10 <a href="https://www.mk.co.kr/news/stock/12122861" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 32종목</summary><div class="pool">GS건설, HD현대에너지솔루션, KBI메탈, LS ELECTRIC, LS마린솔루션, LS에코에너지, PS일렉트로닉스, SGC에너지, SK오션플랜트, SK이터닉스, TS트릴리온, 금강철강, 대원전선, 데이타솔루션, 벡트, 산일전기, 삼성공조, 서진시스템, 선도전기, 신스틸, 씨이랩, 아모텍, 에스에너지, 에스와이</div></details></div><div class="card"><div class="ch"><span class="ct serif">조선·해운</span><span class="cm">1일 등장</span></div><div class="src">“이란 의회, 美·이스라엘 선박 호르무즈 통항금지 법안 승인” — TV조선 2026-08-10 <a href="https://news.tvchosun.com/site/data/html_dir/2026/08/10/2026081090199.html" target="_blank" rel="noopener">↗</a></div><div class="src">“해수부, &#x27;연안선박 현대화 펀드&#x27; 지원 선사 3곳 선정” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810014900051" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 14종목</summary><div class="pool">HD한국조선해양, HMM, STX그린로지스, STX엔진, 대양전기공업, 동일스틸럭스, 미래생명자원, 베셀, 삼성중공업, 삼영엠텍, 일승, 한탑, 한화오션, 현대힘스</div></details></div><div class="card"><div class="ch"><span class="ct serif">광통신</span><span class="cm">美 +7.7% · 4일 등장</span></div><div class="src">美 주도주 COHR +13.4% · AAOI +9.2% · LITE +6.2%</div><div class="src">“[특징주] 광통신주, 미국의 중국산 수입규제 추진 소식에 급등(종합)” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810039051008" target="_blank" rel="noopener">↗</a></div><div class="src">“[특징주] 광통신주, 미국의 중국산 수입규제 추진에 장초반 급등” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810039000008" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 12종목</summary><div class="pool">RF머트리얼즈, 광전자, 기가레인, 대한광통신, 라이콤, 빛과전자, 서울바이오시스, 성호전자, 오이솔루션, 오픈베이스, 이노인스트루먼트, 티엠씨</div></details></div><div class="card"><div class="ch"><span class="ct serif">AI 반도체·기판</span><span class="badge">죽은테마 신호 혼재</span><span class="cm">美 +2.3%</span></div><div class="src">美 주도주 SMCI +6.0% · MRVL +3.9% · NVDA +2.3%</div><div class="src">“[특징주] 반도체 장비주, SK하이닉스 투자 규모 확정에 급등(종합)” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810058951008" target="_blank" rel="noopener">↗</a></div><div class="src">“[특징주] 반도체 장비주, SK하이닉스 투자 규모 확정에 강세” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810058900008" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 7종목</summary><div class="pool">SK하이닉스, 대덕전자, 삼성전기, 심텍, 이수페타시스, 코리아써키트, 티엘비</div></details></div><div class="card"><div class="ch"><span class="ct serif">AI 소프트웨어</span><span class="cm">美 +7.1% · 5일 등장</span></div><div class="src">美 주도주 TEAM +35.3% · PLTR +10.3% · SNOW +3.9%</div><div class="src">“AI·데이터센터 훈풍 탄 산일전기, 5개 분기 연속 ‘역대 최대 실적’” — 매일경제 2026-08-10 <a href="https://www.mk.co.kr/news/stock/12122561" target="_blank" rel="noopener">↗</a></div><div class="src">““스마트 발전소 전환”…동서발전, 국산 물리 인공지능 기업과 업무협약” — 매경 기업 2026-08-10 <a href="https://www.mk.co.kr/news/business/12122719" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 24종목</summary><div class="pool">뉴엔AI, 마음AI, 매드업, 미디어젠, 바이브컴퍼니, 비큐AI, 셀바스AI, 솔트룩스, 시선AI, 신테카바이오, 아이크래프트, 아크릴, 에스원, 엔텔스, 오브젠, 위세아이텍, 윙스풋, 유디엠텍, 이노뎁, 이노에이엑스, 이스트에이드, 이지스, 코난테크놀로지, 폴라리스AI</div></details></div><div class="card"><div class="ch"><span class="ct serif">이차전지·전해액</span><span class="cm">美 +3.4% · 3일 등장</span></div><div class="src">美 주도주 LAC +7.0% · ALB +4.5% · LIT +2.2%</div><div class="src">“[단독] LG화학, 현대차·LG엔솔 합작사 양극재 공급사로 &#x27;낙점&#x27;” — 디일렉 2026-08-10 <a href="https://www.thelec.kr/news/articleView.html?idxno=60737" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 10종목</summary><div class="pool">강원에너지, 동화기업, 삼기, 삼기에너지솔루션, 엔켐, 엘앤에프, 윤성에프앤씨, 천보, 코세스, 포스코퓨처엠</div></details></div><div class="card"><div class="ch"><span class="ct serif">로봇·휴머노이드</span><span class="cm">美 +1.4% · 8일 등장</span></div><div class="src">美 주도주 PATH +7.5% · SYM +1.5% · ISRG +1.4%</div><div class="src">“동서발전·로아스, 로봇 기반 AI 기술개발·실증 협력 협약” — 연합뉴스 2026-08-10 <a href="https://www.yna.co.kr/view/AKR20260810116900057" target="_blank" rel="noopener">↗</a></div><details><summary>후보 풀 31종목</summary><div class="pool">나우로보틱스, 다이나믹솔루션, 대성하이텍, 두산, 레인보우로보틱스, 로보스타, 마키나락스, 삼현, 씨메스로보틱스, 아이로보틱스, 아이씨에이치, 아진엑스텍, 알트, 앤로보틱스, 에브리봇, 에스피지, 엔젤로보틱스, 유니켐, 이랜시스, 져스텍, 카티스, 케이쓰리아이, 케이엔알시스템, 케이엔에스</div></details></div></div>
+  <div>
+    <h3 class="sec">반복 급등 (확인 층)</h3><div class="card"><div class="ch"><span class="ct serif">HD현대에너지솔루션</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">데이터센터 전력</div></div><div class="card"><div class="ch"><span class="ct serif">RF머트리얼즈</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">광통신</div></div><div class="card"><div class="ch"><span class="ct serif">STX그린로지스</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">미국-이란 전쟁 · 조선·해운</div></div><div class="card"><div class="ch"><span class="ct serif">엔젠바이오</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">제약바이오</div></div><div class="card"><div class="ch"><span class="ct serif">자이에스앤디</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">데이터센터 전력</div></div><div class="card"><div class="ch"><span class="ct serif">코스모로보틱스</span><span class="cm">최근 20일 중 9일 급등</span></div><div class="pool">로봇·휴머노이드</div></div><div class="card"><div class="ch"><span class="ct serif">HBL이노베이션</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">제약바이오</div></div><div class="card"><div class="ch"><span class="ct serif">KBI메탈</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">데이터센터 전력</div></div><div class="card"><div class="ch"><span class="ct serif">대원전선</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">데이터센터 전력 · 전력설비·전선</div></div><div class="card"><div class="ch"><span class="ct serif">레인보우로보틱스</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">로봇·휴머노이드</div></div><div class="card"><div class="ch"><span class="ct serif">로보스타</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">로봇·휴머노이드</div></div><div class="card"><div class="ch"><span class="ct serif">마키나락스</span><span class="cm">최근 20일 중 8일 급등</span></div><div class="pool">AI 소프트웨어 · SW · 로봇·휴머노이드</div></div>
+    <h3 class="sec">회피 — 죽은 테마·악재</h3><p class="empty">회피 신호 없음</p>
+  </div>
+</div>
+
+<div class="foot">
+  <b>매매 추천이 아니다.</b> 이 화면은 후보를 좁히고 기준선을 제시하는 판단 보조 도구다.
+  진입가·손절선·목표가는 일봉 기준 계산값이며, 장중 실시간 호가·체결은 반영돼 있지 않다.
+  최종 매수·매도 판단과 주문 실행은 본인이 직접 한다. 이 도구에는 주문 기능이 없다.<br>
+  풀에 있는 종목은 필터를 통과하지 못했거나 시세 데이터가 없어 <b>차트 확인 필요</b> 상태다 —
+  근거 없이 진입가를 만들어 붙이지 않는다.
+  
+</div>
+
+</div></body></html>

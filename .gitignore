@@ -1,0 +1,12 @@
+# 로컬 전용 — 클라우드 저장소에 올리지 않는 것
+__pycache__/
+*.pyc
+logs/
+out/
+data/radar.db
+data/radar.db-wal
+data/radar.db-shm
+data/cache/ohlc/
+data/cache/gnews_*.json
+data/cache/risk_lists.json
+data/core.sql.bak

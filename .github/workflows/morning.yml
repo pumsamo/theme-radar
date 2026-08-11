@@ -1,0 +1,56 @@
+# 장전 브리핑 — 평일 아침 07:25 KST 자동 생성 (PC가 꺼져 있어도 돈다)
+#
+# 흐름: core.sql → DB 복원 → 수집·스크리닝·대시보드 생성 → docs/ 복사 →
+#       DB를 다시 core.sql로 내려 커밋. GitHub Pages가 docs/를 서빙한다.
+# 알려진 리스크: 네이버 시세가 해외 IP를 막을 수 있다 — 첫 실행 로그로 판명.
+name: morning-briefing
+
+on:
+  schedule:
+    # 22:25 UTC(일~목) = 07:25 KST(월~금)
+    - cron: "25 22 * * 0-4"
+  workflow_dispatch: {}     # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Seoul            # date.today()가 한국 날짜가 되도록
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 의존성
+        run: pip install openpyxl
+
+      - name: DB 복원
+        run: python src/db_text.py load
+
+      - name: 브리핑 생성 (부분 실패 허용 — run_morning이 자체 처리)
+        run: python run_morning.py --skip-seed
+
+      - name: 결과를 Pages 폴더로
+        run: |
+          mkdir -p docs
+          cp -f out/*.html out/*.txt docs/ 2>/dev/null || true
+          cp -f out/index.html docs/index.html
+
+      - name: DB 텍스트 덤프
+        run: python src/db_text.py dump
+
+      - name: 커밋
+        run: |
+          git config user.name "theme-radar-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs data/core.sql
+          git diff --cached --quiet && echo "변경 없음" && exit 0
+          git commit -m "장전 브리핑 $(date +%F)"
+          git push

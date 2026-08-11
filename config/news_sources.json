@@ -1,0 +1,11 @@
+{
+  "_note": "국내 뉴스·공시 RSS. enabled=false면 건너뛴다. 한국경제는 2026-08 기준 RSS가 403을 돌려줘 껐다 — 살아나면 다시 켤 것. 이데일리는 연결 자체가 끊긴다.",
+  "feeds": [
+    {"name": "매일경제", "url": "https://www.mk.co.kr/rss/50200011/", "kind": "news", "enabled": true},
+    {"name": "연합뉴스", "url": "https://www.yna.co.kr/rss/economy.xml", "kind": "news", "enabled": true},
+    {"name": "매경 기업", "url": "https://www.mk.co.kr/rss/50100032/", "kind": "news", "enabled": true},
+    {"name": "DART", "url": "https://dart.fss.or.kr/api/todayRSS.xml", "kind": "disclosure", "enabled": true},
+    {"name": "한국경제", "url": "https://www.hankyung.com/feed/finance", "kind": "news", "enabled": false},
+    {"name": "이데일리", "url": "https://rss.edaily.co.kr/stock_news.xml", "kind": "news", "enabled": false}
+  ]
+}
