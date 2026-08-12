@@ -18,6 +18,28 @@ CREATE TABLE candidates (
     data_status  TEXT NOT NULL,   -- ok | 차트 확인 필요 | 데이터 부재
     PRIMARY KEY (date, code, origin)
 );
+INSERT INTO "candidates" VALUES('2026-08-11','127120','제이에스링크','희토류·핵심광물','readacross','pick','A급 자리 · 거래대금 54억 · 거래량 0.8배 · 고점 대비 -5% · 이격 1.19 · RSI 63','A급 자리',42500.0,35500.0,56500.0,63500.0,2.0,2.84,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','000910','유니온','희토류·핵심광물','readacross','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(1억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','011230','삼화전자','희토류·핵심광물','readacross','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','285490','노바텍','희토류·핵심광물','readacross','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','025900','동화기업','이차전지·전해액','readacross','pool','유동성 미달(14억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',8060.0,6820.0,10540.0,11780.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','348370','엔켐','이차전지·전해액','readacross','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
+INSERT INTO "candidates" VALUES('2026-08-11','114190','강원에너지','이차전지·전해액','readacross','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(11억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','066970','엘앤에프','이차전지·전해액','readacross','pool','60일 고점 대비 -45% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','372170','윤성에프앤씨','이차전지·전해액','readacross','pool','60일 고점 대비 -44% — 검증상 승률 33% 이하 구간 · 유동성 미달(6억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','122350','삼기','이차전지·전해액','readacross','pool','60일 고점 대비 -34% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','419050','삼기에너지솔루션','이차전지·전해액','readacross','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','089890','코세스','이차전지·전해액','readacross','pool','60일 고점 대비 -47% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','003670','포스코퓨처엠','이차전지·전해액','readacross','pool','60일 고점 대비 -40% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','278280','천보','이차전지·전해액','readacross','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 유동성 미달(10억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','484870','엠앤씨솔루션','방산','readacross','pool','60일 고점 대비 -52% — 검증상 승률 33% 이하 구간 · 유동성 미달(13억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','012450','한화에어로스페이스','방산','readacross','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',1176000.0,983000.0,1562000.0,1755000.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','064350','현대로템','방산','readacross','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','079550','LIG넥스원','방산','readacross','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','047810','한국항공우주','방산','readacross','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',154600.0,116800.0,230000.0,268000.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','010820','퍼스텍','방산','readacross','pool','60일 고점 대비 -49% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','065450','빅텍','방산','readacross','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간 · 유동성 미달(10억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-11','013810','스페코','방산','readacross','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 유동성 미달(5억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-09','083470','이엠앤아이','반도체 소부장','news','pool','진입 트리거·손절선이 성립하지 않음 · 유동성 미달(6억)','관망 구간',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-08-09','159010','아스플로','반도체 소부장','news','pool','20일선 이격 1.30 — 눌림 기다릴 자리 · 유동성 미달(28억)','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고,죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-08-09','032580','피델릭스','반도체 소부장','news','pool','MA5<MA20<MA60 — 반등 신뢰 낮음 · 거래 위축','역배열',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
@@ -1625,9 +1647,9 @@ INSERT INTO "stocks" VALUES('057540','옴니시스템','KOSDAQ','제약바이오
 INSERT INTO "stocks" VALUES('333430','일승','KOSDAQ','조선·해운',0,'2026-07-24','2026-07-30',5,'20260811');
 INSERT INTO "stocks" VALUES('054540','삼영엠텍','KOSDAQ','조선·해운',0,'2026-07-24','2026-07-24',7,'20260811');
 INSERT INTO "stocks" VALUES('900290','GRT','KOSDAQ','화학',0,'2026-07-24','2026-07-24',NULL,NULL);
-INSERT INTO "stocks" VALUES('251970','펌텍코리아','KOSDAQ','화학',0,'2026-07-24','2026-07-24',NULL,NULL);
+INSERT INTO "stocks" VALUES('251970','펌텍코리아','KOSDAQ','화장품·소비재,화학',0,'2026-07-24','2026-08-12',NULL,NULL);
 INSERT INTO "stocks" VALUES('131760','파인텍','KOSDAQ','디스플레이',0,'2026-07-24','2026-07-24',NULL,NULL);
-INSERT INTO "stocks" VALUES('109740','디에스케이','KOSDAQ','디스플레이',0,'2026-07-24','2026-07-24',NULL,NULL);
+INSERT INTO "stocks" VALUES('109740','디에스케이','KOSDAQ','디스플레이,이차전지·전해액',0,'2026-07-24','2026-08-12',NULL,NULL);
 INSERT INTO "stocks" VALUES('368600','아이씨에이치','KOSDAQ','로봇·휴머노이드',0,'2026-07-24','2026-07-28',5,'20260811');
 INSERT INTO "stocks" VALUES('052460','아이크래프트','KOSDAQ','AI 소프트웨어,AI·재난안전,IT서비스,IT서비스·AI',0,'2026-07-24','2026-08-04',8,'20260811');
 INSERT INTO "stocks" VALUES('033560','블루콤','KOSDAQ',NULL,0,'2026-07-24','2026-07-24',NULL,NULL);
@@ -1750,8 +1772,8 @@ INSERT INTO "stocks" VALUES('476830','알지노믹스','KOSDAQ','제약바이오
 INSERT INTO "stocks" VALUES('217590','티엠씨','KOSPI','광통신',0,'2026-08-04','2026-08-04',6,'20260811');
 INSERT INTO "stocks" VALUES('122350','삼기','KOSDAQ','이차전지·전해액',0,'2026-08-04','2026-08-04',1,'20260811');
 INSERT INTO "stocks" VALUES('419050','삼기에너지솔루션','KOSDAQ','이차전지·전해액',0,'2026-08-04','2026-08-04',3,'20260811');
-INSERT INTO "stocks" VALUES('225190','LK삼양','KOSDAQ','우주항공',0,'2026-08-04','2026-08-04',5,'20260811');
-INSERT INTO "stocks" VALUES('347700','스피어','KOSDAQ','우주항공',0,'2026-08-04','2026-08-07',5,'20260811');
+INSERT INTO "stocks" VALUES('225190','LK삼양','KOSDAQ','우주항공',0,'2026-08-04','2026-08-04',4,'20260810');
+INSERT INTO "stocks" VALUES('347700','스피어','KOSDAQ','우주항공',0,'2026-08-04','2026-08-07',5,'20260810');
 INSERT INTO "stocks" VALUES('452280','한선엔지니어링','KOSDAQ','배관',0,'2026-08-04','2026-08-04',NULL,NULL);
 INSERT INTO "stocks" VALUES('290650','엘앤씨바이오','KOSDAQ',NULL,0,'2026-08-04','2026-08-04',NULL,NULL);
 INSERT INTO "stocks" VALUES('138080','오이솔루션','KOSDAQ','광통신',0,'2026-08-05','2026-08-07',7,'20260811');
@@ -1794,7 +1816,7 @@ INSERT INTO "stocks" VALUES('066970','엘앤에프','KOSPI','이차전지·전�
 INSERT INTO "stocks" VALUES('162300','신스틸','KOSDAQ','데이터센터 전력',0,'2026-08-07','2026-08-07',2,'20260811');
 INSERT INTO "stocks" VALUES('126730','코칩','KOSDAQ','데이터센터 전력',0,'2026-08-07','2026-08-07',5,'20260811');
 INSERT INTO "stocks" VALUES('053260','금강철강','KOSDAQ','데이터센터 전력',0,'2026-08-07','2026-08-07',4,'20260811');
-INSERT INTO "stocks" VALUES('295310','에이치브이엠','KOSDAQ','우주항공',0,'2026-08-07','2026-08-07',6,'20260811');
+INSERT INTO "stocks" VALUES('295310','에이치브이엠','KOSDAQ','우주항공',0,'2026-08-07','2026-08-07',6,'20260810');
 INSERT INTO "stocks" VALUES('950220','네오이뮨텍','KOSDAQ','제약바이오',0,'2026-08-07','2026-08-07',3,'20260811');
 INSERT INTO "stocks" VALUES('282330','BGF리테일','KOSPI','실적',0,'2026-08-07','2026-08-07',NULL,NULL);
 INSERT INTO "stocks" VALUES('280360','롯데웰푸드','KOSPI','실적',0,'2026-08-07','2026-08-07',NULL,NULL);
@@ -1812,22 +1834,22 @@ INSERT INTO "stocks" VALUES('003670','포스코퓨처엠','KOSPI','이차전지�
 INSERT INTO "stocks" VALUES('278280','천보','KOSDAQ','이차전지·전해액',0,NULL,NULL,3,'20260811');
 INSERT INTO "stocks" VALUES('062040','산일전기','KOSPI','데이터센터 전력',0,NULL,NULL,6,'20260811');
 INSERT INTO "stocks" VALUES('033100','제룡전기','KOSDAQ','데이터센터 전력',0,NULL,NULL,7,'20260811');
-INSERT INTO "stocks" VALUES('034020','두산에너빌리티','KOSPI','원전·SMR',0,NULL,NULL,4,'20260811');
-INSERT INTO "stocks" VALUES('105840','우진','KOSPI','원전·SMR',0,NULL,NULL,4,'20260811');
-INSERT INTO "stocks" VALUES('052690','한전기술','KOSPI','원전·SMR',0,NULL,NULL,3,'20260811');
-INSERT INTO "stocks" VALUES('083650','비에이치아이','KOSDAQ','원전·SMR',0,NULL,NULL,7,'20260811');
-INSERT INTO "stocks" VALUES('094820','일진파워','KOSDAQ','원전·SMR',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('051600','한전KPS','KOSPI','원전·SMR',0,NULL,NULL,1,'20260811');
-INSERT INTO "stocks" VALUES('274090','켄코아에어로스페이스','KOSDAQ','우주항공',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('099320','쎄트렉아이','KOSDAQ','우주항공',0,NULL,NULL,6,'20260811');
-INSERT INTO "stocks" VALUES('211270','AP위성','KOSDAQ','우주항공',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('189300','인텔리안테크','KOSDAQ','우주항공',0,NULL,NULL,7,'20260811');
-INSERT INTO "stocks" VALUES('272210','한화시스템','KOSPI','우주항공',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('361390','제노코','KOSDAQ','우주항공',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('356680','엑스게이트','KOSDAQ','양자컴퓨팅',0,NULL,NULL,6,'20260811');
-INSERT INTO "stocks" VALUES('046970','우리로','KOSDAQ','양자컴퓨팅',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('115500','케이씨에스','KOSDAQ','양자컴퓨팅',0,NULL,NULL,5,'20260811');
-INSERT INTO "stocks" VALUES('056360','코위버','KOSDAQ','양자컴퓨팅',0,NULL,NULL,6,'20260811');
+INSERT INTO "stocks" VALUES('034020','두산에너빌리티','KOSPI','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('105840','우진','KOSPI','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('052690','한전기술','KOSPI','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('083650','비에이치아이','KOSDAQ','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('094820','일진파워','KOSDAQ','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('051600','한전KPS','KOSPI','원전·SMR',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('274090','켄코아에어로스페이스','KOSDAQ','우주항공',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('099320','쎄트렉아이','KOSDAQ','우주항공',0,NULL,NULL,6,'20260810');
+INSERT INTO "stocks" VALUES('211270','AP위성','KOSDAQ','우주항공',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('189300','인텔리안테크','KOSDAQ','우주항공',0,NULL,NULL,7,'20260810');
+INSERT INTO "stocks" VALUES('272210','한화시스템','KOSPI','우주항공',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('361390','제노코','KOSDAQ','우주항공',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('356680','엑스게이트','KOSDAQ','양자컴퓨팅',0,NULL,NULL,6,'20260810');
+INSERT INTO "stocks" VALUES('046970','우리로','KOSDAQ','양자컴퓨팅',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('115500','케이씨에스','KOSDAQ','양자컴퓨팅',0,NULL,NULL,5,'20260810');
+INSERT INTO "stocks" VALUES('056360','코위버','KOSDAQ','양자컴퓨팅',0,NULL,NULL,6,'20260810');
 INSERT INTO "stocks" VALUES('196170','알테오젠','KOSDAQ','제약바이오',0,NULL,NULL,5,'20260811');
 INSERT INTO "stocks" VALUES('141080','리가켐바이오','KOSDAQ','제약바이오',0,NULL,NULL,6,'20260811');
 INSERT INTO "stocks" VALUES('012450','한화에어로스페이스','KOSPI','방산',0,NULL,NULL,6,'20260811');
@@ -1859,6 +1881,22 @@ INSERT INTO "stocks" VALUES('161890','한국콜마','KOSPI','화장품·소비�
 INSERT INTO "stocks" VALUES('257720','실리콘투','KOSDAQ','화장품·소비재',0,NULL,NULL,NULL,NULL);
 INSERT INTO "stocks" VALUES('090430','아모레퍼시픽','KOSPI','화장품·소비재',0,NULL,NULL,NULL,NULL);
 INSERT INTO "stocks" VALUES('018290','브이티','KOSDAQ','화장품·소비재',0,NULL,NULL,NULL,NULL);
+INSERT INTO "stocks" VALUES('105550','엣지파운드리','KOSDAQ','양자컴퓨팅',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('007820','엠엑스로보틱스','KOSDAQ','로봇·휴머노이드',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('378800','샤페론','KOSDAQ','제약바이오',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('007120','미래아이앤지','KOSPI',NULL,0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('204270','제이앤티씨','KOSDAQ','반도체 소부장',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('103590','일진전기','KOSPI',NULL,0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('077500','유니퀘스트','KOSPI','반도체 소부장',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('072950','빛샘전자','KOSDAQ','광통신',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('081000','일진다이아','KOSPI',NULL,0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('131970','두산테스나','KOSDAQ','반도체 소부장',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('036810','에프에스티','KOSDAQ','반도체 소부장',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('003350','한국화장품제조','KOSPI','화장품·소비재',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('001060','JW중외제약','KOSPI','제약바이오',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('064760','티씨케이','KOSDAQ',NULL,0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('344860','이노진','KOSDAQ','제약바이오',0,'2026-08-12','2026-08-12',NULL,NULL);
+INSERT INTO "stocks" VALUES('003070','코오롱글로벌','KOSPI',NULL,0,'2026-08-12','2026-08-12',NULL,NULL);
 CREATE TABLE theme_daily (
     date        TEXT NOT NULL,
     kr_theme    TEXT NOT NULL,
@@ -2136,6 +2174,14 @@ INSERT INTO "theme_daily" VALUES('2026-08-12','우주항공',3,4.17,'us_basket')
 INSERT INTO "theme_daily" VALUES('2026-08-12','양자컴퓨팅',3,2.14,'us_basket');
 INSERT INTO "theme_daily" VALUES('2026-08-12','제약바이오',2,-0.06,'us_basket');
 INSERT INTO "theme_daily" VALUES('2026-08-12','방산',3,-0.38,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-08-12','양자컴퓨팅',1,29.97,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','정책·정치',4,27.41,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','로봇·휴머노이드',1,29.93,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','제약바이오',3,19.42,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','화장품·소비재',6,19.19,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','반도체 소부장',6,16.7,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','이차전지·전해액',1,17.02,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-08-12','광통신',1,16.21,'seed_xlsx');
 CREATE TABLE themes (
     kr_theme    TEXT PRIMARY KEY,
     us_theme    TEXT,
@@ -2226,5 +2272,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',389);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',394);
 COMMIT;
