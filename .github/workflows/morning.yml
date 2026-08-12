@@ -7,8 +7,8 @@ name: morning-briefing
 
 on:
   schedule:
-    # 22:25 UTC(일~목) = 07:25 KST(월~금)
-    - cron: "25 22 * * 0-4"
+    # 21:50 UTC(일~목) = 06:50 KST(월~금) — GitHub 무료러너가 30~60분 밀리는 일이 잦아 앞당겨 예약
+    - cron: "50 21 * * 0-4"
   workflow_dispatch: {}     # 수동 실행 버튼
 
 permissions:
