@@ -56,6 +56,7 @@ def main() -> int:
     step(log, "us/theme", collect_us.theme_moves, date, log)
     step(log, "news", collect_news_kr.run, date, log)
     step(log, "screen", screen.run, date, log)
+    step(log, "spot", screen.spot_scan, date, log)
 
     view = viewdata.build(date, notes=log.dump())
     txt = report.write(view)

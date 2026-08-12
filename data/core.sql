@@ -1063,6 +1063,13 @@ INSERT INTO "candidates" VALUES('2026-08-12','356680','엑스게이트','양자�
 INSERT INTO "candidates" VALUES('2026-08-12','046970','우리로','양자컴퓨팅','readacross','pool','60일 고점 대비 -56% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-08-12','115500','케이씨에스','양자컴퓨팅','readacross','pool','60일 고점 대비 -61% — 검증상 승률 33% 이하 구간 · 유동성 미달(6억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-12','056360','코위버','양자컴퓨팅','readacross','pool','60일 고점 대비 -48% — 검증상 승률 33% 이하 구간 · 유동성 미달(4억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','073240','금호타이어','정책·정치','spot','watch','고점 대비 -13% · 이격 1.11 · RSI 60','자리 완성 (테마 신호 대기)',7630.0,6310.0,10270.0,11590.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','439090','마녀공장','화장품·소비재','spot','watch','고점 대비 -8% · 이격 1.19 · RSI 68','자리 완성 (테마 신호 대기)',21300.0,17780.0,28350.0,31850.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','079160','CJ CGV','엔터·미디어','spot','watch','고점 대비 -5% · 이격 1.10 · RSI 64','자리 완성 (테마 신호 대기)',5800.0,4995.0,7410.0,8220.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','282330','BGF리테일','실적','spot','watch','고점 대비 -7% · 이격 1.13 · RSI 66','자리 완성 (테마 신호 대기)',152300.0,133200.0,190500.0,209500.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','280360','롯데웰푸드','실적','spot','watch','고점 대비 -7% · 이격 1.15 · RSI 67','자리 완성 (테마 신호 대기)',127900.0,113300.0,157100.0,171700.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','012450','한화에어로스페이스','방산','spot','watch','고점 대비 -14% · 이격 1.20 · RSI 63','자리 완성 (테마 신호 대기)',1193000.0,1037000.0,1505000.0,1661000.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-12','090430','아모레퍼시픽','화장품·소비재','spot','watch','고점 대비 -4% · 이격 1.07 · RSI 63','자리 완성 (테마 신호 대기)',141400.0,124400.0,175400.0,192400.0,2.0,0.0,NULL,'ok');
 CREATE TABLE global_baseline (
     date        TEXT NOT NULL,
     symbol      TEXT NOT NULL,

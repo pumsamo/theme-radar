@@ -392,6 +392,14 @@ def render(view: dict) -> str:
 <h3 class="sec">오늘의 픽 — 필터 통과 종목만</h3>
 <div class="picks">{picks_html}</div>
 
+{f'''<h3 class="sec">자리 완성 — 테마 신호 대기 (픽 아님)</h3>
+<div class="mom">{"".join(
+    f'<div class="mr"><div class="mn">{e(w["name"])} <span class="md">[{e(w["kr_theme"])}]</span></div>'
+    f'<div class="md mono">진입 {num(w["entry"])} · 손절 {num(w["stop"])} · {e(w["reason"] or "")}</div></div>'
+    for w in v["watch"])}</div>
+<div class="notes" style="margin-bottom:6px">차트 자리는 완성됐지만 테마 신호(미국 +3%·뉴스)가 없는 종목.
+검증상 신호 없이 사면 기대값이 절반(+0.19R vs +0.34R) — 자동 픽으로 올리지 않는 이유. 테마에 불이 붙는 날 픽 후보가 된다.</div>''' if v.get("watch") else ''}
+
 <div class="cols">
   <div><h3 class="sec">해외발 테마</h3>{overseas}</div>
   <div><h3 class="sec">국내발 테마 (뉴스·공시)</h3>{domestic}</div>

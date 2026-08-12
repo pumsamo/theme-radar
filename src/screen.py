@@ -288,6 +288,58 @@ def run(date: str, log: RunLog) -> dict:
             "overseas": overseas, "domestic": domestic, "pre_moved": pre_moved}
 
 
+def spot_scan(date: str, log: RunLog) -> int:
+    """자리 완성 알림 — 테마 신호와 무관하게 지도 전체에서 A급 자리를 찾는다.
+
+    픽이 아니다. 검증상 테마 신호 없는 A급 자리는 기대값이 절반(+0.19R vs +0.34R)이라
+    자동 후보로 올리지 않고 '자리는 왔고 테마 불만 기다리는 종목' 정보로만 표시한다.
+    픽 규칙(동결 대상)은 건드리지 않는 표시 전용 층.
+    """
+    with connect() as conn:
+        done = {r["code"] for r in conn.execute(
+            "SELECT code FROM candidates WHERE date=?", (date,))}
+        rows = conn.execute(
+            "SELECT code, name, themes FROM stocks WHERE themes IS NOT NULL").fetchall()
+    todo = [(r["code"], r["name"], r["themes"]) for r in rows if r["code"] not in done]
+    if not todo:
+        return 0
+
+    end = datetime.strptime(date, "%Y-%m-%d").strftime("%Y%m%d")
+    start = (datetime.strptime(date, "%Y-%m-%d") - timedelta(days=220)).strftime("%Y%m%d")
+    inds, _bad = prices_kr.bulk_indicators([c for c, _, _ in todo], start, end)
+
+    out = []
+    for code, name, themes in todo:
+        ind = inds.get(code)
+        if not ind or ind["value20_eok"] < MIN_VALUE_EOK:
+            continue
+        if not ind["vol_ratio"] or ind["vol_ratio"] < 0.8:
+            continue
+        plan = make_plan(ind)
+        if not plan["entry"] or plan.get("grade") != "A":
+            continue
+        out.append({
+            "date": date, "code": code, "name": name,
+            "kr_theme": (themes or "").split(",")[0], "origin": "spot", "tier": "watch",
+            "reason": " · ".join(plan.get("zone", [])), "setup": "자리 완성 (테마 신호 대기)",
+            "entry": plan["entry"], "stop": plan["stop"],
+            "target1": plan["target1"], "target2": plan["target2"],
+            "rr": plan["rr"], "score": 0.0, "risk_flags": None, "data_status": "ok",
+        })
+
+    with connect() as conn:
+        conn.executemany(
+            """INSERT OR REPLACE INTO candidates
+               (date, code, name, kr_theme, origin, tier, reason, setup,
+                entry, stop, target1, target2, rr, score, risk_flags, data_status)
+               VALUES (:date,:code,:name,:kr_theme,:origin,:tier,:reason,:setup,
+                       :entry,:stop,:target1,:target2,:rr,:score,:risk_flags,:data_status)""",
+            out)
+        conn.commit()
+    log.ok("spot", f"자리 완성 대기 {len(out)}종목 (지도 {len(todo)}종목 스캔)")
+    return len(out)
+
+
 if __name__ == "__main__":
     log = RunLog()
     today = _date.today().isoformat()

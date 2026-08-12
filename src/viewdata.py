@@ -103,7 +103,13 @@ def build(date: str, notes: list[str] | None = None) -> dict:
                WHERE date=? AND risk_flags LIKE '%선반영%'""", (date,))}
 
         cands = [dict(r) for r in conn.execute(
-            "SELECT * FROM candidates WHERE date=? ORDER BY score DESC, name", (date,))]
+            "SELECT * FROM candidates WHERE date=? AND tier IN ('pick','pool') "
+            "ORDER BY score DESC, name", (date,))]
+
+        # 자리 완성 알림 (tier='watch') — 픽 아님, 테마 신호 대기 정보
+        watch = [dict(r) for r in conn.execute(
+            "SELECT * FROM candidates WHERE date=? AND tier='watch' ORDER BY name",
+            (date,))]
 
         since = (datetime.strptime(date, "%Y-%m-%d") - timedelta(days=3)).date().isoformat()
         news = [dict(r) for r in conn.execute(
@@ -188,6 +194,7 @@ def build(date: str, notes: list[str] | None = None) -> dict:
         "overseas": overseas,
         "domestic": domestic,
         "picks": picks,
+        "watch": watch,
         "avoid": avoid,
         "surge": surge,
         "news": news,
