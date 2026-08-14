@@ -120,7 +120,22 @@ def main() -> None:
     print("\n" + "=" * 74)
     print(f"장 마감 채점  {date_c}")
     print("=" * 74)
-    print(f"\n  기준선(테마 소속 {len(moves)}종목): 상승 {base_up:.1f}% · 중앙값 {base_mean:+.2f}%")
+    # '장이 좋았다/나빴다'는 지수(대형주)와 테마주가 갈리는 날이 많다 — 둘 다 보여준다.
+    day8 = datetime.strptime(date_c, "%Y-%m-%d").strftime("%Y%m%d")
+    for sym, nm in (("KOSPI", "코스피"), ("KOSDAQ", "코스닥")):
+        try:
+            idx = prices_kr.fetch_ohlc(sym, (datetime.strptime(date_c, "%Y-%m-%d")
+                                             - timedelta(days=10)).strftime("%Y%m%d"),
+                                       (datetime.strptime(date_c, "%Y-%m-%d")
+                                        + timedelta(days=1)).strftime("%Y%m%d"))
+            if idx and idx[-1]["date"] == day8 and len(idx) >= 2:
+                chg = (idx[-1]["close"] / idx[-2]["close"] - 1) * 100
+                print(f"  {nm} 지수: {idx[-1]['close']:,.2f} ({chg:+.2f}%)", end="")
+        except Exception:  # noqa: BLE001
+            pass
+    print()
+    print(f"  기준선(테마 소속 {len(moves)}종목 중앙값): 상승 {base_up:.1f}% · {base_mean:+.2f}%"
+          f"  ← 채점 기준은 이쪽 (우리가 매매하는 유니버스)")
     print(f"  간밤 미국 기준시각: {asof['asof'] if asof else '기록 없음'}")
 
     # ── ① read-across ────────────────────────────────────────────────
