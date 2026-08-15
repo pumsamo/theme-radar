@@ -26,6 +26,17 @@ import viewdata  # noqa: E402
 from net import RunLog  # noqa: E402
 
 
+def _market_closed(date: str) -> str | None:
+    """휴장이면 사유 문자열, 개장일이면 None. 주말은 크론이 거르지만 이중 안전망."""
+    wd = _date.fromisoformat(date).weekday()
+    if wd >= 5:
+        return "주말"
+    import json
+    hol = json.loads((Path(__file__).resolve().parent / "config" / "holidays_kr.json")
+                     .read_text(encoding="utf-8"))["dates"]
+    return hol.get(date)
+
+
 def step(log: RunLog, name: str, fn, *args, **kwargs):
     """한 단계가 터져도 사이클을 죽이지 않는다."""
     try:
@@ -47,6 +58,18 @@ def main() -> int:
     date = args.date
     log = RunLog()
     print(f"── 장전 파이프라인 {date} ──")
+
+    closed = _market_closed(date)
+    if closed:
+        import report as _report
+        weekday = "월화수목금토일"[_date.fromisoformat(date).weekday()]
+        msg = (f"[장전 브리핑] {date.replace('-', '.')} {weekday} — 오늘 한국장 휴장 ({closed})\n"
+               f"{'-' * 58}\n오늘의 픽 없음 — 휴장일. 다음 거래일 아침에 다시 발송.\n")
+        _report.OUT.mkdir(parents=True, exist_ok=True)
+        (_report.OUT / f"{date}.txt").write_text(msg, encoding="utf-8")
+        (_report.OUT / "latest.txt").write_text(msg, encoding="utf-8")
+        print(msg)
+        return 0
 
     if not args.skip_seed:
         step(log, "seed", seed_import.run, log=log)
