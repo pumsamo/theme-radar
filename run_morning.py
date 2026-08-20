@@ -68,6 +68,15 @@ def main() -> int:
         _report.OUT.mkdir(parents=True, exist_ok=True)
         (_report.OUT / f"{date}.txt").write_text(msg, encoding="utf-8")
         (_report.OUT / "latest.txt").write_text(msg, encoding="utf-8")
+        # 워크플로가 out/index.html 복사를 요구한다 — 휴장 안내 페이지로 채운다
+        idx = ("<!doctype html><meta charset='utf-8'>"
+               "<meta name='viewport' content='width=device-width,initial-scale=1'>"
+               f"<title>장전 브리핑 — 휴장</title>"
+               "<body style='font-family:sans-serif;max-width:40rem;margin:4rem auto;"
+               "padding:0 1rem;line-height:1.7'>"
+               f"<h2>{date.replace('-', '.')} ({weekday}) 오늘 한국장 휴장</h2>"
+               f"<p>{closed} — 오늘의 픽 없음. 다음 거래일 아침에 다시 발행됩니다.</p></body>")
+        (_report.OUT / "index.html").write_text(idx, encoding="utf-8")
         print(msg)
         return 0
 
