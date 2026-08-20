@@ -42,9 +42,11 @@ def kr_moves(date_c: str, log: RunLog) -> dict[str, dict]:
             rows = prices_kr.fetch_ohlc(code, start, end)
         except Exception:  # noqa: BLE001
             return code, None
-        if len(rows) < 2 or rows[-1]["date"] != day:
+        # 소급 채점 대응: 마지막 봉이 아니라 '채점일' 봉을 찾는다 (이후 거래일 봉이 있을 수 있다)
+        pos = next((i for i, r in enumerate(rows) if r["date"] == day), None)
+        if pos is None or pos == 0:
             return code, None
-        cur, prev = rows[-1], rows[-2]
+        cur, prev = rows[pos], rows[pos - 1]
         if prev["close"] <= 0:
             return code, None
         return code, {
@@ -128,9 +130,10 @@ def main() -> None:
                                              - timedelta(days=10)).strftime("%Y%m%d"),
                                        (datetime.strptime(date_c, "%Y-%m-%d")
                                         + timedelta(days=1)).strftime("%Y%m%d"))
-            if idx and idx[-1]["date"] == day8 and len(idx) >= 2:
-                chg = (idx[-1]["close"] / idx[-2]["close"] - 1) * 100
-                print(f"  {nm} 지수: {idx[-1]['close']:,.2f} ({chg:+.2f}%)", end="")
+            pos = next((i for i, r in enumerate(idx) if r["date"] == day8), None)
+            if pos is not None and pos >= 1:
+                chg = (idx[pos]["close"] / idx[pos - 1]["close"] - 1) * 100
+                print(f"  {nm} 지수: {idx[pos]['close']:,.2f} ({chg:+.2f}%)", end="")
         except Exception:  # noqa: BLE001
             pass
     print()
