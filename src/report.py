@@ -39,7 +39,7 @@ def render(view: dict) -> str:
             f"(차트 데이터 없는 {v['counts']['no_chart']}종목은 '차트 확인 필요').\n"
             "매매 추천 아님 · 주문 기능 없음 · 최종 판단과 실행은 본인.")
 
-    return f"{head}\n{'-' * 58}\n{body}{picks}{notes}{tail}\n"
+    return f"{head}\n{'-' * 58}\n{body}{picks}{watch}{notes}{tail}\n"
 
 
 def write(view: dict, out_dir: Path = OUT) -> Path:
