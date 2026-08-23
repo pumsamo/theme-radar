@@ -25,6 +25,12 @@ def render(view: dict) -> str:
             + f"\n    청산: {p['target1']:,.0f} 분할 익절 / {p['stop']:,.0f} 이탈 시 정리"
             for p in v["picks"])
 
+    watch = ""
+    if v.get("watch"):
+        watch = ("\n\n[자리 완성 — 테마 신호 없음, 표시만]\n" + "\n".join(
+            f"  {w['name']}({w['code']}) 진입 {w['entry']:,.0f} / 손절 {w['stop']:,.0f}"
+            for w in v["watch"] if w.get("entry") and w.get("stop")))
+
     notes = ""
     if v["notes"]:
         notes = "\n\n[수집 경고]\n" + "\n".join(f"  - {n}" for n in v["notes"])
