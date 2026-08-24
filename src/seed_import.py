@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 from collections import defaultdict
 from datetime import datetime
@@ -167,6 +168,18 @@ def run(seed_dir: Path = SEED_DIR, log: RunLog | None = None) -> dict:
                 catalysts[theme].add(catalyst)
             if r["chg"] is not None:
                 theme_day[(date, theme)].append(r["chg"])
+
+    # ── 지도 보강 (config/map_extra.json) ────────────────────────────────
+    # 주 1회 전체 시장 A급 스캔(scan_gaps.py)에서 발견한 '지도 구멍' 종목.
+    # 엑셀에 안 실렸을 뿐 업종이 명백한 종목만 사람이 확인하고 넣는다 (2026-08-25 사용자 확정).
+    extra_path = Path(__file__).resolve().parent.parent / "config" / "map_extra.json"
+    if extra_path.exists():
+        extra = json.loads(extra_path.read_text(encoding="utf-8"))
+        for theme, names in extra.get("map", {}).items():
+            for name in names:
+                theme_stocks[theme].add(name)
+                stock_meta.setdefault(name, {"code": tickers.to_code(name),
+                                             "first": "20260825", "last": "20260825"})
 
     # ── 저장 ────────────────────────────────────────────────────────────
     with connect() as conn:
