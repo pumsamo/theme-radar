@@ -22,6 +22,8 @@ def main() -> None:
         ("① 클라우드 동기화", [sys.executable, "sync_cloud.py"]),
         ("② 오늘 장 채점", [sys.executable, "score_day.py", "--date", day]),
         ("③ 검증 계약 일지", [sys.executable, "replay.py", "--days", "60"]),
+        ("④ 저녁 A급 스캔 기록", [sys.executable, "evening_scan.py", day]),
+        ("⑤ 저녁 스캔 트랙 채점", [sys.executable, "score_evenscan.py"]),
     ]
     for title, cmd in steps:
         print(f"\n{'=' * 70}\n{title}\n{'=' * 70}")
