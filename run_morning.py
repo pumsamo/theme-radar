@@ -87,6 +87,33 @@ def main() -> int:
     step(log, "us/regime", collect_us.market_regime, date, log)
     step(log, "us/theme", collect_us.theme_moves, date, log)
     step(log, "news", collect_news_kr.run, date, log)
+
+    # 크론 지연 가드 (2026-08-27 사고: 07:25 예약이 11:14에 실행돼 장중 시세로 픽이
+    # 만들어졌고, 프리장 픽을 덮어썼다). 개장 후 실행이면 KR 스크리닝만 생략한다 —
+    # 미국 스냅샷·뉴스는 장중에도 안 변하므로 위에서 이미 수집했다.
+    from datetime import datetime, timedelta, timezone
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    if date == now_kst.date().isoformat() and now_kst.strftime("%H:%M") >= "08:50":
+        note = (f"[장전 브리핑] {date.replace('-', '.')} — 지연 실행 감지 "
+                f"({now_kst.strftime('%H:%M')} KST)\n{'-' * 58}\n"
+                "예약 시각(07:25)을 넘겨 개장 후에 실행됐다. 장중 시세로 만든 픽은\n"
+                "프리장 계약과 다른 물건이라 오늘 픽은 생성하지 않는다.\n"
+                "미국 스냅샷·뉴스 신호는 정상 수집됨 (저녁 채점에 사용).\n")
+        report.OUT.mkdir(parents=True, exist_ok=True)
+        (report.OUT / f"{date}.txt").write_text(note, encoding="utf-8")
+        (report.OUT / "latest.txt").write_text(note, encoding="utf-8")
+        (report.OUT / "index.html").write_text(
+            "<!doctype html><meta charset='utf-8'>"
+            "<meta name='viewport' content='width=device-width,initial-scale=1'>"
+            "<title>장전 브리핑 — 지연 실행</title>"
+            "<body style='font-family:sans-serif;max-width:40rem;margin:4rem auto;"
+            "padding:0 1rem;line-height:1.7'>"
+            f"<h2>{date.replace('-', '.')} 지연 실행</h2>"
+            f"<p>{now_kst.strftime('%H:%M')} KST 실행 — 장중 데이터 오염 방지를 위해 "
+            "오늘 픽은 생성하지 않았습니다.</p></body>", encoding="utf-8")
+        print(note)
+        return 0
+
     step(log, "screen", screen.run, date, log)
     step(log, "spot", screen.spot_scan, date, log)
 
