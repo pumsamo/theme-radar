@@ -79,16 +79,32 @@ def main() -> None:
         <div class="row">보유 {len(a['open'])}종목 · 현금 {a['cash']:,.0f}원</div>
       </div>"""
 
+    # 두 계좌 병기: 종결은 (일자,종목,결과) 키로, 보유는 종목명 키로 합친다
+    c10 = {(c["date"], c["name"], c["label"]): c["pnl"]
+           for c in a10["closed"] if c["label"] != "미체결 소멸"}
+    c30 = {(c["date"], c["name"], c["label"]): c["pnl"]
+           for c in a30["closed"] if c["label"] != "미체결 소멸"}
+    def money_td(v):
+        return (f"<td class='{pct_cls(v)}'>{won(v)}원</td>" if v is not None
+                else "<td class='row'>—</td>")
     closed_rows = "".join(
-        f"<tr><td>{c['date'][4:6]}/{c['date'][6:8]}</td><td>{c['name']}</td>"
-        f"<td class='{('up' if c['label']=='목표' else 'down')}'>{c['label']}</td>"
-        f"<td class='{pct_cls(c['pnl'])}'>{won(c['pnl'])}원</td></tr>"
-        for c in a10["closed"] if c["label"] != "미체결 소멸")
+        f"<tr><td>{k[0][4:6]}/{k[0][6:8]}</td><td>{k[1]}</td>"
+        f"<td class='{('up' if k[2]=='목표' else 'down')}'>{k[2]}</td>"
+        f"{money_td(c10.get(k))}{money_td(c30.get(k))}</tr>"
+        for k in sorted(set(c10) | set(c30)))
+    p10 = {p["name"]: p for p in a10["open"]}
+    p30 = {p["name"]: p for p in a30["open"]}
+    def pos_td(p):
+        return (f"<td class='{pct_cls(p['pnl'])}'>{p['shares']}주 {won(p['pnl'])}원</td>"
+                if p else "<td class='row'>—</td>")
+    all_pos = sorted(set(p10) | set(p30),
+                     key=lambda n: -((p30.get(n) or p10.get(n))["pnl"]))
     pos_rows = "".join(
-        f"<tr><td>{p['name']}</td><td>{p['shares']}주</td><td>{p['fill']:,.0f}</td>"
-        f"<td>{p['cur']:,.0f}</td><td class='{pct_cls(p['pnl'])}'>{won(p['pnl'])}원</td></tr>"
-        for p in sorted(a10["open"], key=lambda x: -x["pnl"]))
-    only30 = {p["name"] for p in a30["open"]} - {p["name"] for p in a10["open"]}
+        f"<tr><td>{n}</td>"
+        f"<td>{(p10.get(n) or p30.get(n))['fill']:,.0f}</td>"
+        f"<td>{(p10.get(n) or p30.get(n))['cur']:,.0f}</td>"
+        f"{pos_td(p10.get(n))}{pos_td(p30.get(n))}</tr>"
+        for n in all_pos)
     ch_rows = "".join(f"<tr><td>{n}</td><td class='{c}'>{v}</td></tr>" for n, v, c in CHANNELS)
     rs_rows = "".join(
         f"<tr><td class='{('up' if k=='채택' else 'down' if k=='기각' else '')}'>{k}</td><td>{v}</td></tr>"
@@ -134,12 +150,12 @@ def main() -> None:
   {acct_card(a30, "가상계좌 ② 종자돈 3,000만")}
 </div>
 
-<h2>종결 거래 (계좌① 기준)</h2>
-<table><tr><th>일자</th><th>종목</th><th>결과</th><th>손익</th></tr>{closed_rows or '<tr><td colspan=4>아직 없음</td></tr>'}</table>
+<h2>종결 거래</h2>
+<table><tr><th>일자</th><th>종목</th><th>결과</th><th>계좌① 손익</th><th>계좌② 손익</th></tr>{closed_rows or '<tr><td colspan=5>아직 없음</td></tr>'}</table>
 
-<h2>보유 포지션 (계좌① {len(a10['open'])}종목)</h2>
-<table><tr><th>종목</th><th>수량</th><th>진입</th><th>현재</th><th>평가손익</th></tr>{pos_rows or '<tr><td colspan=5>없음</td></tr>'}</table>
-{f'<div class="row">계좌②만 보유 (고가주): {", ".join(sorted(only30))}</div>' if only30 else ''}
+<h2>보유 포지션 (① {len(a10['open'])} · ② {len(a30['open'])}종목)</h2>
+<table><tr><th>종목</th><th>진입</th><th>현재</th><th>계좌①</th><th>계좌②</th></tr>{pos_rows or '<tr><td colspan=5>없음</td></tr>'}</table>
+<div class="row">— 표시는 그 계좌에선 미보유 (고가주 리스크 규칙·현금 한도 차이)</div>
 
 <h2>채널 성적 <span class="row">(수동 집계 {CHANNELS_ASOF} 기준)</span></h2>
 <table>{ch_rows}</table>
