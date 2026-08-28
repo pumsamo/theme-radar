@@ -33,7 +33,9 @@ ENTRY_WINDOW = 3
 HOLD = 20
 
 
-def main() -> None:
+def compute(seed: int = SEED) -> dict:
+    global RISK
+    RISK = seed // 100
     db = connect()
     rows = db.execute(
         """select date, code, name, entry, stop from candidates
@@ -56,7 +58,7 @@ def main() -> None:
     with ThreadPoolExecutor(8) as ex:
         bars_all = dict(ex.map(get, codes))
 
-    cash = SEED
+    cash = seed
     open_pos = []   # {name, code, shares, fill, stop, target, opened, deadline_idx}
     closed = []     # {name, date, pnl, label}
     skipped = []
@@ -99,7 +101,7 @@ def main() -> None:
             skipped.append((e["name"], e["pdate"], "동일 종목 보유 중 — 재진입 스킵"))
             continue
         notional = e["fill"] * e["shares"]
-        cap = SEED * 0.2  # 한 종목 최대 20% (집중 위험 상한)
+        cap = seed * 0.2  # 한 종목 최대 20% (집중 위험 상한)
         if notional > cap:
             e["shares"] = int(cap / e["fill"])
             notional = e["fill"] * e["shares"]
@@ -148,7 +150,23 @@ def main() -> None:
     equity = cash + sum(e["fill"] * e["shares"] + (e["bars"][-1]["close"] - e["fill"]) * e["shares"]
                         for e in open_pos)
 
-    print(f"★ 가상 계좌 (계약 픽 · {START_DATE}~ · 종자돈 {SEED:,}원 · 리스크 {RISK:,}원/건 · 비용 0.3%)")
+    return {"seed": seed, "risk": RISK, "cash": cash, "equity": equity,
+            "realized": realized, "unreal": unreal, "closed": closed,
+            "open": [{"name": e["name"], "shares": e["shares"], "fill": e["fill"],
+                      "cur": e["bars"][-1]["close"],
+                      "pnl": (e["bars"][-1]["close"] - e["fill"]) * e["shares"]}
+                     for e in open_pos],
+            "skipped": skipped}
+
+
+def main() -> None:
+    r = compute(SEED)
+    cash, equity, realized, unreal = r["cash"], r["equity"], r["realized"], r["unreal"]
+    closed, pos = r["closed"], r["open"]
+    pos_lines = [f"    {p['name']}: {p['shares']}주 @ {p['fill']:,.0f} → {p['cur']:,.0f} ({p['pnl']:+,.0f}원)"
+                 for p in pos]
+    skipped = r["skipped"]
+    print(f"★ 가상 계좌 (계약 픽 · {START_DATE}~ · 종자돈 {SEED:,}원 · 리스크 {r['risk']:,}원/건 · 비용 0.3%)")
     print(f"  평가금액 {equity:,.0f}원 ({(equity/SEED-1)*100:+.2f}%) = 현금 {cash:,.0f} + 보유 {equity-cash:,.0f}")
     print(f"  실현손익 {realized:+,.0f}원 · 미실현 {unreal:+,.0f}원")
     n_trade = [c for c in closed if c["label"] != "미체결 소멸"]
