@@ -24,7 +24,8 @@ def main() -> None:
         ("③ 검증 계약 일지", [sys.executable, "replay.py", "--days", "60"]),
         ("④ 저녁 A급 스캔 기록", [sys.executable, "evening_scan.py", day]),
         ("⑤ 저녁 스캔 트랙 채점", [sys.executable, "score_evenscan.py"]),
-        ("⑥ 가상 계좌 원장 (종자돈 1,000만)", [sys.executable, "ledger.py"]),
+        ("⑥ 가상 계좌 1,000만", [sys.executable, "ledger.py", "10000000"]),
+        ("⑦ 가상 계좌 3,000만", [sys.executable, "ledger.py", "30000000"]),
     ]
     for title, cmd in steps:
         print(f"\n{'=' * 70}\n{title}\n{'=' * 70}")

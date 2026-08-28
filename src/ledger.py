@@ -26,8 +26,8 @@ from db import connect
 from prices_kr import fetch_ohlc
 
 START_DATE = "2026-08-11"
-SEED = 10_000_000
-RISK = 100_000
+SEED = int(sys.argv[1]) if len(sys.argv) > 1 else 10_000_000   # python ledger.py 30000000
+RISK = SEED // 100                                             # 1% 리스크 연동
 COST = 0.003
 ENTRY_WINDOW = 3
 HOLD = 20
