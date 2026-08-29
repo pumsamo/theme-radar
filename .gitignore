@@ -10,3 +10,4 @@ data/cache/ohlc/
 data/cache/gnews_*.json
 data/cache/risk_lists.json
 data/core.sql.bak
+data/flows/
