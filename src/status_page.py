@@ -213,40 +213,56 @@ def evenscan_sheet(db):
 <div class="twrap"><table><tr><th>종목</th><th class="opt">테마</th><th>진입</th><th>손절</th><th>거래대금</th><th class="opt">자리</th></tr>{body}</table></div>"""
 
 
-def ma448_sheet(db):
-    codes = {c: n for c, n in db.execute("select code, name from stocks where themes != ''")}
+def box_sheet(db):
+    # 지도 종목은 최근 급등군이라 좁은 박스가 없다 — 전체 시장 캐시로 스캔한다.
+    # 박스는 주간 캐시(scan_gaps가 갱신) 기준, 임박 후보만 현재가를 새로 받는다.
+    import tickers
     cache = replay.load_bars()
+    code_name = {}
+    try:
+        for nm, info in tickers.table().items():
+            c = info.get("code") if isinstance(info, dict) else None
+            if c:
+                code_name[c] = nm
+    except Exception:  # noqa: BLE001
+        pass
     today = _date.today().strftime("%Y%m%d")
 
-    def tail(code):
-        try:
-            return code, fetch_ohlc(code, "20260601", today)
-        except Exception:  # noqa: BLE001
-            return code, []
-    with ThreadPoolExecutor(8) as ex:
-        fresh = dict(ex.map(tail, codes))
-
-    hits = []
-    for code, name in codes.items():
-        old, new = cache.get(code, []), fresh.get(code, [])
-        if not new:
-            continue
-        seen = {b["date"] for b in old}
-        bars = sorted(old + [b for b in new if b["date"] not in seen],
-                      key=lambda b: b["date"])
-        if len(bars) < 448:
+    cand = []
+    for code, bars in cache.items():
+        if len(bars) < 130:
             continue
         closes = [b["close"] for b in bars]
-        ma = sum(closes[-448:]) / 448
-        c = closes[-1]
+        box = closes[-126:]
+        top, bot = max(box), min(box)
         v20 = sum(b["close"] * b["volume"] for b in bars[-20:]) / 20
-        if abs(c / ma - 1) > 0.03 or v20 < 30e8:
+        if bot <= 0 or top / bot >= 1.3 or v20 < 30e8:
             continue
-        if not any(x > ma * 1.03 for x in closes[-60:]):
-            continue  # 위에서 접근한 경우만
-        hits.append({"name": name, "code": code, "close": c, "ma": ma,
-                     "pct": (c / ma - 1) * 100, "val": v20})
+        cand.append({"code": code, "top": top,
+                     "width": (top / bot - 1) * 100, "val": v20})
+
+    def cur_px(c):
+        try:
+            bars = fetch_ohlc(c["code"], "20260810", today)
+            return c["code"], bars[-1]["close"] if bars else None
+        except Exception:  # noqa: BLE001
+            return c["code"], None
+    with ThreadPoolExecutor(8) as ex:
+        px = dict(ex.map(cur_px, cand))
+
+    hits = []
+    for c in cand:
+        p = px.get(c["code"])
+        if not p:
+            continue
+        pct = (p / c["top"] - 1) * 100
+        if not (-3.0 <= pct <= 2.0):
+            continue
+        hits.append({"name": code_name.get(c["code"], c["code"]), "code": c["code"],
+                     "close": p, "ma": c["top"], "pct": pct,
+                     "val": c["val"], "width": c["width"]})
     hits.sort(key=lambda h: -h["val"])
+    hits = hits[:25]
 
     def op_black(code):
         try:
@@ -268,17 +284,19 @@ def ma448_sheet(db):
         fin = dict(ex.map(op_black, [h["code"] for h in hits]))
 
     body = "".join(
-        f"<tr><td>{h['name']}</td><td>{h['close']:,.0f}</td><td>{h['ma']:,.0f}</td>"
-        f"<td class='{pct_cls(h['pct'])}'>{h['pct']:+.1f}%</td><td>{h['val']/1e8:,.0f}억</td>"
+        f"<tr><td>{h['name']}</td><td>{h['close']:,.0f}</td><td class='opt'>{h['ma']:,.0f}</td>"
+        f"<td class='{pct_cls(h['pct'])}'>{h['pct']:+.1f}%</td><td class='opt'>{h['width']:.0f}%</td>"
+        f"<td>{h['val']/1e8:,.0f}억</td>"
         f"<td class='{('up' if fin[h['code']][0]=='흑자' else 'down' if fin[h['code']][0]=='적자' else '')}'>"
         f"{fin[h['code']][0]}({fin[h['code']][1]})</td></tr>"
-        for h in hits) or "<tr><td colspan=6>해당 없음</td></tr>"
+        for h in hits) or "<tr><td colspan=7>해당 없음</td></tr>"
     return f"""
-<h2>관찰 — 448일선 ±3% ({len(hits)}종목)</h2>
-<div class="row">⚠ 백테스트 기각된 셋업 (단독 −0.075R). 매수 목록이 아니라 사용자 가설 추적용 관찰
-시트다. 조건: 448일선 ±3% · 최근 60일 내 위에서 접근 · 거래대금 30억+. 흑자/적자는 최신 확정
-연간 영업이익 (참고: 적자 기업 지지선 매수는 −0.086R로 특히 나쁨 — 회피 원칙 채택됨).</div>
-<div class="twrap"><table><tr><th>종목</th><th>종가</th><th class="opt">448선</th><th>이격</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
+<h2>관찰 — 좁은 박스 돌파 임박 ({len(hits)}종목)</h2>
+<div class="row">6개월(126일)간 폭 30% 미만 좁은 박스의 상단 −3%~+2% 구간에 있는 종목.
+백테스트 +0.104R로 A급 다음 2위 셋업 (계약 중이라 미채택 — 관찰만). 종가가 박스 상단을
+넘어 안착하면 유망 신호라는 게 검증 결과 (bt_box.py). 매수 추천 아님.</div>
+<div class="twrap"><table><tr><th>종목</th><th>종가</th><th class="opt">박스상단</th><th>상단 대비</th>
+<th class="opt">박스폭</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
 
 
 def main() -> None:
@@ -337,7 +355,7 @@ def main() -> None:
         "계좌①": acct_sheet(a10, "가상계좌 ① — 종자돈 1,000만 (리스크 10만/건)"),
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
         "저녁 스캔": evenscan_sheet(db),
-        "관찰 448": ma448_sheet(db),
+        "관찰 박스": box_sheet(db),
         "콜": calls_sheet(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
