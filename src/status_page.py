@@ -130,11 +130,24 @@ def main() -> None:
   .bar{{background:#eee;height:.8rem;margin:.4rem 0}}
   .bar>div{{background:#1a1a1a;height:100%;width:{prog}%}}
   .note{{font-size:.75rem;color:#888;margin-top:1.5rem;border-top:1px solid #ccc;padding-top:.5rem}}
+  .tabs{{display:flex;gap:.3rem;border-bottom:2px solid #1a1a1a;margin:1rem 0 0}}
+  .tabs button{{font:inherit;font-size:.9rem;padding:.4rem .9rem;border:1px solid #ccc;
+    border-bottom:none;background:#f5f5f5;cursor:pointer}}
+  .tabs button.on{{background:#1a1a1a;color:#fff;font-weight:700}}
+  .sheet{{display:none}} .sheet.on{{display:block}}
   @media(max-width:40rem){{body{{padding:.8rem}}}}
 </style></head><body>
 <h1>테마 레이더 — 검증 현황판</h1>
 <div class="date">갱신 {today.isoformat()} 저녁 · 계약 {CONTRACT_START} ~ 약 {VERDICT} (60거래일)</div>
 
+<div class="tabs">
+  <button class="on" data-s="s1">요약</button>
+  <button data-s="s2">거래</button>
+  <button data-s="s3">채널</button>
+  <button data-s="s4">연구</button>
+</div>
+
+<div class="sheet on" id="s1">
 <h2>계약 진행</h2>
 <div class="bar"><div></div></div>
 <div class="row">D+{run_days}/{CONTRACT_DAYS} 거래일 ({prog}%) · 중간점검 {MIDCHECK} · 판정 기준: 체결 평균 R ≥ +0.10</div>
@@ -149,19 +162,35 @@ def main() -> None:
   {acct_card(a10, "가상계좌 ① 종자돈 1,000만")}
   {acct_card(a30, "가상계좌 ② 종자돈 3,000만")}
 </div>
+</div>
 
+<div class="sheet" id="s2">
 <h2>종결 거래</h2>
 <table><tr><th>일자</th><th>종목</th><th>결과</th><th>계좌① 손익</th><th>계좌② 손익</th></tr>{closed_rows or '<tr><td colspan=5>아직 없음</td></tr>'}</table>
 
 <h2>보유 포지션 (① {len(a10['open'])} · ② {len(a30['open'])}종목)</h2>
 <table><tr><th>종목</th><th>진입</th><th>현재</th><th>계좌①</th><th>계좌②</th></tr>{pos_rows or '<tr><td colspan=5>없음</td></tr>'}</table>
 <div class="row">— 표시는 그 계좌에선 미보유 (고가주 리스크 규칙·현금 한도 차이)</div>
+</div>
 
+<div class="sheet" id="s3">
 <h2>채널 성적 <span class="row">(수동 집계 {CHANNELS_ASOF} 기준)</span></h2>
 <table>{ch_rows}</table>
+</div>
 
+<div class="sheet" id="s4">
 <h2>연구 판정 <span class="row">(수동 집계 {CHANNELS_ASOF} 기준)</span></h2>
 <table>{rs_rows}</table>
+</div>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {{
+  document.querySelectorAll('.tabs button').forEach(x => x.classList.remove('on'));
+  document.querySelectorAll('.sheet').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  document.getElementById(b.dataset.s).classList.add('on');
+}});
+</script>
 
 <div class="note">관찰·검증 기록용 — 매매 추천 아님 · 주문 기능 없음 · 최종 판단과 실행은 본인.<br>
 가상계좌: 리스크 1%/건 · 진입 3일 창 · 손절우선 · +2R 청산 · 20일 기한 · 왕복 비용 0.3% ·

@@ -18,11 +18,24 @@
   .bar{background:#eee;height:.8rem;margin:.4rem 0}
   .bar>div{background:#1a1a1a;height:100%;width:20%}
   .note{font-size:.75rem;color:#888;margin-top:1.5rem;border-top:1px solid #ccc;padding-top:.5rem}
+  .tabs{display:flex;gap:.3rem;border-bottom:2px solid #1a1a1a;margin:1rem 0 0}
+  .tabs button{font:inherit;font-size:.9rem;padding:.4rem .9rem;border:1px solid #ccc;
+    border-bottom:none;background:#f5f5f5;cursor:pointer}
+  .tabs button.on{background:#1a1a1a;color:#fff;font-weight:700}
+  .sheet{display:none} .sheet.on{display:block}
   @media(max-width:40rem){body{padding:.8rem}}
 </style></head><body>
 <h1>테마 레이더 — 검증 현황판</h1>
-<div class="date">갱신 2026-08-28 저녁 · 계약 2026-08-11 ~ 약 2026-11-04 (60거래일)</div>
+<div class="date">갱신 2026-08-29 저녁 · 계약 2026-08-11 ~ 약 2026-11-04 (60거래일)</div>
 
+<div class="tabs">
+  <button class="on" data-s="s1">요약</button>
+  <button data-s="s2">거래</button>
+  <button data-s="s3">채널</button>
+  <button data-s="s4">연구</button>
+</div>
+
+<div class="sheet on" id="s1">
 <h2>계약 진행</h2>
 <div class="bar"><div></div></div>
 <div class="row">D+12/60 거래일 (20%) · 중간점검 2026-09-08 · 판정 기준: 체결 평균 R ≥ +0.10</div>
@@ -49,19 +62,35 @@
         <div class="row">보유 13종목 · 현금 18,973원</div>
       </div>
 </div>
+</div>
 
+<div class="sheet" id="s2">
 <h2>종결 거래</h2>
 <table><tr><th>일자</th><th>종목</th><th>결과</th><th>계좌① 손익</th><th>계좌② 손익</th></tr><tr><td>08/19</td><td>제이에스링크</td><td class='down'>손절</td><td class='down'>-99,638원</td><td class='down'>-298,914원</td></tr><tr><td>08/21</td><td>뉴파워프라즈마</td><td class='down'>손절</td><td class='down'>-100,935원</td><td class='down'>-302,806원</td></tr><tr><td>08/27</td><td>에스원</td><td class='up'>목표</td><td class='up'>+187,014원</td><td class='up'>+579,743원</td></tr></table>
 
 <h2>보유 포지션 (① 11 · ② 13종목)</h2>
 <table><tr><th>종목</th><th>진입</th><th>현재</th><th>계좌①</th><th>계좌②</th></tr><tr><td>삼양식품</td><td>1,358,000</td><td>1,547,000</td><td class='row'>—</td><td class='up'>2주 +378,000원</td></tr><tr><td>SK케미칼</td><td>50,000</td><td>54,200</td><td class='up'>22주 +92,400원</td><td class='up'>68주 +285,600원</td></tr><tr><td>아모레퍼시픽</td><td>137,200</td><td>150,600</td><td class='up'>7주 +93,800원</td><td class='up'>21주 +281,400원</td></tr><tr><td>빙그레</td><td>84,400</td><td>92,900</td><td class='up'>8주 +68,000원</td><td class='up'>24주 +204,000원</td></tr><tr><td>BGF리테일</td><td>144,400</td><td>147,000</td><td class='up'>7주 +18,200원</td><td class='up'>22주 +57,200원</td></tr><tr><td>성광벤드</td><td>31,250</td><td>31,850</td><td class='up'>22주 +13,200원</td><td class='up'>51주 +30,600원</td></tr><tr><td>메지온</td><td>68,600</td><td>69,200</td><td class='up'>8주 +4,800원</td><td class='up'>26주 +15,600원</td></tr><tr><td>LS마린솔루션</td><td>33,800</td><td>33,800</td><td class=''>28주 +0원</td><td class=''>85주 +0원</td></tr><tr><td>한미글로벌</td><td>23,250</td><td>23,000</td><td class='down'>22주 -5,500원</td><td class='down'>66주 -16,500원</td></tr><tr><td>HMM</td><td>22,100</td><td>21,700</td><td class='down'>55주 -22,000원</td><td class='down'>166주 -66,400원</td></tr><tr><td>한화에어로스페이스</td><td>1,255,000</td><td>1,157,000</td><td class='row'>—</td><td class='down'>1주 -98,000원</td></tr><tr><td>티에스이</td><td>268,500</td><td>238,500</td><td class='down'>1주 -30,000원</td><td class='down'>4주 -120,000원</td></tr><tr><td>인바디</td><td>65,900</td><td>60,300</td><td class='down'>10주 -56,000원</td><td class='down'>30주 -168,000원</td></tr></table>
 <div class="row">— 표시는 그 계좌에선 미보유 (고가주 리스크 규칙·현금 한도 차이)</div>
+</div>
 
+<div class="sheet" id="s3">
 <h2>채널 성적 <span class="row">(수동 집계 2026-08-28 기준)</span></h2>
 <table><tr><td>초하쌤 콜 (방송·글·톡)</td><td class='up'>10콜 · 4✅ 1❌ 1△ 4대기</td></tr><tr><td>초하쌤 방 언급 따라사기</td><td class='up'>5일 +1.49% (126건)</td></tr><tr><td>수강생 반 언급</td><td class='down'>5일 −2.20% (224건)</td></tr><tr><td>소식방 언급</td><td class='down'>5일 −6.0% (2,407건)</td></tr></table>
+</div>
 
+<div class="sheet" id="s4">
 <h2>연구 판정 <span class="row">(수동 집계 2026-08-28 기준)</span></h2>
 <table><tr><td class='up'>채택</td><td>read-across (미국 테마 → 다음날 한국, 64.5% vs 44.3%)</td></tr><tr><td class='up'>채택</td><td>A급 자리 3/3 (낙폭 −15~−3 · 이격 · RSI) — 계약 동결 중</td></tr><tr><td class='up'>채택</td><td>악재 뉴스 회피 필터 · 적자기업 지지선 매수 회피</td></tr><tr><td class='down'>기각</td><td>삼박자 · 기준봉 눌림 · 소식방 따라사기 · 스프링 재진입</td></tr><tr><td class='down'>기각</td><td>448선 단독 (−0.075R) · 448+실적 YoY (판정선 미달)</td></tr><tr><td class=''>보류</td><td>대장주 우위 (소급 편향 → 저녁 스캔 전방 데이터로 재검증 중)</td></tr></table>
+</div>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.classList.remove('on'));
+  document.querySelectorAll('.sheet').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  document.getElementById(b.dataset.s).classList.add('on');
+});
+</script>
 
 <div class="note">관찰·검증 기록용 — 매매 추천 아님 · 주문 기능 없음 · 최종 판단과 실행은 본인.<br>
 가상계좌: 리스크 1%/건 · 진입 3일 창 · 손절우선 · +2R 청산 · 20일 기한 · 왕복 비용 0.3% ·
