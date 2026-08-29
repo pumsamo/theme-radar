@@ -95,6 +95,8 @@ def compute(seed: int = SEED) -> dict:
     # 시간순 현금 관리: 체결일 기준 정렬해 현금 한도 적용
     events.sort(key=lambda e: e["bars"][e["fill_i"]]["date"])
     holding: dict[str, str] = {}  # code → 청산일 (그 전엔 같은 종목 재진입 금지)
+    txns = []       # (일자, 현금흐름) — 잔고 시계열 재구성용
+    intervals = []  # {closes, shares, start, end} — 보유 구간 평가용
     for e in events:
         fill_dt = e["bars"][e["fill_i"]]["date"]
         if e["code"] in holding and fill_dt <= holding[e["code"]]:
@@ -133,10 +135,17 @@ def compute(seed: int = SEED) -> dict:
             closed.append({"name": e["name"], "date": exit_dt,
                            "pnl": proceeds - notional - fee, "label": label})
             holding[e["code"]] = exit_dt
+            txns.append((fill_dt, -notional))
+            txns.append((exit_dt, proceeds - fee))
+            intervals.append({"closes": {b["date"]: b["close"] for b in bars},
+                              "shares": e["shares"], "start": fill_dt, "end": exit_dt})
         else:
             e["notional"] = notional
             open_pos.append(e)
             holding[e["code"]] = "99999999"
+            txns.append((fill_dt, -notional))
+            intervals.append({"closes": {b["date"]: b["close"] for b in e["bars"]},
+                              "shares": e["shares"], "start": fill_dt, "end": None})
 
     # 평가
     unreal = 0.0
@@ -150,7 +159,24 @@ def compute(seed: int = SEED) -> dict:
     equity = cash + sum(e["fill"] * e["shares"] + (e["bars"][-1]["close"] - e["fill"]) * e["shares"]
                         for e in open_pos)
 
+    # 일자별 평가금액 재구성 (파생 데이터 — 거래 판정엔 영향 없음)
+    start_d = START_DATE.replace("-", "")
+    days = sorted({d for iv in intervals for d in iv["closes"] if d >= start_d})
+    series = []
+    for d in days:
+        cash_d = seed + sum(amt for dt, amt in txns if dt <= d)
+        pos_d = 0.0
+        for iv in intervals:
+            if iv["start"] <= d and (iv["end"] is None or d < iv["end"]):
+                px = iv["closes"].get(d)
+                if px is None:  # 그날 휴장·데이터 결측이면 직전 종가
+                    prior = [v for k, v in sorted(iv["closes"].items()) if k <= d]
+                    px = prior[-1] if prior else 0
+                pos_d += px * iv["shares"]
+        series.append((d, cash_d + pos_d))
+
     return {"seed": seed, "risk": RISK, "cash": cash, "equity": equity,
+            "equity_series": series,
             "realized": realized, "unreal": unreal, "closed": closed,
             "open": [{"name": e["name"], "shares": e["shares"], "fill": e["fill"],
                       "cur": e["bars"][-1]["close"],

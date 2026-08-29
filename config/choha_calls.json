@@ -1,0 +1,15 @@
+{
+  "_note": "초하쌤 콜 추적 원장 — RESUME 서술의 데이터판 (2026-08-29 이관). 새 콜 접수·판정 시 RESUME와 함께 여기도 갱신한다. basis=발신 시점 기준가, 판정: ✅ 맞음 / ❌ 틀림 / △ 애매 / 대기. code 있는 '대기' 건은 현황판이 현재가로 진행률을 계산한다.",
+  "calls": [
+    {"no": 1, "date": "2026-08-23", "name": "푸른로보틱스", "code": null, "basis": null, "stop": null, "target": null, "style": "매도 콜", "verdict": "✅", "result": "\"다 파세요\" → 다음날 −6.8%", "source": "8/23 일요일 방송"},
+    {"no": 2, "date": "2026-08-23", "name": "한중엔시에스", "code": null, "basis": null, "stop": null, "target": null, "style": "홀드 콜", "verdict": "✅", "result": "\"눌림일 뿐\" → +11.2%", "source": "8/23 일요일 방송"},
+    {"no": 3, "date": "2026-08-23", "name": "대아티아이", "code": null, "basis": null, "stop": null, "target": null, "style": "단타 콜", "verdict": "❌", "result": "\"단타론 더 낫다\" → −9.3%", "source": "8/23 일요일 방송"},
+    {"no": 4, "date": "2026-08-23", "name": "삼성전자·SK하이닉스 (본주>스퀘어)", "code": null, "basis": null, "stop": null, "target": null, "style": "상대 콜", "verdict": "△", "result": "하이닉스 −3.4% < 스퀘어 −4.2%지만 삼전 −8.7%", "source": "8/23 일요일 방송"},
+    {"no": 5, "date": "2026-08-24", "name": "두산에너빌리티", "code": "034020", "basis": null, "stop": null, "target": null, "style": "프리장 매수", "verdict": "✅", "result": "8/25 시가 74,700 → 종가 80,700 (+8.0%), 웨스팅하우스 재료 전날 선취", "source": "8/24 단톡방"},
+    {"no": 6, "date": "2026-08-26", "name": "우리기술투자", "code": "041190", "basis": 6500, "stop": 6000, "target": null, "style": "단타 3일", "verdict": "대기", "result": "\"음봉 종가베팅, 6,000 안 깨면 단기시세\"", "source": "8/26 아카데미 글"},
+    {"no": 7, "date": "2026-08-26", "name": "미래에셋증권", "code": "006800", "basis": 36300, "stop": 33000, "target": null, "style": "스윙 10일", "verdict": "대기", "result": "\"33,000 안 깨면 우상향\"", "source": "8/26 아카데미 글"},
+    {"no": 8, "date": "2026-08-26", "name": "건설 3인방 (현대건설·대우건설·삼성E&A)", "code": null, "basis": null, "stop": null, "target": null, "style": "눌림 예고", "verdict": "대기", "result": "\"당장 진입 말고 눌림에 잡겠다\" — 레벨 없음, 실행 관찰", "source": "8/26 아카데미 글"},
+    {"no": 9, "date": "2026-08-25", "name": "아난티", "code": "025980", "basis": 5090, "stop": 4900, "target": 6000, "style": "스윙 10일", "verdict": "대기", "result": "\"4,900 안 깨면 6,000 부근까지\"", "source": "8/25 단톡방 (8/26 발견)"},
+    {"no": 10, "date": "2026-08-25", "name": "원전 셋트 (한전기술·두산에너빌리티·태웅)", "code": null, "basis": null, "stop": null, "target": null, "style": "테마 콜", "verdict": "✅", "result": "8/26 한전기술 +13.6% · 두산 +6.3% · 태웅 +6.7% (원전 테마 +14% 날)", "source": "8/25 단톡방"}
+  ]
+}

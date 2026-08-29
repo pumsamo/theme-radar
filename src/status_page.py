@@ -81,10 +81,117 @@ def acct_sheet(a, label):
   <div class="row">종결 {len(closed)}건 · 보유 {len(a['open'])}종목 · 미체결 소멸 {lapsed}건</div>
 </div></div>
 <h2>종결 거래</h2>
-<table><tr><th>일자</th><th>종목</th><th>결과</th><th>손익</th></tr>{closed_rows}</table>
+<div class="twrap"><table><tr><th>일자</th><th>종목</th><th>결과</th><th>손익</th></tr>{closed_rows}</table></div>
 <h2>보유 포지션</h2>
-<table><tr><th>종목</th><th>수량</th><th>진입</th><th>현재</th><th>평가손익</th></tr>{pos_rows}</table>
+<div class="twrap"><table><tr><th>종목</th><th>수량</th><th>진입</th><th>현재</th><th>평가손익</th></tr>{pos_rows}</table></div>
 {skip_rows}"""
+
+
+def picks_sheet(db):
+    latest = db.execute("select max(date) from candidates where tier='pick'").fetchone()[0]
+    if not latest:
+        return "<h2>아침 픽</h2><p>기록 없음</p>"
+    today = _date.today().isoformat()
+    note = "" if latest == today else f"<div class='row'>오늘 결번 (지각·휴장) — 최근 픽 {latest}</div>"
+    rows = db.execute(
+        """select name, kr_theme, entry, stop, target1, target2, setup, risk_flags
+           from candidates where tier='pick' and date=? group by code""", (latest,)).fetchall()
+    watch = db.execute(
+        """select name, entry, stop from candidates
+           where tier='watch' and date=? and entry is not null group by code""", (latest,)).fetchall()
+    body = "".join(
+        f"<tr><td>{n}</td><td class='opt'>{t or ''}</td><td>{e:,.0f}</td><td>{s:,.0f}</td>"
+        f"<td>{t1:,.0f}</td><td class='opt'>{t2:,.0f}</td>"
+        f"<td class='row'>{(st or '') + ((' ⚠' + rf) if rf else '')}</td></tr>"
+        for n, t, e, s, t1, t2, st, rf in rows) or "<tr><td colspan=7>픽 없음</td></tr>"
+    wbody = "".join(f"<tr><td>{n}</td><td>{e:,.0f}</td><td>{s:,.0f}</td></tr>"
+                    for n, e, s in watch)
+    wsec = (f"<h2>자리 완성 (테마 신호 대기)</h2><div class='twrap'><table>"
+            f"<tr><th>종목</th><th>진입</th><th>손절</th></tr>{wbody}</table></div>") if wbody else ""
+    return f"""
+<h2>아침 계약 픽 — {latest} ({len(rows)}종목)</h2>
+{note}
+<div class="row">진입 = 전일 고가 돌파 확인가. 3거래일 내 미돌파 시 소멸. 매수 추천 아님.</div>
+<div class="twrap"><table><tr><th>종목</th><th class="opt">테마</th><th>진입</th><th>손절</th>
+<th>목표1</th><th class="opt">목표2</th><th>비고</th></tr>{body}</table></div>
+{wsec}"""
+
+
+def calls_sheet():
+    path = ROOT / "config" / "choha_calls.json"
+    if not path.exists():
+        return "<h2>초하쌤 콜</h2><p>데이터 없음</p>"
+    calls = json.loads(path.read_text(encoding="utf-8"))["calls"]
+    pending = [c for c in calls if c["verdict"] == "대기" and c.get("code") and c.get("basis")]
+    cur = {}
+    for c in pending:
+        try:
+            bars = fetch_ohlc(c["code"], "20260820", _date.today().strftime("%Y%m%d"))
+            if bars:
+                cur[c["no"]] = bars[-1]["close"]
+        except Exception:  # noqa: BLE001
+            pass
+    n_ok = sum(1 for c in calls if c["verdict"] == "✅")
+    n_no = sum(1 for c in calls if c["verdict"] == "❌")
+    n_amb = sum(1 for c in calls if c["verdict"] == "△")
+    n_wait = sum(1 for c in calls if c["verdict"] == "대기")
+    rows = []
+    for c in calls:
+        prog = ""
+        if c["no"] in cur and c.get("basis"):
+            pct = (cur[c["no"]] / c["basis"] - 1) * 100
+            prog = f"<span class='{pct_cls(pct)}'>현재 {cur[c['no']]:,.0f} ({pct:+.1f}%)</span>"
+        v = c["verdict"]
+        vcls = "up" if v == "✅" else ("down" if v == "❌" else "")
+        rows.append(
+            f"<tr><td>{c['no']}</td><td class='opt'>{c['date'][5:]}</td><td>{c['name']}</td>"
+            f"<td>{f"{c['basis']:,.0f}" if c.get('basis') else '—'}</td>"
+            f"<td class='opt'>{f"{c['stop']:,.0f}" if c.get('stop') else '—'}</td>"
+            f"<td class='{vcls}'>{v}</td><td class='row'>{c['result']} {prog}</td></tr>")
+    return f"""
+<h2>초하쌤 콜 추적 — {len(calls)}콜 ({n_ok}✅ {n_no}❌ {n_amb}△ {n_wait}대기)</h2>
+<div class="row">방송·글·톡방에서 나온 종목 콜을 접수 즉시 기록하고 기한 내 성적으로 판정.
+채널 신뢰도의 근거 데이터 (config/choha_calls.json).</div>
+<div class="twrap"><table><tr><th>#</th><th class="opt">일자</th><th>종목</th><th>기준가</th>
+<th class="opt">손절</th><th>판정</th><th>결과·진행</th></tr>{"".join(rows)}</table></div>"""
+
+
+def equity_svg(s10, s30):
+    """계좌①·② 수익률(%) 추이 — 외부 라이브러리 없는 인라인 SVG."""
+    if len(s10) < 2:
+        return ""
+    days = sorted({d for d, _ in s10} | {d for d, _ in s30})
+    def pcts(series, seed):
+        m = dict(series)
+        out, last = [], seed
+        for d in days:
+            last = m.get(d, last)
+            out.append((last / seed - 1) * 100)
+        return out
+    p10, p30 = pcts(s10, s10[0][1]), pcts(s30, s30[0][1])
+    lo = min(min(p10), min(p30), 0) - 0.3
+    hi = max(max(p10), max(p30), 0) + 0.3
+    W, H, L = 640, 180, 44
+    def xy(i, v):
+        x = L + (W - L - 8) * i / max(1, len(days) - 1)
+        y = 8 + (H - 28) * (hi - v) / (hi - lo)
+        return f"{x:.1f},{y:.1f}"
+    y0 = 8 + (H - 28) * hi / (hi - lo)
+    grid = "".join(
+        f'<text x="2" y="{8 + (H-28)*(hi-v)/(hi-lo)+4:.0f}" font-size="10" fill="#888">{v:+.0f}%</text>'
+        for v in {round(lo), 0, round(hi)})
+    labels = (f'<text x="{L}" y="{H-4}" font-size="10" fill="#888">{days[0][4:6]}/{days[0][6:]}</text>'
+              f'<text x="{W-52}" y="{H-4}" font-size="10" fill="#888">{days[-1][4:6]}/{days[-1][6:]}</text>')
+    return f"""
+<h2>잔고 추이 (수익률 %)</h2>
+<div class="twrap"><svg viewBox="0 0 {W} {H}" style="width:100%;max-width:{W}px">
+<line x1="{L}" y1="{y0:.1f}" x2="{W-8}" y2="{y0:.1f}" stroke="#bbb" stroke-dasharray="3,3"/>
+{grid}{labels}
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="{' '.join(xy(i, v) for i, v in enumerate(p10))}"/>
+<polyline fill="none" stroke="#1a4f9c" stroke-width="2" points="{' '.join(xy(i, v) for i, v in enumerate(p30))}"/>
+<text x="{L}" y="16" font-size="11" fill="#c0392b">— 계좌① 1,000만</text>
+<text x="{L+130}" y="16" font-size="11" fill="#1a4f9c">— 계좌② 3,000만</text>
+</svg></div>"""
 
 
 def evenscan_sheet(db):
@@ -103,7 +210,7 @@ def evenscan_sheet(db):
 <h2>저녁 A급 스캔 — {latest} ({len(rows)}종목)</h2>
 <div class="row">매일 종가 기준 자리 좋은 지도 종목 전부. 다음날 진입가(전일 고가 돌파) 미달 시 소멸.
 누적 기록 {total}건 — 그림자 트랙으로 자동 채점 중 (매수 추천 아님).</div>
-<table><tr><th>종목</th><th>테마</th><th>진입</th><th>손절</th><th>거래대금</th><th>자리</th></tr>{body}</table>"""
+<div class="twrap"><table><tr><th>종목</th><th class="opt">테마</th><th>진입</th><th>손절</th><th>거래대금</th><th class="opt">자리</th></tr>{body}</table></div>"""
 
 
 def ma448_sheet(db):
@@ -171,7 +278,7 @@ def ma448_sheet(db):
 <div class="row">⚠ 백테스트 기각된 셋업 (단독 −0.075R). 매수 목록이 아니라 사용자 가설 추적용 관찰
 시트다. 조건: 448일선 ±3% · 최근 60일 내 위에서 접근 · 거래대금 30억+. 흑자/적자는 최신 확정
 연간 영업이익 (참고: 적자 기업 지지선 매수는 −0.086R로 특히 나쁨 — 회피 원칙 채택됨).</div>
-<table><tr><th>종목</th><th>종가</th><th>448선</th><th>이격</th><th>거래대금</th><th>실적</th></tr>{body}</table>"""
+<div class="twrap"><table><tr><th>종목</th><th>종가</th><th class="opt">448선</th><th>이격</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
 
 
 def main() -> None:
@@ -224,16 +331,19 @@ def main() -> None:
   </div>
   {acct_card(a10, "가상계좌 ① 1,000만")}
   {acct_card(a30, "가상계좌 ② 3,000만")}
-</div>""",
+</div>
+{equity_svg(a10["equity_series"], a30["equity_series"])}""",
+        "아침 픽": picks_sheet(db),
         "계좌①": acct_sheet(a10, "가상계좌 ① — 종자돈 1,000만 (리스크 10만/건)"),
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
         "저녁 스캔": evenscan_sheet(db),
         "관찰 448": ma448_sheet(db),
+        "콜": calls_sheet(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
-<table>{ch_rows}</table>
+<div class="twrap"><table>{ch_rows}</table></div>
 <h2>연구 판정 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
-<table>{rs_rows}</table>""",
+<div class="twrap"><table>{rs_rows}</table></div>""",
     }
 
     tab_btns = "".join(
@@ -268,7 +378,10 @@ def main() -> None:
     border-bottom:none;background:#f5f5f5;cursor:pointer}}
   .tabs button.on{{background:#1a1a1a;color:#fff;font-weight:700}}
   .sheet{{display:none}} .sheet.on{{display:block}}
-  @media(max-width:40rem){{body{{padding:.8rem}}}}
+  .twrap{{overflow-x:auto}}
+  @media(max-width:40rem){{body{{padding:.8rem}}
+    table{{font-size:.78rem}} td,th{{padding:.25rem .3rem}}
+    .opt{{display:none}}}}
 </style></head><body>
 <h1>테마 레이더 — 검증 현황판</h1>
 <div class="date">갱신 {today.isoformat()} · 계약 {CONTRACT_START} ~ 약 {VERDICT} (60거래일)</div>
