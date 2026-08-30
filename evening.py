@@ -27,7 +27,8 @@ def main() -> None:
         ("⑥ 가상 계좌 1,000만", [sys.executable, "ledger.py", "10000000"]),
         ("⑦ 가상 계좌 3,000만", [sys.executable, "ledger.py", "30000000"]),
         ("⑧ 수급 갱신 (외국인·기관, 증분)", [sys.executable, "collect_flows.py", "3"]),
-        ("⑨ 검증 현황판 생성", [sys.executable, "status_page.py"]),
+        ("⑨ 수급 관찰 트랙 기록·채점", [sys.executable, "flow_track.py"]),
+        ("⑩ 검증 현황판 생성", [sys.executable, "status_page.py"]),
     ]
     for title, cmd in steps:
         print(f"\n{'=' * 70}\n{title}\n{'=' * 70}")
