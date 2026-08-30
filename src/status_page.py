@@ -215,6 +215,63 @@ def evenscan_sheet(db):
 <div class="twrap"><table><tr><th>종목</th><th class="opt">테마</th><th>진입</th><th>손절</th><th>거래대금</th><th class="opt">자리</th></tr>{body}</table></div>"""
 
 
+def flows_sheet():
+    """기관·외인 동반 순매수 지속 종목 — bt_flows ② 조건 그대로 (관찰용)."""
+    import tickers
+    flows_dir = ROOT / "data" / "flows"
+    if not flows_dir.exists():
+        return "<h2>관찰 수급</h2><p>수급 데이터 없음</p>"
+    code_name = {}
+    try:
+        for nm, info in tickers.table().items():
+            c = info.get("code") if isinstance(info, dict) else None
+            if c:
+                code_name[c] = nm
+    except Exception:  # noqa: BLE001
+        pass
+
+    hits = []
+    for path in flows_dir.glob("*.json"):
+        try:
+            fl = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        days = sorted(fl)[-5:]
+        if len(days) < 5:
+            continue
+        win = [fl[d] for d in days]
+        both = sum(1 for w in win if w[0] > 0 and w[1] > 0)
+        if both < 4:
+            continue
+        avg_val = sum((w[0] + w[1]) * w[2] for w in win) / 5
+        if avg_val < 1e8:
+            continue
+        d20 = sorted(fl)[-20:]
+        tval = sum(fl[d][2] * fl[d][3] for d in d20) / max(1, len(d20))
+        if tval < 30e8:
+            continue
+        code = path.stem
+        hits.append({"name": code_name.get(code, code), "close": win[-1][2],
+                     "both": both, "sum5": sum((w[0] + w[1]) * w[2] for w in win) / 1e8,
+                     "ratio_chg": win[-1][4] - win[0][4], "val": tval, "date": days[-1]})
+    hits.sort(key=lambda h: -h["sum5"])
+    asof = hits[0]["date"] if hits else ""
+    hits = hits[:25]
+    body = "".join(
+        f"<tr><td>{h['name']}</td><td>{h['close']:,.0f}</td><td>{h['both']}/5일</td>"
+        f"<td class='up'>{h['sum5']:,.0f}억</td>"
+        f"<td class='{pct_cls(h['ratio_chg'])} opt'>{h['ratio_chg']:+.2f}%p</td>"
+        f"<td>{h['val']/1e8:,.0f}억</td></tr>"
+        for h in hits) or "<tr><td colspan=6>해당 없음</td></tr>"
+    return f"""
+<h2>관찰 — 기관·외인 동반 순매수 지속 ({len(hits)}종목{', ' + asof[:4] + '.' + asof[4:6] + '.' + asof[6:] + ' 기준' if asof else ''})</h2>
+<div class="row">최근 5거래일 중 4일 이상 기관·외인 동반 순매수 + 일평균 순매수 1억+ + 거래대금 30억+.
+검증: 60일 후 +3.2%p·승률 +4.9%p 우위 (n=1,840) — 단 느린 신호(20일엔 무효)라 스윙~중장기
+관찰용. 상위 25종목, 5일 합산 순매수금액순. 매수 추천 아님.</div>
+<div class="twrap"><table><tr><th>종목</th><th>종가</th><th>동반매수</th><th>5일 순매수</th>
+<th class="opt">외인보유율 Δ</th><th>거래대금</th></tr>{body}</table></div>"""
+
+
 def box_sheet(db):
     # 지도 종목은 최근 급등군이라 좁은 박스가 없다 — 전체 시장 캐시로 스캔한다.
     # 박스는 주간 캐시(scan_gaps가 갱신) 기준, 임박 후보만 현재가를 새로 받는다.
@@ -358,6 +415,7 @@ def main() -> None:
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
         "저녁 스캔": evenscan_sheet(db),
         "관찰 박스": box_sheet(db),
+        "관찰 수급": flows_sheet(),
         "콜": calls_sheet(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
