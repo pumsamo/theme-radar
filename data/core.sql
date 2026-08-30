@@ -5281,7 +5281,7 @@ INSERT INTO "global_baseline" VALUES('2026-08-31','^GSPC','S&P500',7711.76,-0.25
 INSERT INTO "global_baseline" VALUES('2026-08-31','^IXIC','나스닥',26402.42,-0.52,'2026-08-28 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','^SOX','필라델피아 반도체',11469.66,-3.47,'2026-08-28 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','EWY','EWY(한국 ETF)',180.2,-1.07,'2026-08-28 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-08-31','KRW=X','원/달러',1377.45,-0.22,'2026-08-30 22:56Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-08-31','KRW=X','원/달러',1377.85,-0.19,'2026-08-30 23:56Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','^KS11','코스피(전 거래일)',6788.88,-1.79,'2026-08-28 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','^KQ11','코스닥(전 거래일)',838.41,0.09,'2026-08-28 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','KOSPI_REGIME','5일 -1.8% · 60일고점 -25.5%',-25.52,-1.79,NULL,'yahoo/regime');
@@ -5679,6 +5679,7 @@ INSERT INTO "news_signals" VALUES(2390,'2026-08-30','2026-08-30 06:30','연합�
 INSERT INTO "news_signals" VALUES(2391,'2026-08-30','2026-08-30 05:53','연합뉴스','AI 반도체·기판','호재',NULL,'원화 강세 힘받나…IIF "반도체 호조로 코로나 전 수준 회복"','(서울=연합뉴스) 임지우 기자 = 반도체 수출 호조와 한국은행의 선제적인 기준금리 인상에 원화 추가 강세 전망이 커지고 있다.','https://www.yna.co.kr/view/AKR20260829032700002',1.5);
 INSERT INTO "news_signals" VALUES(2392,'2026-08-30','2026-08-30 05:53','연합뉴스','반도체 소부장','호재',NULL,'원화 강세 힘받나…IIF "반도체 호조로 코로나 전 수준 회복"','(서울=연합뉴스) 임지우 기자 = 반도체 수출 호조와 한국은행의 선제적인 기준금리 인상에 원화 추가 강세 전망이 커지고 있다.','https://www.yna.co.kr/view/AKR20260829032700002',1.5);
 INSERT INTO "news_signals" VALUES(2393,'2026-08-29','2026-08-29 10:00','연합뉴스','제약바이오','호재','한미약품','[바이오사이언스] 석달 새 5조원 기술수출…한미약품 ''R&D의 힘''','(서울=연합뉴스) 신선미 기자 = 한미약품[128940]이 최근 석 달간 글로벌 제약사 제넨텍과 일라이 릴리에 최대 5조원 규모의 기술수출을 잇...','https://www.yna.co.kr/view/AKR20260828133400017',2.0);
+INSERT INTO "news_signals" VALUES(2398,'2026-08-31','2026-08-31 08:35','연합뉴스','데이터센터 전력','호재',NULL,'KB증권 "대한전선, 북미 수주 가속화 기대…목표가↑"','(서울=연합뉴스) 고은지 기자 = KB증권은 31일 대한전선[001440]에 대해 "내년부터 북미 수주 가속화가 기대된다"며 투자의견 ''매수''를...','https://www.yna.co.kr/view/AKR20260831023400008',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -7065,5 +7066,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',2393);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',2402);
 COMMIT;
