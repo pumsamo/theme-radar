@@ -94,6 +94,19 @@ def main() -> int:
     from datetime import datetime, timedelta, timezone
     now_kst = datetime.now(timezone(timedelta(hours=9)))
     if date == now_kst.date().isoformat() and now_kst.strftime("%H:%M") >= "08:50":
+        # 로컬 07:30 백업이 이미 오늘 브리핑을 발행했다면(docs에 존재·지연문 아님)
+        # 그걸 보존한다 — out/에 docs 내용을 복사해 워크플로 복사 단계가 무해해지게.
+        docs = Path(__file__).resolve().parent / "docs"
+        prior = docs / f"{date}.txt"
+        if prior.exists() and "지연 실행" not in prior.read_text(encoding="utf-8"):
+            report.OUT.mkdir(parents=True, exist_ok=True)
+            import shutil as _sh
+            for name in (f"{date}.txt", "latest.txt", "index.html", f"{date}.html"):
+                src = docs / name
+                if src.exists():
+                    _sh.copy2(src, report.OUT / name)
+            print(f"지연 실행({now_kst.strftime('%H:%M')} KST) — 로컬 발행 브리핑 보존, 덮어쓰기 생략")
+            return 0
         note = (f"[장전 브리핑] {date.replace('-', '.')} — 지연 실행 감지 "
                 f"({now_kst.strftime('%H:%M')} KST)\n{'-' * 58}\n"
                 "예약 시각(07:25)을 넘겨 개장 후에 실행됐다. 장중 시세로 만든 픽은\n"

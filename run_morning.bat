@@ -13,6 +13,10 @@ REM the daily run. After adding a new xlsx, run: python run_morning.py
 "%PY%" run_morning.py --skip-seed >> "logs\run_%date:~0,4%%date:~5,2%.log" 2>&1
 set CODE=%ERRORLEVEL%
 
+REM Publish local results to GitHub so the 07:40 Kakao reads today's briefing
+REM (cloud cron is chronically late; local run is the primary source now).
+if "%CODE%"=="0" "%PY%" src\push_morning.py >> "logs\run_%date:~0,4%%date:~5,2%.log" 2>&1
+
 if not "%CODE%"=="0" echo [%date% %time%] FAILED code=%CODE% >> "logs\errors.log"
 
 popd
