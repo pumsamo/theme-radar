@@ -302,8 +302,8 @@ def box_sheet(db):
 
     def cur_px(c):
         try:
-            bars = fetch_ohlc(c["code"], "20260810", today)
-            return c["code"], bars[-1]["close"] if bars else None
+            bars = fetch_ohlc(c["code"], "20260801", today)
+            return c["code"], bars if bars else None
         except Exception:  # noqa: BLE001
             return c["code"], None
     with ThreadPoolExecutor(8) as ex:
@@ -311,17 +311,32 @@ def box_sheet(db):
 
     hits = []
     for c in cand:
-        p = px.get(c["code"])
-        if not p:
+        bars = px.get(c["code"])
+        if not bars:
             continue
+        p = bars[-1]["close"]
         pct = (p / c["top"] - 1) * 100
-        if not (-3.0 <= pct <= 2.0):
+        # 매집 시그니처 (패턴 탐색 8/31 합격 가족): 연속양봉 + 조용한 거래량(0.7~2배)
+        streak = 0
+        for b in reversed(bars):
+            if b["close"] > b["open"]:
+                streak += 1
+            else:
+                break
+        prev_v = [b["volume"] for b in bars[:-1]][-14:]
+        volx = bars[-1]["volume"] / (sum(prev_v) / len(prev_v)) if prev_v else 0
+        quiet_up = streak >= 2 and 0.7 <= volx <= 2.0
+        if -3.0 <= pct <= 2.0:
+            state = "돌파 임박" + (" ⭐매집" if quiet_up else "")
+        elif -25.0 <= pct < -3.0 and quiet_up:
+            state = "매집 단계"
+        else:
             continue
         hits.append({"name": code_name.get(c["code"], c["code"]), "code": c["code"],
-                     "close": p, "ma": c["top"], "pct": pct,
-                     "val": c["val"], "width": c["width"]})
-    hits.sort(key=lambda h: -h["val"])
-    hits = hits[:25]
+                     "close": p, "ma": c["top"], "pct": pct, "val": c["val"],
+                     "width": c["width"], "state": state, "streak": streak, "volx": volx})
+    hits.sort(key=lambda h: (0 if "임박" in h["state"] else 1, -h["val"]))
+    hits = hits[:30]
 
     def op_black(code):
         try:
@@ -343,19 +358,23 @@ def box_sheet(db):
         fin = dict(ex.map(op_black, [h["code"] for h in hits]))
 
     body = "".join(
-        f"<tr><td>{h['name']}</td><td>{h['close']:,.0f}</td><td class='opt'>{h['ma']:,.0f}</td>"
-        f"<td class='{pct_cls(h['pct'])}'>{h['pct']:+.1f}%</td><td class='opt'>{h['width']:.0f}%</td>"
+        f"<tr><td>{h['name']}</td>"
+        f"<td class='{('up' if '임박' in h['state'] else '')}'>{h['state']}</td>"
+        f"<td>{h['close']:,.0f}</td>"
+        f"<td class='{pct_cls(h['pct'])}'>{h['pct']:+.1f}%</td>"
+        f"<td class='opt'>{h['streak']}양봉·{h['volx']:.1f}배</td>"
         f"<td>{h['val']/1e8:,.0f}억</td>"
         f"<td class='{('up' if fin[h['code']][0]=='흑자' else 'down' if fin[h['code']][0]=='적자' else '')}'>"
         f"{fin[h['code']][0]}({fin[h['code']][1]})</td></tr>"
         for h in hits) or "<tr><td colspan=7>해당 없음</td></tr>"
     return f"""
-<h2>관찰 — 좁은 박스 돌파 임박 ({len(hits)}종목)</h2>
-<div class="row">6개월(126일)간 폭 30% 미만 좁은 박스의 상단 −3%~+2% 구간에 있는 종목.
-백테스트 +0.104R로 A급 다음 2위 셋업 (계약 중이라 미채택 — 관찰만). 종가가 박스 상단을
-넘어 안착하면 유망 신호라는 게 검증 결과 (bt_box.py). 매수 추천 아님.</div>
-<div class="twrap"><table><tr><th>종목</th><th>종가</th><th class="opt">박스상단</th><th>상단 대비</th>
-<th class="opt">박스폭</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
+<h2>관찰 — 좁은 박스 ({len(hits)}종목)</h2>
+<div class="row">6개월(126일) 폭 30% 미만 좁은 박스 종목의 두 단계.
+<b>돌파 임박</b> = 상단 −3%~+2% (박스 돌파 +0.104R 검증). <b>매집 단계</b> = 박스 안(상단 −25%~−3%)에서
+연속양봉 2개↑ + 거래량 평소 수준(0.7~2배) — 8/31 패턴 자동 탐색 합격 가족(검증 +0.51R), 돌파 전
+조용한 매집 그림. 임박 종목에 ⭐매집이 함께 붙으면 두 신호 중첩. 관찰용 — 매수 추천 아님.</div>
+<div class="twrap"><table><tr><th>종목</th><th>상태</th><th>종가</th><th>상단 대비</th>
+<th class="opt">양봉·거래량</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
 
 
 def main() -> None:
