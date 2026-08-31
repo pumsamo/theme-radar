@@ -5281,10 +5281,10 @@ INSERT INTO "global_baseline" VALUES('2026-08-31','^GSPC','S&P500',7711.76,-0.25
 INSERT INTO "global_baseline" VALUES('2026-08-31','^IXIC','나스닥',26402.42,-0.52,'2026-08-28 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','^SOX','필라델피아 반도체',11469.66,-3.47,'2026-08-28 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-08-31','EWY','EWY(한국 ETF)',180.2,-1.07,'2026-08-28 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-08-31','KRW=X','원/달러',1377.85,-0.19,'2026-08-30 23:56Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-08-31','^KS11','코스피(전 거래일)',6788.88,-1.79,'2026-08-28 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-08-31','^KQ11','코스닥(전 거래일)',838.41,0.09,'2026-08-28 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-08-31','KOSPI_REGIME','5일 -1.8% · 60일고점 -25.5%',-25.52,-1.79,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-08-31','KRW=X','원/달러',1378.88,-0.11,'2026-08-31 00:38Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-08-31','^KS11','코스피(전 거래일)',6634.98,-2.27,'2026-08-31 00:18Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-08-31','^KQ11','코스닥(전 거래일)',812.47,-3.09,'2026-08-31 00:18Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-08-31','KOSPI_REGIME','5일 -0.9% · 60일고점 -27.2%',-27.2,-0.93,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-08-31','AAOI','광통신',106.23,-6.22,'2026-08-28 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-08-31','COHR','광통신',279.2,-5.48,'2026-08-28 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-08-31','LITE','광통신',895.0,-6.39,'2026-08-28 20:00Z','yahoo/ticker');
@@ -5680,6 +5680,19 @@ INSERT INTO "news_signals" VALUES(2391,'2026-08-30','2026-08-30 05:53','연합�
 INSERT INTO "news_signals" VALUES(2392,'2026-08-30','2026-08-30 05:53','연합뉴스','반도체 소부장','호재',NULL,'원화 강세 힘받나…IIF "반도체 호조로 코로나 전 수준 회복"','(서울=연합뉴스) 임지우 기자 = 반도체 수출 호조와 한국은행의 선제적인 기준금리 인상에 원화 추가 강세 전망이 커지고 있다.','https://www.yna.co.kr/view/AKR20260829032700002',1.5);
 INSERT INTO "news_signals" VALUES(2393,'2026-08-29','2026-08-29 10:00','연합뉴스','제약바이오','호재','한미약품','[바이오사이언스] 석달 새 5조원 기술수출…한미약품 ''R&D의 힘''','(서울=연합뉴스) 신선미 기자 = 한미약품[128940]이 최근 석 달간 글로벌 제약사 제넨텍과 일라이 릴리에 최대 5조원 규모의 기술수출을 잇...','https://www.yna.co.kr/view/AKR20260828133400017',2.0);
 INSERT INTO "news_signals" VALUES(2398,'2026-08-31','2026-08-31 08:35','연합뉴스','데이터센터 전력','호재',NULL,'KB증권 "대한전선, 북미 수주 가속화 기대…목표가↑"','(서울=연합뉴스) 고은지 기자 = KB증권은 31일 대한전선[001440]에 대해 "내년부터 북미 수주 가속화가 기대된다"며 투자의견 ''매수''를...','https://www.yna.co.kr/view/AKR20260831023400008',1.5);
+INSERT INTO "news_signals" VALUES(2403,'2026-08-31','2026-08-31 09:23','매일경제','가상화폐','호재','헥토파이낸셜','헥토파이낸셜 ‘사상 최대 실적’ 전망…스테이블코인 수혜주 주목','올해 매출 2213억·영업익 256억 전망 서클 결제 네트워크 CPN 국내 유일 파트너 디지털자산기본법 9월 중 발의 전망 AI 에이전트 결제 x402 생태계도 참여가상자산 산업 ..','https://www.mk.co.kr/news/stock/12140090',2.0);
+INSERT INTO "news_signals" VALUES(2404,'2026-08-31','2026-08-31 09:23','매일경제','스테이블코인','호재','헥토파이낸셜','헥토파이낸셜 ‘사상 최대 실적’ 전망…스테이블코인 수혜주 주목','올해 매출 2213억·영업익 256억 전망 서클 결제 네트워크 CPN 국내 유일 파트너 디지털자산기본법 9월 중 발의 전망 AI 에이전트 결제 x402 생태계도 참여가상자산 산업 ..','https://www.mk.co.kr/news/stock/12140090',2.0);
+INSERT INTO "news_signals" VALUES(2405,'2026-08-31','2026-08-31 09:22','매일경제','AI·재난안전','호재','엠젠솔루션','[MK 골든크로스 돌파종목 : 지구홀딩스(221800) & 엠젠솔루션(032790)]','안녕하세요. 국내 핫 이슈 종목을 분석해드리는 AI 기자 ‘MK시그널’ 입니다. MK시그널이 오늘 분석한 핫 이슈 골든크로스 종목은 지구홀딩스 & 엠젠솔루션 입니다. - 지구홀딩스..','https://www.mk.co.kr/news/stock/12140088',2.0);
+INSERT INTO "news_signals" VALUES(2406,'2026-08-31','2026-08-31 09:22','매일경제','재난안전','호재','엠젠솔루션','[MK 골든크로스 돌파종목 : 지구홀딩스(221800) & 엠젠솔루션(032790)]','안녕하세요. 국내 핫 이슈 종목을 분석해드리는 AI 기자 ‘MK시그널’ 입니다. MK시그널이 오늘 분석한 핫 이슈 골든크로스 종목은 지구홀딩스 & 엠젠솔루션 입니다. - 지구홀딩스..','https://www.mk.co.kr/news/stock/12140088',2.0);
+INSERT INTO "news_signals" VALUES(2407,'2026-08-31','2026-08-31 09:22','매일경제','재난','호재','엠젠솔루션','[MK 골든크로스 돌파종목 : 지구홀딩스(221800) & 엠젠솔루션(032790)]','안녕하세요. 국내 핫 이슈 종목을 분석해드리는 AI 기자 ‘MK시그널’ 입니다. MK시그널이 오늘 분석한 핫 이슈 골든크로스 종목은 지구홀딩스 & 엠젠솔루션 입니다. - 지구홀딩스..','https://www.mk.co.kr/news/stock/12140088',2.0);
+INSERT INTO "news_signals" VALUES(2408,'2026-08-31','2026-08-31 09:03','매일경제','지주·밸류업','호재','SK증권','“54만원 SK, 80만원 가능”…실적 개선 외에 증권사가 꼽은 이유가','SK증권은 31일 SK에 대해 SK에코플랜트를 중심으로 실적이 큰 폭으로 개선되는 가운데 자사주 소각과 특별배당 등 주주환원도 주가 재평가를 이끌 것으로 보인다며 투자의견 ‘매수’..','https://www.mk.co.kr/news/stock/12140074',1.5);
+INSERT INTO "news_signals" VALUES(2409,'2026-08-31','2026-08-31 09:03','매일경제','증권','호재','SK증권','“54만원 SK, 80만원 가능”…실적 개선 외에 증권사가 꼽은 이유가','SK증권은 31일 SK에 대해 SK에코플랜트를 중심으로 실적이 큰 폭으로 개선되는 가운데 자사주 소각과 특별배당 등 주주환원도 주가 재평가를 이끌 것으로 보인다며 투자의견 ‘매수’..','https://www.mk.co.kr/news/stock/12140074',1.5);
+INSERT INTO "news_signals" VALUES(2410,'2026-08-31','2026-08-31 09:03','매일경제','수급이벤트','호재','SK증권','“54만원 SK, 80만원 가능”…실적 개선 외에 증권사가 꼽은 이유가','SK증권은 31일 SK에 대해 SK에코플랜트를 중심으로 실적이 큰 폭으로 개선되는 가운데 자사주 소각과 특별배당 등 주주환원도 주가 재평가를 이끌 것으로 보인다며 투자의견 ‘매수’..','https://www.mk.co.kr/news/stock/12140074',1.5);
+INSERT INTO "news_signals" VALUES(2415,'2026-08-31','2026-08-31 09:32','연합뉴스','AI 반도체·기판','죽은테마',NULL,'7월 생산·소비 주춤…반도체 훈풍에 설비투자 5개월만에 껑충(종합)','(세종=연합뉴스) 김수현 안채원 송정은 기자 = 7월 산업생산과 소비가 주춤했다.','https://www.yna.co.kr/view/AKR20260831014452002',1.5);
+INSERT INTO "news_signals" VALUES(2416,'2026-08-31','2026-08-31 09:32','연합뉴스','반도체 소부장','죽은테마',NULL,'7월 생산·소비 주춤…반도체 훈풍에 설비투자 5개월만에 껑충(종합)','(세종=연합뉴스) 김수현 안채원 송정은 기자 = 7월 산업생산과 소비가 주춤했다.','https://www.yna.co.kr/view/AKR20260831014452002',1.5);
+INSERT INTO "news_signals" VALUES(2417,'2026-08-31','2026-08-31 09:23','연합뉴스','AI 반도체·기판','죽은테마','SK하이닉스,삼성전자','[특징주] 삼전·닉스, 미국발 삭풍에 장 초반 3%대 급락','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 31일 장 초반 3%대의 낙폭을 보인다','https://www.yna.co.kr/view/AKR20260831038800008',1.5);
+INSERT INTO "news_signals" VALUES(2418,'2026-08-31','2026-08-31 09:23','연합뉴스','반도체 소부장','죽은테마','SK하이닉스,삼성전자','[특징주] 삼전·닉스, 미국발 삭풍에 장 초반 3%대 급락','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 31일 장 초반 3%대의 낙폭을 보인다','https://www.yna.co.kr/view/AKR20260831038800008',1.5);
+INSERT INTO "news_signals" VALUES(2419,'2026-08-31','2026-08-31 09:22','연합뉴스','지주·밸류업','호재',NULL,'[특징주] DB손보, 주주환원 목표 상향에 장초반 강세','(서울=연합뉴스) 김유향 기자 = DB손해보험 주가가 기업가치 제고 계획 공시 영향으로 31일 장 초반 상승세다.','https://www.yna.co.kr/view/AKR20260831036900008',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -7066,5 +7079,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',2402);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',2421);
 COMMIT;
