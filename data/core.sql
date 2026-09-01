@@ -5465,10 +5465,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-01','^GSPC','S&P500',7686.14,-0.33
 INSERT INTO "global_baseline" VALUES('2026-09-01','^IXIC','나스닥',26370.89,-0.12,'2026-08-31 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-01','^SOX','필라델피아 반도체',11535.05,0.57,'2026-08-31 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-01','EWY','EWY(한국 ETF)',180.86,0.37,'2026-08-31 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','KRW=X','원/달러',1369.88,-0.53,'2026-09-01 00:48Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','^KS11','코스피(전 거래일)',6789.58,0.01,'2026-09-01 00:28Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','^KQ11','코스닥(전 거래일)',825.33,-1.56,'2026-09-01 00:28Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','KOSPI_REGIME','5일 +1.4% · 60일고점 -25.5%',-25.51,1.38,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-01','KRW=X','원/달러',1370.18,-0.74,'2026-09-01 01:18Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','^KS11','코스피(전 거래일)',6802.76,0.2,'2026-09-01 00:58Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','^KQ11','코스닥(전 거래일)',822.61,-1.88,'2026-09-01 00:58Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','KOSPI_REGIME','5일 +1.6% · 60일고점 -25.4%',-25.38,1.56,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-01','AAOI','광통신',107.69,1.37,'2026-08-31 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-01','COHR','광통신',277.83,-0.49,'2026-08-31 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-01','LITE','광통신',914.76,2.21,'2026-08-31 20:00Z','yahoo/ticker');
@@ -5905,6 +5905,10 @@ INSERT INTO "news_signals" VALUES(2793,'2026-09-01','2026-09-01 09:06','매경 �
 INSERT INTO "news_signals" VALUES(2794,'2026-09-01','2026-09-01 09:06','매경 기업','AI 반도체·기판','호재',NULL,'“소요기간 최대한 단축”…LH, 내달 용인 반도체 국가산단 조성 착공','사업자 선정 절차 획기적 단축 전월 벌목·문화재조사 등 사전공사 개시 보상절차도 연내 마무리한국토지주택공사(LH)가 다음달 용인 반도체 산단 1공구 조성공사를 착공한다. 1일 LH..','https://www.mk.co.kr/news/business/12140937',1.0);
 INSERT INTO "news_signals" VALUES(2795,'2026-09-01','2026-09-01 09:03','매경 기업','반도체 소부장','호재',NULL,'[속보] 반도체 8월 수출 466.5억달러…역대 최대','한국의 8월 수출액이 1000억달러에 육박하며 역대 세 번째로 높은 월간 실적을 기록했다. 특히 반도체 수출이 사상 최대치를 갈아치우며 전체 수출 증가세를 이끌었다. 산업통상부는 ..','https://www.mk.co.kr/news/business/12140935',1.0);
 INSERT INTO "news_signals" VALUES(2796,'2026-09-01','2026-09-01 09:03','매경 기업','AI 반도체·기판','호재',NULL,'[속보] 반도체 8월 수출 466.5억달러…역대 최대','한국의 8월 수출액이 1000억달러에 육박하며 역대 세 번째로 높은 월간 실적을 기록했다. 특히 반도체 수출이 사상 최대치를 갈아치우며 전체 수출 증가세를 이끌었다. 산업통상부는 ..','https://www.mk.co.kr/news/business/12140935',1.0);
+INSERT INTO "news_signals" VALUES(2814,'2026-09-01','2026-09-01 10:00','연합뉴스','게임','호재',NULL,'메리츠증권, ''AI 탑재·글로벌 커뮤니티'' 금융 플랫폼 MOUM 출시','(서울=연합뉴스) 김유아 기자 = 메리츠증권은 1일 서울 여의도 페어몬트 앰배서더 서울에서 론칭 행사를 열고 신규 금융 플랫폼 ''MOUM''(모음...','https://www.yna.co.kr/view/AKR20260901051200008',1.5);
+INSERT INTO "news_signals" VALUES(2831,'2026-09-01','2026-09-01 01:09','DART','조선·해운','호재','한화오션','(유가)한화오션 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260901800108',2.5);
+INSERT INTO "news_signals" VALUES(2832,'2026-09-01','2026-09-01 00:57','DART','데이터센터 전력','호재','삼성전기','(유가)삼성전기 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260901800106',2.5);
+INSERT INTO "news_signals" VALUES(2833,'2026-09-01','2026-09-01 00:57','DART','AI 반도체·기판','호재','삼성전기','(유가)삼성전기 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260901800106',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -7322,5 +7326,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',2799);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',2834);
 COMMIT;
