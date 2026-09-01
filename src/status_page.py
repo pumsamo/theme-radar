@@ -378,6 +378,25 @@ def box_sheet(db):
 <th class="opt">양봉·거래량</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
 
 
+def value_sheet():
+    path = ROOT / "data" / "value_screen.json"
+    if not path.exists():
+        return "<h2>가치 스크린</h2><p>데이터 없음 — 금요일 갱신 대기</p>"
+    d = json.loads(path.read_text(encoding="utf-8"))
+    body = "".join(
+        f"<tr><td>{i+1}</td><td>{r['name']}</td>"
+        f"<td class='up'>+{r['opg']:,.0f}%</td><td>{r['op']:,.0f}억</td>"
+        f"<td>{r['debt']:.0f}%</td><td class='opt'>{r['val']:,.0f}억</td></tr>"
+        for i, r in enumerate(d["rows"]))
+    return f"""
+<h2>가치 스크린 — 이익 성장 ∩ 저부채 TOP20 <span class="row">({d['asof']} 기준, 통과 {d['universe']}종목)</span></h2>
+<div class="row">최신 확정 연간 영업이익 증가율 상위 (2년 연속 흑자) + 부채비율 ≤120% + 거래대금 10억+.
+소급 검증: 단일 코호트 17개월 +38.4% (시장 +19.7%) — '유망' 단계라 성적 축적 중.
+<b>중장기(수개월~년) 관찰용</b> — 단기 트랙과 무관, 매수 추천 아님. 금요일 주간 갱신.</div>
+<div class="twrap"><table><tr><th>#</th><th>종목</th><th>영업이익 증가</th><th>영업이익</th>
+<th>부채비율</th><th class="opt">거래대금</th></tr>{body}</table></div>"""
+
+
 def main() -> None:
     today = _date.today()
     db = connect()
@@ -437,6 +456,7 @@ def main() -> None:
         "관찰 박스": box_sheet(db),
         "관찰 수급": flows_sheet(),
         "콜": calls_sheet(),
+        "가치": value_sheet(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
 <div class="twrap"><table>{ch_rows}</table></div>
