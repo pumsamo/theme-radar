@@ -5465,10 +5465,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-01','^GSPC','S&P500',7686.14,-0.33
 INSERT INTO "global_baseline" VALUES('2026-09-01','^IXIC','나스닥',26370.89,-0.12,'2026-08-31 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-01','^SOX','필라델피아 반도체',11535.05,0.57,'2026-08-31 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-01','EWY','EWY(한국 ETF)',180.86,0.37,'2026-08-31 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','KRW=X','원/달러',1368.78,-0.85,'2026-09-01 00:07Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','^KS11','코스피(전 거래일)',6788.88,-1.79,'2026-08-31 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','^KQ11','코스닥(전 거래일)',838.41,0.09,'2026-08-31 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-01','KOSPI_REGIME','5일 -1.8% · 60일고점 -25.5%',-25.52,-1.79,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-01','KRW=X','원/달러',1369.88,-0.53,'2026-09-01 00:48Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','^KS11','코스피(전 거래일)',6789.58,0.01,'2026-09-01 00:28Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','^KQ11','코스닥(전 거래일)',825.33,-1.56,'2026-09-01 00:28Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-01','KOSPI_REGIME','5일 +1.4% · 60일고점 -25.5%',-25.51,1.38,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-01','AAOI','광통신',107.69,1.37,'2026-08-31 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-01','COHR','광통신',277.83,-0.49,'2026-08-31 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-01','LITE','광통신',914.76,2.21,'2026-08-31 20:00Z','yahoo/ticker');
@@ -5895,6 +5895,16 @@ INSERT INTO "news_signals" VALUES(2760,'2026-08-31','2026-08-31 14:21','연합�
 INSERT INTO "news_signals" VALUES(2761,'2026-08-31','2026-08-31 22:05','매경 기업','이차전지·전해액','호재',NULL,'계약 단 한건으로 한해 목표 절반 채웠다…SK온 ‘ESS 파죽지세’','美서 배터리셀 1.5조원 수주 쾌거 전기차 캐즘, 신성장축 ESS로 돌파 연내 9GWh 추가계약 전망도SK온이 미국 네오볼타파워와 대규모 공급계약을 체결하면서 전기차 캐즘(일시적 ..','https://www.mk.co.kr/news/business/12140804',1.0);
 INSERT INTO "news_signals" VALUES(2762,'2026-08-31','2026-08-31 17:57','매경 기업','이차전지·전해액','호재',NULL,'K배터리 美 ESS 시장서 숨통 … SK온, 배터리셀 1.5조원 수주','국내 배터리 업체 SK온이 미국 에너지저장장치(ESS) 기업인 네오볼타파워에 9GWh 규모의 리튬인산철(LFP) 배터리 셀을 공급한다. 업계에서는 이번 계약 규모를 1조5000억원..','https://www.mk.co.kr/news/business/12140652',1.5);
 INSERT INTO "news_signals" VALUES(2763,'2026-09-01','2026-09-01 00:05','DART','건설','호재','일성건설','(유가)일성건설 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260901800059',2.5);
+INSERT INTO "news_signals" VALUES(2764,'2026-09-01','2026-09-01 09:43','매일경제','석유·에너지','호재','SK이노베이션','중동 긴장 재고조에 정유주 ‘들썩’…SK이노베이션 7%대 급등','미국과 이란 간 무력 충돌이 재개되면서 국제유가가 급등하자 정유주가 1일 장 초반 일제히 강세를 보이고 있다. 이날 오전 9시 31분 현재 SK이노베이션은 전일 대비 9200원(7..','https://www.mk.co.kr/news/stock/12140976',2.0);
+INSERT INTO "news_signals" VALUES(2765,'2026-09-01','2026-09-01 09:23','매일경제','엔터·미디어','호재','에스엠','글로벌에스엠, 2분기 영업익 181만달러…전분기比 85.2%↑','전장부품 호조·고부가 제품 확대 이차전지·로봇 신사업 가속정밀 금속 제조 전문기업 글로벌에스엠이 전장부품 판매 호조에 힘입어 지난 2분기 실적 개선을 이뤄냈다. 글로벌에스엠은 2분..','https://www.mk.co.kr/news/stock/12140956',1.5);
+INSERT INTO "news_signals" VALUES(2781,'2026-09-01','2026-09-01 09:37','연합뉴스','석유·에너지','호재','SK이노베이션','[특징주] SK온 1.5조 배터리셀 수주 소식에 SK이노 장초반 급등','(서울=연합뉴스) 김유향 기자 = SK이노베이션[096770]이 자회사 SK온의 미국 에너지저장장치(ESS)용 배터리셀 수주 소식에 1일 장 초...','https://www.yna.co.kr/view/AKR20260901052000008',1.5);
+INSERT INTO "news_signals" VALUES(2782,'2026-09-01','2026-09-01 09:37','연합뉴스','이차전지·전해액','호재','SK이노베이션','[특징주] SK온 1.5조 배터리셀 수주 소식에 SK이노 장초반 급등','(서울=연합뉴스) 김유향 기자 = SK이노베이션[096770]이 자회사 SK온의 미국 에너지저장장치(ESS)용 배터리셀 수주 소식에 1일 장 초...','https://www.yna.co.kr/view/AKR20260901052000008',2.0);
+INSERT INTO "news_signals" VALUES(2783,'2026-09-01','2026-09-01 09:30','연합뉴스','반도체 소부장','호재',NULL,'[2보] 8월 수출 983억달러로 역대 3위…반도체 사상 최대','(서울=연합뉴스) 신창용 기자 = 한국이 지난달 1천억달러에 육박하는 수출 실적을 거뒀다.','https://www.yna.co.kr/view/AKR20260901038051003',1.5);
+INSERT INTO "news_signals" VALUES(2784,'2026-09-01','2026-09-01 09:30','연합뉴스','AI 반도체·기판','호재',NULL,'[2보] 8월 수출 983억달러로 역대 3위…반도체 사상 최대','(서울=연합뉴스) 신창용 기자 = 한국이 지난달 1천억달러에 육박하는 수출 실적을 거뒀다.','https://www.yna.co.kr/view/AKR20260901038051003',1.5);
+INSERT INTO "news_signals" VALUES(2793,'2026-09-01','2026-09-01 09:06','매경 기업','반도체 소부장','호재',NULL,'“소요기간 최대한 단축”…LH, 내달 용인 반도체 국가산단 조성 착공','사업자 선정 절차 획기적 단축 전월 벌목·문화재조사 등 사전공사 개시 보상절차도 연내 마무리한국토지주택공사(LH)가 다음달 용인 반도체 산단 1공구 조성공사를 착공한다. 1일 LH..','https://www.mk.co.kr/news/business/12140937',1.0);
+INSERT INTO "news_signals" VALUES(2794,'2026-09-01','2026-09-01 09:06','매경 기업','AI 반도체·기판','호재',NULL,'“소요기간 최대한 단축”…LH, 내달 용인 반도체 국가산단 조성 착공','사업자 선정 절차 획기적 단축 전월 벌목·문화재조사 등 사전공사 개시 보상절차도 연내 마무리한국토지주택공사(LH)가 다음달 용인 반도체 산단 1공구 조성공사를 착공한다. 1일 LH..','https://www.mk.co.kr/news/business/12140937',1.0);
+INSERT INTO "news_signals" VALUES(2795,'2026-09-01','2026-09-01 09:03','매경 기업','반도체 소부장','호재',NULL,'[속보] 반도체 8월 수출 466.5억달러…역대 최대','한국의 8월 수출액이 1000억달러에 육박하며 역대 세 번째로 높은 월간 실적을 기록했다. 특히 반도체 수출이 사상 최대치를 갈아치우며 전체 수출 증가세를 이끌었다. 산업통상부는 ..','https://www.mk.co.kr/news/business/12140935',1.0);
+INSERT INTO "news_signals" VALUES(2796,'2026-09-01','2026-09-01 09:03','매경 기업','AI 반도체·기판','호재',NULL,'[속보] 반도체 8월 수출 466.5억달러…역대 최대','한국의 8월 수출액이 1000억달러에 육박하며 역대 세 번째로 높은 월간 실적을 기록했다. 특히 반도체 수출이 사상 최대치를 갈아치우며 전체 수출 증가세를 이끌었다. 산업통상부는 ..','https://www.mk.co.kr/news/business/12140935',1.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -7312,5 +7322,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',2763);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',2799);
 COMMIT;
