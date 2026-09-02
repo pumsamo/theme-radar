@@ -378,6 +378,89 @@ def box_sheet(db):
 <th class="opt">양봉·거래량</th><th>거래대금</th><th>실적</th></tr>{body}</table></div>"""
 
 
+def holdings_sheet():
+    """사용자 실계좌 보유 관찰 — 자리 3요건·수급 방향 자동 추적 (매도·매수 신호 아님)."""
+    path = ROOT / "config" / "holdings.json"
+    if not path.exists():
+        return "<h2>보유 관찰</h2><p>데이터 없음</p>"
+    conf = json.loads(path.read_text(encoding="utf-8"))
+    today = _date.today().strftime("%Y%m%d")
+
+    def rsi14(cl):
+        g = l = 0.0
+        for i in range(-14, 0):
+            d = cl[i] - cl[i - 1]
+            g += max(d, 0)
+            l += max(-d, 0)
+        return 100.0 if l == 0 else 100 - 100 / (1 + g / l)
+
+    def load(h):
+        try:
+            bars = fetch_ohlc(h["code"], "20251001", today)
+            return h["code"], bars if len(bars) >= 60 else None
+        except Exception:  # noqa: BLE001
+            return h["code"], None
+    with ThreadPoolExecutor(6) as ex:
+        px = dict(ex.map(load, conf["holdings"]))
+
+    rows, tot_val, tot_cost = [], 0.0, 0.0
+    for h in conf["holdings"]:
+        bars = px.get(h["code"])
+        cost = h["shares"] * h["avg"]
+        tot_cost += cost
+        if not bars:
+            rows.append(f"<tr><td>{h['name']}</td><td colspan=7>시세 조회 실패</td></tr>")
+            tot_val += cost
+            continue
+        cl = [b["close"] for b in bars]
+        close = cl[-1]
+        val = h["shares"] * close
+        tot_val += val
+        pnl = val - cost
+        vs = (close / h["avg"] - 1) * 100
+        off = (close / max(b["high"] for b in bars[-60:]) - 1) * 100
+        disp = close / (sum(cl[-20:]) / 20)
+        r = rsi14(cl)
+        ok = sum((-15 <= off <= -3, 0.95 <= disp <= 1.20, 45 <= r <= 75))
+        # 수급 방향 (최근 5거래일, collect_flows 데이터)
+        sup, scls = "—", ""
+        fp = ROOT / "data" / "flows" / f"{h['code']}.json"
+        if fp.exists():
+            try:
+                fl = json.loads(fp.read_text(encoding="utf-8"))
+                win = [fl[d] for d in sorted(fl)[-5:]]
+                inst = sum(w[0] for w in win)
+                frgn = sum(w[1] for w in win)
+                if inst > 0 and frgn > 0:
+                    sup, scls = "동반 매수", "up"
+                elif inst < 0 and frgn < 0:
+                    sup, scls = "동반 매도", "down"
+                else:
+                    sup = f"{'기관+' if inst > 0 else '기관−'} {'외인+' if frgn > 0 else '외인−'}"
+            except Exception:  # noqa: BLE001
+                pass
+        rows.append(
+            f"<tr><td>{h['name']}</td><td class='{pct_cls(vs)}'>{vs:+.1f}%</td>"
+            f"<td class='{pct_cls(pnl)}'>{won(pnl)}원</td>"
+            f"<td class='opt {pct_cls(off)}'>{off:+.1f}%</td>"
+            f"<td class='opt'>{disp:.2f}</td><td class='opt'>{r:.0f}</td>"
+            f"<td class='{('up' if ok == 3 else '')}'>{ok}/3</td>"
+            f"<td class='{scls}'>{sup}</td></tr>")
+    tret = (tot_val / tot_cost - 1) * 100 if tot_cost else 0
+    return f"""
+<h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 ({conf['asof']} 등록)</h2>
+<div class="cards"><div class="card">
+  <div class="big {pct_cls(tret)}">{tot_val:,.0f}<span class="unit">원</span></div>
+  <div class="sub {pct_cls(tret)}">{tret:+.2f}% ({won(tot_val - tot_cost)}원)</div>
+  <div class="row">매입원금 {tot_cost:,.0f}원 · 매일 저녁 자동 갱신</div>
+</div></div>
+<div class="row">자리 = A급 3요건(고점比 −15~−3% · 이격 0.95~1.20 · RSI 45~75) 충족 수.
+수급 = 최근 5거래일 기관·외인 순매수 방향. 검증 참고: 동반 매수 지속은 60일 +3.2%p 유망,
+동반 매도 지속은 회피 신호. <b>추적 기록일 뿐 매도·매수 신호 아님 — 판단·실행은 본인.</b></div>
+<div class="twrap"><table><tr><th>종목</th><th>평단比</th><th>평가손익</th><th class="opt">고점比</th>
+<th class="opt">이격</th><th class="opt">RSI</th><th>자리</th><th>수급 5일</th></tr>{"".join(rows)}</table></div>"""
+
+
 def value_sheet():
     path = ROOT / "data" / "value_screen.json"
     if not path.exists():
@@ -452,6 +535,7 @@ def main() -> None:
         "아침 픽": picks_sheet(db),
         "계좌①": acct_sheet(a10, "가상계좌 ① — 종자돈 1,000만 (리스크 10만/건)"),
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
+        "보유 관찰": holdings_sheet(),
         "저녁 스캔": evenscan_sheet(db),
         "관찰 박스": box_sheet(db),
         "관찰 수급": flows_sheet(),
