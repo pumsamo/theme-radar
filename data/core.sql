@@ -5891,10 +5891,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-02','^GSPC','S&P500',7631.47,-0.71
 INSERT INTO "global_baseline" VALUES('2026-09-02','^IXIC','나스닥',26099.77,-1.03,'2026-09-01 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-02','^SOX','필라델피아 반도체',11288.61,-2.14,'2026-09-01 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-02','EWY','EWY(한국 ETF)',175.8,-2.8,'2026-09-01 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-02','KRW=X','원/달러',1374.17,0.55,'2026-09-01 23:34Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-02','^KS11','코스피(전 거래일)',6820.02,-1.34,'2026-09-01 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-02','^KQ11','코스닥(전 거래일)',834.29,-0.4,'2026-09-01 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-02','KOSPI_REGIME','5일 -1.3% · 60일고점 -25.2%',-25.17,-1.34,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-02','KRW=X','원/달러',1370.98,0.32,'2026-09-02 00:17Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-02','^KS11','코스피(전 거래일)',6820.02,0.46,'2026-09-01 09:05Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-02','^KQ11','코스닥(전 거래일)',834.29,-0.49,'2026-09-01 09:05Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-02','KOSPI_REGIME','5일 +1.8% · 60일고점 -25.2%',-25.17,1.84,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-02','AAOI','광통신',103.39,-3.99,'2026-09-01 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-02','COHR','광통신',272.03,-2.09,'2026-09-01 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-02','LITE','광통신',868.95,-5.01,'2026-09-01 20:00Z','yahoo/ticker');
@@ -6361,6 +6361,10 @@ INSERT INTO "news_signals" VALUES(3156,'2026-09-02','2026-09-02 08:12','연합�
 INSERT INTO "news_signals" VALUES(3157,'2026-09-02','2026-09-02 08:12','연합뉴스','데이터센터 전력','호재','삼성전기','IBK증권, 삼성전기 1조원대 계약에 "MLCC 선점 경쟁 본격화"','(서울=연합뉴스) 황철환 기자 = IBK투자증권은 삼성전기[009150]의 1조원대 인공지능(AI) 서버용 적층세라믹캐패시터(MLCC) 공급계약...','https://www.yna.co.kr/view/AKR20260902023900008',1.5);
 INSERT INTO "news_signals" VALUES(3173,'2026-09-01','2026-09-01 23:09','DART','수소에너지·연료전지','호재','두산퓨얼셀','(유가)두산퓨얼셀 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260902800020',2.5);
 INSERT INTO "news_signals" VALUES(3174,'2026-09-01','2026-09-01 23:09','DART','연료전지','호재','두산퓨얼셀','(유가)두산퓨얼셀 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260902800020',2.5);
+INSERT INTO "news_signals" VALUES(3175,'2026-09-02','2026-09-02 08:44','매일경제','반도체 소부장','호재','SFA반도체,테스','“HBM만 보지 마세요”…반도체 증설 본격화, 후공정주도 소·부·장 볕든다 [오늘 나온 보고서]','하나증권 “DRAM 웨이퍼 투입 2027년까지 15% 증가” HBM이 후공정 캐파 차지하며 범용 패키징·테스트 외주화 4분기부터 소재·부품·테스트로 증설 수혜 확산 SFA반도체·에..','https://www.mk.co.kr/news/stock/12141948',2.0);
+INSERT INTO "news_signals" VALUES(3176,'2026-09-02','2026-09-02 08:44','매일경제','AI 반도체·기판','호재','SFA반도체,테스','“HBM만 보지 마세요”…반도체 증설 본격화, 후공정주도 소·부·장 볕든다 [오늘 나온 보고서]','하나증권 “DRAM 웨이퍼 투입 2027년까지 15% 증가” HBM이 후공정 캐파 차지하며 범용 패키징·테스트 외주화 4분기부터 소재·부품·테스트로 증설 수혜 확산 SFA반도체·에..','https://www.mk.co.kr/news/stock/12141948',2.0);
+INSERT INTO "news_signals" VALUES(3189,'2026-09-02','2026-09-02 09:01','연합뉴스','원전·SMR','호재',NULL,'[한·중앙아를 잇다]④ 가스전·원전 수주 넘어…에너지 시장서 찾는 새 길','(투르크멘바시[투르크메니스탄]·알마티[카자흐스탄]=연합뉴스) 성도현 기자 = 카스피해 연안 투르크메니스탄 서부의 ''키얀리 폴리머 플랜트''는 현대...','https://www.yna.co.kr/view/AKR20260826113900371',1.5);
+INSERT INTO "news_signals" VALUES(3209,'2026-09-02','2026-09-02 00:03','DART','원전·SMR','호재','SNT에너지','(유가)SNT에너지 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260902800049',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -7812,5 +7816,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',3174);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',3211);
 COMMIT;
