@@ -18,15 +18,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 
+# encoding 명시 필수: 미지정 시 Windows cp949로 자식 출력을 읽다가 한글 UTF-8 바이트에서
+# UnicodeDecodeError → stdout=None → crash (9/3 첫 실전에서 발행 전체가 죽은 원인).
 def sh(*args, timeout=180):
-    return subprocess.run(args, cwd=ROOT, capture_output=True, text=True, timeout=timeout)
+    return subprocess.run(args, cwd=ROOT, capture_output=True, text=True,
+                          encoding="utf-8", errors="replace", timeout=timeout)
 
 
 def main() -> int:
     # ① DB → core.sql
-    r = subprocess.run([sys.executable, str(ROOT / "src" / "db_text.py"), "dump"],
-                       cwd=ROOT / "src", capture_output=True, text=True)
-    print(r.stdout.strip() or r.stderr.strip())
+    r = subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "src" / "db_text.py"), "dump"],
+                       cwd=ROOT / "src", capture_output=True, text=True,
+                       encoding="utf-8", errors="replace")
+    print((r.stdout or "").strip() or (r.stderr or "").strip())
 
     # ② out → docs (워크플로의 복사 단계와 동일)
     docs = ROOT / "docs"
