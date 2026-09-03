@@ -403,13 +403,13 @@ def holdings_sheet():
     with ThreadPoolExecutor(6) as ex:
         px = dict(ex.map(load, conf["holdings"]))
 
-    rows, tot_val, tot_cost = [], 0.0, 0.0
+    rows, tot_val, tot_cost, breaches = [], 0.0, 0.0, []
     for h in conf["holdings"]:
         bars = px.get(h["code"])
         cost = h["shares"] * h["avg"]
         tot_cost += cost
         if not bars:
-            rows.append(f"<tr><td>{h['name']}</td><td colspan=7>시세 조회 실패</td></tr>")
+            rows.append(f"<tr><td>{h['name']}</td><td colspan=8>시세 조회 실패</td></tr>")
             tot_val += cost
             continue
         cl = [b["close"] for b in bars]
@@ -439,9 +439,18 @@ def holdings_sheet():
                     sup = f"{'기관+' if inst > 0 else '기관−'} {'외인+' if frgn > 0 else '외인−'}"
             except Exception:  # noqa: BLE001
                 pass
+        stop = h.get("stop")
+        if stop:
+            breached = close <= stop
+            if breached:
+                breaches.append(h["name"])
+            stop_cell = f"<td class='{('down' if breached else '')}'>{stop:,.0f}{' ⚠이탈' if breached else ''}</td>"
+        else:
+            stop_cell = "<td class='row'>—</td>"
         rows.append(
             f"<tr><td>{h['name']}</td><td class='{pct_cls(vs)}'>{vs:+.1f}%</td>"
             f"<td class='{pct_cls(pnl)}'>{won(pnl)}원</td>"
+            f"{stop_cell}"
             f"<td class='opt {pct_cls(off)}'>{off:+.1f}%</td>"
             f"<td class='opt'>{disp:.2f}</td><td class='opt'>{r:.0f}</td>"
             f"<td class='{('up' if ok == 3 else '')}'>{ok}/3</td>"
@@ -454,19 +463,26 @@ def holdings_sheet():
         items = " · ".join(f"{r['date'][5:]} {r['name']} {won(r['pnl'])}원({r['pct']:+.1f}%)"
                            for r in realized[-5:])
         rline = f"<div class='row'>실현 확정 {len(realized)}건 합계 <span class='{pct_cls(rsum)}'>{won(rsum)}원</span> — {items}</div>"
+    n_stop = sum(1 for h in conf["holdings"] if h.get("stop"))
+    bline = (f"<div class='row down'>⚠ 손절선 이탈: {', '.join(breaches)} — 종가 기준, 알림일 뿐 자동 매도 아님</div>"
+             if breaches else "")
     return f"""
 <h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 ({conf['asof']} 갱신)</h2>
 <div class="cards"><div class="card">
   <div class="big {pct_cls(tret)}">{tot_val:,.0f}<span class="unit">원</span></div>
   <div class="sub {pct_cls(tret)}">{tret:+.2f}% ({won(tot_val - tot_cost)}원)</div>
-  <div class="row">매입원금 {tot_cost:,.0f}원 · 매일 저녁 자동 갱신</div>
+  <div class="row">매입원금 {tot_cost:,.0f}원 · 손절선 등록 {n_stop}/{len(conf['holdings'])}종목 · 매일 저녁 자동 갱신</div>
 </div></div>
 {rline}
+{bline}
 <div class="row">자리 = A급 3요건(고점比 −15~−3% · 이격 0.95~1.20 · RSI 45~75) 충족 수.
 수급 = 최근 5거래일 기관·외인 순매수 방향. 검증 참고: 동반 매수 지속은 60일 +3.2%p 유망,
-동반 매도 지속은 회피 신호. <b>추적 기록일 뿐 매도·매수 신호 아님 — 판단·실행은 본인.</b></div>
-<div class="twrap"><table><tr><th>종목</th><th>평단比</th><th>평가손익</th><th class="opt">고점比</th>
-<th class="opt">이격</th><th class="opt">RSI</th><th>자리</th><th>수급 5일</th></tr>{"".join(rows)}</table></div>"""
+동반 매도 지속은 회피 신호. 손절선은 본인이 정한 값을 config/holdings.json에 등록 —
+종가가 그 아래로 마감하면 '이탈'로 표시(자동 매도 아님, 알림용). <b>추적 기록일 뿐 매도·매수
+신호 아님 — 판단·실행은 본인.</b></div>
+<div class="twrap"><table><tr><th>종목</th><th>평단比</th><th>평가손익</th><th>손절선</th>
+<th class="opt">고점比</th><th class="opt">이격</th><th class="opt">RSI</th><th>자리</th>
+<th>수급 5일</th></tr>{"".join(rows)}</table></div>"""
 
 
 def value_sheet():

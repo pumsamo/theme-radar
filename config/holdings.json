@@ -1,20 +1,20 @@
 {
-  "_note": "사용자 실계좌 보유 관찰 (스크린샷 기준 등록·갱신). 자리·수급 추적 전용 — 매수·매도 신호 아님, 판단은 본인. 수량·평단 변동 시 여기 갱신. realized = 매도로 확정한 실현 손익 기록.",
+  "_note": "사용자 실계좌 보유 관찰 (스크린샷 기준 등록·갱신). 자리·수급 추적 전용 — 매수·매도 신호 아님, 판단은 본인. 수량·평단 변동 시 여기 갱신. realized = 매도로 확정한 실현 손익 기록. stop = 사용자 본인 손절 기준가(null이면 미설정, 시트엔 '—'). 종가가 stop 이하로 마감하면 시트가 '이탈' 표시 — 자동 매도 아님, 알림용.",
   "asof": "2026-09-03",
   "holdings": [
-    {"name": "현대차", "code": "005380", "shares": 26, "avg": 481307},
-    {"name": "삼성전자", "code": "005930", "shares": 25, "avg": 259066},
-    {"name": "대한광통신", "code": "010170", "shares": 300, "avg": 13283},
-    {"name": "대원전선", "code": "006340", "shares": 300, "avg": 14376},
-    {"name": "한화오션", "code": "042660", "shares": 40, "avg": 91500},
-    {"name": "광동제약", "code": "009290", "shares": 500, "avg": 6220},
-    {"name": "코스모로보틱스", "code": "439960", "shares": 250, "avg": 20250},
-    {"name": "오이솔루션", "code": "138080", "shares": 150, "avg": 24900},
-    {"name": "한미반도체", "code": "042700", "shares": 13, "avg": 244700},
-    {"name": "SK이터닉스", "code": "475150", "shares": 50, "avg": 52320},
-    {"name": "현대건설", "code": "000720", "shares": 20, "avg": 121600},
-    {"name": "두산에너빌리티", "code": "034020", "shares": 15, "avg": 79100},
-    {"name": "포스코DX", "code": "022100", "shares": 10, "avg": 23525}
+    {"name": "현대차", "code": "005380", "shares": 26, "avg": 481307, "stop": null},
+    {"name": "삼성전자", "code": "005930", "shares": 25, "avg": 259066, "stop": null},
+    {"name": "대한광통신", "code": "010170", "shares": 300, "avg": 13283, "stop": null},
+    {"name": "대원전선", "code": "006340", "shares": 300, "avg": 14376, "stop": null},
+    {"name": "한화오션", "code": "042660", "shares": 40, "avg": 91500, "stop": null},
+    {"name": "광동제약", "code": "009290", "shares": 500, "avg": 6220, "stop": null},
+    {"name": "코스모로보틱스", "code": "439960", "shares": 250, "avg": 20250, "stop": null},
+    {"name": "오이솔루션", "code": "138080", "shares": 150, "avg": 24900, "stop": null},
+    {"name": "한미반도체", "code": "042700", "shares": 13, "avg": 244700, "stop": null},
+    {"name": "SK이터닉스", "code": "475150", "shares": 50, "avg": 52320, "stop": null},
+    {"name": "현대건설", "code": "000720", "shares": 20, "avg": 121600, "stop": null},
+    {"name": "두산에너빌리티", "code": "034020", "shares": 15, "avg": 79100, "stop": null},
+    {"name": "포스코DX", "code": "022100", "shares": 10, "avg": 23525, "stop": null}
   ],
   "realized": [
     {"date": "2026-09-03", "name": "원익", "code": "032940", "shares": 300, "avg": 8240, "pnl": 155971, "pct": 6.31, "note": "전량 매도 — 보유 관찰 첫 실현"}
