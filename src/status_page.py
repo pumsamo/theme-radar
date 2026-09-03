@@ -447,13 +447,21 @@ def holdings_sheet():
             f"<td class='{('up' if ok == 3 else '')}'>{ok}/3</td>"
             f"<td class='{scls}'>{sup}</td></tr>")
     tret = (tot_val / tot_cost - 1) * 100 if tot_cost else 0
+    realized = conf.get("realized", [])
+    rsum = sum(r["pnl"] for r in realized)
+    rline = ""
+    if realized:
+        items = " · ".join(f"{r['date'][5:]} {r['name']} {won(r['pnl'])}원({r['pct']:+.1f}%)"
+                           for r in realized[-5:])
+        rline = f"<div class='row'>실현 확정 {len(realized)}건 합계 <span class='{pct_cls(rsum)}'>{won(rsum)}원</span> — {items}</div>"
     return f"""
-<h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 ({conf['asof']} 등록)</h2>
+<h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 ({conf['asof']} 갱신)</h2>
 <div class="cards"><div class="card">
   <div class="big {pct_cls(tret)}">{tot_val:,.0f}<span class="unit">원</span></div>
   <div class="sub {pct_cls(tret)}">{tret:+.2f}% ({won(tot_val - tot_cost)}원)</div>
   <div class="row">매입원금 {tot_cost:,.0f}원 · 매일 저녁 자동 갱신</div>
 </div></div>
+{rline}
 <div class="row">자리 = A급 3요건(고점比 −15~−3% · 이격 0.95~1.20 · RSI 45~75) 충족 수.
 수급 = 최근 5거래일 기관·외인 순매수 방향. 검증 참고: 동반 매수 지속은 60일 +3.2%p 유망,
 동반 매도 지속은 회피 신호. <b>추적 기록일 뿐 매도·매수 신호 아님 — 판단·실행은 본인.</b></div>
