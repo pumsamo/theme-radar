@@ -5395,7 +5395,7 @@ INSERT INTO "candidates" VALUES('2026-09-03','008930','한미사이언스',NULL,
 INSERT INTO "candidates" VALUES('2026-09-03','096770','SK이노베이션',NULL,'flows','fwatch','동반 4/5일 · 5일 순매수 2,110억','동반 순매수 지속',NULL,NULL,NULL,NULL,NULL,2110.309316,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','317400','자이에스앤디','데이터센터 전력','news','pick','A급 자리 · 거래대금 179억 · 거래량 0.8배 · 고점 대비 -6% · 이격 1.12 · RSI 63','A급 자리',11480.0,9530.0,15380.0,17330.0,2.0,2.83,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','162300','신스틸','데이터센터 전력','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',2110.0,1897.0,2535.0,2750.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-04','053260','금강철강','데이터센터 전력','news','pick','A급 자리 · 거래대금 80억 · 거래량 5.5배 · 고점 대비 -12% · 이격 1.15 · RSI 70','A급 자리',7060.0,5590.0,10000.0,11470.0,2.0,7.52,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-04','053260','금강철강','데이터센터 전력','news','pick','A급 자리 · 거래대금 80억 · 거래량 5.5배 · 고점 대비 -12% · 이격 1.15 · RSI 70','A급 자리',7060.0,5590.0,10000.0,11470.0,2.0,7.54,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','320000','한울반도체','데이터센터 전력','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','457600','벡트','데이터센터 전력','news','pool','유동성 미달(11억) · 거래 위축','A급 자리',5470.0,4430.0,7550.0,8590.0,2.0,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','432470','케이엔에스','데이터센터 전력','news','pool','거래 위축','A급 자리',10600.0,8330.0,15140.0,17410.0,2.0,0.0,'죽은테마 신호 혼재','ok');
@@ -5433,7 +5433,7 @@ INSERT INTO "candidates" VALUES('2026-09-04','060370','LS마린솔루션','데�
 INSERT INTO "candidates" VALUES('2026-09-04','109610','에스와이','데이터센터 전력','news','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','365330','에스와이스틸텍','데이터센터 전력','news','pool','60일 고점 대비 -42% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-04','033100','제룡전기','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (0/3 충족)','B급 (0/3 충족)',45650.0,40450.0,56000.0,61200.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-04','009150','삼성전기','AI 반도체·기판','news','pool','60일 고점 대비 -44% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-04','009150','삼성전기','AI 반도체·기판','news','pool','60일 고점 대비 -44% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','007660','이수페타시스','AI 반도체·기판','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',114700.0,94400.0,155300.0,175600.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','007810','코리아써키트','AI 반도체·기판','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','412350','레이저쎌','반도체 소부장','news','pool','유동성 미달(10억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',5700.0,4560.0,7980.0,9120.0,2.0,0.0,NULL,'ok');
@@ -5661,7 +5661,7 @@ INSERT INTO "candidates" VALUES('2026-09-04','034020','두산에너빌리티','�
 INSERT INTO "candidates" VALUES('2026-09-04','105840','우진','원전·SMR','news','pool','60일 고점 대비 -40% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','094820','일진파워','원전·SMR','news','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간 · 유동성 미달(15억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','051600','한전KPS','원전·SMR','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',45750.0,42700.0,51800.0,54900.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-04','028670','팬오션','조선·해운','news','pick','A급 자리 · 거래대금 246억 · 거래량 1.8배 · 고점 대비 -9% · 이격 1.02 · RSI 56','A급 자리',6110.0,5380.0,7570.0,8300.0,2.0,3.83,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-04','028670','팬오션','조선·해운','news','pick','A급 자리 · 거래대금 246억 · 거래량 1.8배 · 고점 대비 -9% · 이격 1.02 · RSI 56','A급 자리',6110.0,5380.0,7570.0,8300.0,2.0,3.84,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','023790','동일스틸럭스','조선·해운','news','pool','60일 고점 대비 -44% — 검증상 승률 33% 이하 구간 · 유동성 미달(9억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','010140','삼성중공업','조선·해운','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',21950.0,20350.0,25150.0,26750.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','465770','STX그린로지스','조선·해운','news','pool','60일 고점 대비 -34% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -6857,7 +6857,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-04','^GSPC','S&P500',7747.71,1.06,
 INSERT INTO "global_baseline" VALUES('2026-09-04','^IXIC','나스닥',26584.06,1.4,'2026-09-03 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-04','^SOX','필라델피아 반도체',11352.13,0.11,'2026-09-03 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-04','EWY','EWY(한국 ETF)',180.56,0.95,'2026-09-03 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-04','KRW=X','원/달러',1356.01,-0.18,'2026-09-03 22:50Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-04','KRW=X','원/달러',1356.0,-0.18,'2026-09-03 23:32Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-04','^KS11','코스피(전 거래일)',6562.72,-3.99,'2026-09-03 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-04','^KQ11','코스닥(전 거래일)',803.98,-2.1,'2026-09-03 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-04','KOSPI_REGIME','5일 -3.6% · 60일고점 -28.0%',-28.0,-3.61,NULL,'yahoo/regime');
@@ -7383,6 +7383,8 @@ INSERT INTO "news_signals" VALUES(3998,'2026-09-03','2026-09-03 15:00','연합�
 INSERT INTO "news_signals" VALUES(3999,'2026-09-03','2026-09-03 13:28','연합뉴스','건설','악재','대원','경찰·노동부, ''3명 사망 화재'' 천안 대원산업 압수수색','(서울=연합뉴스) 한혜원 기자 = 경찰과 노동당국이 3명이 숨진 충남 천안 대원산업 공장 화재 사고와 관련해 3일 압수수색에 나섰다.','https://www.yna.co.kr/view/AKR20260903097900530',2.0);
 INSERT INTO "news_signals" VALUES(4000,'2026-09-03','2026-09-03 11:30','매경 기업','조선·해운','호재','한화오션','“첫 계약 1년 만에 또 쾌거”… 한화오션, 대만 컨테이너선 6척 수주','한화오션이 첫 계약을 맺은 지 불과 1년 만에 글로벌 주요 선사로부터 대규모 후속 물량을 수주하며 기술력과 프로젝트 수행 역량에 대한 신뢰를 다시 한번 확인했다. 한화오션은 대만 ..','https://www.mk.co.kr/news/business/12143203',2.0);
 INSERT INTO "news_signals" VALUES(4001,'2026-09-03','2026-09-03 22:42','DART','실적','악재','고려아연','(유가)고려아연 - [기재정정]소송등의제기ㆍ신청(경영권분쟁소송)',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260904800002',2.5);
+INSERT INTO "news_signals" VALUES(4012,'2026-09-04','2026-09-04 08:25','연합뉴스','화장품·소비재','호재','실리콘투','한투증권, 실리콘투 목표가↑…"유럽 내 화장품 수요 증가"','(서울=연합뉴스) 이민영 기자 = 한국투자증권은 4일 실리콘투[257720]에 대해 유럽 내 한국 화장품 수요 증가에 따른 실적 개선이 기대된다...','https://www.yna.co.kr/view/AKR20260904025600008',1.5);
+INSERT INTO "news_signals" VALUES(4020,'2026-09-04','2026-09-04 08:08','매경 기업','엔터·미디어','호재','제이티','법무법인 로고스, 중앙미디어그룹 5개사 회생절차 통합채권자협의회 법률자문 맡아','법무법인 로고스는 회생절차가 진행 중인 중앙미디어그룹 주요 5개사의 통합채권자협의회 법률자문기관으로 선정돼 본격적인 자문 업무에 착수했다고 4일 밝혔다. 자문 대상은 제이티비씨(J..','https://www.mk.co.kr/news/society/12144081',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -8900,5 +8902,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4001);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4022);
 COMMIT;
