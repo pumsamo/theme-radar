@@ -123,8 +123,14 @@ def picks_sheet(db):
 def calls_sheet():
     path = ROOT / "config" / "choha_calls.json"
     if not path.exists():
-        return "<h2>초하쌤 콜</h2><p>데이터 없음</p>"
+        return "<h2>채널 콜</h2><p>데이터 없음</p>"
     calls = json.loads(path.read_text(encoding="utf-8"))["calls"]
+    for c in calls:
+        c.setdefault("caller", "초하쌤")
+    callers = []
+    for c in calls:
+        if c["caller"] not in callers:
+            callers.append(c["caller"])
     pending = [c for c in calls if c["verdict"] == "대기" and c.get("code") and c.get("basis")]
     cur = {}
     for c in pending:
@@ -147,16 +153,25 @@ def calls_sheet():
         v = c["verdict"]
         vcls = "up" if v == "✅" else ("down" if v == "❌" else "")
         rows.append(
-            f"<tr><td>{c['no']}</td><td class='opt'>{c['date'][5:]}</td><td>{c['name']}</td>"
+            f"<tr><td>{c['no']}</td><td class='opt'>{c['date'][5:]}</td><td class='opt'>{c['caller']}</td>"
+            f"<td>{c['name']}</td>"
             f"<td>{f"{c['basis']:,.0f}" if c.get('basis') else '—'}</td>"
             f"<td class='opt'>{f"{c['stop']:,.0f}" if c.get('stop') else '—'}</td>"
             f"<td class='{vcls}'>{v}</td><td class='row'>{c['result']} {prog}</td></tr>")
+    tally = []
+    for who in callers:
+        cs = [c for c in calls if c["caller"] == who]
+        tally.append(f"{who} {len(cs)}콜 ({sum(1 for c in cs if c['verdict']=='✅')}✅ "
+                     f"{sum(1 for c in cs if c['verdict']=='❌')}❌ {sum(1 for c in cs if c['verdict']=='△')}△ "
+                     f"{sum(1 for c in cs if c['verdict']=='대기')}대기)")
     return f"""
-<h2>초하쌤 콜 추적 — {len(calls)}콜 ({n_ok}✅ {n_no}❌ {n_amb}△ {n_wait}대기)</h2>
+<h2>채널 콜 추적 — {len(calls)}콜 ({n_ok}✅ {n_no}❌ {n_amb}△ {n_wait}대기)</h2>
+<div class="row">발신별: {" · ".join(tally)}</div>
 <div class="row">방송·글·톡방에서 나온 종목 콜을 접수 즉시 기록하고 기한 내 성적으로 판정.
-채널 신뢰도의 근거 데이터 (config/choha_calls.json).</div>
-<div class="twrap"><table><tr><th>#</th><th class="opt">일자</th><th>종목</th><th>기준가</th>
-<th class="opt">손절</th><th>판정</th><th>결과·진행</th></tr>{"".join(rows)}</table></div>"""
+채널 신뢰도의 근거 데이터 (config/choha_calls.json). 오동나무 = 유튜브 NXT종가배팅 라이브,
+규칙: 당일 종가 매수 · 당일 시가 이탈 손절 · +10% 목표 · 익일 아침 매도(1일 판정).</div>
+<div class="twrap"><table><tr><th>#</th><th class="opt">일자</th><th class="opt">발신</th><th>종목</th>
+<th>기준가</th><th class="opt">손절</th><th>판정</th><th>결과·진행</th></tr>{"".join(rows)}</table></div>"""
 
 
 def equity_svg(s10, s30):
