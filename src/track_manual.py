@@ -31,7 +31,9 @@ FILL_WINDOW = 3
 
 def evaluate(pick: dict, log: RunLog) -> dict:
     name = pick["name"]
-    code = tickers.to_code(name)
+    if pick.get("entry") is None or pick.get("stop") is None:
+        return {**pick, "status": "관찰중 (레벨 미확정)"}
+    code = pick.get("code") or tickers.to_code(name)
     if not code:
         return {**pick, "status": "종목코드 미매칭"}
 
@@ -92,8 +94,10 @@ def main():
     print("=" * 72)
     for r in results:
         rs = f'{r["r"]:+.2f}R' if r.get("r") is not None else ""
+        entry_s = f'{float(r["entry"]):>9,.0f}' if r.get("entry") is not None else "     대기"
+        stop_s = f'{float(r["stop"]):>9,.0f}' if r.get("stop") is not None else "     대기"
         print(f'  [{r.get("channel", "?"):<3}] {r["date"]} {r["name"]:<12} '
-              f'진입 {float(r["entry"]):>9,.0f} 손절 {float(r["stop"]):>9,.0f} '
+              f'진입 {entry_s} 손절 {stop_s} '
               f'→ {r["status"]:<8} {rs}  ({r.get("reason", "")[:28]})')
 
     print("\n  ▸ 채널별 성적 (체결분, 보유중은 현재가 기준)")
