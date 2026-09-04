@@ -467,7 +467,7 @@ def holdings_sheet():
     bline = (f"<div class='row down'>⚠ 손절선 이탈: {', '.join(breaches)} — 종가 기준, 알림일 뿐 자동 매도 아님</div>"
              if breaches else "")
     return f"""
-<h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 ({conf['asof']} 갱신)</h2>
+<h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 (포지션 확인일 {conf['asof']} · 시세는 매일 저녁 자동)</h2>
 <div class="cards"><div class="card">
   <div class="big {pct_cls(tret)}">{tot_val:,.0f}<span class="unit">원</span></div>
   <div class="sub {pct_cls(tret)}">{tret:+.2f}% ({won(tot_val - tot_cost)}원)</div>
