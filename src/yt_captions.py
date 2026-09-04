@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import collections
+import os
 import re
 import subprocess
 import sys
@@ -25,7 +26,8 @@ TAG_RE = re.compile(r"<[^>]+>")
 
 
 def run(*args: str) -> str:
-    r = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8"}      # yt-dlp가 cp949로 찍는 것 방지
+    r = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
     if r.returncode != 0:
         sys.stderr.write(r.stderr[-800:])
     return r.stdout
