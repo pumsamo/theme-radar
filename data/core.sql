@@ -7313,7 +7313,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-07','^GSPC','S&P500',7718.6,-0.38,
 INSERT INTO "global_baseline" VALUES('2026-09-07','^IXIC','나스닥',26506.99,-0.29,'2026-09-04 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-07','^SOX','필라델피아 반도체',11735.26,3.37,'2026-09-04 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-07','EWY','EWY(한국 ETF)',188.87,4.6,'2026-09-04 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-07','KRW=X','원/달러',1345.66,-0.72,'2026-09-06 23:13Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-07','KRW=X','원/달러',1345.85,-0.71,'2026-09-06 23:58Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-07','^KS11','코스피(전 거래일)',6687.21,1.64,'2026-09-04 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-07','^KQ11','코스닥(전 거래일)',813.5,2.95,'2026-09-04 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-07','KOSPI_REGIME','5일 -1.5% · 60일고점 -26.6%',-26.63,-1.5,NULL,'yahoo/regime');
@@ -7850,6 +7850,10 @@ INSERT INTO "news_signals" VALUES(4014,'2026-09-07','2026-09-07 08:05','연합�
 INSERT INTO "news_signals" VALUES(4015,'2026-09-07','2026-09-07 08:05','연합뉴스','AI 소프트웨어','호재',NULL,'[마켓뷰] 오픈AI발 호재에 美반도체 급등…코스피도 강세 기대','(서울=연합뉴스) 황철환 기자 = 7일 코스피는 미국 오픈AI의 새 인공지능(AI) 모델 ''아스트라'' 출시와 범용인공지능(AGI) 시대 도래 선...','https://www.yna.co.kr/view/AKR20260907016300008',1.0);
 INSERT INTO "news_signals" VALUES(4018,'2026-09-06','2026-09-06 22:39','DART','제약바이오','호재','셀트리온','(유가)셀트리온 - 투자판단관련주요경영사항 (CTP44(다잘렉스 바이오시밀러) 한국 임상 3상 시험계획 변경신청 승인)',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260907800002',2.5);
 INSERT INTO "news_signals" VALUES(4019,'2026-09-06','2026-09-06 22:38','DART','제약바이오','호재','셀트리온','(유가)셀트리온 - 투자판단관련주요경영사항 (CTP51(키트루다 바이오시밀러) 미국 임상 3상 시험계획 변경신청 승인)',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260907800004',2.5);
+INSERT INTO "news_signals" VALUES(4020,'2026-09-07','2026-09-07 08:47','매일경제','AI 반도체·기판','죽은테마','SK하이닉스,SK스퀘어','210만원→100만원대…닉스·SK스퀘어 주가, 폭등 뒤 폭락 ‘한몸’','6월 210만원대서 100만원대 올해 초 30만원대에선 폭등 증권가 “주주환원 정책은 기대”한때 SK하이닉스와 함께 주가가 가파르게 올랐던 SK스퀘어가 닉스와 함께 고점 대비 크게..','https://www.mk.co.kr/news/stock/12145692',1.5);
+INSERT INTO "news_signals" VALUES(4021,'2026-09-07','2026-09-07 08:47','매일경제','지주·밸류업','죽은테마','SK하이닉스,SK스퀘어','210만원→100만원대…닉스·SK스퀘어 주가, 폭등 뒤 폭락 ‘한몸’','6월 210만원대서 100만원대 올해 초 30만원대에선 폭등 증권가 “주주환원 정책은 기대”한때 SK하이닉스와 함께 주가가 가파르게 올랐던 SK스퀘어가 닉스와 함께 고점 대비 크게..','https://www.mk.co.kr/news/stock/12145692',1.5);
+INSERT INTO "news_signals" VALUES(4022,'2026-09-07','2026-09-07 08:47','매일경제','반도체 소부장','죽은테마','SK하이닉스,SK스퀘어','210만원→100만원대…닉스·SK스퀘어 주가, 폭등 뒤 폭락 ‘한몸’','6월 210만원대서 100만원대 올해 초 30만원대에선 폭등 증권가 “주주환원 정책은 기대”한때 SK하이닉스와 함께 주가가 가파르게 올랐던 SK스퀘어가 닉스와 함께 고점 대비 크게..','https://www.mk.co.kr/news/stock/12145692',2.0);
+INSERT INTO "news_signals" VALUES(4028,'2026-09-07','2026-09-07 08:21','연합뉴스','로봇·휴머노이드','호재','디케이티','IBK증권, 디케이티 기업분석 개시…"휴머노이드 탈중국 수혜주"','(서울=연합뉴스) 황철환 기자 = IBK투자증권은 코스닥 상장사 디케이티[290550]에 대해 투자의견 ''매수'', 목표주가 2만5천원을 제시하며...','https://www.yna.co.kr/view/AKR20260907019200008',2.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -9411,5 +9415,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4019);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4035);
 COMMIT;
