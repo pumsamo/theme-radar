@@ -66,7 +66,8 @@ def fetch(video: str) -> None:
     vid = video.rsplit("v=", 1)[-1].rsplit("/", 1)[-1][:11]
     OUT.mkdir(parents=True, exist_ok=True)
     stem = OUT / vid
-    run("yt-dlp", "--skip-download", "--write-auto-subs", "--sub-langs", "ko-orig",
+    # 옛 영상은 자동자막 코드가 'ko'(ko-orig 없음)라 둘 다 요청 — 있는 쪽이 받아진다
+    run("yt-dlp", "--skip-download", "--write-auto-subs", "--write-subs", "--sub-langs", "ko-orig,ko",
         "--sub-format", "vtt", "-o", str(stem), f"https://www.youtube.com/watch?v={vid}")
     vtts = list(OUT.glob(f"{vid}*.vtt"))
     if not vtts:
