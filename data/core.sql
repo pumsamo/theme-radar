@@ -7700,10 +7700,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-08','^GSPC','S&P500',7718.6,-0.38,
 INSERT INTO "global_baseline" VALUES('2026-09-08','^IXIC','나스닥',26506.99,-0.29,'2026-09-04 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-08','^SOX','필라델피아 반도체',11735.26,3.37,'2026-09-04 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-08','EWY','EWY(한국 ETF)',188.87,4.6,'2026-09-04 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-08','KRW=X','원/달러',1344.41,-0.05,'2026-09-07 23:47Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-08','^KS11','코스피(전 거래일)',6687.21,1.64,'2026-09-07 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-08','^KQ11','코스닥(전 거래일)',813.5,2.95,'2026-09-07 09:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-08','KOSPI_REGIME','5일 -1.5% · 60일고점 -26.6%',-26.63,-1.5,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-08','KRW=X','원/달러',1341.08,-0.3,'2026-09-08 00:27Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-08','^KS11','코스피(전 거래일)',7042.34,5.31,'2026-09-08 00:07Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-08','^KQ11','코스닥(전 거래일)',829.11,1.92,'2026-09-08 00:07Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-08','KOSPI_REGIME','5일 +3.3% · 60일고점 -22.7%',-22.74,3.26,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-08','AAOI','광통신',105.53,5.13,'2026-09-04 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-08','COHR','광통신',281.86,6.6,'2026-09-04 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-08','LITE','광통신',881.26,4.0,'2026-09-04 20:00Z','yahoo/ticker');
@@ -8258,6 +8258,10 @@ INSERT INTO "news_signals" VALUES(4031,'2026-09-07','2026-09-07 15:56','연합�
 INSERT INTO "news_signals" VALUES(4032,'2026-09-07','2026-09-07 15:43','연합뉴스','AI 반도체·기판','호재','SK하이닉스,삼성전자','[특징주] 반도체 훈풍에 관련 ''소부장주'' 급등 마감(종합)','(서울=연합뉴스) 김유향 기자 = 삼성전자[005930]와 SK하이닉스[000660] 등 국내증시 내 대형 반도체주가 강세를 나타내자 반도체 소...','https://www.yna.co.kr/view/AKR20260907040051008',2.0);
 INSERT INTO "news_signals" VALUES(4033,'2026-09-07','2026-09-07 15:43','연합뉴스','반도체 소부장','호재','SK하이닉스,삼성전자','[특징주] 반도체 훈풍에 관련 ''소부장주'' 급등 마감(종합)','(서울=연합뉴스) 김유향 기자 = 삼성전자[005930]와 SK하이닉스[000660] 등 국내증시 내 대형 반도체주가 강세를 나타내자 반도체 소...','https://www.yna.co.kr/view/AKR20260907040051008',2.0);
 INSERT INTO "news_signals" VALUES(4034,'2026-09-07','2026-09-07 11:38','연합뉴스','조선·해운','호재',NULL,'부산항만공사, 해운항만 창업지원 플랫폼 입주기업 3개사 선정','(부산=연합뉴스) 박창수 기자 = 부산항만공사(BPA)는 해운항만 창업지원 플랫폼 ''1876 부산''에 새로 입주할 기업 3개사를 선정했다고 7일...','https://www.yna.co.kr/view/AKR20260907078500051',1.5);
+INSERT INTO "news_signals" VALUES(4089,'2026-09-08','2026-09-08 09:12','매일경제','AI 반도체·기판','호재','SK하이닉스,삼성전자','시한 있는 삼전닉스 자사주 방파제…원화 강세에 외국인 돌아올까','삼성전자와 SK하이닉스의 대규모 자사주 매입이 코스피 하단을 막고 있는 가운데 최근 외국인의 매수세가 살아나면서 수급 구도에 변화가 나타나고 있다. 시장에선 자사주 매입은 한시적인..','https://www.mk.co.kr/news/stock/12146655',1.5);
+INSERT INTO "news_signals" VALUES(4090,'2026-09-08','2026-09-08 09:12','매일경제','반도체 소부장','호재','SK하이닉스,삼성전자','시한 있는 삼전닉스 자사주 방파제…원화 강세에 외국인 돌아올까','삼성전자와 SK하이닉스의 대규모 자사주 매입이 코스피 하단을 막고 있는 가운데 최근 외국인의 매수세가 살아나면서 수급 구도에 변화가 나타나고 있다. 시장에선 자사주 매입은 한시적인..','https://www.mk.co.kr/news/stock/12146655',1.5);
+INSERT INTO "news_signals" VALUES(4091,'2026-09-08','2026-09-08 09:12','매일경제','수급이벤트','호재','SK하이닉스,삼성전자','시한 있는 삼전닉스 자사주 방파제…원화 강세에 외국인 돌아올까','삼성전자와 SK하이닉스의 대규모 자사주 매입이 코스피 하단을 막고 있는 가운데 최근 외국인의 매수세가 살아나면서 수급 구도에 변화가 나타나고 있다. 시장에선 자사주 매입은 한시적인..','https://www.mk.co.kr/news/stock/12146655',2.0);
+INSERT INTO "news_signals" VALUES(4117,'2026-09-08','2026-09-08 00:26','DART','실적','호재','코오롱글로벌','(유가)코오롱글로벌 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260908800083',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -9868,5 +9872,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4088);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4117);
 COMMIT;
