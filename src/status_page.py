@@ -67,20 +67,39 @@ def pct_cls(x: float) -> str:
     return "up" if x > 0 else ("down" if x < 0 else "")
 
 
+def sh_cell(sh: dict) -> str:
+    """그림자 청산 한 칸: '거래량×6.1 09/03 +12,300' / '손절 08/21 −100,935' / '진행 +3,200'."""
+    lab = sh["label"]
+    txt = f"{lab} {sh['date'][4:6]}/{sh['date'][6:8]}" if sh.get("date") else lab
+    return f"<td class='{pct_cls(sh['pnl'])}'>{txt} {won(sh['pnl'])}</td>"
+
+
+def cap_cell(t: dict) -> str:
+    c = t.get("cap_eok")
+    if c is None:
+        return "<td class='opt'>—</td>"
+    return f"<td class='opt'>{c / 10000:.1f}조</td>" if c >= 10000 else f"<td class='opt'>{c:,.0f}억</td>"
+
+
 def acct_sheet(a, label):
-    """한 계좌의 종결 거래 + 보유 포지션 시트 본문."""
+    """한 계좌의 종결 거래 + 보유 포지션 시트 본문. 그림자 청산(×5/×2)·시총은 표시 전용."""
     closed = [c for c in a["closed"] if c["label"] != "미체결 소멸"]
     lapsed = sum(1 for c in a["closed"] if c["label"] == "미체결 소멸")
     ret = (a["equity"] / a["seed"] - 1) * 100
     closed_rows = "".join(
         f"<tr><td>{c['date'][4:6]}/{c['date'][6:8]}</td><td>{c['name']}</td>"
         f"<td class='{('up' if c['label'] == '목표' else 'down')}'>{c['label']}</td>"
-        f"<td class='{pct_cls(c['pnl'])}'>{won(c['pnl'])}원</td></tr>"
-        for c in closed) or "<tr><td colspan=4>아직 없음</td></tr>"
+        f"<td class='{pct_cls(c['pnl'])}'>{won(c['pnl'])}원</td>"
+        f"{sh_cell(c['shadow'][5])}{sh_cell(c['shadow'][2])}{cap_cell(c)}</tr>"
+        for c in closed) or "<tr><td colspan=7>아직 없음</td></tr>"
     pos_rows = "".join(
         f"<tr><td>{p['name']}</td><td>{p['shares']}주</td><td>{p['fill']:,.0f}</td>"
-        f"<td>{p['cur']:,.0f}</td><td class='{pct_cls(p['pnl'])}'>{won(p['pnl'])}원</td></tr>"
-        for p in sorted(a["open"], key=lambda x: -x["pnl"])) or "<tr><td colspan=5>없음</td></tr>"
+        f"<td>{p['cur']:,.0f}</td><td class='{pct_cls(p['pnl'])}'>{won(p['pnl'])}원</td>"
+        f"{sh_cell(p['shadow'][5])}{sh_cell(p['shadow'][2])}{cap_cell(p)}</tr>"
+        for p in sorted(a["open"], key=lambda x: -x["pnl"])) or "<tr><td colspan=8>없음</td></tr>"
+    ss = ledger.summary(a)
+    m5, m2 = ss["modes"]["거래량 ×5 청산"], ss["modes"]["거래량 ×2 청산"]
+    shadow_won = {k: sum(t["shadow"][k]["pnl"] for t in closed + a["open"]) for k in (5, 2)}
     skip_rows = "".join(f"<div class='row'>⚠ {dt} {nm}: {why}</div>"
                         for nm, dt, why in a["skipped"])
     return f"""
@@ -90,11 +109,15 @@ def acct_sheet(a, label):
   <div class="sub {pct_cls(ret)}">{ret:+.2f}%</div>
   <div class="row">실현 {won(a['realized'])} · 미실현 {won(a['unreal'])} · 현금 {a['cash']:,.0f}원</div>
   <div class="row">종결 {len(closed)}건 · 보유 {len(a['open'])}종목 · 미체결 소멸 {lapsed}건</div>
+  <div class="row">그림자 청산이었다면(같은 체결, 표시만): ×5 {won(shadow_won[5])}원
+    (종결 {m5['n_done']}·진행 {m5['n_open']}) · ×2 {won(shadow_won[2])}원 (종결 {m2['n_done']}·진행 {m2['n_open']})</div>
 </div></div>
-<h2>종결 거래</h2>
-<div class="twrap"><table><tr><th>일자</th><th>종목</th><th>결과</th><th>손익</th></tr>{closed_rows}</table></div>
+<h2>종결 거래 <span class="row">(×5/×2 = 거래량 폭발일 청산 그림자, 표시 전용)</span></h2>
+<div class="twrap"><table><tr><th>일자</th><th>종목</th><th>결과</th><th>손익</th><th>×5 그림자</th><th>×2 그림자</th>
+<th class="opt">시총</th></tr>{closed_rows}</table></div>
 <h2>보유 포지션</h2>
-<div class="twrap"><table><tr><th>종목</th><th>수량</th><th>진입</th><th>현재</th><th>평가손익</th></tr>{pos_rows}</table></div>
+<div class="twrap"><table><tr><th>종목</th><th>수량</th><th>진입</th><th>현재</th><th>평가손익</th><th>×5 그림자</th>
+<th>×2 그림자</th><th class="opt">시총</th></tr>{pos_rows}</table></div>
 {skip_rows}"""
 
 
@@ -239,8 +262,68 @@ def evenscan_sheet(db):
 <div class="twrap"><table><tr><th>종목</th><th class="opt">테마</th><th>진입</th><th>손절</th><th>거래대금</th><th class="opt">자리</th></tr>{body}</table></div>"""
 
 
-def flows_sheet():
-    """기관·외인 동반 순매수 지속 종목 — bt_flows ② 조건 그대로 (관찰용)."""
+def money_flow_block(flows_dir, code_name, scan_codes) -> str:
+    """'돈 + 수급 동시 유입' 스크린 (사용자 요청 2026-09-07, 표시 전용 · 미검증).
+    돈 = 거래대금 5일 평균 ≥ 20일 평균 × 1.5 (20일 평균 30억+) · 수급 = 최근 5일 중 3일+ 기관·외인 동반 순매수 +
+    5일 합산 순매수 5억+ · 시총 1,000억+ (bt_mcap 회피 필터, 9/7 스냅샷). 개인 ≈ −(기관+외인) 근사(기타법인 포함).
+    A급 = 오늘 저녁 스캔(tier='escan')과 교집합 표시."""
+    try:
+        mc = json.loads((ROOT / "data" / "mcap.json").read_text(encoding="utf-8"))["stocks"]
+    except Exception:  # noqa: BLE001
+        mc = {}
+    hits = []
+    for path in flows_dir.glob("*.json"):
+        try:
+            fl = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        days = sorted(fl)
+        if len(days) < 25:
+            continue
+        w20 = [fl[d] for d in days[-20:]]
+        w5 = w20[-5:]
+        val20 = sum(w[2] * w[3] for w in w20) / 20
+        val5 = sum(w[2] * w[3] for w in w5) / 5
+        if val20 < 30e8 or val5 < 1.5 * val20:
+            continue
+        both = sum(1 for w in w5 if w[0] > 0 and w[1] > 0)
+        net5 = sum((w[0] + w[1]) * w[2] for w in w5) / 1e8
+        if both < 3 or net5 < 5:
+            continue
+        code = path.stem
+        cap = mc.get(code, {}).get("mcap_eok")
+        if cap is None or cap < 1000:
+            continue
+        hits.append({"code": code, "name": code_name.get(code, mc.get(code, {}).get("name", code)),
+                     "close": w5[-1][2], "chg5": w5[-1][2] / w20[-6][2] - 1, "ratio": val5 / val20,
+                     "both": both, "net5": net5, "indiv": -net5, "cap": cap, "val5": val5,
+                     "date": days[-1], "a": code in scan_codes})
+    hits.sort(key=lambda h: -h["net5"])
+    asof = hits[0]["date"] if hits else ""
+    n_all = len(hits)
+    hits = hits[:25]
+
+    def cap_s(c):
+        return f"{c / 10000:.1f}조" if c >= 10000 else f"{c:,.0f}억"
+    body = "".join(
+        f"<tr><td>{h['name']}{' <b>A급</b>' if h['a'] else ''}</td><td>{h['close']:,.0f}</td>"
+        f"<td class='{pct_cls(h['chg5'])}'>{h['chg5'] * 100:+.1f}%</td><td>{h['ratio']:.1f}배</td>"
+        f"<td>{h['both']}/5일</td><td class='up'>{h['net5']:+,.0f}억</td>"
+        f"<td class='{pct_cls(h['indiv'])} opt'>{h['indiv']:+,.0f}억</td><td class='opt'>{cap_s(h['cap'])}</td></tr>"
+        for h in hits) or "<tr><td colspan=8>해당 없음</td></tr>"
+    return f"""
+<h2>돈 + 수급 동시 유입 ({n_all}종목{', ' + asof[:4] + '.' + asof[4:6] + '.' + asof[6:] + ' 기준' if asof else ''})
+<span class="row">표시 전용 · 미검증</span></h2>
+<div class="row">거래대금 5일 평균이 20일 평균의 1.5배 이상(돈) + 최근 5일 중 3일 이상 기관·외인 동반 순매수·5일 합산 5억+(수급)
++ 시총 1,000억 이상. 개인 = −(기관+외인) 근사(기타법인 포함). 5일 등락이 이미 큰 종목은 고점권 거래량 폭발일 수 있음
+(회피 검증 결과) — 낮은 등락에 유입이 큰 쪽이 '조용한 매집'. <b>A급</b> = 오늘 저녁 A급 스캔과 교집합. 상위 25, 5일 순매수순.
+매수 추천 아님.</div>
+<div class="twrap"><table><tr><th>종목</th><th>종가</th><th>5일 등락</th><th>거래대금 5/20일</th><th>동반매수</th>
+<th>기관+외인 5일</th><th class="opt">개인 근사</th><th class="opt">시총</th></tr>{body}</table></div>"""
+
+
+def flows_sheet(db=None):
+    """기관·외인 동반 순매수 지속 종목 — bt_flows ② 조건 그대로 (관찰용) + 돈·수급 동시 유입 블록."""
     import tickers
     flows_dir = ROOT / "data" / "flows"
     if not flows_dir.exists():
@@ -253,6 +336,12 @@ def flows_sheet():
                 code_name[c] = nm
     except Exception:  # noqa: BLE001
         pass
+    scan_codes: set[str] = set()
+    if db is not None:
+        latest = db.execute("select max(date) from candidates where tier='escan'").fetchone()[0]
+        if latest:
+            scan_codes = {r[0] for r in db.execute(
+                "select code from candidates where tier='escan' and date=?", (latest,)) if r[0]}
 
     hits = []
     for path in flows_dir.glob("*.json"):
@@ -293,7 +382,8 @@ def flows_sheet():
 검증: 60일 후 +3.2%p·승률 +4.9%p 우위 (n=1,840) — 단 느린 신호(20일엔 무효)라 스윙~중장기
 관찰용. 상위 25종목, 5일 합산 순매수금액순. 매수 추천 아님.</div>
 <div class="twrap"><table><tr><th>종목</th><th>종가</th><th>동반매수</th><th>5일 순매수</th>
-<th class="opt">외인보유율 Δ</th><th>거래대금</th></tr>{body}</table></div>"""
+<th class="opt">외인보유율 Δ</th><th>거래대금</th></tr>{body}</table></div>
+{money_flow_block(flows_dir, code_name, scan_codes)}"""
 
 
 def box_sheet(db):
@@ -548,6 +638,17 @@ def main() -> None:
     open_r = [p["pnl"] / big["risk"] for p in big["open"]]
     lapsed = sum(1 for c in big["closed"] if c["label"] == "미체결 소멸")
     prog = min(100, int(run_days / CONTRACT_DAYS * 100))
+    ss = ledger.summary(big)
+    mc, m5, m2 = (ss["modes"][k] for k in ("계약 +2R/20일", "거래량 ×5 청산", "거래량 ×2 청산"))
+
+    def rcell(x):
+        return f"<td class='{pct_cls(x)}'>{x:+.2f}R</td>"
+    bucket_rows = "".join(
+        f"<tr><td>{b['bucket']}</td><td>{b['n']}</td>{rcell(b['r'])}{rcell(b['avg'])}{rcell(b['r5'])}{rcell(b['r2'])}</tr>"
+        for b in ss["buckets"])
+    n_tr = ss["n"] or 1
+    bucket_rows += (f"<tr><th>전체</th><th>{ss['n']}</th>{rcell(mc['total'])}{rcell(mc['total'] / n_tr)}"
+                    f"{rcell(m5['total'])}{rcell(m2['total'])}</tr>")
 
     def acct_card(a, label):
         ret = (a["equity"] / a["seed"] - 1) * 100
@@ -574,18 +675,27 @@ def main() -> None:
     <div class="big {pct_cls(sum(closed_r) + sum(open_r))}">{sum(closed_r) + sum(open_r):+.2f}<span class="unit">R</span></div>
     <div class="sub">종결 {sum(closed_r):+.2f}R · 진행 {sum(open_r):+.2f}R</div>
     <div class="row">픽 {picks_n} · 종결 {len(closed_r)} · 보유 {len(open_r)} · 미체결 소멸 {lapsed}</div>
+    <div class="row">그림자 청산(표시만): ×5 <b class="{pct_cls(m5['total'])}">{m5['total']:+.2f}R</b>
+      (종결 {m5['n_done']}·진행 {m5['n_open']}) · ×2 <b class="{pct_cls(m2['total'])}">{m2['total']:+.2f}R</b>
+      (종결 {m2['n_done']}·진행 {m2['n_open']})</div>
   </div>
   {acct_card(a10, "가상계좌 ① 1,000만")}
   {acct_card(a30, "가상계좌 ② 3,000만")}
 </div>
-{equity_svg(a10["equity_series"], a30["equity_series"])}""",
+{equity_svg(a10["equity_series"], a30["equity_series"])}
+<h2>그림자 청산 · 시총 구간 <span class="row">(표시 전용 — 계약 판정 미반영, 2026-09-08부터 병기)</span></h2>
+<div class="row">같은 체결 {ss['n']}건에 청산만 바꿔 계산 — 계약 = +2R 목표·20일 기한 / ×5·×2 = 목표 없이 거래량이
+20일 평균의 5배·2배가 되는 첫날 종가 청산(손절 우선·20일 기한, 백테스트 ×5 +0.189R vs 기준 +0.128R).
+시총 = 체결가 × 현재 상장주식수(9/7 스냅샷) 근사, 백테스트에선 시총이 클수록 단조 개선(2조+ +0.250R).</div>
+<div class="twrap"><table><tr><th>시총 구간</th><th>체결</th><th>계약 합계</th><th>계약 평균</th><th>×5 합계</th><th>×2 합계</th></tr>
+{bucket_rows}</table></div>""",
         "아침 픽": picks_sheet(db),
         "계좌①": acct_sheet(a10, "가상계좌 ① — 종자돈 1,000만 (리스크 10만/건)"),
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
         "보유 관찰": holdings_sheet(),
         "저녁 스캔": evenscan_sheet(db),
         "관찰 박스": box_sheet(db),
-        "관찰 수급": flows_sheet(),
+        "관찰 수급": flows_sheet(db),
         "콜": calls_sheet(),
         "가치": value_sheet(),
         "채널·연구": f"""
@@ -646,7 +756,8 @@ document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {{
 </script>
 <div class="note">관찰·검증 기록용 — 매매 추천 아님 · 주문 기능 없음 · 최종 판단과 실행은 본인.<br>
 가상계좌 규칙: 리스크 1%/건 · 진입 3일 창 · 손절우선 · +2R 청산 · 20일 기한 · 왕복 비용 0.3% ·
-동일 종목 중복 금지 · 종목당 20% 상한. <a href="index.html">→ 장전 브리핑</a></div>
+동일 종목 중복 금지 · 종목당 20% 상한. 그림자 청산(거래량 ×5/×2)·시총 구간은 표시 전용 — 계약 판정 미반영.
+<a href="index.html">→ 장전 브리핑</a></div>
 </body></html>"""
 
     for d in (ROOT / "docs", ROOT / "out"):

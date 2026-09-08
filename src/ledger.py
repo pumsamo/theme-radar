@@ -13,13 +13,21 @@
   대상: tier='pick' (아침 계약 픽). 저녁 스캔 트랙은 동시 수십 종목이라
         현금 제약상 실전 재현이 안 돼 제외 (R 지표로만 본다).
 
+그림자 청산 병기 (2026-09-08부터, 표시 전용 · 계약 판정 미반영 · 사용자 지시 9/7):
+  같은 체결(진입·손절·주수)에 청산만 바꾼 결과를 나란히 계산한다.
+    ×5 = 목표 없이 '거래량 ≥ 20일 평균 × 5 인 첫날 종가 청산' · 손절 우선 · 20일 기한 (bt_volexit V1, +0.189R vs 기준 +0.128R)
+    ×2 = 같은 규칙에 k=2 (회전형, 승률 51% · 보유 6.9일)
+  시총 구간(체결가 × 현재 상장주식수, data/mcap.json 근사)도 트레이드마다 붙여 R트랙을 구간별로 본다 (bt_mcap 전방 확인).
+
 실행: python src/ledger.py  (저녁 루틴 ⑥단계)
 """
 from __future__ import annotations
 
+import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date as _date
+from pathlib import Path
 
 import boot  # noqa: F401
 from db import connect
@@ -31,6 +39,51 @@ RISK = SEED // 100                                             # 1% 리스크 �
 COST = 0.003
 ENTRY_WINDOW = 3
 HOLD = 20
+# 진입 탐색 시작일 = 픽 날짜 D 당일 (계약: 진입가 = 전일 고가×1.002, D·D+1·D+2 3거래일 창 — score_day ③·백테스트와 동일).
+# 2026-09-08 버그 수정: 종전 코드는 D+1부터 탐색해 하루 늦게 체결됐다(저녁 스캔 트랙의 '다음 날부터' 규칙이 잘못 복사됨).
+ENTRY_SAME_DAY = True
+ROOT = Path(__file__).resolve().parent.parent
+FETCH_START = "20260615"  # 그림자 청산의 20일 평균 거래량용 여유분 — 계약 진입 탐색은 픽 다음 날부터라 영향 없음
+SHADOW_K = (5, 2)         # 그림자 청산 배수 (표시 전용)
+BUCKETS = [(0, 500, "<500억"), (500, 1000, "500~1,000억"), (1000, 5000, "1,000~5,000억"),
+           (5000, 20000, "5,000억~2조"), (20000, 1e12, "2조 이상")]  # bt_mcap.BUCKETS와 동일
+BUCKET_ORDER = [lab for _, _, lab in BUCKETS] + ["미상"]
+
+
+def bucket(cap_eok) -> str:
+    if cap_eok is None:
+        return "미상"
+    for lo, hi, lab in BUCKETS:
+        if lo <= cap_eok < hi:
+            return lab
+    return "미상"
+
+
+def load_shares() -> dict[str, int]:
+    """data/mcap.json(collect_mcap.py 스냅샷)의 상장주식수. 없으면 빈 dict → 구간 '미상'."""
+    try:
+        mc = json.loads((ROOT / "data" / "mcap.json").read_text(encoding="utf-8"))
+        return {c: int(v["shares"]) for c, v in mc["stocks"].items() if v.get("shares")}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def shadow_exit(bars: list[dict], i0: int, stop: float, k: float):
+    """그림자 청산 탐색: 손절 우선 → 거래량 ≥ 20일 평균×k 인 첫날 종가 → 20일 기한 종가.
+    bt_volexit.simulate(mode='v1')와 동일 (체결일 포함, 손절이 같은 날이면 손절). 미종결이면 (None, None, None)."""
+    vol = [b["volume"] for b in bars]
+    for t, b in enumerate(bars[i0:i0 + HOLD]):
+        idx = i0 + t
+        if b["low"] <= stop:
+            return stop, b["date"], "손절"
+        prev = vol[max(0, idx - 20):idx]
+        v20 = sum(prev) / len(prev) if prev else 0
+        if v20 > 0 and vol[idx] >= k * v20:
+            return b["close"], b["date"], f"거래량×{vol[idx] / v20:.1f}"
+    if len(bars) - 1 >= i0 + HOLD - 1:
+        last = bars[i0 + HOLD - 1]
+        return last["close"], last["date"], "기한 청산"
+    return None, None, None
 
 
 def compute(seed: int = SEED) -> dict:
@@ -52,11 +105,12 @@ def compute(seed: int = SEED) -> dict:
 
     def get(code):
         try:
-            return code, fetch_ohlc(code, "20260801", _date.today().strftime("%Y%m%d"))
+            return code, fetch_ohlc(code, FETCH_START, _date.today().strftime("%Y%m%d"))
         except Exception:  # noqa: BLE001
             return code, []
     with ThreadPoolExecutor(8) as ex:
         bars_all = dict(ex.map(get, codes))
+    shares_out = load_shares()
 
     cash = seed
     open_pos = []   # {name, code, shares, fill, stop, target, opened, deadline_idx}
@@ -67,7 +121,8 @@ def compute(seed: int = SEED) -> dict:
     for pdate, code, name, entry, stop in picks:
         bars = bars_all.get(code, [])
         d0 = pdate.replace("-", "")
-        idx = next((i for i, b in enumerate(bars) if b["date"] > d0), None)
+        idx = next((i for i, b in enumerate(bars)
+                    if (b["date"] >= d0 if ENTRY_SAME_DAY else b["date"] > d0)), None)
         if idx is None:
             skipped.append((name, pdate, "시세 없음"))
             continue
@@ -88,9 +143,11 @@ def compute(seed: int = SEED) -> dict:
         if shares <= 0:
             skipped.append((name, pdate, f"고가주 — 1주 리스크 {risk_per_share:,.0f}원 > 10만원"))
             continue
+        cap = fill_px * shares_out[code] / 1e8 if code in shares_out else None
         events.append({"name": name, "code": code, "pdate": pdate, "bars": bars,
                        "fill_i": fill_i, "fill": fill_px, "stop": stop,
-                       "target": fill_px + 2 * risk_per_share, "shares": shares})
+                       "target": fill_px + 2 * risk_per_share, "shares": shares,
+                       "cap_eok": cap, "bucket": bucket(cap)})
 
     # 시간순 현금 관리: 체결일 기준 정렬해 현금 한도 적용
     events.sort(key=lambda e: e["bars"][e["fill_i"]]["date"])
@@ -114,8 +171,20 @@ def compute(seed: int = SEED) -> dict:
                 continue
             notional = e["fill"] * e["shares"]
         cash -= notional
-        # 청산 탐색
         bars, i0 = e["bars"], e["fill_i"]
+        # 그림자 청산 (표시 전용): 같은 체결에 청산만 다르게 — R은 계약 채점과 같은 방식(손절 −1, 그 외 손익/리스크)
+        shadow = {}
+        for k in SHADOW_K:
+            px, dt, lab = shadow_exit(bars, i0, e["stop"], k)
+            if px is None:
+                pl = (bars[-1]["close"] - e["fill"]) * e["shares"]
+                shadow[k] = {"label": "진행", "date": None, "pnl": pl, "r": pl / RISK}
+            else:
+                pr = px * e["shares"]
+                pl = pr - notional - (notional + pr) * COST / 2
+                shadow[k] = {"label": lab, "date": dt, "pnl": pl, "r": -1.0 if lab == "손절" else pl / RISK}
+        meta = {"shadow": shadow, "cap_eok": e["cap_eok"], "bucket": e["bucket"], "fill_date": fill_dt}
+        # 청산 탐색
         exit_px, exit_dt, label = None, None, None
         for b in bars[i0:i0 + HOLD]:
             if b["low"] <= e["stop"]:
@@ -132,8 +201,9 @@ def compute(seed: int = SEED) -> dict:
             proceeds = exit_px * e["shares"]
             fee = (notional + proceeds) * COST / 2
             cash += proceeds - fee
-            closed.append({"name": e["name"], "date": exit_dt,
-                           "pnl": proceeds - notional - fee, "label": label})
+            pnl = proceeds - notional - fee
+            closed.append({"name": e["name"], "date": exit_dt, "pnl": pnl, "label": label,
+                           "r": 2.0 if label == "목표" else (-1.0 if label == "손절" else pnl / RISK), **meta})
             holding[e["code"]] = exit_dt
             txns.append((fill_dt, -notional))
             txns.append((exit_dt, proceeds - fee))
@@ -141,6 +211,7 @@ def compute(seed: int = SEED) -> dict:
                               "shares": e["shares"], "start": fill_dt, "end": exit_dt})
         else:
             e["notional"] = notional
+            e["meta"] = meta
             open_pos.append(e)
             holding[e["code"]] = "99999999"
             txns.append((fill_dt, -notional))
@@ -180,9 +251,35 @@ def compute(seed: int = SEED) -> dict:
             "realized": realized, "unreal": unreal, "closed": closed,
             "open": [{"name": e["name"], "shares": e["shares"], "fill": e["fill"],
                       "cur": e["bars"][-1]["close"],
-                      "pnl": (e["bars"][-1]["close"] - e["fill"]) * e["shares"]}
+                      "pnl": (e["bars"][-1]["close"] - e["fill"]) * e["shares"],
+                      "r": (e["bars"][-1]["close"] - e["fill"]) * e["shares"] / RISK, **e["meta"]}
                      for e in open_pos],
             "skipped": skipped}
+
+
+def summary(r: dict) -> dict:
+    """계약 vs 그림자 청산 합계 R + 시총 구간표 (표시 전용). trades = 종결 + 보유(미체결 소멸 제외)."""
+    trades = [c for c in r["closed"] if c["label"] != "미체결 소멸"] + r["open"]
+    modes = {}
+    for name, rf, done in (
+        ("계약 +2R/20일", lambda t: t["r"], lambda t: "cur" not in t),
+        ("거래량 ×5 청산", lambda t: t["shadow"][5]["r"], lambda t: t["shadow"][5]["label"] != "진행"),
+        ("거래량 ×2 청산", lambda t: t["shadow"][2]["r"], lambda t: t["shadow"][2]["label"] != "진행"),
+    ):
+        rs = [rf(t) for t in trades]
+        done_rs = [rf(t) for t in trades if done(t)]
+        modes[name] = {"total": sum(rs), "n": len(rs), "n_done": len(done_rs), "n_open": len(rs) - len(done_rs),
+                       "avg_done": (sum(done_rs) / len(done_rs)) if done_rs else 0.0}
+    buckets = []
+    for lab in BUCKET_ORDER:
+        ts = [t for t in trades if t["bucket"] == lab]
+        if not ts:
+            continue
+        buckets.append({"bucket": lab, "n": len(ts), "r": sum(t["r"] for t in ts),
+                        "avg": sum(t["r"] for t in ts) / len(ts),
+                        "r5": sum(t["shadow"][5]["r"] for t in ts),
+                        "r2": sum(t["shadow"][2]["r"] for t in ts)})
+    return {"modes": modes, "buckets": buckets, "n": len(trades)}
 
 
 def main() -> None:
@@ -206,6 +303,13 @@ def main() -> None:
         print("  보유 중:")
         for ln in pos_lines:
             print(ln)
+    ss = summary(r)
+    print(f"  그림자 청산 병기 (표시 전용 · 체결 {ss['n']}건 동일, 청산만 다름):")
+    for name, m in ss["modes"].items():
+        print(f"    {name:12s}: 합계 {m['total']:+.2f}R · 종결 {m['n_done']}건 평균 {m['avg_done']:+.2f}R · 진행 {m['n_open']}건")
+    print("  시총 구간별 (체결가 × 현재 주식수 근사):")
+    for b in ss["buckets"]:
+        print(f"    {b['bucket']:12s}: {b['n']:2d}건 · 계약 {b['r']:+.2f}R (평균 {b['avg']:+.2f}) · ×5 {b['r5']:+.2f}R · ×2 {b['r2']:+.2f}R")
     for nm, dt, why in skipped:
         print(f"  ⚠ 스킵 {dt} {nm}: {why}")
 
