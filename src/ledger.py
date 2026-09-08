@@ -86,7 +86,10 @@ def shadow_exit(bars: list[dict], i0: int, stop: float, k: float):
     return None, None, None
 
 
-def compute(seed: int = SEED) -> dict:
+def compute(seed: int = SEED, unconstrained: bool = False) -> dict:
+    """unconstrained=True: R트랙(판정 기준)용 — 종목당 20% 상한·현금 한도를 적용하지 않는다 (체결된 픽은 전부 채점).
+    2026-09-08 버그 수정: '무제약'을 종자돈 10억으로 흉내 냈으나 포지션 크기가 종자돈에 비례(리스크 1% × 손절폭)해
+    동시 보유 5종목쯤에서 현금이 바닥나 이후 픽이 '현금 부족'으로 조용히 버려지고 있었다 — 규모와 무관한 구조적 문제."""
     global RISK
     RISK = seed // 100
     db = connect()
@@ -160,16 +163,17 @@ def compute(seed: int = SEED) -> dict:
             skipped.append((e["name"], e["pdate"], "동일 종목 보유 중 — 재진입 스킵"))
             continue
         notional = e["fill"] * e["shares"]
-        cap = seed * 0.2  # 한 종목 최대 20% (집중 위험 상한)
-        if notional > cap:
-            e["shares"] = int(cap / e["fill"])
-            notional = e["fill"] * e["shares"]
-        if notional > cash:
-            e["shares"] = int(cash / e["fill"])
-            if e["shares"] <= 0:
-                skipped.append((e["name"], e["pdate"], "현금 부족"))
-                continue
-            notional = e["fill"] * e["shares"]
+        cap = seed * 0.2  # 한 종목 최대 20% (집중 위험 상한) — 가상계좌에만 적용
+        if not unconstrained:
+            if notional > cap:
+                e["shares"] = int(cap / e["fill"])
+                notional = e["fill"] * e["shares"]
+            if notional > cash:
+                e["shares"] = int(cash / e["fill"])
+                if e["shares"] <= 0:
+                    skipped.append((e["name"], e["pdate"], "현금 부족"))
+                    continue
+                notional = e["fill"] * e["shares"]
         cash -= notional
         bars, i0 = e["bars"], e["fill_i"]
         # 그림자 청산 (표시 전용): 같은 체결에 청산만 다르게 — R은 계약 채점과 같은 방식(손절 −1, 그 외 손익/리스크)

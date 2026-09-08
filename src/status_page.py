@@ -627,7 +627,7 @@ def main() -> None:
         "select count(*) from (select distinct date, code from candidates where date >= ? and tier='pick')",
         (CONTRACT_START,)).fetchone()[0]
 
-    big = ledger.compute(1_000_000_000)
+    big = ledger.compute(1_000_000_000, unconstrained=True)  # R트랙: 현금·상한 제약 없음 (9/8 수정)
     a10 = ledger.compute(10_000_000)
     a30 = ledger.compute(30_000_000)
 
