@@ -7040,7 +7040,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','396300','세아메카닉스','로�
 INSERT INTO "candidates" VALUES('2026-09-10','115610','이미지스','로봇·휴머노이드','news','pool','유동성 미달(1억) · 거래 위축','B급 (2/3 충족)',1700.0,1449.0,2200.0,2455.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','090460','비에이치','로봇·휴머노이드','news','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','290740','액트로','로봇·휴머노이드','news','pool','유동성 미달(9억) · 거래 위축','B급 (2/3 충족)',13230.0,10590.0,18510.0,21150.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','432470','케이엔에스','로봇·휴머노이드','news','pick','A급 자리 · 거래대금 43억 · 거래량 1.6배 · 고점 대비 -12% · 이격 1.09 · RSI 61','A급 자리',10980.0,8470.0,16000.0,18510.0,2.0,3.63,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','432470','케이엔에스','로봇·휴머노이드','news','pick','A급 자리 · 거래대금 43억 · 거래량 1.6배 · 고점 대비 -12% · 이격 1.09 · RSI 61','A급 자리',10980.0,8470.0,16000.0,18510.0,2.0,3.64,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','078590','휴림에이텍','로봇·휴머노이드','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(12억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','059090','미코','로봇·휴머노이드','news','pick','A급 자리 · 거래대금 45억 · 거래량 2.2배 · 고점 대비 -12% · 이격 1.07 · RSI 63','A급 자리',20150.0,18070.0,24300.0,26400.0,2.0,4.22,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','153890','져스텍','로봇·휴머노이드','news','pool','60일 고점 대비 -74% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
@@ -7072,7 +7072,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','391710','코닉오토메이션','�
 INSERT INTO "candidates" VALUES('2026-09-10','277810','레인보우로보틱스','로봇·휴머노이드','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','129920','대성하이텍','로봇·휴머노이드','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 유동성 미달(8억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','090360','로보스타','로봇·휴머노이드','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','068270','셀트리온','제약바이오','news','pick','A급 자리 · 거래대금 822억 · 거래량 0.9배 · 고점 대비 -14% · 이격 0.96 · RSI 47','A급 자리',184600.0,175700.0,202500.0,211500.0,2.0,2.86,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','068270','셀트리온','제약바이오','news','pick','A급 자리 · 거래대금 823억 · 거래량 0.9배 · 고점 대비 -14% · 이격 0.96 · RSI 47','A급 자리',184600.0,175700.0,202500.0,211500.0,2.0,2.87,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','009420','한올바이오파마','제약바이오','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',55500.0,48550.0,69400.0,76400.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','000100','유한양행','제약바이오','news','pool','거래 위축','A급 자리',80400.0,75900.0,89400.0,93900.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','086450','동국제약','제약바이오','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',19990.0,17670.0,24650.0,26950.0,2.0,0.0,NULL,'ok');
@@ -7150,7 +7150,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','087010','펩트론','제약바이�
 INSERT INTO "candidates" VALUES('2026-09-10','365660','레몬헬스케어','제약바이오','news','pool','60일 고점 대비 -76% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','217730','강스템바이오텍','제약바이오','news','pool','유동성 미달(9억) · 거래 위축','B급 (1/3 충족)',2255.0,1966.0,2835.0,3120.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','018620','우진비앤지','제약바이오','news','pool','유동성 미달(1억) · 거래 위축','A급 자리',2740.0,2550.0,3120.0,3310.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','028670','팬오션','조선·해운','news','pick','A급 자리 · 거래대금 250억 · 거래량 0.8배 · 고점 대비 -8% · 이격 1.02 · RSI 58','A급 자리',6150.0,5440.0,7570.0,8280.0,2.0,2.85,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','028670','팬오션','조선·해운','news','pick','A급 자리 · 거래대금 250억 · 거래량 0.9배 · 고점 대비 -8% · 이격 1.02 · RSI 58','A급 자리',6150.0,5440.0,7570.0,8280.0,2.0,2.86,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','023790','동일스틸럭스','조선·해운','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 유동성 미달(19억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','010140','삼성중공업','조선·해운','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',21850.0,20400.0,24750.0,26200.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','465770','STX그린로지스','조선·해운','news','pool','60일 고점 대비 -39% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7178,7 +7178,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','044490','태웅','원전·SMR','ne
 INSERT INTO "candidates" VALUES('2026-09-10','053690','한미글로벌','원전·SMR','news','pool','거래 위축','A급 자리',23600.0,19730.0,31350.0,35200.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','014620','성광벤드','원전·SMR','news','pool','자리 B급 (1/3 충족)','B급 (1/3 충족)',35350.0,30750.0,44550.0,49150.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','130660','한전산업','원전·SMR','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',13880.0,11890.0,17860.0,19850.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','000720','현대건설','원전·SMR','news','pick','A급 자리 · 거래대금 1,002억 · 거래량 1.1배 · 고점 대비 -14% · 이격 1.12 · RSI 66','A급 자리',142300.0,120300.0,186300.0,208500.0,2.0,3.06,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','000720','현대건설','원전·SMR','news','pick','A급 자리 · 거래대금 1,003억 · 거래량 1.1배 · 고점 대비 -14% · 이격 1.12 · RSI 66','A급 자리',142300.0,120300.0,186300.0,208500.0,2.0,3.07,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','096350','대창솔루션','원전·SMR','news','pool','유동성 미달(8억)','A급 자리',2280.0,1765.0,3310.0,3825.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','034020','두산에너빌리티','원전·SMR','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',94600.0,83700.0,116400.0,127300.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','105840','우진','원전·SMR','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',16350.0,13940.0,21150.0,23600.0,2.0,0.0,NULL,'ok');
@@ -7187,7 +7187,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','051600','한전KPS','원전·SMR',
 INSERT INTO "candidates" VALUES('2026-09-10','278470','에이피알','화장품·소비재','news','pool','자리 B급 (0/3 충족)','B급 (0/3 충족)',384500.0,330000.0,493500.0,548000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','214450','파마리서치','화장품·소비재','news','pool','자리 B급 (0/3 충족)','B급 (0/3 충족)',372500.0,331500.0,454500.0,495500.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','051900','LG생활건강','화장품·소비재','news','pick','A급 자리 · 거래대금 229억 · 거래량 0.9배 · 고점 대비 -13% · 이격 0.96 · RSI 52','A급 자리',294000.0,271000.0,340000.0,363000.0,2.0,2.91,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','0015N0','아로마티카','화장품·소비재','news','pick','A급 자리 · 거래대금 69억 · 거래량 0.9배 · 고점 대비 -12% · 이격 1.09 · RSI 64','A급 자리',10650.0,8730.0,14490.0,16410.0,2.0,2.89,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','0015N0','아로마티카','화장품·소비재','news','pick','A급 자리 · 거래대금 69억 · 거래량 0.9배 · 고점 대비 -12% · 이격 1.09 · RSI 64','A급 자리',10650.0,8730.0,14490.0,16410.0,2.0,2.9,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','351320','넥사다이내믹스','화장품·소비재','news','pool','20일선 이격 2.25 — 눌림 기다릴 자리','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-10','373200','엑스플러스','화장품·소비재','news','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 유동성 미달(2억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','142760','모아라이프플러스','화장품·소비재','news','pool','60일 고점 대비 -63% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
@@ -8602,7 +8602,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-10','^GSPC','S&P500',7636.36,-0.48
 INSERT INTO "global_baseline" VALUES('2026-09-10','^IXIC','나스닥',26253.34,-0.64,'2026-09-09 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-10','^SOX','필라델피아 반도체',11931.32,0.37,'2026-09-09 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-10','EWY','EWY(한국 ETF)',190.78,0.46,'2026-09-09 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-10','KRW=X','원/달러',1339.31,0.01,'2026-09-09 22:46Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-10','KRW=X','원/달러',1339.53,0.02,'2026-09-09 23:30Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-10','^KS11','코스피(전 거래일)',6954.52,-0.58,'2026-09-09 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-10','^KQ11','코스닥(전 거래일)',811.88,-1.25,'2026-09-09 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-10','KOSPI_REGIME','5일 +1.7% · 60일고점 -23.7%',-23.7,1.74,NULL,'yahoo/regime');
@@ -9190,6 +9190,7 @@ INSERT INTO "news_signals" VALUES(4066,'2026-09-09','2026-09-09 17:54','매경 �
 INSERT INTO "news_signals" VALUES(4067,'2026-09-09','2026-09-09 14:59','매경 기업','정책·정치','호재',NULL,'“지속 에너지 공급 체계 구축”…남부발전, 산단 노후석탄열병합 ‘친환경 LNG’ 전환 추진','GS E&R와 ‘신규 전원개발사업 공동협력 업무협약’ 체결 “친환경 연료전환 차질 없이 이끌어 낼 것”한국남부발전이 산업단지 노후석탄열병합을 ‘친환경 LNG’로의 전환을 추진한다...','https://www.mk.co.kr/news/business/12148245',1.0);
 INSERT INTO "news_signals" VALUES(4068,'2026-09-09','2026-09-09 14:54','매경 기업','화장품·소비재','호재','코스맥스,스맥','코스맥스-로레알그룹, 한불수교 140주년 맞아 MOU','코스맥스가 세계 최대 뷰티 기업 로레알그룹과 한·불 수교 140주년 기념 정상회담을 맞아 미래 글로벌 뷰티 시장을 공략하기 위한 업무협약(MOU)을 맺었다. 9일 코스맥스는 “지난..','https://www.mk.co.kr/news/business/12148240',2.0);
 INSERT INTO "news_signals" VALUES(4069,'2026-09-09','2026-09-09 11:31','매경 기업','조선·해운','호재','한화오션','한화오션, 태국 차세대 호위함 우선협상대상자 선정…“세부 협상 착수”','한화오션이 태국 왕립해군의 차세대 호위함 도입 사업 우선협상대상자로 선정됐다고 9일 밝혔다. 이번 선정은 최종 계약 체결에 앞서 세부 기술 사양과 사업 범위 등 구체적인 조건을 협..','https://www.mk.co.kr/news/business/12148098',2.0);
+INSERT INTO "news_signals" VALUES(4098,'2026-09-10','2026-09-10 07:53','연합뉴스','우주항공','호재',NULL,'부산시, 차세대 항공 기체부품 첨단제조 공모 선정','(부산=연합뉴스) 김선호 기자 = 부산시는 우주항공청(KASA)의 차세대 항공 기체부품 첨단제조 실증지원 기반구축 공모 사업에 최종 선정됐다고 ...','https://www.yna.co.kr/view/AKR20260910019400051',1.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -10882,5 +10883,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4089);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4110);
 COMMIT;
