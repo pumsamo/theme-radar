@@ -3593,7 +3593,7 @@ INSERT INTO "candidates" VALUES('2026-08-25','094480','갤럭시아머니트리'
 INSERT INTO "candidates" VALUES('2026-08-25','278470','에이피알','화장품·소비재','spot','watch','고점 대비 -8% · 이격 1.11 · RSI 63','자리 완성 (테마 신호 대기)',416000.0,369500.0,509000.0,556000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','096770','SK이노베이션','석유·에너지','spot','watch','고점 대비 -4% · 이격 1.09 · RSI 63','자리 완성 (테마 신호 대기)',134800.0,120000.0,164400.0,179200.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -12.8% · RSI 54 · 진입까지 +3.5%','저녁 A급 스캔',1141000.0,998000.0,1427000.0,1570000.0,2.0,2298.922542,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-25','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -14.2% · RSI 54 · 진입까지 +2.8%','저녁 A급 스캔',314000.0,268000.0,406000.0,452000.0,2.0,1.658881562462000147e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-25','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -14.2% · RSI 54 · 진입까지 +2.8%','저녁 A급 스캔',314000.0,268000.0,406000.0,452000.0,2.0,1.65888156246200014e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -10.6% · RSI 50 · 진입까지 +2.8%','저녁 A급 스캔',195000.0,179100.0,227000.0,242500.0,2.0,1437.04512485,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','006360','GS건설','데이터센터 전력','evenscan','escan','고점대비 -4.9% · RSI 55 · 진입까지 +1.4%','저녁 A급 스캔',35500.0,30850.0,44800.0,49450.0,2.0,999.009738425,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','207940','삼성바이오로직스','제약바이오','evenscan','escan','고점대비 -3.6% · RSI 60 · 진입까지 +0.9%','저녁 A급 스캔',1599000.0,1508000.0,1781000.0,1872000.0,2.0,911.125848,NULL,'ok');
@@ -3912,7 +3912,7 @@ INSERT INTO "candidates" VALUES('2026-08-26','251970','펌텍코리아','화장�
 INSERT INTO "candidates" VALUES('2026-08-26','123330','제닉','화장품·소비재','spot','watch','고점 대비 -5% · 이격 1.17 · RSI 61','자리 완성 (테마 신호 대기)',32400.0,27300.0,42600.0,47700.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','011200','HMM','조선·해운','spot','watch','고점 대비 -3% · 이격 1.06 · RSI 62','자리 완성 (테마 신호 대기)',23050.0,21250.0,26650.0,28450.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -14.0% · RSI 53 · 진입까지 +1.6%','저녁 A급 스캔',1104000.0,981000.0,1350000.0,1473000.0,2.0,2268.520501,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-26','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 56 · 진입까지 +2.9%','저녁 A급 스캔',320500.0,274000.0,413500.0,460000.0,2.0,1.733237405757999796e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-26','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 56 · 진입까지 +2.9%','저녁 A급 스캔',320500.0,274000.0,413500.0,460000.0,2.0,1.73323740575799979e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -8.8% · RSI 55 · 진입까지 +1.3%','저녁 A급 스캔',195900.0,183100.0,221500.0,234500.0,2.0,1352.67832225,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','119850','지엔씨에너지','데이터센터 전력','evenscan','escan','고점대비 -11.0% · RSI 61 · 진입까지 +2.1%','저녁 A급 스캔',52700.0,43400.0,71300.0,80600.0,2.0,517.472209975,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','010950','S-Oil','석유·에너지','evenscan','escan','고점대비 -10.4% · RSI 51 · 진입까지 +1.9%','저녁 A급 스캔',143700.0,126600.0,177900.0,195000.0,2.0,482.79244565,NULL,'ok');
@@ -4276,7 +4276,7 @@ INSERT INTO "candidates" VALUES('2026-08-27','013810','스페코','방산','read
 INSERT INTO "candidates" VALUES('2026-08-27','282330','BGF리테일','실적','spot','watch','고점 대비 -7% · 이격 1.04 · RSI 60','자리 완성 (테마 신호 대기)',153300.0,134400.0,191100.0,210000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','257720','실리콘투','화장품·소비재','spot','watch','고점 대비 -9% · 이격 1.15 · RSI 64','자리 완성 (테마 신호 대기)',49350.0,42500.0,63000.0,69900.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -9.0% · RSI 60 · 진입까지 +1.0%','저녁 A급 스캔',1161000.0,1044000.0,1395000.0,1512000.0,2.0,2230.343111,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-27','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 59 · 진입까지 +2.1%','저녁 A급 스캔',318000.0,276000.0,402000.0,444000.0,2.0,1.722366735647999803e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-27','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 59 · 진입까지 +2.1%','저녁 A급 스캔',318000.0,276000.0,402000.0,444000.0,2.0,1.7223667356479998e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','006340','대원전선','데이터센터 전력','evenscan','escan','고점대비 -13.6% · RSI 52 · 진입까지 +4.9%','저녁 A급 스캔',14830.0,12420.0,19650.0,22050.0,2.0,1536.280357815,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','278470','에이피알','화장품·소비재','evenscan','escan','고점대비 -4.1% · RSI 65 · 진입까지 +3.3%','저녁 A급 스캔',449000.0,397500.0,552000.0,604000.0,2.0,1228.47287875,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -9.8% · RSI 53 · 진입까지 +2.4%','저녁 A급 스캔',195800.0,181100.0,225000.0,240000.0,2.0,1215.4144084,NULL,'ok');
@@ -4336,7 +4336,7 @@ INSERT INTO "candidates" VALUES('2026-08-28','045390','대아티아이','남북�
 INSERT INTO "candidates" VALUES('2026-08-28','251970','펌텍코리아','화장품·소비재','evenscan','escan','고점대비 -7.2% · RSI 64 · 진입까지 +0.3%','저녁 A급 스캔',61900.0,54200.0,77300.0,85000.0,2.0,59.867942875,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','014620','성광벤드','원전·SMR','evenscan','escan','고점대비 -8.5% · RSI 66 · 진입까지 +2.4%','저녁 A급 스캔',32600.0,28750.0,40300.0,44150.0,2.0,58.550175,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','019170','신풍제약','제약바이오','evenscan','escan','고점대비 -7.7% · RSI 62 · 진입까지 +8.5%','저녁 A급 스캔',10950.0,8980.0,14890.0,16860.0,2.0,47.097589105,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-28','289080','SV인베스트먼트','리벨리온','evenscan','escan','고점대비 -13.4% · RSI 62 · 진입까지 +5.7%','저녁 A급 스캔',2600.0,2110.0,3580.0,4070.0,2.0,4.685069261399999618e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-28','289080','SV인베스트먼트','리벨리온','evenscan','escan','고점대비 -13.4% · RSI 62 · 진입까지 +5.7%','저녁 A급 스캔',2600.0,2110.0,3580.0,4070.0,2.0,4.68506926139999961e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','468530','프로티나','제약바이오','evenscan','escan','고점대비 -12.8% · RSI 58 · 진입까지 +6.7%','저녁 A급 스캔',38300.0,28600.0,57700.0,67400.0,2.0,46.131805415,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','012750','에스원','AI 소프트웨어','evenscan','escan','고점대비 -8.0% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',84700.0,78900.0,96300.0,102100.0,2.0,44.56661465,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','441270','파인엠텍','폴더블폰','evenscan','escan','고점대비 -13.0% · RSI 57 · 진입까지 +3.5%','저녁 A급 스캔',8470.0,7220.0,10970.0,12220.0,2.0,40.46059306,NULL,'ok');
@@ -4522,7 +4522,7 @@ INSERT INTO "candidates" VALUES('2026-08-31','051900','LG생활건강','화장�
 INSERT INTO "candidates" VALUES('2026-08-31','018260','삼성에스디에스','IT서비스','spot','watch','고점 대비 -13% · 이격 1.06 · RSI 63','자리 완성 (테마 신호 대기)',245500.0,225000.0,286500.0,307000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','006400','삼성SDI','이차전지·전해액','evenscan','escan','고점대비 -4.0% · RSI 67 · 진입까지 +2.8%','저녁 A급 스캔',593000.0,530000.0,719000.0,782000.0,2.0,2277.6882815,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -12.8% · RSI 53 · 진입까지 +6.3%','저녁 A급 스캔',1171000.0,997000.0,1519000.0,1693000.0,2.0,2166.930865,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-31','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -13.6% · RSI 57 · 진입까지 +1.3%','저녁 A급 스캔',311500.0,275000.0,384500.0,421000.0,2.0,1.81912365068049985e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-31','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -13.6% · RSI 57 · 진입까지 +1.3%','저녁 A급 스캔',311500.0,275000.0,384500.0,421000.0,2.0,1.81912365068049984e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','096770','SK이노베이션','석유·에너지','evenscan','escan','고점대비 -7.6% · RSI 53 · 진입까지 +1.8%','저녁 A급 스캔',127700.0,113700.0,155700.0,169700.0,2.0,1144.84859545,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','006360','GS건설','데이터센터 전력','evenscan','escan','고점대비 -6.9% · RSI 58 · 진입까지 +1.5%','저녁 A급 스캔',36850.0,32450.0,45650.0,50000.0,2.0,1055.5221509,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -10.9% · RSI 50 · 진입까지 +1.5%','저녁 A급 스캔',191700.0,179100.0,217000.0,229500.0,2.0,1037.21691415,NULL,'ok');
@@ -5791,7 +5791,7 @@ INSERT INTO "candidates" VALUES('2026-09-04','140410','메지온','제약바이�
 INSERT INTO "candidates" VALUES('2026-09-04','285130','SK케미칼','실적','evenscan','escan','고점대비 -3.2% · RSI 68 · 진입까지 +2.0%','저녁 A급 스캔',56300.0,50800.0,67300.0,72800.0,2.0,56.036269325,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','162300','신스틸','데이터센터 전력','evenscan','escan','고점대비 -6.0% · RSI 74 · 진입까지 +6.7%','저녁 A급 스캔',2245.0,1887.0,2960.0,3320.0,2.0,50.2372670375,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','107640','한중엔시에스','이차전지·전해액','evenscan','escan','고점대비 -13.4% · RSI 59 · 진입까지 +2.8%','저녁 A급 스캔',40900.0,34900.0,52900.0,58900.0,2.0,49.092550725,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-04','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.3% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',1257.0,1104.0,1563.0,1716.0,2.0,4.882779838850000687e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-04','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.3% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',1257.0,1104.0,1563.0,1716.0,2.0,4.88277983885000068e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','012750','에스원','AI 소프트웨어','evenscan','escan','고점대비 -12.8% · RSI 55 · 진입까지 +2.8%','저녁 A급 스캔',81400.0,74300.0,95600.0,102700.0,2.0,45.74851285,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','079160','CJ CGV','엔터·미디어','evenscan','escan','고점대비 -6.7% · RSI 56 · 진입까지 +0.4%','저녁 A급 스캔',5420.0,4995.0,6270.0,6700.0,2.0,40.33477348,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','432470','케이엔에스','데이터센터 전력','evenscan','escan','고점대비 -13.7% · RSI 57 · 진입까지 +4.6%','저녁 A급 스캔',10310.0,8220.0,14490.0,16580.0,2.0,39.005573285,NULL,'ok');
@@ -7312,7 +7312,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','012750','에스원','AI 소프트�
 INSERT INTO "candidates" VALUES('2026-09-10','107640','한중엔시에스','이차전지·전해액','evenscan','escan','고점대비 -5.8% · RSI 71 · 진입까지 +0.8%','저녁 A급 스캔',42800.0,38000.0,52400.0,57200.0,2.0,52.844041375,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','159010','아스플로','반도체 소부장','evenscan','escan','고점대비 -12.0% · RSI 67 · 진입까지 +4.5%','저녁 A급 스캔',24550.0,19960.0,33750.0,38300.0,2.0,48.39861574,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','059090','미코','로봇·휴머노이드','evenscan','escan','고점대비 -13.2% · RSI 62 · 진입까지 +6.1%','저녁 A급 스캔',20550.0,17620.0,26400.0,29350.0,2.0,45.911298405,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.9% · RSI 75 · 진입까지 +0.2%','저녁 A급 스캔',1233.0,1100.0,1499.0,1632.0,2.0,4.435863514949999598e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.9% · RSI 75 · 진입까지 +0.2%','저녁 A급 스캔',1233.0,1100.0,1499.0,1632.0,2.0,4.43586351494999959e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','432470','케이엔에스','데이터센터 전력','evenscan','escan','고점대비 -12.6% · RSI 63 · 진입까지 +3.9%','저녁 A급 스캔',10370.0,8580.0,13950.0,15740.0,2.0,43.5475125,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','199430','케이엔알시스템','로봇·원전','evenscan','escan','고점대비 -7.9% · RSI 58 · 진입까지 +4.5%','저녁 A급 스캔',19350.0,16050.0,25950.0,29250.0,2.0,41.631440015,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','192650','드림텍','반도체 소부장','evenscan','escan','고점대비 -5.7% · RSI 70 · 진입까지 +0.8%','저녁 A급 스캔',6330.0,5590.0,7810.0,8550.0,2.0,35.3817731125,NULL,'ok');
@@ -7322,7 +7322,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','036930','주성엔지니어링',NU
 INSERT INTO "candidates" VALUES('2026-09-10','403870','HPSP',NULL,'flows','fwatch','동반 4/5일 · 5일 순매수 1,128억','동반 순매수 지속',NULL,NULL,NULL,NULL,NULL,1127.677809,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','039030','이오테크닉스','반도체 소부장','news','pick','A급 자리 · 거래대금 587억 · 거래량 3.5배 · 고점 대비 -14% · 이격 1.09 · RSI 72','A급 자리',490500.0,414500.0,642000.0,718000.0,2.0,5.52,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','403870','HPSP','반도체 소부장','news','pool','자리 B급 (1/3 충족)','B급 (1/3 충족)',60400.0,50500.0,80200.0,90100.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','224060','더코디','반도체 소부장','news','pool','20일선 이격 2.40 — 눌림 기다릴 자리 · 유동성 미달(9억)','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','224060','더코디','반도체 소부장','news','pool','20일선 이격 2.40 — 눌림 기다릴 자리 · 유동성 미달(9억)','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','131290','티에스이','반도체 소부장','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',319000.0,270500.0,416000.0,464500.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','117670','알파칩스','반도체 소부장','news','pool','유동성 미달(2억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',10470.0,9470.0,12470.0,13470.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','950250','테라뷰','반도체 소부장','news','pool','20일선 이격 1.47 — 눌림 기다릴 자리','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7345,28 +7345,28 @@ INSERT INTO "candidates" VALUES('2026-09-11','228340','동양파일','반도체 
 INSERT INTO "candidates" VALUES('2026-09-11','058730','다스코','반도체 소부장','news','pool','60일 고점 대비 -42% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','159010','아스플로','반도체 소부장','news','pick','A급 자리 · 거래대금 48억 · 거래량 0.8배 · 고점 대비 -12% · 이격 1.04 · RSI 67','A급 자리',24550.0,19960.0,33750.0,38300.0,2.0,2.85,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','091590','남화토건','반도체 소부장','news','pool','60일 고점 대비 -42% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','092870','엑시콘','반도체 소부장','news','pick','A급 자리 · 거래대금 99억 · 거래량 0.8배 · 고점 대비 -11% · 이격 1.13 · RSI 65','A급 자리',30100.0,24500.0,41300.0,46900.0,2.0,2.85,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','092870','엑시콘','반도체 소부장','news','pool',NULL,'A급 자리',30100.0,24500.0,41300.0,46900.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','003160','디아이','반도체 소부장','news','pick','A급 자리 · 거래대금 137억 · 거래량 1.1배 · 고점 대비 -6% · 이격 1.13 · RSI 72','A급 자리',31600.0,27250.0,40300.0,44650.0,2.0,3.06,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','198440','강동씨앤엘','반도체 소부장','news','pool','20일선 이격 1.31 — 눌림 기다릴 자리','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','089790','제이티','반도체 소부장','news','pool','유동성 미달(9억) · 거래 위축','A급 자리',5020.0,4350.0,6360.0,7030.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','001210','금호전기','반도체 소부장','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',12200.0,9610.0,17380.0,19970.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','001210','금호전기','반도체 소부장','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',12200.0,9610.0,17380.0,19970.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','054940','엑사이엔씨','반도체 소부장','news','pool','유동성 미달(18억) · 거래 위축','B급 (2/3 충족)',3840.0,3270.0,4980.0,5550.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','077500','유니퀘스트','반도체 소부장','news','pool','유동성 미달(14억)','A급 자리',7180.0,6430.0,8680.0,9430.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','192650','드림텍','반도체 소부장','news','pool','거래 위축','A급 자리',6330.0,5590.0,7810.0,8550.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','413630','씨피시스템','반도체 소부장','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',4395.0,3650.0,5880.0,6630.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','355150','코스텍시스','반도체 소부장','news','pool','60일 고점 대비 -40% — 검증상 승률 33% 이하 구간 · 유동성 미달(18억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','036810','에프에스티','반도체 소부장','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',26900.0,23300.0,34100.0,37700.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','080580','오킨스전자','반도체 소부장','news','pool','거래 위축','A급 자리',21900.0,17740.0,30200.0,34400.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','080580','오킨스전자','반도체 소부장','news','pool','거래 위축','A급 자리',21900.0,17740.0,30200.0,34400.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','232140','와이씨','반도체 소부장','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',12220.0,10480.0,15700.0,17440.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','405100','큐알티','반도체 소부장','news','pool','유동성 미달(12억) · 거래 위축','A급 자리',14460.0,12710.0,17960.0,19710.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','183300','코미코','반도체 소부장','news','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','228850','레이언스','반도체 소부장','news','pool','유동성 미달(6억) · 거래 위축','A급 자리',7260.0,6640.0,8500.0,9120.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','002990','금호건설','반도체 소부장','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',15630.0,12610.0,21650.0,24700.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','098120','마이크로컨텍솔','반도체 소부장','news','pool','자리 B급 (0/3 충족)','B급 (0/3 충족)',52100.0,45750.0,64800.0,71200.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','098120','마이크로컨텍솔','반도체 소부장','news','pool','자리 B급 (0/3 충족)','B급 (0/3 충족)',52100.0,45750.0,64800.0,71200.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','061970','LB세미콘','반도체 소부장','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','217190','제너셈','반도체 소부장','news','pool','유동성 미달(24억) · 거래 위축','B급 (2/3 충족)',6490.0,5590.0,8290.0,9190.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','083310','엘오티베큠','반도체 소부장','news','pool','유동성 미달(8억) · 거래 위축','B급 (2/3 충족)',10020.0,9100.0,11860.0,12780.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','131400','이브이첨단소재','반도체 소부장','news','pool','60일 고점 대비 -53% — 검증상 승률 33% 이하 구간 · 유동성 미달(25억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','131400','이브이첨단소재','반도체 소부장','news','pool','60일 고점 대비 -53% — 검증상 승률 33% 이하 구간 · 유동성 미달(25억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','025560','미래산업','반도체 소부장','news','pool','60일 고점 대비 -55% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','009730','이렘','반도체 소부장','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(2억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','101400','엔시트론','반도체 소부장','news','pool','유동성 미달(4억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',1743.0,1555.0,2120.0,2305.0,2.0,0.0,NULL,'ok');
@@ -7383,7 +7383,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','147760','피엠티','반도체 소
 INSERT INTO "candidates" VALUES('2026-09-11','114810','한솔아이원스','반도체 소부장','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',13160.0,11330.0,16820.0,18650.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','083470','이엠앤아이','반도체 소부장','news','pool','유동성 미달(1억) · 거래 위축','B급 (1/3 충족)',911.0,797.0,1139.0,1253.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','032580','피델릭스','반도체 소부장','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',5200.0,4520.0,6560.0,7240.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','247660','나노씨엠에스','반도체 소부장','news','pool','유동성 미달(2억) · 거래 위축','B급 (2/3 충족)',3910.0,3220.0,5290.0,5980.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','247660','나노씨엠에스','반도체 소부장','news','pool','유동성 미달(2억) · 거래 위축','B급 (2/3 충족)',3910.0,3220.0,5290.0,5980.0,2.0,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','323280','태성','반도체 소부장','news','pick','A급 자리 · 거래대금 143억 · 거래량 4.9배 · 고점 대비 -12% · 이격 1.02 · RSI 64','A급 자리',49950.0,45350.0,59200.0,63800.0,2.0,6.9,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','254120','자비스','반도체 소부장','news','pool','유동성 미달(1억) · 거래 위축','A급 자리',1057.0,952.0,1267.0,1372.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','420770','기가비스','반도체 소부장','news','pool','60일 고점 대비 -53% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7413,7 +7413,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','003010','혜인','데이터센터 
 INSERT INTO "candidates" VALUES('2026-09-11','001820','삼화콘덴서','데이터센터 전력','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','900290','GRT','데이터센터 전력','news','pool','유동성 미달(14억) · 거래 위축','B급 (2/3 충족)',3720.0,3235.0,4690.0,5180.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','067170','오텍','데이터센터 전력','news','pool','유동성 미달(14억) · 거래 위축','B급 (2/3 충족)',2635.0,2190.0,3525.0,3970.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','024840','KBI메탈','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',5490.0,4795.0,6880.0,7580.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','024840','KBI메탈','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',5490.0,4795.0,6880.0,7580.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','457370','한켐','데이터센터 전력','news','pool','60일 고점 대비 -55% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','082920','비츠로셀','데이터센터 전력','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','006660','삼성공조','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',13360.0,11920.0,16240.0,17680.0,2.0,0.0,NULL,'ok');
@@ -7423,7 +7423,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','119850','지엔씨에너지','데�
 INSERT INTO "candidates" VALUES('2026-09-11','009150','삼성전기','데이터센터 전력','news','pool','60일 고점 대비 -42% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','469610','이노테크','데이터센터 전력','news','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','103590','일진전기','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',71900.0,65000.0,85700.0,92600.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','095910','에스에너지','데이터센터 전력','news','pool','60일 고점 대비 -57% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','095910','에스에너지','데이터센터 전력','news','pool','60일 고점 대비 -57% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','126730','코칩','데이터센터 전력','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','007610','선도전기','데이터센터 전력','news','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간 · 유동성 미달(10억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','006360','GS건설','데이터센터 전력','news','pick','A급 자리 · 거래대금 754억 · 거래량 0.8배 · 고점 대비 -4% · 이격 1.06 · RSI 69','A급 자리',37500.0,33800.0,44900.0,48600.0,2.0,2.8,NULL,'ok');
@@ -7470,7 +7470,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','290740','액트로','로봇·휴�
 INSERT INTO "candidates" VALUES('2026-09-11','432470','케이엔에스','로봇·휴머노이드','news','pool','거래 위축','A급 자리',10370.0,8580.0,13950.0,15740.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','078590','휴림에이텍','로봇·휴머노이드','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(11억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','059090','미코','로봇·휴머노이드','news','pick','A급 자리 · 거래대금 46억 · 거래량 2.6배 · 고점 대비 -13% · 이격 1.04 · RSI 62','A급 자리',20550.0,17620.0,26400.0,29350.0,2.0,4.65,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','153890','져스텍','로봇·휴머노이드','news','pool','60일 고점 대비 -75% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','153890','져스텍','로봇·휴머노이드','news','pool','60일 고점 대비 -75% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','126640','화신정공','로봇·휴머노이드','news','pool','60일 고점 대비 -45% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','066430','아이로보틱스','로봇·휴머노이드','news','pool','60일 고점 대비 -47% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','448900','한국피아이엠','로봇·휴머노이드','news','pool','60일 고점 대비 -40% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7520,7 +7520,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','263860','지니언스','AI 소프�
 INSERT INTO "candidates" VALUES('2026-09-11','475040','스트라드비젼','AI 소프트웨어','news','pool','60일 고점 대비 -66% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','488280','에스투더블유','AI 소프트웨어','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 유동성 미달(14억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','300080','플리토','AI 소프트웨어','news','pool','유동성 미달(6억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',10320.0,9540.0,11880.0,12660.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','134580','탑코미디어','AI 소프트웨어','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',3910.0,2865.0,6000.0,7040.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','134580','탑코미디어','AI 소프트웨어','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',3910.0,2865.0,6000.0,7040.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','035510','신세계I&C','AI 소프트웨어','news','pool','유동성 미달(15억) · 자리 B급 (1/3 충족)','B급 (1/3 충족)',16670.0,15210.0,19590.0,21050.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','038880','아이에이','AI 소프트웨어','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(1억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','0039P0','매드업','AI 소프트웨어','news','pool','60일 고점 대비 -57% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7531,7 +7531,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','304100','솔트룩스','AI 소프�
 INSERT INTO "candidates" VALUES('2026-09-11','039980','폴라리스AI','AI 소프트웨어','news','pool','유동성 미달(24억) · 거래 위축','B급 (1/3 충족)',5290.0,4680.0,6510.0,7120.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','296640','이노에이엑스','AI 소프트웨어','news','pool','유동성 미달(2억) · 거래 위축','A급 자리',6230.0,5610.0,7470.0,8090.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','193250','링크드','AI 소프트웨어','news','pool','유동성 미달(3억) · 거래 위축','B급 (2/3 충족)',2180.0,1822.0,2895.0,3255.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','239340','이스트에이드','AI 소프트웨어','news','pool','60일 고점 대비 -58% — 검증상 승률 33% 이하 구간 · 유동성 미달(4억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','239340','이스트에이드','AI 소프트웨어','news','pool','60일 고점 대비 -58% — 검증상 승률 33% 이하 구간 · 유동성 미달(4억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','148780','비큐AI','AI 소프트웨어','news','pool','60일 고점 대비 -40% — 검증상 승률 33% 이하 구간 · 유동성 미달(12억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','069410','엔텔스','AI 소프트웨어','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 유동성 미달(0억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','477850','마키나락스','AI 소프트웨어','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7543,7 +7543,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','463020','뉴엔AI','AI 소프트�
 INSERT INTO "candidates" VALUES('2026-09-11','417860','오브젠','AI 소프트웨어','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 유동성 미달(1억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','377480','마음AI','AI 소프트웨어','news','pool','유동성 미달(4억) · 자리 B급 (2/3 충족)','B급 (2/3 충족)',10270.0,9560.0,11690.0,12400.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','340810','시선AI','AI 소프트웨어','news','pool','유동성 미달(7억) · 거래 위축','A급 자리',3955.0,3520.0,4825.0,5260.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','389680','유디엠텍','AI 소프트웨어','news','pool','20일선 이격 1.36 — 눌림 기다릴 자리 · 유동성 미달(6억)','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','389680','유디엠텍','AI 소프트웨어','news','pool','20일선 이격 1.36 — 눌림 기다릴 자리 · 유동성 미달(6억)','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목,투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','303530','이노뎁','AI 소프트웨어','news','pool','유동성 미달(0억) · 거래 위축','B급 (2/3 충족)',3105.0,2760.0,3795.0,4140.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','012750','에스원','AI 소프트웨어','news','pick','A급 자리 · 거래대금 53억 · 거래량 3.2배 · 고점 대비 -9% · 이격 1.01 · RSI 60','A급 자리',83000.0,75600.0,97800.0,105200.0,2.0,5.17,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','065370','위세아이텍','AI 소프트웨어','news','pool','유동성 미달(0억) · 거래 위축','B급 (2/3 충족)',3055.0,2805.0,3555.0,3805.0,2.0,0.0,NULL,'ok');
@@ -7579,7 +7579,7 @@ INSERT INTO "candidates" VALUES('2026-09-11','476060','온코닉테라퓨틱스'
 INSERT INTO "candidates" VALUES('2026-09-11','299660','셀리드','제약바이오','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',2485.0,1931.0,3595.0,4145.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','382150','온코크로스','제약바이오','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','094170','동운아나텍','제약바이오','news','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','331920','셀레믹스','제약바이오','news','pool','유동성 미달(12억) · 거래 위축','B급 (2/3 충족)',14220.0,12320.0,18020.0,19920.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','331920','셀레믹스','제약바이오','news','pool','유동성 미달(12억) · 거래 위축','B급 (2/3 충족)',14220.0,12320.0,18020.0,19920.0,2.0,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','229000','젠큐릭스','제약바이오','news','pool','60일 고점 대비 -34% — 검증상 승률 33% 이하 구간 · 유동성 미달(6억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','456160','지투지바이오','제약바이오','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','373110','엑셀세라퓨틱스','제약바이오','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 유동성 미달(6억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -7607,16 +7607,16 @@ INSERT INTO "candidates" VALUES('2026-09-11','291650','츨립앤사이언스','�
 INSERT INTO "candidates" VALUES('2026-09-11','179530','애드바이오텍','제약바이오','news','pool','유동성 미달(5억) · 거래 위축','B급 (1/3 충족)',2365.0,1985.0,3125.0,3505.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','950160','코오롱티슈진','제약바이오','news','pool','60일 고점 대비 -85% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','468530','프로티나','제약바이오','news','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','378800','샤페론','제약바이오','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','378800','샤페론','제약바이오','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','001060','JW중외제약','제약바이오','news','pool','유동성 미달(24억) · 거래 위축','B급 (2/3 충족)',26950.0,25050.0,30750.0,32650.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','344860','이노진','제약바이오','news','pool','유동성 미달(1억) · 거래 위축','A급 자리',1413.0,1311.0,1617.0,1719.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','203400','에이비온','제약바이오','news','pool','60일 고점 대비 -72% — 검증상 승률 33% 이하 구간 · 유동성 미달(12억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','203400','에이비온','제약바이오','news','pool','60일 고점 대비 -72% — 검증상 승률 33% 이하 구간 · 유동성 미달(12억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','067080','대화제약','제약바이오','news','pool','유동성 미달(10억) · 거래 위축','A급 자리',10940.0,10200.0,12420.0,13160.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','174900','앱클론','제약바이오','news','pool','60일 고점 대비 -43% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','310210','보로노이','제약바이오','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','317690','퀀타매트릭스','제약바이오','news','pool','유동성 미달(1억) · 거래 위축','B급 (2/3 충족)',2470.0,2220.0,2970.0,3220.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','365270','큐라클','제약바이오','news','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 유동성 미달(9억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','084650','랩지노믹스','제약바이오','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간 · 유동성 미달(21억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','084650','랩지노믹스','제약바이오','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간 · 유동성 미달(21억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','348080','큐라티스','제약바이오','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 유동성 미달(2억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','001540','안국약품','제약바이오','news','pool','유동성 미달(8억) · 거래 위축','B급 (1/3 충족)',10320.0,9620.0,11720.0,12420.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','083790','CG인바이츠','제약바이오','news','pool','유동성 미달(2억)','A급 자리',1007.0,903.0,1215.0,1319.0,2.0,0.0,NULL,'ok');
@@ -7631,14 +7631,14 @@ INSERT INTO "candidates" VALUES('2026-09-11','278470','에이피알','화장품�
 INSERT INTO "candidates" VALUES('2026-09-11','214450','파마리서치','화장품·소비재','news','pool','자리 B급 (0/3 충족)','B급 (0/3 충족)',365000.0,314500.0,466000.0,516000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','051900','LG생활건강','화장품·소비재','news','pick','A급 자리 · 거래대금 224억 · 거래량 0.9배 · 고점 대비 -12% · 이격 0.97 · RSI 53','A급 자리',296500.0,275500.0,338500.0,359500.0,2.0,2.95,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','0015N0','아로마티카','화장품·소비재','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',11120.0,8340.0,16680.0,19460.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','351320','넥사다이내믹스','화장품·소비재','news','pool','20일선 이격 1.74 — 눌림 기다릴 자리','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','351320','넥사다이내믹스','화장품·소비재','news','pool','20일선 이격 1.74 — 눌림 기다릴 자리','과열 추격 구간',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','373200','엑스플러스','화장품·소비재','news','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 유동성 미달(2억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','142760','모아라이프플러스','화장품·소비재','news','pool','60일 고점 대비 -64% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','900300','오가닉티코스메틱','화장품·소비재','news','pool','60일 고점 대비 -45% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','142760','모아라이프플러스','화장품·소비재','news','pool','60일 고점 대비 -64% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
+INSERT INTO "candidates" VALUES('2026-09-11','900300','오가닉티코스메틱','화장품·소비재','news','pool','60일 고점 대비 -45% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'투자경고','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','123330','제닉','화장품·소비재','news','pool','60일 고점 대비 -34% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','003350','한국화장품제조','화장품·소비재','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',13510.0,11260.0,18010.0,20250.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','237880','클리오','화장품·소비재','news','pool','유동성 미달(28억) · 거래 위축','B급 (1/3 충족)',12250.0,11370.0,14010.0,14890.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-11','226340','본느','화장품·소비재','news','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-11','226340','본느','화장품·소비재','news','pool','60일 고점 대비 -38% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'관리종목','ok');
 INSERT INTO "candidates" VALUES('2026-09-11','406820','뷰티스킨','화장품·소비재','news','pool','유동성 미달(8억) · 거래 위축','B급 (2/3 충족)',1896.0,1734.0,2220.0,2380.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','251970','펌텍코리아','화장품·소비재','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',52900.0,46750.0,65200.0,71400.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-11','192820','코스맥스','화장품·소비재','news','pool','거래 위축','A급 자리',274500.0,240000.0,343500.0,378000.0,2.0,0.0,NULL,'ok');
@@ -9083,7 +9083,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-11','^GSPC','S&P500',7591.7,-0.58,
 INSERT INTO "global_baseline" VALUES('2026-09-11','^IXIC','나스닥',26081.72,-0.65,'2026-09-10 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-11','^SOX','필라델피아 반도체',11614.17,-2.66,'2026-09-10 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-11','EWY','EWY(한국 ETF)',182.78,-4.19,'2026-09-10 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-11','KRW=X','원/달러',1349.21,0.75,'2026-09-10 22:26Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-11','KRW=X','원/달러',1349.23,0.75,'2026-09-10 22:48Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-11','^KS11','코스피(전 거래일)',7051.64,1.4,'2026-09-10 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-11','^KQ11','코스닥(전 거래일)',830.37,2.28,'2026-09-10 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-11','KOSPI_REGIME','5일 +7.4% · 60일고점 -22.6%',-22.63,7.45,NULL,'yahoo/regime');
@@ -9679,6 +9679,7 @@ INSERT INTO "news_signals" VALUES(4075,'2026-09-10','2026-09-10 11:10','매경 �
 INSERT INTO "news_signals" VALUES(4076,'2026-09-10','2026-09-10 11:10','매경 기업','데이터센터 전력','호재',NULL,'“자꾸 의심하는데, 삼전닉스 앞으로 더 좋습니다”…‘반도체의 왕’ 메모리 가격 더 뛴다','AI 데이터센터 투자 확대 힘입어 메모리가 반도체 매출 55% 차지인공지능(AI) 데이터센터 투자 확대와 공급 부족에 따른 가격 급등으로 메모리 반도체가 세계 반도체 시장의 절반 ..','https://www.mk.co.kr/news/business/12149192',1.0);
 INSERT INTO "news_signals" VALUES(4077,'2026-09-10','2026-09-10 11:10','매경 기업','반도체 소부장','호재',NULL,'“자꾸 의심하는데, 삼전닉스 앞으로 더 좋습니다”…‘반도체의 왕’ 메모리 가격 더 뛴다','AI 데이터센터 투자 확대 힘입어 메모리가 반도체 매출 55% 차지인공지능(AI) 데이터센터 투자 확대와 공급 부족에 따른 가격 급등으로 메모리 반도체가 세계 반도체 시장의 절반 ..','https://www.mk.co.kr/news/business/12149192',1.0);
 INSERT INTO "news_signals" VALUES(4078,'2026-09-10','2026-09-10 11:10','매경 기업','AI 반도체·기판','호재',NULL,'“자꾸 의심하는데, 삼전닉스 앞으로 더 좋습니다”…‘반도체의 왕’ 메모리 가격 더 뛴다','AI 데이터센터 투자 확대 힘입어 메모리가 반도체 매출 55% 차지인공지능(AI) 데이터센터 투자 확대와 공급 부족에 따른 가격 급등으로 메모리 반도체가 세계 반도체 시장의 절반 ..','https://www.mk.co.kr/news/business/12149192',1.0);
+INSERT INTO "news_signals" VALUES(4094,'2026-09-10','2026-09-10 22:37','DART','방산','호재','한화에어로스페이스','(유가)한화에어로스페이스 - 단일판매ㆍ공급계약체결(자율공시)',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260911800004',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -11412,5 +11413,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4081);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4094);
 COMMIT;
