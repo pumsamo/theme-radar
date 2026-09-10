@@ -498,6 +498,10 @@ def holdings_sheet():
         return "<h2>보유 관찰</h2><p>데이터 없음</p>"
     conf = json.loads(path.read_text(encoding="utf-8"))
     today = _date.today().strftime("%Y%m%d")
+    try:
+        mcap = json.loads((ROOT / "data" / "mcap.json").read_text(encoding="utf-8"))["stocks"]
+    except Exception:  # noqa: BLE001
+        mcap = {}
 
     def rsi14(cl):
         g = l = 0.0
@@ -516,13 +520,13 @@ def holdings_sheet():
     with ThreadPoolExecutor(6) as ex:
         px = dict(ex.map(load, conf["holdings"]))
 
-    rows, tot_val, tot_cost, breaches = [], 0.0, 0.0, []
+    rows, tot_val, tot_cost, breaches, rules = [], 0.0, 0.0, [], []
     for h in conf["holdings"]:
         bars = px.get(h["code"])
         cost = h["shares"] * h["avg"]
         tot_cost += cost
         if not bars:
-            rows.append(f"<tr><td>{h['name']}</td><td colspan=8>시세 조회 실패</td></tr>")
+            rows.append(f"<tr><td>{h['name']}</td><td colspan=12>시세 조회 실패</td></tr>")
             tot_val += cost
             continue
         cl = [b["close"] for b in bars]
@@ -535,6 +539,14 @@ def holdings_sheet():
         disp = close / (sum(cl[-20:]) / 20)
         r = rsi14(cl)
         ok = sum((-15 <= off <= -3, 0.95 <= disp <= 1.20, 45 <= r <= 75))
+        # 규칙 대응용 보조값: 224일선 · 거래량 배수 · 참고 손절(10일 저가×0.99, R3 검증 구조 손절) · 시총
+        ma224 = sum(cl[-224:]) / 224 if len(cl) >= 224 else None
+        v224 = (close / ma224 - 1) * 100 if ma224 else None
+        vol20 = sum(b["volume"] for b in bars[-21:-1]) / 20
+        volx = bars[-1]["volume"] / vol20 if vol20 else 0.0
+        ref_stop = min(b["low"] for b in bars[-10:]) * 0.99
+        cap_eok = (mcap.get(h["code"]) or {}).get("mcap_eok") or 0
+        both5 = 0
         # 수급 방향 (최근 5거래일, collect_flows 데이터)
         sup, scls = "—", ""
         fp = ROOT / "data" / "flows" / f"{h['code']}.json"
@@ -544,6 +556,7 @@ def holdings_sheet():
                 win = [fl[d] for d in sorted(fl)[-5:]]
                 inst = sum(w[0] for w in win)
                 frgn = sum(w[1] for w in win)
+                both5 = sum(1 for w in win if w[0] > 0 and w[1] > 0)
                 if inst > 0 and frgn > 0:
                     sup, scls = "동반 매수", "up"
                 elif inst < 0 and frgn < 0:
@@ -560,14 +573,29 @@ def holdings_sheet():
             stop_cell = f"<td class='{('down' if breached else '')}'>{stop:,.0f}{' ⚠이탈' if breached else ''}</td>"
         else:
             stop_cell = "<td class='row'>—</td>"
+        # 규칙 대응 (검증 규칙 대입 — 지시 아님): 청산 신호 > 추매 회피 > 추매 검토 > 관찰
+        if volx >= 5:
+            rule, rcls = f"청산 신호 — 거래량 {volx:.1f}배 폭발일", "down"
+        elif off <= -30:
+            rule, rcls = "추매 근거 없음 — 낙폭 과대(승률 33%↓)", "down"
+        elif sup == "동반 매도":
+            rule, rcls = "추매 근거 없음 — 동반 매도 중", "down"
+        elif ok == 3 and both5 >= 3 and cap_eok >= 1000 and (v224 is None or v224 >= 0):
+            rule, rcls = f"추매 검토 가능 — 돌파 확인가 {bars[-1]['high'] * 1.002:,.0f}", "up"
+        elif ok == 3:
+            rule, rcls = "자리 됨, 수급 미확인 — 관찰", ""
+        else:
+            rule, rcls = "관찰 — 조건 미충족", ""
+        rules.append(rule)
         rows.append(
             f"<tr><td>{h['name']}</td><td class='{pct_cls(vs)}'>{vs:+.1f}%</td>"
             f"<td class='{pct_cls(pnl)}'>{won(pnl)}원</td>"
-            f"{stop_cell}"
+            f"{stop_cell}<td class='row'>{ref_stop:,.0f}</td>"
             f"<td class='opt {pct_cls(off)}'>{off:+.1f}%</td>"
             f"<td class='opt'>{disp:.2f}</td><td class='opt'>{r:.0f}</td>"
+            f"<td class='opt {pct_cls(v224 or 0)}'>{(f'{v224:+.0f}%' if v224 is not None else '—')}</td>"
             f"<td class='{('up' if ok == 3 else '')}'>{ok}/3</td>"
-            f"<td class='{scls}'>{sup}</td></tr>")
+            f"<td class='{scls}'>{sup}</td><td>{volx:.1f}배</td><td class='{rcls}'>{rule}</td></tr>")
     tret = (tot_val / tot_cost - 1) * 100 if tot_cost else 0
     realized = conf.get("realized", [])
     rsum = sum(r["pnl"] for r in realized)
@@ -579,6 +607,11 @@ def holdings_sheet():
     n_stop = sum(1 for h in conf["holdings"] if h.get("stop"))
     bline = (f"<div class='row down'>⚠ 손절선 이탈: {', '.join(breaches)} — 종가 기준, 알림일 뿐 자동 매도 아님</div>"
              if breaches else "")
+    n_exit = sum(1 for x in rules if x.startswith("청산"))
+    n_avoid = sum(1 for x in rules if x.startswith("추매 근거"))
+    n_add = sum(1 for x in rules if x.startswith("추매 검토"))
+    rule_line = (f"<div class='row'>규칙 대응 요약: 청산 신호 {n_exit} · 추매 근거 없음 {n_avoid} · 추매 검토 가능 {n_add} · "
+                 f"관찰 {len(rules) - n_exit - n_avoid - n_add}</div>")
     return f"""
 <h2>보유 관찰 — 실계좌 {len(conf['holdings'])}종목 (포지션 확인일 {conf['asof']} · 시세는 매일 저녁 자동)</h2>
 <div class="cards"><div class="card">
@@ -588,14 +621,19 @@ def holdings_sheet():
 </div></div>
 {rline}
 {bline}
+{rule_line}
 <div class="row">자리 = A급 3요건(고점比 −15~−3% · 이격 0.95~1.20 · RSI 45~75) 충족 수.
 수급 = 최근 5거래일 기관·외인 순매수 방향. 검증 참고: 동반 매수 지속은 60일 +3.2%p 유망,
 동반 매도 지속은 회피 신호. 손절선은 본인이 정한 값을 config/holdings.json에 등록 —
-종가가 그 아래로 마감하면 '이탈'로 표시(자동 매도 아님, 알림용). <b>추적 기록일 뿐 매도·매수
-신호 아님 — 판단·실행은 본인.</b></div>
-<div class="twrap"><table><tr><th>종목</th><th>평단比</th><th>평가손익</th><th>손절선</th>
-<th class="opt">고점比</th><th class="opt">이격</th><th class="opt">RSI</th><th>자리</th>
-<th>수급 5일</th></tr>{"".join(rows)}</table></div>"""
+종가가 그 아래로 마감하면 '이탈'로 표시(자동 매도 아님, 알림용).
+<b>규칙 대응</b>(2026-09-10부터, 사용자 요청) = 검증된 규칙을 보유 종목에 대입한 결과:
+추매 검토 가능 = 자리 3/3 + 5일 중 3일↑ 동반 순매수 + 시총 1,000억↑ + 224선 위, 추가 진입은 돌파 확인가(오늘 고가×1.002)에서만 ·
+추매 근거 없음 = 고점比 −30% 이하(검증 승률 33% 이하 구간, 물타기 회피) 또는 동반 매도 중 ·
+청산 신호 = 거래량이 20일 평균의 5배 이상인 날(거래량 폭발일 청산 +0.189R 검증). 참고 손절 = 10일 저가×0.99(R3 검증 구조 손절).
+<b>규칙 대입 결과이지 매매 지시가 아님 — 판단·실행은 본인.</b></div>
+<div class="twrap"><table><tr><th>종목</th><th>평단比</th><th>평가손익</th><th>손절선</th><th>참고 손절</th>
+<th class="opt">고점比</th><th class="opt">이격</th><th class="opt">RSI</th><th class="opt">224선</th><th>자리</th>
+<th>수급 5일</th><th>거래량</th><th>규칙 대응</th></tr>{"".join(rows)}</table></div>"""
 
 
 def value_sheet():
