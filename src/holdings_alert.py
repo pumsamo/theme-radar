@@ -84,15 +84,19 @@ def main() -> None:
     prev = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     watch = sys.argv[sys.argv.index("--watch") + 1] if "--watch" in sys.argv else None
     cur, changes = {}, []
-    for h in conf["holdings"]:
+    targets = [dict(h, _kind="보유") for h in conf["holdings"]] + [dict(w, _kind="관심") for w in conf.get("watchlist", [])]
+    for h in targets:
         ev = evaluate(h, mcap)
         if not ev:
             continue
+        if h["_kind"] == "관심":  # 신규 매수 후보는 '추매' 대신 '신규 진입' 표현
+            ev["rule"] = ev["rule"].replace("추매 검토 가능", "신규 진입 검토 가능").replace("추매 근거 없음", "신규 진입 근거 없음")
+        h["name"] = f"{h['name']}({h['_kind']})" if h["_kind"] == "관심" else h["name"]
         cur[h["name"]] = ev["rule"]
         before = prev.get(h["name"])
         if before is not None and before != ev["rule"]:
             changes.append((h["name"], before, ev["rule"], ev))
-        if watch and h["name"] == watch:
+        if watch and h["name"].split("(")[0] == watch:
             need = ev["hi60"] * 0.85
             print(f"[{watch}] {ev['date']} 종가 {ev['close']:,.0f} · 60일 고점 {ev['hi60']:,.0f} 比 {ev['off']:+.1f}% "
                   f"(자리 조건 −15% = {need:,.0f}, {'충족' if ev['off'] >= -15 else f'{(need / ev['close'] - 1) * 100:+.1f}% 남음'}) · "
@@ -106,7 +110,7 @@ def main() -> None:
     else:
         print(f"규칙 대응 변경 없음 ({len(cur)}종목, 상태 저장)")
     for nm, rule in cur.items():
-        if rule.startswith(("추매 검토", "청산 신호", "손절선 이탈")):
+        if rule.startswith(("추매 검토", "신규 진입 검토", "청산 신호", "손절선 이탈")):
             print(f"  ▶ 현재 신호: {nm} — {rule}")
 
 
