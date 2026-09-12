@@ -655,6 +655,63 @@ def value_sheet():
 <th>부채비율</th><th class="opt">거래대금</th></tr>{body}</table></div>"""
 
 
+def playbook_sheet():
+    """국면 플레이북 — data/playbook.json (src/playbook.py, 2026-09-12 사용자 제안). 표시 전용, 매수 신호 아님."""
+    path = ROOT / "data" / "playbook.json"
+    if not path.exists():
+        return "<h2>국면 플레이북</h2><p>데이터 없음 — python src/playbook.py 실행 대기</p>"
+    d = json.loads(path.read_text(encoding="utf-8"))
+    fl = d.get("flags", {})
+    act = fl.get("active", [])
+
+    def fval(f):
+        v = f.get("value")
+        return v if isinstance(v, str) else (f"{v:+.1f}%" if v is not None else "부재")
+    flag_line = (" · ".join(f"<b>{f['label']}</b> {fval(f)}" for f in act) if act else "해당 없음")
+    others = " · ".join(f"{f['label']} {fval(f)}" for f in fl.get("all", []) if not f.get("active") and f.get("value") is not None)
+
+    def th_cell(items, cls):
+        return " · ".join(f"<span class='{cls}'>{t['theme']}</span> {t['part']:.0%}/{t['excess']:+.1f}%" for t in items) or "—"
+
+    def st_cell(items):
+        return " · ".join(f"{'<b>' if s['star'] else ''}{s['name']}{'★</b>' if s['star'] else ''} {s['part']:.0%}/{s['excess']:+.1f}%"
+                          for s in items) or "—"
+    rows, cur = [], None
+    for c in d.get("conditions", []):
+        if c.get("group") != cur:
+            cur = c.get("group")
+            rows.append(f"<tr><th colspan=7 style='background:#f5f5f5'>{cur}</th></tr>")
+        if not c.get("n"):
+            rows.append(f"<tr><td>{c['label']}</td><td colspan=6>조건일 없음</td></tr>")
+            continue
+        rows.append(
+            f"<tr><td><b>{c['label']}</b><div class='row'>{c['note']}</div></td>"
+            f"<td class='opt'>{c['rule']}</td><td>{c['n']}</td>"
+            f"<td class='{pct_cls(c['mkt_next'])}'>{c['mkt_next']:+.2f}%</td>"
+            f"<td>{th_cell(c['top_themes'][:3], 'up')}</td>"
+            f"<td>{st_cell(c['top_stocks'][:6])}</td>"
+            f"<td class='opt'>{th_cell(c['bottom_themes'][:2], 'down')}</td></tr>")
+    prox = "".join(
+        f"<tr><td>{p['theme']}</td><td>{p['n']}일 (최근 {p['last'][4:6]}/{p['last'][6:]})</td>"
+        f"<td>{' · '.join(f'{x['name']} {x['part']:.0%}' for x in p['leaders'][:4]) or '—'}</td>"
+        f"<td>{' · '.join(f'{x['name']} {x['part']:.0%}/{x['excess']:+.1f}%p' for x in p['candidates'][:4]) or '—'}</td></tr>"
+        for p in d.get("proxies", []))
+    w = d.get("window", {})
+    return f"""
+<h2>국면 플레이북 — 상황별로 시장을 이긴 묶음 <span class="row">(계산 {d.get('generated')} · 창 {w.get('from')}~{w.get('to')} {w.get('days')}거래일)</span></h2>
+<div class="row"><b>오늘 국면 플래그 ({fl.get('asof')})</b>: {flag_line}</div>
+<div class="row">기타 최신값: {others}</div>
+<div class="row">방식: 조건일(외부 시세 상·하위 8% 급변일 또는 시장 내부 극단일) → <b>다음 한국 거래일</b>에 전 종목 중앙값 대비 초과수익.
+참여 = 중앙값을 이긴 날 비율, 초과 = 평균 초과수익. 종목은 거래대금 20일 30억+·시총 1,000억+만 표시, ★ = 참여 70%↑ AND 조건일 30일↑
+(2,500종목을 한꺼번에 시험한 결과라 ★도 우연이 섞임 — 전향 추적으로 가림). 테마는 소속 종목 중앙값(5종목↑). 통설 칸은 검증 대상이지 사실이 아님. 하루에 국면이 여러 개 겹치므로 전향 추적으로 가려야 함.
+<b>관찰 우선순위·회피 참고용 — 매수 신호 아님, 판단·실행은 본인.</b> 금요일 주간 세트에서 재계산.</div>
+<div class="twrap"><table><tr><th>국면 · 통설</th><th class="opt">조건</th><th>일수</th><th>다음날 시장</th>
+<th>강한 테마 (참여/초과)</th><th>강한 종목</th><th class="opt">약한 테마</th></tr>{"".join(rows)}</table></div>
+<h2>테마 대리 국면 — 뉴스로는 표본이 안 나오는 상황 <span class="row">(동행 학습 인용)</span></h2>
+<div class="row">대북=남북경협, 중동=미국-이란 전쟁, 방산, 정책, 계절, 코로나·질병=제약바이오. 각 테마 급등일에 같이 오른 대장과 지도 밖 후보.</div>
+<div class="twrap"><table><tr><th>테마</th><th>급등일</th><th>대장 (참여)</th><th>지도 밖 후보 (참여/초과)</th></tr>{prox}</table></div>"""
+
+
 def main() -> None:
     today = _date.today()
     db = connect()
@@ -736,6 +793,7 @@ def main() -> None:
         "관찰 수급": flows_sheet(db),
         "콜": calls_sheet(),
         "가치": value_sheet(),
+        "국면": playbook_sheet(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
 <div class="twrap"><table>{ch_rows}</table></div>
