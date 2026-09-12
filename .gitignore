@@ -12,3 +12,4 @@ data/cache/risk_lists.json
 data/core.sql.bak
 data/flows/
 config/secrets/
+data/dart/market_*.json
