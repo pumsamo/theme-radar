@@ -1,0 +1,1688 @@
+{
+  "chunk": 4,
+  "period": "20250901-20260912",
+  "stocks_total": 119,
+  "stocks_done": 119,
+  "filings": [
+    {
+      "stock_code": "000250",
+      "corp_name": "삼천당제약",
+      "report_name": "[기재정정]주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20250919",
+      "receipt_no": "20250919000122"
+    },
+    {
+      "stock_code": "000250",
+      "corp_name": "삼천당제약",
+      "report_name": "[기재정정]주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20250919",
+      "receipt_no": "20250919000111"
+    },
+    {
+      "stock_code": "000720",
+      "corp_name": "현대건설",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260609",
+      "receipt_no": "20260609000517"
+    },
+    {
+      "stock_code": "001060",
+      "corp_name": "JW중외제약",
+      "report_name": "주요사항보고서(영업정지)",
+      "submitted_at": "20260430",
+      "receipt_no": "20260430001776"
+    },
+    {
+      "stock_code": "002140",
+      "corp_name": "고려산업",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251229",
+      "receipt_no": "20251229000088"
+    },
+    {
+      "stock_code": "003010",
+      "corp_name": "혜인",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260409",
+      "receipt_no": "20260409002298"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260810",
+      "receipt_no": "20260810000559"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260806",
+      "receipt_no": "20260806000407"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자본으로인정되는채무증권발행결정)",
+      "submitted_at": "20260806",
+      "receipt_no": "20260806000399"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20251230",
+      "receipt_no": "20251230000628"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20251203",
+      "receipt_no": "20251203000211"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20251203",
+      "receipt_no": "20251203000201"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251203",
+      "receipt_no": "20251203000193"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20250929",
+      "receipt_no": "20250929000272"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20250929",
+      "receipt_no": "20250929000270"
+    },
+    {
+      "stock_code": "003580",
+      "corp_name": "HLB글로벌",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20250905",
+      "receipt_no": "20250905000505"
+    },
+    {
+      "stock_code": "004710",
+      "corp_name": "한솔테크닉스",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260724",
+      "receipt_no": "20260724000218"
+    },
+    {
+      "stock_code": "004710",
+      "corp_name": "한솔테크닉스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260709",
+      "receipt_no": "20260709000212"
+    },
+    {
+      "stock_code": "004710",
+      "corp_name": "한솔테크닉스",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260616",
+      "receipt_no": "20260616000345"
+    },
+    {
+      "stock_code": "004710",
+      "corp_name": "한솔테크닉스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260520",
+      "receipt_no": "20260520000284"
+    },
+    {
+      "stock_code": "004710",
+      "corp_name": "한솔테크닉스",
+      "report_name": "주요사항보고서(감자결정)",
+      "submitted_at": "20260213",
+      "receipt_no": "20260213000881"
+    },
+    {
+      "stock_code": "005360",
+      "corp_name": "모나미",
+      "report_name": "주요사항보고서(회사합병결정)",
+      "submitted_at": "20250902",
+      "receipt_no": "20250902000081"
+    },
+    {
+      "stock_code": "006360",
+      "corp_name": "GS건설",
+      "report_name": "주요사항보고서(자본으로인정되는채무증권발행결정)",
+      "submitted_at": "20251217",
+      "receipt_no": "20251217000425"
+    },
+    {
+      "stock_code": "007810",
+      "corp_name": "코리아써키트",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20251229",
+      "receipt_no": "20251229000355"
+    },
+    {
+      "stock_code": "008970",
+      "corp_name": "KBI동양철관",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20251201",
+      "receipt_no": "20251201000168"
+    },
+    {
+      "stock_code": "010060",
+      "corp_name": "OCI홀딩스",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260810",
+      "receipt_no": "20260810000268"
+    },
+    {
+      "stock_code": "010060",
+      "corp_name": "OCI홀딩스",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211000644"
+    },
+    {
+      "stock_code": "018290",
+      "corp_name": "브이티",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260813",
+      "receipt_no": "20260813001171"
+    },
+    {
+      "stock_code": "025560",
+      "corp_name": "미래산업",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260709",
+      "receipt_no": "20260709000380"
+    },
+    {
+      "stock_code": "025560",
+      "corp_name": "미래산업",
+      "report_name": "주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260608",
+      "receipt_no": "20260608000398"
+    },
+    {
+      "stock_code": "025560",
+      "corp_name": "미래산업",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20260318",
+      "receipt_no": "20260318001368"
+    },
+    {
+      "stock_code": "025560",
+      "corp_name": "미래산업",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260119",
+      "receipt_no": "20260119000196"
+    },
+    {
+      "stock_code": "033100",
+      "corp_name": "제룡전기",
+      "report_name": "주요사항보고서(유형자산양수결정)",
+      "submitted_at": "20260204",
+      "receipt_no": "20260204000215"
+    },
+    {
+      "stock_code": "034020",
+      "corp_name": "두산에너빌리티",
+      "report_name": "[기재정정]주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260413",
+      "receipt_no": "20260413002228"
+    },
+    {
+      "stock_code": "038880",
+      "corp_name": "아이에이",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260818",
+      "receipt_no": "20260818000250"
+    },
+    {
+      "stock_code": "038880",
+      "corp_name": "아이에이",
+      "report_name": "[첨부추가]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260713",
+      "receipt_no": "20260713000370"
+    },
+    {
+      "stock_code": "038880",
+      "corp_name": "아이에이",
+      "report_name": "주요사항보고서(감자결정)",
+      "submitted_at": "20260410",
+      "receipt_no": "20260410001365"
+    },
+    {
+      "stock_code": "038880",
+      "corp_name": "아이에이",
+      "report_name": "주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260106",
+      "receipt_no": "20260106000004"
+    },
+    {
+      "stock_code": "040160",
+      "corp_name": "누리플렉스",
+      "report_name": "[기재정정]주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260227",
+      "receipt_no": "20260227001109"
+    },
+    {
+      "stock_code": "042520",
+      "corp_name": "한스바이오메드",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251215",
+      "receipt_no": "20251215000414"
+    },
+    {
+      "stock_code": "042520",
+      "corp_name": "한스바이오메드",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20251202",
+      "receipt_no": "20251202000244"
+    },
+    {
+      "stock_code": "042520",
+      "corp_name": "한스바이오메드",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251024",
+      "receipt_no": "20251024000497"
+    },
+    {
+      "stock_code": "044340",
+      "corp_name": "위닉스",
+      "report_name": "[기재정정]주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260309",
+      "receipt_no": "20260306001025"
+    },
+    {
+      "stock_code": "044340",
+      "corp_name": "위닉스",
+      "report_name": "[기재정정]주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20260309",
+      "receipt_no": "20260306001019"
+    },
+    {
+      "stock_code": "053260",
+      "corp_name": "금강철강",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260723",
+      "receipt_no": "20260723000638"
+    },
+    {
+      "stock_code": "053260",
+      "corp_name": "금강철강",
+      "report_name": "[연장결정]주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20251114",
+      "receipt_no": "20251114001270"
+    },
+    {
+      "stock_code": "054540",
+      "corp_name": "삼영엠텍",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251120",
+      "receipt_no": "20251120000026"
+    },
+    {
+      "stock_code": "054540",
+      "corp_name": "삼영엠텍",
+      "report_name": "주요사항보고서(신주인수권부사채권발행결정)",
+      "submitted_at": "20251119",
+      "receipt_no": "20251119000305"
+    },
+    {
+      "stock_code": "054540",
+      "corp_name": "삼영엠텍",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251119",
+      "receipt_no": "20251119000222"
+    },
+    {
+      "stock_code": "054540",
+      "corp_name": "삼영엠텍",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20251028",
+      "receipt_no": "20251028000268"
+    },
+    {
+      "stock_code": "057680",
+      "corp_name": "티사이언티픽",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260604",
+      "receipt_no": "20260604000573"
+    },
+    {
+      "stock_code": "057680",
+      "corp_name": "티사이언티픽",
+      "report_name": "주요사항보고서(감자결정)",
+      "submitted_at": "20260306",
+      "receipt_no": "20260306000966"
+    },
+    {
+      "stock_code": "061040",
+      "corp_name": "알에프텍",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260804",
+      "receipt_no": "20260804000294"
+    },
+    {
+      "stock_code": "061040",
+      "corp_name": "알에프텍",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260413",
+      "receipt_no": "20260413002373"
+    },
+    {
+      "stock_code": "061040",
+      "corp_name": "알에프텍",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260226",
+      "receipt_no": "20260226004550"
+    },
+    {
+      "stock_code": "066970",
+      "corp_name": "엘앤에프",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260212",
+      "receipt_no": "20260212001688"
+    },
+    {
+      "stock_code": "066970",
+      "corp_name": "엘앤에프",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251202",
+      "receipt_no": "20251202000401"
+    },
+    {
+      "stock_code": "067630",
+      "corp_name": "HLB생명과학",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260528",
+      "receipt_no": "20260528000687"
+    },
+    {
+      "stock_code": "067630",
+      "corp_name": "HLB생명과학",
+      "report_name": "주요사항보고서(영업정지)",
+      "submitted_at": "20260515",
+      "receipt_no": "20260515001759"
+    },
+    {
+      "stock_code": "067630",
+      "corp_name": "HLB생명과학",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20260122",
+      "receipt_no": "20260122000412"
+    },
+    {
+      "stock_code": "067630",
+      "corp_name": "HLB생명과학",
+      "report_name": "주요사항보고서(영업정지)",
+      "submitted_at": "20251127",
+      "receipt_no": "20251127001272"
+    },
+    {
+      "stock_code": "067630",
+      "corp_name": "HLB생명과학",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20251103",
+      "receipt_no": "20251103000295"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260819",
+      "receipt_no": "20260819000187"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260813",
+      "receipt_no": "20260813000478"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260813",
+      "receipt_no": "20260813000476"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기신주인수권부사채만기전취득결정)",
+      "submitted_at": "20260813",
+      "receipt_no": "20260813000475"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260722",
+      "receipt_no": "20260722000410"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260721",
+      "receipt_no": "20260721001367"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260625",
+      "receipt_no": "20260625000492"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(자기신주인수권부사채매도결정)",
+      "submitted_at": "20260625",
+      "receipt_no": "20260625000487"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260610",
+      "receipt_no": "20260610000504"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260610",
+      "receipt_no": "20260610000502"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기신주인수권부사채만기전취득결정)",
+      "submitted_at": "20260610",
+      "receipt_no": "20260610000498"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20260325",
+      "receipt_no": "20260325001045"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260312",
+      "receipt_no": "20260312000229"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기신주인수권부사채만기전취득결정)",
+      "submitted_at": "20260128",
+      "receipt_no": "20260128000269"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260128",
+      "receipt_no": "20260128000267"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(주권관련사채권양수결정)",
+      "submitted_at": "20251226",
+      "receipt_no": "20251226000004"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(타법인주식및출자증권양도결정)",
+      "submitted_at": "20251226",
+      "receipt_no": "20251226000003"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251107",
+      "receipt_no": "20251107000390"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(신주인수권부사채권발행결정)",
+      "submitted_at": "20251107",
+      "receipt_no": "20251107000383"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20251015",
+      "receipt_no": "20251015000308"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20250929",
+      "receipt_no": "20250926000799"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20250926",
+      "receipt_no": "20250926000788"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20250926",
+      "receipt_no": "20250926000639"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "주요사항보고서(소송등의제기)",
+      "submitted_at": "20250922",
+      "receipt_no": "20250919000624"
+    },
+    {
+      "stock_code": "071950",
+      "corp_name": "코아스",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20250910",
+      "receipt_no": "20250910000002"
+    },
+    {
+      "stock_code": "079160",
+      "corp_name": "CJ CGV",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260604",
+      "receipt_no": "20260604000492"
+    },
+    {
+      "stock_code": "079160",
+      "corp_name": "CJ CGV",
+      "report_name": "주요사항보고서(자본으로인정되는채무증권발행결정)",
+      "submitted_at": "20260309",
+      "receipt_no": "20260309001829"
+    },
+    {
+      "stock_code": "079160",
+      "corp_name": "CJ CGV",
+      "report_name": "주요사항보고서(자본으로인정되는채무증권발행결정)",
+      "submitted_at": "20260309",
+      "receipt_no": "20260309001826"
+    },
+    {
+      "stock_code": "080580",
+      "corp_name": "오킨스전자",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260109",
+      "receipt_no": "20260108000628"
+    },
+    {
+      "stock_code": "080580",
+      "corp_name": "오킨스전자",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20260109",
+      "receipt_no": "20260108000626"
+    },
+    {
+      "stock_code": "083470",
+      "corp_name": "이엠앤아이",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260820",
+      "receipt_no": "20260820000381"
+    },
+    {
+      "stock_code": "083470",
+      "corp_name": "이엠앤아이",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251229",
+      "receipt_no": "20251229000465"
+    },
+    {
+      "stock_code": "085910",
+      "corp_name": "네오티스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260513",
+      "receipt_no": "20260513000522"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260818",
+      "receipt_no": "20260818000240"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260518",
+      "receipt_no": "20260518000397"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260429",
+      "receipt_no": "20260429000752"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260313",
+      "receipt_no": "20260313001309"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260313",
+      "receipt_no": "20260312001436"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211001144"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211001130"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211001126"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211001117"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260211",
+      "receipt_no": "20260211001112"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260203",
+      "receipt_no": "20260203000403"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251223",
+      "receipt_no": "20251223000799"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "주요사항보고서(유형자산양도결정)",
+      "submitted_at": "20251124",
+      "receipt_no": "20251124000242"
+    },
+    {
+      "stock_code": "089230",
+      "corp_name": "THE E&M",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20250923",
+      "receipt_no": "20250923000385"
+    },
+    {
+      "stock_code": "090430",
+      "corp_name": "아모레퍼시픽",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260730",
+      "receipt_no": "20260730000286"
+    },
+    {
+      "stock_code": "090430",
+      "corp_name": "아모레퍼시픽",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260429",
+      "receipt_no": "20260429000004"
+    },
+    {
+      "stock_code": "090430",
+      "corp_name": "아모레퍼시픽",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260309",
+      "receipt_no": "20260309001389"
+    },
+    {
+      "stock_code": "090430",
+      "corp_name": "아모레퍼시픽",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260206",
+      "receipt_no": "20260206002081"
+    },
+    {
+      "stock_code": "090430",
+      "corp_name": "아모레퍼시픽",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251106",
+      "receipt_no": "20251106000355"
+    },
+    {
+      "stock_code": "094820",
+      "corp_name": "일진파워",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260122",
+      "receipt_no": "20260122000459"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260812",
+      "receipt_no": "20260812000683"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260506",
+      "receipt_no": "20260506000422"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260410",
+      "receipt_no": "20260410002547"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260311",
+      "receipt_no": "20260311004060"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260311",
+      "receipt_no": "20260311004042"
+    },
+    {
+      "stock_code": "096530",
+      "corp_name": "씨젠",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251112",
+      "receipt_no": "20251112000291"
+    },
+    {
+      "stock_code": "108490",
+      "corp_name": "로보티즈",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260123",
+      "receipt_no": "20260123000377"
+    },
+    {
+      "stock_code": "108490",
+      "corp_name": "로보티즈",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260105",
+      "receipt_no": "20260105000433"
+    },
+    {
+      "stock_code": "108490",
+      "corp_name": "로보티즈",
+      "report_name": "[첨부정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251217",
+      "receipt_no": "20251217000085"
+    },
+    {
+      "stock_code": "108490",
+      "corp_name": "로보티즈",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20251105",
+      "receipt_no": "20251105000069"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260911",
+      "receipt_no": "20260911000566"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260731",
+      "receipt_no": "20260731000723"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "[기재정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "submitted_at": "20260303",
+      "receipt_no": "20260303002984"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260226",
+      "receipt_no": "20260226006695"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260219",
+      "receipt_no": "20260219002701"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260116",
+      "receipt_no": "20260116000369"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260116",
+      "receipt_no": "20260116000366"
+    },
+    {
+      "stock_code": "119830",
+      "corp_name": "아이텍",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20251229",
+      "receipt_no": "20251229000586"
+    },
+    {
+      "stock_code": "124500",
+      "corp_name": "아이티센글로벌",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260508",
+      "receipt_no": "20260508000526"
+    },
+    {
+      "stock_code": "128940",
+      "corp_name": "한미약품",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260728",
+      "receipt_no": "20260728000463"
+    },
+    {
+      "stock_code": "128940",
+      "corp_name": "한미약품",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260109",
+      "receipt_no": "20260109000717"
+    },
+    {
+      "stock_code": "131400",
+      "corp_name": "이브이첨단소재",
+      "report_name": "주요사항보고서(감자결정)",
+      "submitted_at": "20260713",
+      "receipt_no": "20260713000111"
+    },
+    {
+      "stock_code": "131400",
+      "corp_name": "이브이첨단소재",
+      "report_name": "주요사항보고서(타법인주식및출자증권양도결정)",
+      "submitted_at": "20260119",
+      "receipt_no": "20260119000116"
+    },
+    {
+      "stock_code": "131400",
+      "corp_name": "이브이첨단소재",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20251113",
+      "receipt_no": "20251113000820"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260710",
+      "receipt_no": "20260710000216"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260428",
+      "receipt_no": "20260428000563"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20251202",
+      "receipt_no": "20251202000115"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20251114",
+      "receipt_no": "20251114001321"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251114",
+      "receipt_no": "20251113001052"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20251114",
+      "receipt_no": "20251113001049"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20251104",
+      "receipt_no": "20251104000272"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251029",
+      "receipt_no": "20251029000407"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20251029",
+      "receipt_no": "20251029000402"
+    },
+    {
+      "stock_code": "138360",
+      "corp_name": "앤로보틱스",
+      "report_name": "주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20251017",
+      "receipt_no": "20251017000467"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260820",
+      "receipt_no": "20260820000310"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "[기재정정]주요사항보고서(주권관련사채권양도결정)",
+      "submitted_at": "20260720",
+      "receipt_no": "20260720000224"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260312",
+      "receipt_no": "20260312001312"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260312",
+      "receipt_no": "20260312000861"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260227",
+      "receipt_no": "20260227008313"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "[기재정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "submitted_at": "20260127",
+      "receipt_no": "20260127000424"
+    },
+    {
+      "stock_code": "142760",
+      "corp_name": "모아라이프플러스",
+      "report_name": "주요사항보고서(제3자의전환사채매수선택권행사)",
+      "submitted_at": "20260105",
+      "receipt_no": "20260105000405"
+    },
+    {
+      "stock_code": "170920",
+      "corp_name": "엘티씨",
+      "report_name": "주요사항보고서(제3자의전환사채매수선택권행사)",
+      "submitted_at": "20251106",
+      "receipt_no": "20251106000237"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260813",
+      "receipt_no": "20260813001276"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "[기재정정]주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260806",
+      "receipt_no": "20260806000544"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260806",
+      "receipt_no": "20260806000192"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260708",
+      "receipt_no": "20260707000469"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260521",
+      "receipt_no": "20260521000583"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251119",
+      "receipt_no": "20251119000290"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251028",
+      "receipt_no": "20251028000416"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20250925",
+      "receipt_no": "20250924000452"
+    },
+    {
+      "stock_code": "179900",
+      "corp_name": "유티아이",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20250924",
+      "receipt_no": "20250924000446"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260708",
+      "receipt_no": "20260708000372"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260508",
+      "receipt_no": "20260508000269"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260409",
+      "receipt_no": "20260409002022"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260401",
+      "receipt_no": "20260401004335"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260313",
+      "receipt_no": "20260313001224"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260109",
+      "receipt_no": "20260109000480"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251219",
+      "receipt_no": "20251219000365"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20251212",
+      "receipt_no": "20251212000344"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20251119",
+      "receipt_no": "20251119000080"
+    },
+    {
+      "stock_code": "189300",
+      "corp_name": "인텔리안테크",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251031",
+      "receipt_no": "20251031000363"
+    },
+    {
+      "stock_code": "192820",
+      "corp_name": "코스맥스",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20250902",
+      "receipt_no": "20250902000179"
+    },
+    {
+      "stock_code": "196700",
+      "corp_name": "웹스",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260713",
+      "receipt_no": "20260713000268"
+    },
+    {
+      "stock_code": "199800",
+      "corp_name": "툴젠",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260806",
+      "receipt_no": "20260806000329"
+    },
+    {
+      "stock_code": "211270",
+      "corp_name": "AP위성",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260626",
+      "receipt_no": "20260626000709"
+    },
+    {
+      "stock_code": "211270",
+      "corp_name": "AP위성",
+      "report_name": "[기재정정]주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260319",
+      "receipt_no": "20260319000456"
+    },
+    {
+      "stock_code": "218150",
+      "corp_name": "미래생명자원",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260626",
+      "receipt_no": "20260626000452"
+    },
+    {
+      "stock_code": "225570",
+      "corp_name": "넥슨게임즈",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20250922",
+      "receipt_no": "20250922000107"
+    },
+    {
+      "stock_code": "249420",
+      "corp_name": "일동제약",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260415",
+      "receipt_no": "20260415000392"
+    },
+    {
+      "stock_code": "255440",
+      "corp_name": "야스",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251223",
+      "receipt_no": "20251223000659"
+    },
+    {
+      "stock_code": "255440",
+      "corp_name": "야스",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20251223",
+      "receipt_no": "20251223000603"
+    },
+    {
+      "stock_code": "270660",
+      "corp_name": "에브리봇",
+      "report_name": "주요사항보고서(유형자산양도결정)",
+      "submitted_at": "20260401",
+      "receipt_no": "20260401002655"
+    },
+    {
+      "stock_code": "278280",
+      "corp_name": "천보",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251211",
+      "receipt_no": "20251211000420"
+    },
+    {
+      "stock_code": "290560",
+      "corp_name": "파라택시스이더리움",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260720",
+      "receipt_no": "20260720000349"
+    },
+    {
+      "stock_code": "290560",
+      "corp_name": "파라택시스이더리움",
+      "report_name": "주요사항보고서(중요한자산양수도결정(기타))",
+      "submitted_at": "20260306",
+      "receipt_no": "20260306000880"
+    },
+    {
+      "stock_code": "290560",
+      "corp_name": "파라택시스이더리움",
+      "report_name": "[기재정정]주요사항보고서(중요한자산양수도결정(기타))",
+      "submitted_at": "20260225",
+      "receipt_no": "20260225002569"
+    },
+    {
+      "stock_code": "290560",
+      "corp_name": "파라택시스이더리움",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260209",
+      "receipt_no": "20260206002164"
+    },
+    {
+      "stock_code": "290560",
+      "corp_name": "파라택시스이더리움",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251204",
+      "receipt_no": "20251204000469"
+    },
+    {
+      "stock_code": "294570",
+      "corp_name": "쿠콘",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260805",
+      "receipt_no": "20260805000373"
+    },
+    {
+      "stock_code": "294570",
+      "corp_name": "쿠콘",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260226",
+      "receipt_no": "20260226005914"
+    },
+    {
+      "stock_code": "310210",
+      "corp_name": "보로노이",
+      "report_name": "[첨부정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "submitted_at": "20260730",
+      "receipt_no": "20260730000373"
+    },
+    {
+      "stock_code": "310210",
+      "corp_name": "보로노이",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260624",
+      "receipt_no": "20260624000449"
+    },
+    {
+      "stock_code": "310210",
+      "corp_name": "보로노이",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251229",
+      "receipt_no": "20251229000758"
+    },
+    {
+      "stock_code": "310210",
+      "corp_name": "보로노이",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20251002",
+      "receipt_no": "20251002000554"
+    },
+    {
+      "stock_code": "310210",
+      "corp_name": "보로노이",
+      "report_name": "주요사항보고서(교환사채권발행결정)",
+      "submitted_at": "20251002",
+      "receipt_no": "20251002000532"
+    },
+    {
+      "stock_code": "317690",
+      "corp_name": "퀀타매트릭스",
+      "report_name": "[기재정정]주요사항보고서(자본으로인정되는채무증권발행결정)",
+      "submitted_at": "20251222",
+      "receipt_no": "20251222000453"
+    },
+    {
+      "stock_code": "317690",
+      "corp_name": "퀀타매트릭스",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251222",
+      "receipt_no": "20251222000411"
+    },
+    {
+      "stock_code": "344860",
+      "corp_name": "이노진",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260811",
+      "receipt_no": "20260811000585"
+    },
+    {
+      "stock_code": "344860",
+      "corp_name": "이노진",
+      "report_name": "주요사항보고서(유상증자결정)",
+      "submitted_at": "20260807",
+      "receipt_no": "20260807000763"
+    },
+    {
+      "stock_code": "344860",
+      "corp_name": "이노진",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260731",
+      "receipt_no": "20260731000380"
+    },
+    {
+      "stock_code": "344860",
+      "corp_name": "이노진",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260519",
+      "receipt_no": "20260519000241"
+    },
+    {
+      "stock_code": "351870",
+      "corp_name": "차이커뮤니케이션",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260422",
+      "receipt_no": "20260422000508"
+    },
+    {
+      "stock_code": "351870",
+      "corp_name": "차이커뮤니케이션",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20251121",
+      "receipt_no": "20251121000421"
+    },
+    {
+      "stock_code": "365330",
+      "corp_name": "에스와이스틸텍",
+      "report_name": "[기재정정]주요사항보고서(유무상증자결정)",
+      "submitted_at": "20250901",
+      "receipt_no": "20250901000077"
+    },
+    {
+      "stock_code": "373200",
+      "corp_name": "엑스플러스",
+      "report_name": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+      "submitted_at": "20260730",
+      "receipt_no": "20260730000506"
+    },
+    {
+      "stock_code": "373200",
+      "corp_name": "엑스플러스",
+      "report_name": "[기재정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "submitted_at": "20260730",
+      "receipt_no": "20260730000427"
+    },
+    {
+      "stock_code": "373200",
+      "corp_name": "엑스플러스",
+      "report_name": "[첨부정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260528",
+      "receipt_no": "20260528000939"
+    },
+    {
+      "stock_code": "373200",
+      "corp_name": "엑스플러스",
+      "report_name": "[기재정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "submitted_at": "20251231",
+      "receipt_no": "20251231000460"
+    },
+    {
+      "stock_code": "378800",
+      "corp_name": "샤페론",
+      "report_name": "주요사항보고서(자기전환사채만기전취득결정)",
+      "submitted_at": "20260811",
+      "receipt_no": "20260811000693"
+    },
+    {
+      "stock_code": "378800",
+      "corp_name": "샤페론",
+      "report_name": "주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260611",
+      "receipt_no": "20260611000467"
+    },
+    {
+      "stock_code": "378800",
+      "corp_name": "샤페론",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260407",
+      "receipt_no": "20260407003428"
+    },
+    {
+      "stock_code": "378800",
+      "corp_name": "샤페론",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20251030",
+      "receipt_no": "20251030000356"
+    },
+    {
+      "stock_code": "388050",
+      "corp_name": "지투파워",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260722",
+      "receipt_no": "20260722000166"
+    },
+    {
+      "stock_code": "388050",
+      "corp_name": "지투파워",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260610",
+      "receipt_no": "20260610000263"
+    },
+    {
+      "stock_code": "388050",
+      "corp_name": "지투파워",
+      "report_name": "[기재정정]주요사항보고서(유형자산양수결정)",
+      "submitted_at": "20251201",
+      "receipt_no": "20251201000718"
+    },
+    {
+      "stock_code": "399720",
+      "corp_name": "가온칩스",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260903",
+      "receipt_no": "20260903000301"
+    },
+    {
+      "stock_code": "417840",
+      "corp_name": "저스템",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260827",
+      "receipt_no": "20260827000843"
+    },
+    {
+      "stock_code": "417840",
+      "corp_name": "저스템",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitted_at": "20260624",
+      "receipt_no": "20260624000318"
+    },
+    {
+      "stock_code": "417840",
+      "corp_name": "저스템",
+      "report_name": "주요사항보고서(자기주식처분결정)",
+      "submitted_at": "20260311",
+      "receipt_no": "20260310003128"
+    },
+    {
+      "stock_code": "417840",
+      "corp_name": "저스템",
+      "report_name": "주요사항보고서(무상증자결정)",
+      "submitted_at": "20251218",
+      "receipt_no": "20251218000111"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260812",
+      "receipt_no": "20260812000540"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260624",
+      "receipt_no": "20260624000284"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260624",
+      "receipt_no": "20260624000155"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260602",
+      "receipt_no": "20260602000317"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "submitted_at": "20260602",
+      "receipt_no": "20260602000177"
+    },
+    {
+      "stock_code": "439090",
+      "corp_name": "마녀공장",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitted_at": "20260325",
+      "receipt_no": "20260325001241"
+    },
+    {
+      "stock_code": "445090",
+      "corp_name": "에이직랜드",
+      "report_name": "주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260313",
+      "receipt_no": "20260313000791"
+    },
+    {
+      "stock_code": "459510",
+      "corp_name": "나우로보틱스",
+      "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+      "submitted_at": "20260630",
+      "receipt_no": "20260630000985"
+    },
+    {
+      "stock_code": "459510",
+      "corp_name": "나우로보틱스",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "submitted_at": "20260430",
+      "receipt_no": "20260430000724"
+    },
+    {
+      "stock_code": "459510",
+      "corp_name": "나우로보틱스",
+      "report_name": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "submitted_at": "20260116",
+      "receipt_no": "20260115000430"
+    },
+    {
+      "stock_code": "475830",
+      "corp_name": "오름테라퓨틱",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260108",
+      "receipt_no": "20260108000315"
+    },
+    {
+      "stock_code": "475830",
+      "corp_name": "오름테라퓨틱",
+      "report_name": "[첨부정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20260108",
+      "receipt_no": "20260108000251"
+    },
+    {
+      "stock_code": "494120",
+      "corp_name": "큐리오시스",
+      "report_name": "주요사항보고서(무상증자결정)",
+      "submitted_at": "20260629",
+      "receipt_no": "20260629000118"
+    },
+    {
+      "stock_code": "494120",
+      "corp_name": "큐리오시스",
+      "report_name": "[기재정정]주요사항보고서(유상증자결정)",
+      "submitted_at": "20251103",
+      "receipt_no": "20251103000094"
+    }
+  ],
+  "failures": [
+    {
+      "stock_code": "0120G0",
+      "name": "삼양바이오팜",
+      "error": "invalid stock_code format (not 6-digit numeric); rejected by tool input validation on both attempts"
+    }
+  ]
+}

@@ -719,6 +719,42 @@ def playbook_sheet():
 <div class="twrap"><table><tr><th>테마</th><th>급등일</th><th>대장 (참여)</th><th>지도 밖 후보 (참여/초과)</th></tr>{prox}</table></div>"""
 
 
+def dart_block():
+    """공시 이벤트 검증 표 — data/dart_events.json (src/dart_events.py). 표시 전용."""
+    path = ROOT / "data" / "dart_events.json"
+    if not path.exists():
+        return ""
+    d = json.loads(path.read_text(encoding="utf-8"))
+
+    def cell(r, k, pct=True):
+        v = r.get(k)
+        if v is None:
+            return "<td>—</td>"
+        return f"<td class='{pct_cls(v)}'>{v:+.2f}%</td>" if pct else f"<td>{v:.0%}</td>"
+
+    def wincell(r):
+        v = r.get("d20_win")
+        return f"<td>{v:.0%}</td>" if v is not None else "<td>—</td>"
+    rows = "".join(
+        f"<tr><td><b>{r['type']}</b><div class='row'>{r['note']}</div></td><td>{r['n']}</td>"
+        f"{cell(r, 'd0')}{cell(r, 'gap1')}{cell(r, 'd1')}{cell(r, 'd5')}{cell(r, 'd20')}{cell(r, 'd20_med')}"
+        f"{wincell(r)}"
+        f"<td class='opt'>{' · '.join(r.get('examples', [])[:3])}</td></tr>"
+        for r in d.get("summary", []))
+    rec = "".join(
+        f"<tr><td>{e['date'][4:6]}/{e['date'][6:]}</td><td>{e['name']}</td><td>{e['type']}</td>"
+        f"{cell(e, 'd0')}{cell(e, 'd1')}{cell(e, 'd5')}{cell(e, 'd20')}</tr>"
+        for e in d.get("events_recent", [])[:25])
+    return f"""
+<h2>공시 이벤트 — 주요사항보고 뒤 시장 대비 성적 <span class="row">(계산 {d.get('generated')} · {d.get('period')} · 표본 {d.get('universe')} · 공시 {d.get('filings')}건 → 이벤트 {d.get('events')}건)</span></h2>
+<div class="row">접수일 D0(휴장이면 다음 거래일) 종가 기준. 당일 = D0 수익률 − 시장 중앙값(접수 시각 미상이라 장중·장후 혼재), 다음날 시가 = D0 종가 → D+1 시가(아침 예약 진입 참고),
+D+k = D0 종가 → D+k 종가 누적수익 − 같은 기간 시장 중앙값 누적. 정정공시 제외, 같은 종목·유형·날짜 1건. 표본이 지도 종목이라 전 시장과 다를 수 있음.
+통설 칸은 검증 대상. <b>회피 필터·관찰 참고용 — 매수·매도 신호 아님.</b></div>
+<div class="twrap"><table><tr><th>유형 · 통설</th><th>n</th><th>당일</th><th>다음날 시가</th><th>D+1</th><th>D+5</th><th>D+20 평균</th><th>D+20 중앙</th><th>D+20 승률</th><th class="opt">최근 예</th></tr>{rows}</table></div>
+<h3 class="row">최근 이벤트 25건</h3>
+<div class="twrap"><table><tr><th>일자</th><th>종목</th><th>유형</th><th>당일</th><th>D+1</th><th>D+5</th><th>D+20</th></tr>{rec}</table></div>"""
+
+
 def main() -> None:
     today = _date.today()
     db = connect()
@@ -800,7 +836,7 @@ def main() -> None:
         "관찰 수급": flows_sheet(db),
         "콜": calls_sheet(),
         "가치": value_sheet(),
-        "국면": playbook_sheet(),
+        "국면": playbook_sheet() + dart_block(),
         "채널·연구": f"""
 <h2>채널 성적 <span class="row">({CHANNELS_ASOF} 기준)</span></h2>
 <div class="twrap"><table>{ch_rows}</table></div>
