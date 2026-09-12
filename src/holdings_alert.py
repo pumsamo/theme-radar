@@ -90,7 +90,8 @@ def main() -> None:
         if not ev:
             continue
         if h["_kind"] == "관심":  # 신규 매수 후보는 '추매' 대신 '신규 진입' 표현
-            ev["rule"] = ev["rule"].replace("추매 검토 가능", "신규 진입 검토 가능").replace("추매 근거 없음", "신규 진입 근거 없음")
+            ev["rule"] = (ev["rule"].replace("추매 검토 가능", "신규 진입 검토 가능").replace("추매 근거 없음", "신규 진입 근거 없음")
+                          .replace("청산 신호 — ", "신규 진입 보류 — "))  # 미보유 종목에 '청산'은 무의미 → 거래량 폭발일엔 추격 금지
         h["name"] = f"{h['name']}({h['_kind']})" if h["_kind"] == "관심" else h["name"]
         cur[h["name"]] = ev["rule"]
         before = prev.get(h["name"])

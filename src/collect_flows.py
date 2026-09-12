@@ -1,6 +1,6 @@
 """투자자별 수급 수집기 — 종목별 외국인·기관 순매매량 (2026-08-30 신설).
 
-소스: finance.naver.com/item/frgn.naver (EUC-KR, 페이지당 20거래일).
+소스: m.stock.naver.com/api/stock/{code}/trend (JSON, 페이지당 20거래일 · 2026-09-12 교체, 구 frgn.naver 표 소멸).
 저장: data/flows/{code}.json = {date: [기관순매매, 외국인순매매, 종가, 거래량, 외인보유율]}
   날짜 키 YYYYMMDD. 재실행 시 이미 최신인 종목은 건너뛰고, 아니면 새 페이지만 병합.
 
@@ -12,7 +12,6 @@
 from __future__ import annotations
 
 import json
-import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -23,15 +22,10 @@ import replay
 from net import fetch
 
 OUT = Path(__file__).resolve().parent.parent / "data" / "flows"
-URL = "https://finance.naver.com/item/frgn.naver?code={code}&page={page}"
-ROW = re.compile(
-    r'<td[^>]*class="tc"><span[^>]*>(\d{4})\.(\d{2})\.(\d{2})</span></td>\s*'
-    r'<td[^>]*><span[^>]*>([\d,]+)</span></td>.*?'          # 종가
-    r'<td[^>]*><span[^>]*>([\d,]+)</span></td>\s*'          # 거래량
-    r'<td[^>]*><span[^>]*>([+\-]?[\d,]+)</span></td>\s*'    # 기관
-    r'<td[^>]*><span[^>]*>([+\-]?[\d,]+)</span></td>\s*'    # 외국인
-    r'<td[^>]*><span[^>]*>[\d,]+</span></td>\s*'            # 보유주수
-    r'<td[^>]*><span[^>]*>([\d.]+)%</span></td>', re.S)
+URL = "https://m.stock.naver.com/api/stock/{code}/trend?pageSize=20&page={page}"
+# 2026-09-12 소스 교체: finance.naver.com/item/frgn.naver 가 Next.js 앱(Npay 증권)으로 바뀌어 서버 렌더 표가 사라짐
+# (9/11 저녁 수집 2,531종목 전부 빈응답). 모바일 JSON API로 교체 — 필드·저장 형식은 그대로.
+HDRS = {"Accept": "application/json", "Referer": "https://m.stock.naver.com/"}
 
 
 def n(s: str) -> int:
@@ -39,10 +33,20 @@ def n(s: str) -> int:
 
 
 def fetch_page(code: str, page: int) -> dict:
-    raw = fetch(URL.format(code=code, page=page), timeout=15).decode("euc-kr", errors="replace")
+    raw = fetch(URL.format(code=code, page=page), timeout=15, headers=HDRS)
     out = {}
-    for y, m, d, close, vol, inst, forgn, ratio in ROW.findall(raw):
-        out[f"{y}{m}{d}"] = [n(inst), n(forgn), n(close), n(vol), float(ratio)]
+    try:
+        rows = json.loads(raw.decode("utf-8"))
+    except Exception:  # noqa: BLE001
+        return out
+    if not isinstance(rows, list):
+        return out
+    for r in rows:
+        try:
+            out[str(r["bizdate"])] = [n(r["organPureBuyQuant"]), n(r["foreignerPureBuyQuant"]), n(r["closePrice"]),
+                                      n(r["accumulatedTradingVolume"]), float(str(r["foreignerHoldRatio"]).rstrip("%"))]
+        except Exception:  # noqa: BLE001
+            continue
     return out
 
 

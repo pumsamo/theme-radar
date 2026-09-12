@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04",
+ "generated": "2026-09-12",
  "params": {
   "spike_min": 3.0,
   "cand_part": 0.6,
@@ -118,7 +118,9 @@
      "name": "DB하이텍",
      "part": 0.92,
      "lift": 7.9,
-     "other_themes": []
+     "other_themes": [
+      "반도체 소부장"
+     ]
     },
     {
      "code": "098460",
@@ -130,52 +132,52 @@
    ]
   },
   "AI 소프트웨어": {
-   "n_members": 25,
+   "n_members": 31,
    "spike_days": [
     "20250618",
     "20250414",
-    "20250604",
     "20250102",
+    "20260804",
     "20260728",
-    "20260529",
+    "20250604",
     "20250203",
-    "20241127"
+    "20260529"
    ],
    "leaders": [
     {
      "name": "솔트룩스",
      "code": "304100",
      "part": 1.0,
-     "avg_excess": 9.57,
-     "spike_val_억": 817
+     "avg_excess": 12.17,
+     "spike_val_억": 781
+    },
+    {
+     "name": "셀바스AI",
+     "code": "108860",
+     "part": 1.0,
+     "avg_excess": 8.77,
+     "spike_val_억": 310
+    },
+    {
+     "name": "코난테크놀로지",
+     "code": "402030",
+     "part": 1.0,
+     "avg_excess": 11.94,
+     "spike_val_억": 169
     },
     {
      "name": "오브젠",
      "code": "417860",
      "part": 1.0,
-     "avg_excess": 11.69,
-     "spike_val_억": 126
-    },
-    {
-     "name": "셀바스AI",
-     "code": "108860",
-     "part": 0.88,
-     "avg_excess": 7.74,
-     "spike_val_억": 334
-    },
-    {
-     "name": "폴라리스AI",
-     "code": "039980",
-     "part": 0.88,
-     "avg_excess": 8.71,
-     "spike_val_억": 328
+     "avg_excess": 10.9,
+     "spike_val_억": 132
     },
     {
      "name": "마음AI",
      "code": "377480",
      "part": 0.88,
-     "avg_excess": 9.59,
-     "spike_val_억": 295
+     "avg_excess": 8.43,
+     "spike_val_억": 256
     }
    ],
    "candidates": [
@@ -183,69 +185,69 @@
      "code": "189330",
      "name": "씨이랩",
      "part": 0.75,
-     "lift": 5.77,
+     "lift": 7.0,
      "other_themes": [
       "데이터센터 전력"
      ]
     },
     {
-     "code": "058610",
-     "name": "에스피지",
+     "code": "119850",
+     "name": "지엔씨에너지",
      "part": 0.75,
-     "lift": 4.08,
+     "lift": 5.19,
      "other_themes": [
-      "로봇·휴머노이드",
-      "폭염·계절"
+      "데이터센터 전력"
      ]
     },
     {
-     "code": "277810",
-     "name": "레인보우로보틱스",
-     "part": 0.62,
-     "lift": 6.03,
-     "other_themes": [
-      "로봇·휴머노이드"
-     ]
+     "code": "100790",
+     "name": "미래에셋벤처투자",
+     "part": 0.75,
+     "lift": 2.98,
+     "other_themes": []
     },
     {
-     "code": "466100",
-     "name": "클로봇",
+     "code": "181710",
+     "name": "NHN",
      "part": 0.62,
-     "lift": 5.31,
+     "lift": 6.77,
      "other_themes": [
-      "로봇·휴머노이드"
+      "실적"
      ]
     },
     {
      "code": "454910",
      "name": "두산로보틱스",
      "part": 0.62,
-     "lift": 5.27,
+     "lift": 5.22,
      "other_themes": []
     },
     {
-     "code": "307950",
-     "name": "현대오토에버",
+     "code": "466100",
+     "name": "클로봇",
      "part": 0.62,
-     "lift": 5.15,
-     "other_themes": []
-    },
-    {
-     "code": "319400",
-     "name": "현대무벡스",
-     "part": 0.62,
-     "lift": 2.95,
+     "lift": 4.9,
      "other_themes": [
       "로봇·휴머노이드"
      ]
     },
     {
-     "code": "119850",
-     "name": "지엔씨에너지",
+     "code": "079550",
+     "name": "LIG디펜스앤에어로스페이스",
      "part": 0.62,
-     "lift": 2.63,
+     "lift": 4.07,
      "other_themes": [
-      "데이터센터 전력"
+      "방산"
+     ]
+    },
+    {
+     "code": "058610",
+     "name": "에스피지",
+     "part": 0.62,
+     "lift": 3.23,
+     "other_themes": [
+      "로봇·휴머노이드",
+      "폭염·계절"
      ]
     }
    ]
@@ -343,7 +345,9 @@
      "name": "로보티즈",
      "part": 0.67,
      "lift": 5.92,
-     "other_themes": []
+     "other_themes": [
+      "로봇·휴머노이드"
+     ]
     },
     {
      "code": "032500",
@@ -682,7 +686,9 @@
      "name": "우리기술",
      "part": 0.67,
      "lift": 4.33,
-     "other_themes": []
+     "other_themes": [
+      "원전·SMR"
+     ]
     },
     {
      "code": "003530",
@@ -798,74 +804,90 @@
    ]
   },
   "건설": {
-   "n_members": 7,
+   "n_members": 9,
    "spike_days": [
-    "20260701",
     "20260706",
-    "20260702",
     "20241112",
-    "20260408",
     "20250908",
-    "20250407",
-    "20241121",
+    "20260408",
+    "20260616",
     "20251205",
+    "20260701",
+    "20250407",
+    "20260320",
     "20250213",
-    "20250612",
-    "20260616"
+    "20241121",
+    "20260202"
    ],
    "leaders": [
     {
      "name": "동신건설",
      "code": "025950",
      "part": 1.0,
-     "avg_excess": 12.15,
-     "spike_val_억": 238
+     "avg_excess": 11.08,
+     "spike_val_억": 213
     },
     {
      "name": "일성건설",
      "code": "013360",
-     "part": 1.0,
-     "avg_excess": 19.44,
+     "part": 0.92,
+     "avg_excess": 17.14,
      "spike_val_억": 178
     },
     {
      "name": "금호건설",
      "code": "002990",
-     "part": 0.75,
-     "avg_excess": 8.04,
-     "spike_val_억": 631
+     "part": 0.83,
+     "avg_excess": 10.63,
+     "spike_val_억": 288
     },
     {
      "name": "남광토건",
      "code": "001260",
-     "part": 0.75,
-     "avg_excess": 15.25,
-     "spike_val_억": 145
+     "part": 0.83,
+     "avg_excess": 14.45,
+     "spike_val_억": 98
     },
     {
-     "name": "자연과환경",
-     "code": "043910",
-     "part": 0.42,
-     "avg_excess": 2.52,
-     "spike_val_억": 71
+     "name": "엔알비",
+     "code": "475230",
+     "part": 0.5,
+     "avg_excess": 2.37,
+     "spike_val_억": 80
     }
    ],
    "candidates": [
     {
+     "code": "006360",
+     "name": "GS건설",
+     "part": 0.75,
+     "lift": 8.1,
+     "other_themes": [
+      "데이터센터 전력"
+     ]
+    },
+    {
      "code": "091590",
      "name": "남화토건",
-     "part": 0.75,
-     "lift": 7.63,
+     "part": 0.67,
+     "lift": 6.62,
      "other_themes": [
       "반도체 소부장",
       "정책·정치"
      ]
     },
     {
-     "code": "006360",
-     "name": "GS건설",
+     "code": "375500",
+     "name": "DL이앤씨",
      "part": 0.67,
-     "lift": 6.23,
+     "lift": 6.57,
+     "other_themes": []
+    },
+    {
+     "code": "317400",
+     "name": "자이에스앤디",
+     "part": 0.67,
+     "lift": 2.54,
      "other_themes": [
       "데이터센터 전력"
      ]
@@ -873,223 +895,231 @@
    ]
   },
   "게임": {
-   "n_members": 11,
+   "n_members": 12,
    "spike_days": [
     "20260126",
     "20260309",
-    "20260102",
     "20260702",
-    "20260729",
+    "20260102",
+    "20260313",
+    "20240905",
     "20241021",
-    "20240905"
+    "20260729",
+    "20260629"
    ],
    "leaders": [
     {
      "name": "펄어비스",
      "code": "263750",
-     "part": 0.86,
-     "avg_excess": 6.7,
-     "spike_val_억": 390
+     "part": 0.78,
+     "avg_excess": 6.43,
+     "spike_val_억": 444
     },
     {
      "name": "NC",
      "code": "036570",
-     "part": 0.86,
-     "avg_excess": 4.11,
-     "spike_val_억": 300
+     "part": 0.78,
+     "avg_excess": 4.33,
+     "spike_val_억": 332
     },
     {
-     "name": "넥슨게임즈",
-     "code": "225570",
-     "part": 0.71,
-     "avg_excess": 2.83,
-     "spike_val_억": 65
+     "name": "카카오게임즈",
+     "code": "293490",
+     "part": 0.67,
+     "avg_excess": 3.99,
+     "spike_val_억": 51
     },
     {
      "name": "데브시스터즈",
      "code": "194480",
-     "part": 0.71,
-     "avg_excess": 4.46,
-     "spike_val_억": 40
+     "part": 0.67,
+     "avg_excess": 6.26,
+     "spike_val_억": 39
     },
     {
-     "name": "위메이드",
-     "code": "112040",
-     "part": 0.57,
-     "avg_excess": 2.69,
-     "spike_val_억": 132
+     "name": "크래프톤",
+     "code": "259960",
+     "part": 0.56,
+     "avg_excess": 3.48,
+     "spike_val_억": 421
     }
    ],
    "candidates": [
     {
-     "code": "123330",
-     "name": "제닉",
-     "part": 0.71,
-     "lift": 8.78,
-     "other_themes": [
-      "화장품·소비재"
-     ]
-    },
-    {
-     "code": "328130",
-     "name": "루닛",
-     "part": 0.71,
-     "lift": 3.32,
-     "other_themes": []
-    },
-    {
-     "code": "051900",
-     "name": "LG생활건강",
-     "part": 0.71,
-     "lift": 3.31,
-     "other_themes": [
-      "화장품·소비재"
-     ]
-    },
-    {
-     "code": "047920",
-     "name": "HLB제약",
-     "part": 0.71,
-     "lift": 3.17,
+     "code": "140410",
+     "name": "메지온",
+     "part": 0.67,
+     "lift": 5.45,
      "other_themes": [
       "제약바이오"
      ]
     },
     {
-     "code": "053800",
-     "name": "안랩",
-     "part": 0.71,
-     "lift": 3.04,
+     "code": "328130",
+     "name": "루닛",
+     "part": 0.67,
+     "lift": 3.87,
      "other_themes": []
     },
     {
-     "code": "484810",
-     "name": "티엑스알로보틱스",
-     "part": 0.6,
-     "lift": 5.79,
+     "code": "041510",
+     "name": "에스엠",
+     "part": 0.67,
+     "lift": 3.11,
      "other_themes": [
-      "로봇·휴머노이드"
+      "엔터·미디어"
+     ]
+    },
+    {
+     "code": "051900",
+     "name": "LG생활건강",
+     "part": 0.67,
+     "lift": 2.86,
+     "other_themes": [
+      "화장품·소비재"
+     ]
+    },
+    {
+     "code": "032820",
+     "name": "우리기술",
+     "part": 0.67,
+     "lift": 2.75,
+     "other_themes": [
+      "원전·SMR"
+     ]
+    },
+    {
+     "code": "047920",
+     "name": "HLB제약",
+     "part": 0.67,
+     "lift": 2.73,
+     "other_themes": [
+      "제약바이오"
      ]
     }
    ]
   },
   "광통신": {
-   "n_members": 14,
+   "n_members": 16,
    "spike_days": [
     "20260401",
     "20260511",
+    "20260413",
     "20260805",
     "20260325",
     "20260410",
-    "20260413",
-    "20260311",
     "20260731",
-    "20260715",
-    "20260414",
+    "20260311",
     "20260710",
-    "20260709"
+    "20260414",
+    "20260715",
+    "20260504"
    ],
    "leaders": [
     {
-     "name": "빛과전자",
-     "code": "069540",
+     "name": "우리넷",
+     "code": "115440",
      "part": 1.0,
-     "avg_excess": 17.03,
-     "spike_val_억": 1136
+     "avg_excess": 11.87,
+     "spike_val_억": 590
     },
     {
      "name": "성호전자",
      "code": "043260",
      "part": 0.92,
-     "avg_excess": 9.76,
-     "spike_val_억": 1156
+     "avg_excess": 9.67,
+     "spike_val_억": 1201
     },
     {
      "name": "RF머트리얼즈",
      "code": "327260",
      "part": 0.92,
-     "avg_excess": 10.77,
-     "spike_val_억": 315
+     "avg_excess": 11.76,
+     "spike_val_억": 375
     },
     {
      "name": "빛샘전자",
      "code": "072950",
      "part": 0.92,
-     "avg_excess": 12.34,
-     "spike_val_억": 265
+     "avg_excess": 12.46,
+     "spike_val_억": 302
     },
     {
-     "name": "이노인스트루먼트",
-     "code": "215790",
+     "name": "빛과전자",
+     "code": "069540",
      "part": 0.91,
-     "avg_excess": 17.19,
-     "spike_val_억": 333
+     "avg_excess": 16.56,
+     "spike_val_억": 1187
     }
    ],
    "candidates": [
     {
      "code": "046970",
      "name": "우리로",
-     "part": 0.83,
-     "lift": 10.82,
+     "part": 0.92,
+     "lift": 11.09,
      "other_themes": [
+      "양자",
       "양자컴퓨팅"
      ]
     },
     {
-     "code": "218410",
-     "name": "RFHIC",
-     "part": 0.83,
-     "lift": 8.76,
-     "other_themes": []
-    },
-    {
      "code": "032500",
      "name": "케이엠더블유",
-     "part": 0.83,
-     "lift": 8.74,
+     "part": 0.92,
+     "lift": 9.23,
      "other_themes": []
     },
     {
-     "code": "330860",
-     "name": "네패스아크",
+     "code": "218410",
+     "name": "RFHIC",
+     "part": 0.92,
+     "lift": 9.12,
+     "other_themes": []
+    },
+    {
+     "code": "027360",
+     "name": "아주IB투자",
      "part": 0.83,
-     "lift": 8.36,
+     "lift": 10.25,
      "other_themes": [
-      "반도체 소부장"
+      "우주항공"
      ]
+    },
+    {
+     "code": "389500",
+     "name": "에스비비테크",
+     "part": 0.83,
+     "lift": 7.62,
+     "other_themes": []
     },
     {
      "code": "092870",
      "name": "엑시콘",
      "part": 0.83,
-     "lift": 6.57,
+     "lift": 6.66,
      "other_themes": [
       "반도체 소부장"
      ]
     },
     {
-     "code": "083450",
-     "name": "GST",
+     "code": "356680",
+     "name": "엑스게이트",
      "part": 0.83,
-     "lift": 5.97,
-     "other_themes": []
-    },
-    {
-     "code": "420770",
-     "name": "기가비스",
-     "part": 0.83,
-     "lift": 5.74,
+     "lift": 6.6,
      "other_themes": [
-      "반도체 소부장"
+      "사이버보안",
+      "양자컴퓨팅"
      ]
     },
     {
-     "code": "031330",
-     "name": "에스에이엠티",
+     "code": "281820",
+     "name": "케이씨텍",
      "part": 0.83,
-     "lift": 5.17,
-     "other_themes": []
+     "lift": 6.1,
+     "other_themes": [
+      "반도체 소부장"
+     ]
     }
    ]
   },
@@ -1165,6 +1195,130 @@
     }
    ]
   },
+  "데이터센터 전력": {
+   "n_members": 48,
+   "spike_days": [
+    "20260731",
+    "20260723",
+    "20260521",
+    "20250410",
+    "20260615",
+    "20260305"
+   ],
+   "leaders": [
+    {
+     "name": "LS ELECTRIC",
+     "code": "010120",
+     "part": 1.0,
+     "avg_excess": 11.99,
+     "spike_val_억": 2823
+    },
+    {
+     "name": "HD현대일렉트릭",
+     "code": "267260",
+     "part": 1.0,
+     "avg_excess": 7.64,
+     "spike_val_억": 2194
+    },
+    {
+     "name": "서진시스템",
+     "code": "178320",
+     "part": 1.0,
+     "avg_excess": 9.92,
+     "spike_val_억": 861
+    },
+    {
+     "name": "산일전기",
+     "code": "062040",
+     "part": 1.0,
+     "avg_excess": 8.55,
+     "spike_val_억": 648
+    },
+    {
+     "name": "일진전기",
+     "code": "103590",
+     "part": 1.0,
+     "avg_excess": 6.78,
+     "spike_val_억": 317
+    }
+   ],
+   "candidates": [
+    {
+     "code": "089030",
+     "name": "테크윙",
+     "part": 1.0,
+     "lift": 11.74,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "336260",
+     "name": "두산퓨얼셀",
+     "part": 1.0,
+     "lift": 9.85,
+     "other_themes": [
+      "수소에너지·연료전지",
+      "연료전지"
+     ]
+    },
+    {
+     "code": "033160",
+     "name": "엠케이전자",
+     "part": 1.0,
+     "lift": 9.6,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "003160",
+     "name": "디아이",
+     "part": 1.0,
+     "lift": 9.16,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "199430",
+     "name": "케이엔알시스템",
+     "part": 1.0,
+     "lift": 8.76,
+     "other_themes": [
+      "로봇·원전",
+      "로봇·휴머노이드"
+     ]
+    },
+    {
+     "code": "048410",
+     "name": "현대바이오",
+     "part": 1.0,
+     "lift": 8.43,
+     "other_themes": [
+      "제약바이오"
+     ]
+    },
+    {
+     "code": "187660",
+     "name": "페니트리움바이오",
+     "part": 1.0,
+     "lift": 7.98,
+     "other_themes": [
+      "제약바이오"
+     ]
+    },
+    {
+     "code": "277810",
+     "name": "레인보우로보틱스",
+     "part": 1.0,
+     "lift": 7.95,
+     "other_themes": [
+      "로봇·휴머노이드"
+     ]
+    }
+   ]
+  },
   "디스플레이": {
    "n_members": 4,
    "spike_days": [
@@ -1214,115 +1368,117 @@
    "candidates": []
   },
   "로봇·휴머노이드": {
-   "n_members": 47,
+   "n_members": 54,
    "spike_days": [
     "20260722",
     "20260521",
-    "20260119",
     "20260731",
     "20260803",
     "20260305",
+    "20260119",
     "20260408",
     "20251010",
-    "20260727",
-    "20251020",
+    "20250102",
+    "20260715",
     "20251103",
-    "20251128"
+    "20260727"
    ],
    "leaders": [
+    {
+     "name": "로보티즈",
+     "code": "108490",
+     "part": 1.0,
+     "avg_excess": 12.42,
+     "spike_val_억": 1999
+    },
     {
      "name": "레인보우로보틱스",
      "code": "277810",
      "part": 1.0,
-     "avg_excess": 9.66,
-     "spike_val_억": 2166
+     "avg_excess": 10.94,
+     "spike_val_억": 1988
+    },
+    {
+     "name": "클로봇",
+     "code": "466100",
+     "part": 1.0,
+     "avg_excess": 11.78,
+     "spike_val_억": 1629
     },
     {
      "name": "에스피지",
      "code": "058610",
      "part": 1.0,
-     "avg_excess": 14.79,
-     "spike_val_억": 1556
+     "avg_excess": 13.88,
+     "spike_val_억": 1319
     },
     {
-     "name": "한라캐스트",
-     "code": "125490",
+     "name": "원익홀딩스",
+     "code": "030530",
      "part": 1.0,
-     "avg_excess": 9.18,
-     "spike_val_억": 1163
-    },
-    {
-     "name": "현대무벡스",
-     "code": "319400",
-     "part": 1.0,
-     "avg_excess": 9.73,
-     "spike_val_억": 1046
-    },
-    {
-     "name": "이랜시스",
-     "code": "264850",
-     "part": 1.0,
-     "avg_excess": 8.14,
-     "spike_val_억": 195
+     "avg_excess": 11.15,
+     "spike_val_억": 592
     }
    ],
    "candidates": [
     {
-     "code": "108490",
-     "name": "로보티즈",
-     "part": 1.0,
-     "lift": 11.34,
-     "other_themes": []
-    },
-    {
      "code": "389500",
      "name": "에스비비테크",
      "part": 1.0,
-     "lift": 11.2,
-     "other_themes": []
-    },
-    {
-     "code": "056080",
-     "name": "유진로봇",
-     "part": 1.0,
-     "lift": 8.98,
+     "lift": 11.71,
      "other_themes": []
     },
     {
      "code": "348340",
      "name": "뉴로메카",
      "part": 1.0,
-     "lift": 8.92,
+     "lift": 9.04,
      "other_themes": []
     },
     {
-     "code": "090710",
-     "name": "휴림로봇",
-     "part": 0.92,
-     "lift": 11.71,
-     "other_themes": []
-    },
-    {
-     "code": "030530",
-     "name": "원익홀딩스",
-     "part": 0.92,
-     "lift": 10.88,
+     "code": "413630",
+     "name": "씨피시스템",
+     "part": 1.0,
+     "lift": 8.58,
      "other_themes": [
       "반도체 소부장"
      ]
     },
     {
-     "code": "098460",
-     "name": "고영",
+     "code": "090710",
+     "name": "휴림로봇",
      "part": 0.92,
-     "lift": 7.39,
+     "lift": 10.41,
      "other_themes": []
+    },
+    {
+     "code": "323280",
+     "name": "태성",
+     "part": 0.92,
+     "lift": 10.22,
+     "other_themes": [
+      "반도체 소부장"
+     ]
     },
     {
      "code": "454910",
      "name": "두산로보틱스",
      "part": 0.92,
-     "lift": 7.33,
+     "lift": 9.33,
+     "other_themes": []
+    },
+    {
+     "code": "056080",
+     "name": "유진로봇",
+     "part": 0.92,
+     "lift": 8.9,
+     "other_themes": []
+    },
+    {
+     "code": "098460",
+     "name": "고영",
+     "part": 0.92,
+     "lift": 6.84,
      "other_themes": []
     }
    ]
@@ -1455,7 +1611,7 @@
    ]
   },
   "반도체 소부장": {
-   "n_members": 100,
+   "n_members": 111,
    "spike_days": [
     "20260731",
     "20260710",
@@ -1464,11 +1620,11 @@
     "20260521",
     "20260810",
     "20260408",
-    "20260715",
     "20260128",
-    "20260611",
+    "20260715",
     "20260401",
-    "20260604"
+    "20260604",
+    "20260611"
    ],
    "leaders": [
     {
@@ -1486,6 +1642,13 @@
      "spike_val_억": 1763
     },
     {
+     "name": "이오테크닉스",
+     "code": "039030",
+     "part": 1.0,
+     "avg_excess": 10.26,
+     "spike_val_억": 846
+    },
+    {
      "name": "유진테크",
      "code": "084370",
      "part": 1.0,
@@ -1498,30 +1661,9 @@
      "part": 1.0,
      "avg_excess": 13.34,
      "spike_val_억": 379
-    },
-    {
-     "name": "와이씨",
-     "code": "232140",
-     "part": 1.0,
-     "avg_excess": 7.58,
-     "spike_val_억": 202
     }
    ],
    "candidates": [
-    {
-     "code": "039030",
-     "name": "이오테크닉스",
-     "part": 1.0,
-     "lift": 10.26,
-     "other_themes": []
-    },
-    {
-     "code": "403870",
-     "name": "HPSP",
-     "part": 1.0,
-     "lift": 9.58,
-     "other_themes": []
-    },
     {
      "code": "098460",
      "name": "고영",
@@ -1551,72 +1693,88 @@
      "other_themes": []
     },
     {
-     "code": "161580",
-     "name": "필옵틱스",
-     "part": 1.0,
-     "lift": 6.75,
-     "other_themes": []
-    },
-    {
      "code": "074600",
      "name": "원익QnC",
      "part": 1.0,
      "lift": 6.72,
      "other_themes": []
+    },
+    {
+     "code": "102710",
+     "name": "이엔에프테크놀로지",
+     "part": 1.0,
+     "lift": 6.25,
+     "other_themes": []
+    },
+    {
+     "code": "005690",
+     "name": "파미셀",
+     "part": 1.0,
+     "lift": 4.91,
+     "other_themes": []
+    },
+    {
+     "code": "010170",
+     "name": "대한광통신",
+     "part": 0.92,
+     "lift": 11.28,
+     "other_themes": [
+      "광통신"
+     ]
     }
    ]
   },
   "방산": {
-   "n_members": 9,
+   "n_members": 10,
    "spike_days": [
     "20260303",
     "20250613",
     "20250304",
-    "20250218",
-    "20250317",
     "20260616",
-    "20260402",
+    "20250317",
     "20260108",
-    "20260610",
-    "20251229",
+    "20260220",
+    "20260106",
     "20260401",
-    "20260220"
+    "20251229",
+    "20250822",
+    "20260306"
    ],
    "leaders": [
     {
-     "name": "현대로템",
-     "code": "064350",
-     "part": 1.0,
-     "avg_excess": 7.5,
-     "spike_val_억": 2892
-    },
-    {
      "name": "LIG넥스원",
      "code": "079550",
+     "part": 1.0,
+     "avg_excess": 12.72,
+     "spike_val_억": 4146
+    },
+    {
+     "name": "현대로템",
+     "code": "064350",
      "part": 0.92,
-     "avg_excess": 12.83,
-     "spike_val_억": 3895
+     "avg_excess": 6.47,
+     "spike_val_억": 2723
     },
     {
      "name": "한국항공우주",
      "code": "047810",
      "part": 0.83,
-     "avg_excess": 6.98,
-     "spike_val_억": 2343
+     "avg_excess": 6.75,
+     "spike_val_억": 2411
     },
     {
      "name": "퍼스텍",
      "code": "010820",
      "part": 0.83,
-     "avg_excess": 8.35,
-     "spike_val_억": 382
+     "avg_excess": 9.12,
+     "spike_val_억": 618
     },
     {
      "name": "한화에어로스페이스",
      "code": "012450",
      "part": 0.75,
-     "avg_excess": 9.43,
-     "spike_val_억": 6268
+     "avg_excess": 8.65,
+     "spike_val_억": 6373
     }
    ],
    "candidates": [
@@ -1624,7 +1782,7 @@
      "code": "272210",
      "name": "한화시스템",
      "part": 0.92,
-     "lift": 8.68,
+     "lift": 8.55,
      "other_themes": [
       "우주항공"
      ]
@@ -1632,58 +1790,281 @@
     {
      "code": "103140",
      "name": "풍산",
-     "part": 0.92,
-     "lift": 6.42,
+     "part": 0.83,
+     "lift": 6.84,
      "other_themes": []
-    },
-    {
-     "code": "298040",
-     "name": "효성중공업",
-     "part": 0.75,
-     "lift": 2.66,
-     "other_themes": [
-      "전력설비·전선"
-     ]
     },
     {
      "code": "218410",
      "name": "RFHIC",
-     "part": 0.67,
-     "lift": 4.46,
+     "part": 0.75,
+     "lift": 6.08,
      "other_themes": []
     },
     {
      "code": "000880",
      "name": "한화",
-     "part": 0.67,
-     "lift": 4.24,
+     "part": 0.75,
+     "lift": 3.54,
      "other_themes": []
     },
     {
-     "code": "052710",
-     "name": "아모텍",
+     "code": "042660",
+     "name": "한화오션",
      "part": 0.67,
-     "lift": 4.12,
-     "other_themes": [
-      "데이터센터 전력"
-     ]
-    },
-    {
-     "code": "009540",
-     "name": "HD한국조선해양",
-     "part": 0.67,
-     "lift": 3.97,
+     "lift": 4.07,
      "other_themes": [
       "조선·해운"
      ]
     },
     {
-     "code": "267260",
-     "name": "HD현대일렉트릭",
+     "code": "083650",
+     "name": "비에이치아이",
      "part": 0.67,
-     "lift": 2.81,
+     "lift": 3.69,
+     "other_themes": [
+      "원전·SMR"
+     ]
+    },
+    {
+     "code": "032820",
+     "name": "우리기술",
+     "part": 0.67,
+     "lift": 3.55,
+     "other_themes": [
+      "원전·SMR"
+     ]
+    },
+    {
+     "code": "082920",
+     "name": "비츠로셀",
+     "part": 0.67,
+     "lift": 3.43,
      "other_themes": [
       "데이터센터 전력"
+     ]
+    }
+   ]
+  },
+  "사이버보안": {
+   "n_members": 21,
+   "spike_days": [
+    "20260415",
+    "20260420",
+    "20240827",
+    "20260416",
+    "20241211"
+   ],
+   "leaders": [
+    {
+     "name": "드림시큐리티",
+     "code": "203650",
+     "part": 1.0,
+     "avg_excess": 21.26,
+     "spike_val_억": 846
+    },
+    {
+     "name": "라온시큐어",
+     "code": "042510",
+     "part": 1.0,
+     "avg_excess": 19.44,
+     "spike_val_억": 485
+    },
+    {
+     "name": "아톤",
+     "code": "158430",
+     "part": 0.8,
+     "avg_excess": 11.3,
+     "spike_val_억": 1593
+    },
+    {
+     "name": "엑스게이트",
+     "code": "356680",
+     "part": 0.8,
+     "avg_excess": 19.26,
+     "spike_val_억": 1086
+    },
+    {
+     "name": "이스트소프트",
+     "code": "047560",
+     "part": 0.8,
+     "avg_excess": 6.64,
+     "spike_val_억": 623
+    }
+   ],
+   "candidates": [
+    {
+     "code": "456010",
+     "name": "아이씨티케이",
+     "part": 0.8,
+     "lift": 12.96,
+     "other_themes": []
+    },
+    {
+     "code": "189330",
+     "name": "씨이랩",
+     "part": 0.8,
+     "lift": 9.46,
+     "other_themes": [
+      "데이터센터 전력"
+     ]
+    },
+    {
+     "code": "090460",
+     "name": "비에이치",
+     "part": 0.8,
+     "lift": 6.6,
+     "other_themes": [
+      "로봇·휴머노이드",
+      "폴더블폰"
+     ]
+    },
+    {
+     "code": "263800",
+     "name": "데이타솔루션",
+     "part": 0.8,
+     "lift": 4.81,
+     "other_themes": [
+      "데이터센터 전력"
+     ]
+    },
+    {
+     "code": "085910",
+     "name": "네오티스",
+     "part": 0.8,
+     "lift": 4.05,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "219130",
+     "name": "타이거일렉",
+     "part": 0.8,
+     "lift": 3.37,
+     "other_themes": []
+    },
+    {
+     "code": "323280",
+     "name": "태성",
+     "part": 0.8,
+     "lift": 3.26,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "010060",
+     "name": "OCI홀딩스",
+     "part": 0.6,
+     "lift": 10.33,
+     "other_themes": [
+      "실적",
+      "태양광"
+     ]
+    }
+   ]
+  },
+  "석유화학": {
+   "n_members": 3,
+   "spike_days": [
+    "20260429",
+    "20251112",
+    "20240924",
+    "20260615",
+    "20250708",
+    "20250305",
+    "20260112",
+    "20260318",
+    "20250307",
+    "20250821",
+    "20260224",
+    "20251022"
+   ],
+   "leaders": [
+    {
+     "name": "대한유화",
+     "code": "006650",
+     "part": 1.0,
+     "avg_excess": 10.15,
+     "spike_val_억": 179
+    },
+    {
+     "name": "롯데케미칼",
+     "code": "011170",
+     "part": 0.83,
+     "avg_excess": 9.7,
+     "spike_val_억": 580
+    },
+    {
+     "name": "HD현대",
+     "code": "267250",
+     "part": 0.42,
+     "avg_excess": 3.42,
+     "spike_val_억": 485
+    }
+   ],
+   "candidates": [
+    {
+     "code": "011780",
+     "name": "금호석유화학",
+     "part": 0.92,
+     "lift": 5.69,
+     "other_themes": []
+    },
+    {
+     "code": "051910",
+     "name": "LG화학",
+     "part": 0.75,
+     "lift": 3.85,
+     "other_themes": []
+    },
+    {
+     "code": "002380",
+     "name": "케이씨씨",
+     "part": 0.75,
+     "lift": 3.01,
+     "other_themes": []
+    },
+    {
+     "code": "000880",
+     "name": "한화",
+     "part": 0.75,
+     "lift": 2.95,
+     "other_themes": []
+    },
+    {
+     "code": "004990",
+     "name": "롯데지주",
+     "part": 0.75,
+     "lift": 2.84,
+     "other_themes": []
+    },
+    {
+     "code": "000210",
+     "name": "DL",
+     "part": 0.67,
+     "lift": 4.05,
+     "other_themes": []
+    },
+    {
+     "code": "010060",
+     "name": "OCI홀딩스",
+     "part": 0.67,
+     "lift": 3.81,
+     "other_themes": [
+      "실적",
+      "태양광"
+     ]
+    },
+    {
+     "code": "010120",
+     "name": "엘에스일렉트릭",
+     "part": 0.67,
+     "lift": 3.49,
+     "other_themes": [
+      "데이터센터 전력",
+      "실적"
      ]
     }
    ]
@@ -1771,6 +2152,7 @@
      "part": 0.67,
      "lift": 4.66,
      "other_themes": [
+      "사이버보안",
       "양자컴퓨팅"
      ]
     },
@@ -2022,6 +2404,119 @@
     }
    ]
   },
+  "양자": {
+   "n_members": 3,
+   "spike_days": [
+    "20260324",
+    "20260325",
+    "20250106",
+    "20260413",
+    "20260403",
+    "20260327",
+    "20260323",
+    "20260511",
+    "20260522",
+    "20260526",
+    "20260520",
+    "20250204"
+   ],
+   "leaders": [
+    {
+     "name": "우리로",
+     "code": "046970",
+     "part": 1.0,
+     "avg_excess": 18.25,
+     "spike_val_억": 1298
+    },
+    {
+     "name": "한국첨단소재",
+     "code": "062970",
+     "part": 0.75,
+     "avg_excess": 14.88,
+     "spike_val_억": 445
+    },
+    {
+     "name": "쏘닉스",
+     "code": "088280",
+     "part": 0.67,
+     "avg_excess": 10.49,
+     "spike_val_억": 100
+    }
+   ],
+   "candidates": [
+    {
+     "code": "010170",
+     "name": "대한광통신",
+     "part": 0.83,
+     "lift": 11.7,
+     "other_themes": [
+      "광통신"
+     ]
+    },
+    {
+     "code": "017900",
+     "name": "광전자",
+     "part": 0.75,
+     "lift": 14.11,
+     "other_themes": [
+      "광통신"
+     ]
+    },
+    {
+     "code": "203650",
+     "name": "드림시큐리티",
+     "part": 0.75,
+     "lift": 5.94,
+     "other_themes": [
+      "사이버보안"
+     ]
+    },
+    {
+     "code": "356680",
+     "name": "엑스게이트",
+     "part": 0.67,
+     "lift": 6.98,
+     "other_themes": [
+      "사이버보안",
+      "양자컴퓨팅"
+     ]
+    },
+    {
+     "code": "456010",
+     "name": "아이씨티케이",
+     "part": 0.67,
+     "lift": 5.59,
+     "other_themes": []
+    },
+    {
+     "code": "330860",
+     "name": "네패스아크",
+     "part": 0.67,
+     "lift": 5.44,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "200710",
+     "name": "에이디테크놀로지",
+     "part": 0.67,
+     "lift": 5.05,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "189330",
+     "name": "씨이랩",
+     "part": 0.67,
+     "lift": 3.13,
+     "other_themes": [
+      "데이터센터 전력"
+     ]
+    }
+   ]
+  },
   "양자컴퓨팅": {
    "n_members": 4,
    "spike_days": [
@@ -2074,7 +2569,9 @@
      "name": "드림시큐리티",
      "part": 0.83,
      "lift": 12.44,
-     "other_themes": []
+     "other_themes": [
+      "사이버보안"
+     ]
     },
     {
      "code": "456010",
@@ -2139,80 +2636,103 @@
    ]
   },
   "우주항공": {
-   "n_members": 13,
+   "n_members": 14,
    "spike_days": [
     "20260305",
-    "20251222",
-    "20241107",
     "20260518",
+    "20251222",
+    "20260810",
+    "20241107",
     "20260102",
     "20260731",
+    "20260401",
     "20260129",
-    "20260810",
-    "20251212",
+    "20260710",
     "20260804",
-    "20260120",
-    "20260511"
+    "20251212"
    ],
    "leaders": [
     {
      "name": "스피어",
      "code": "347700",
      "part": 1.0,
-     "avg_excess": 14.87,
-     "spike_val_억": 976
-    },
-    {
-     "name": "에이치브이엠",
-     "code": "295310",
-     "part": 1.0,
-     "avg_excess": 16.15,
-     "spike_val_억": 852
+     "avg_excess": 15.08,
+     "spike_val_억": 864
     },
     {
      "name": "켄코아에어로스페이스",
      "code": "274090",
      "part": 1.0,
-     "avg_excess": 12.44,
-     "spike_val_억": 569
+     "avg_excess": 12.14,
+     "spike_val_억": 528
     },
     {
      "name": "쎄트렉아이",
      "code": "099320",
      "part": 1.0,
-     "avg_excess": 10.86,
-     "spike_val_억": 449
+     "avg_excess": 10.76,
+     "spike_val_억": 386
     },
     {
      "name": "인텔리안테크",
      "code": "189300",
      "part": 1.0,
-     "avg_excess": 10.26,
-     "spike_val_억": 337
+     "avg_excess": 9.69,
+     "spike_val_억": 303
+    },
+    {
+     "name": "한화시스템",
+     "code": "272210",
+     "part": 0.92,
+     "avg_excess": 7.71,
+     "spike_val_억": 2621
     }
    ],
    "candidates": [
     {
      "code": "100790",
      "name": "미래에셋벤처투자",
-     "part": 0.92,
-     "lift": 13.42,
+     "part": 1.0,
+     "lift": 13.17,
      "other_themes": []
     },
     {
      "code": "010820",
      "name": "퍼스텍",
-     "part": 0.92,
-     "lift": 4.45,
+     "part": 1.0,
+     "lift": 4.6,
      "other_themes": [
       "방산"
+     ]
+    },
+    {
+     "code": "218410",
+     "name": "RFHIC",
+     "part": 0.92,
+     "lift": 9.29,
+     "other_themes": []
+    },
+    {
+     "code": "456010",
+     "name": "아이씨티케이",
+     "part": 0.92,
+     "lift": 5.73,
+     "other_themes": []
+    },
+    {
+     "code": "490470",
+     "name": "세미파이브",
+     "part": 0.89,
+     "lift": 8.48,
+     "other_themes": [
+      "반도체 소부장"
      ]
     },
     {
      "code": "010170",
      "name": "대한광통신",
      "part": 0.83,
-     "lift": 10.99,
+     "lift": 11.7,
      "other_themes": [
       "광통신"
      ]
@@ -2221,96 +2741,73 @@
      "code": "327260",
      "name": "RF머트리얼즈",
      "part": 0.83,
-     "lift": 10.31,
+     "lift": 11.57,
      "other_themes": [
       "광통신"
      ]
-    },
-    {
-     "code": "218410",
-     "name": "RFHIC",
-     "part": 0.83,
-     "lift": 7.87,
-     "other_themes": []
     },
     {
      "code": "043260",
      "name": "성호전자",
-     "part": 0.75,
-     "lift": 8.62,
+     "part": 0.83,
+     "lift": 9.99,
      "other_themes": [
       "광통신"
      ]
-    },
-    {
-     "code": "319400",
-     "name": "현대무벡스",
-     "part": 0.75,
-     "lift": 7.07,
-     "other_themes": [
-      "로봇·휴머노이드"
-     ]
-    },
-    {
-     "code": "006910",
-     "name": "보성파워텍",
-     "part": 0.75,
-     "lift": 6.5,
-     "other_themes": []
     }
    ]
   },
   "원전·SMR": {
-   "n_members": 14,
+   "n_members": 19,
    "spike_days": [
-    "20260320",
-    "20260731",
-    "20250516",
-    "20250523",
-    "20250619",
-    "20250612",
-    "20260723",
-    "20260612",
     "20260120",
-    "20251015",
+    "20250619",
+    "20260731",
+    "20250523",
+    "20260320",
+    "20250612",
+    "20260629",
+    "20251010",
+    "20260220",
+    "20260305",
     "20250821",
-    "20260629"
+    "20251015"
    ],
    "leaders": [
+    {
+     "name": "우진",
+     "code": "105840",
+     "part": 1.0,
+     "avg_excess": 9.71,
+     "spike_val_억": 709
+    },
+    {
+     "name": "태웅",
+     "code": "044490",
+     "part": 1.0,
+     "avg_excess": 14.49,
+     "spike_val_억": 676
+    },
     {
      "name": "한전산업",
      "code": "130660",
      "part": 1.0,
-     "avg_excess": 7.65,
-     "spike_val_억": 304
-    },
-    {
-     "name": "일진파워",
-     "code": "094820",
-     "part": 1.0,
      "avg_excess": 7.75,
-     "spike_val_억": 261
+     "spike_val_억": 659
     },
     {
-     "name": "한전기술",
-     "code": "052690",
-     "part": 0.92,
-     "avg_excess": 10.45,
-     "spike_val_억": 1411
+     "name": "오르비텍",
+     "code": "046120",
+     "part": 1.0,
+     "avg_excess": 12.14,
+     "spike_val_억": 449
     },
     {
-     "name": "우진",
-     "code": "105840",
-     "part": 0.92,
-     "avg_excess": 8.65,
-     "spike_val_억": 486
-    },
-    {
-     "name": "비에이치아이",
-     "code": "083650",
-     "part": 0.83,
-     "avg_excess": 8.44,
-     "spike_val_억": 848
+     "name": "한신기계",
+     "code": "011700",
+     "part": 1.0,
+     "avg_excess": 10.58,
+     "spike_val_억": 380
     }
    ],
    "candidates": [
@@ -2318,62 +2815,173 @@
      "code": "006910",
      "name": "보성파워텍",
      "part": 1.0,
-     "lift": 9.61,
+     "lift": 13.35,
      "other_themes": []
     },
     {
-     "code": "032820",
-     "name": "우리기술",
-     "part": 0.92,
-     "lift": 11.44,
-     "other_themes": []
-    },
-    {
-     "code": "047040",
-     "name": "대우건설",
+     "code": "010820",
+     "name": "퍼스텍",
      "part": 0.83,
-     "lift": 6.0,
-     "other_themes": []
-    },
-    {
-     "code": "064350",
-     "name": "현대로템",
-     "part": 0.75,
-     "lift": 3.62,
+     "lift": 5.43,
      "other_themes": [
       "방산"
      ]
     },
     {
+     "code": "047040",
+     "name": "대우건설",
+     "part": 0.75,
+     "lift": 5.52,
+     "other_themes": []
+    },
+    {
      "code": "119850",
      "name": "지엔씨에너지",
      "part": 0.67,
-     "lift": 7.89,
+     "lift": 5.46,
      "other_themes": [
       "데이터센터 전력"
+     ]
+    },
+    {
+     "code": "125490",
+     "name": "한라캐스트",
+     "part": 0.67,
+     "lift": 5.43,
+     "other_themes": [
+      "로봇·휴머노이드",
+      "자동차부품"
+     ]
+    },
+    {
+     "code": "323280",
+     "name": "태성",
+     "part": 0.67,
+     "lift": 5.37,
+     "other_themes": [
+      "반도체 소부장"
      ]
     },
     {
      "code": "032500",
      "name": "케이엠더블유",
      "part": 0.67,
-     "lift": 5.34,
+     "lift": 5.15,
      "other_themes": []
     },
     {
      "code": "003530",
      "name": "한화투자증권",
      "part": 0.67,
-     "lift": 4.52,
+     "lift": 4.09,
+     "other_themes": []
+    }
+   ]
+  },
+  "유리기판": {
+   "n_members": 3,
+   "spike_days": [
+    "20260506",
+    "20250210",
+    "20250526",
+    "20260416",
+    "20250401",
+    "20260731",
+    "20250207",
+    "20250211",
+    "20250411",
+    "20260521",
+    "20260427",
+    "20260422"
+   ],
+   "leaders": [
+    {
+     "name": "한빛레이저",
+     "code": "452190",
+     "part": 1.0,
+     "avg_excess": 15.08,
+     "spike_val_억": 1178
+    },
+    {
+     "name": "피아이이",
+     "code": "452450",
+     "part": 1.0,
+     "avg_excess": 13.79,
+     "spike_val_억": 876
+    },
+    {
+     "name": "이노메트리",
+     "code": "302430",
+     "part": 0.5,
+     "avg_excess": 3.87,
+     "spike_val_억": 23
+    }
+   ],
+   "candidates": [
+    {
+     "code": "161580",
+     "name": "필옵틱스",
+     "part": 0.92,
+     "lift": 10.0,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "011790",
+     "name": "SKC",
+     "part": 0.83,
+     "lift": 7.87,
      "other_themes": []
     },
     {
-     "code": "060370",
-     "name": "LS마린솔루션",
-     "part": 0.67,
-     "lift": 2.85,
+     "code": "052710",
+     "name": "아모텍",
+     "part": 0.75,
+     "lift": 7.22,
      "other_themes": [
       "데이터센터 전력"
+     ]
+    },
+    {
+     "code": "323280",
+     "name": "태성",
+     "part": 0.75,
+     "lift": 6.3,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "000990",
+     "name": "DB하이텍",
+     "part": 0.75,
+     "lift": 5.82,
+     "other_themes": [
+      "반도체 소부장"
+     ]
+    },
+    {
+     "code": "358570",
+     "name": "지아이이노베이션",
+     "part": 0.75,
+     "lift": 5.16,
+     "other_themes": []
+    },
+    {
+     "code": "005290",
+     "name": "동진쎄미켐",
+     "part": 0.75,
+     "lift": 4.57,
+     "other_themes": []
+    },
+    {
+     "code": "080220",
+     "name": "제주반도체",
+     "part": 0.67,
+     "lift": 8.13,
+     "other_themes": [
+      "반도체 소부장"
      ]
     }
    ]
@@ -2468,6 +3076,7 @@
      "part": 0.6,
      "lift": 2.74,
      "other_themes": [
+      "STO",
       "가상화폐",
       "스테이블코인"
      ]
@@ -2544,20 +3153,20 @@
    ]
   },
   "이차전지·전해액": {
-   "n_members": 27,
+   "n_members": 29,
    "spike_days": [
-    "20251024",
     "20260122",
     "20260629",
     "20260731",
-    "20260421",
+    "20251024",
     "20251016",
+    "20260421",
     "20260305",
-    "20250805",
     "20251017",
+    "20250805",
     "20250410",
-    "20260723",
-    "20260306"
+    "20260306",
+    "20260723"
    ],
    "leaders": [
     {
@@ -2872,6 +3481,51 @@
     }
    ]
   },
+  "철강": {
+   "n_members": 4,
+   "spike_days": [
+    "20260428",
+    "20260601",
+    "20250910",
+    "20260807",
+    "20260810",
+    "20260409",
+    "20260615",
+    "20260623",
+    "20250307"
+   ],
+   "leaders": [
+    {
+     "name": "금강철강",
+     "code": "053260",
+     "part": 0.89,
+     "avg_excess": 12.05,
+     "spike_val_억": 198
+    },
+    {
+     "name": "신스틸",
+     "code": "162300",
+     "part": 0.89,
+     "avg_excess": 8.99,
+     "spike_val_억": 77
+    },
+    {
+     "name": "대호특수강",
+     "code": "021040",
+     "part": 0.56,
+     "avg_excess": 9.58,
+     "spike_val_억": 26
+    },
+    {
+     "name": "동국제강",
+     "code": "460860",
+     "part": 0.44,
+     "avg_excess": 1.85,
+     "spike_val_억": 77
+    }
+   ],
+   "candidates": []
+  },
   "태양광": {
    "n_members": 4,
    "spike_days": [
@@ -3162,7 +3816,9 @@
      "name": "디케이티",
      "part": 0.83,
      "lift": 7.05,
-     "other_themes": []
+     "other_themes": [
+      "로봇·휴머노이드"
+     ]
     },
     {
      "code": "160980",
@@ -3443,6 +4099,7 @@
      "part": 0.75,
      "lift": 7.8,
      "other_themes": [
+      "스페이스X",
       "우주항공"
      ]
     },
@@ -3467,7 +4124,9 @@
      "name": "HPSP",
      "part": 0.75,
      "lift": 3.02,
-     "other_themes": []
+     "other_themes": [
+      "반도체 소부장"
+     ]
     },
     {
      "code": "448900",
