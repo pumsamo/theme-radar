@@ -34,7 +34,7 @@ def main() -> None:
         return
     q = urllib.parse.urlencode({"crtfc_key": key, "bgn_de": "20260910", "end_de": "20260911", "pblntf_ty": "B", "page_count": 1})
     try:
-        d = json.loads(fetch("https://opendart.fsc.or.kr/api/list.json?" + q, timeout=20).decode("utf-8"))
+        d = json.loads(fetch("https://opendart.fss.or.kr/api/list.json?" + q, timeout=20).decode("utf-8"))
     except Exception as exc:  # noqa: BLE001
         print(f"호출 실패: {type(exc).__name__}")
         return
