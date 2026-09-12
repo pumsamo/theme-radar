@@ -668,7 +668,14 @@ def playbook_sheet():
         v = f.get("value")
         return v if isinstance(v, str) else (f"{v:+.1f}%" if v is not None else "부재")
     flag_line = (" · ".join(f"<b>{f['label']}</b> {fval(f)}" for f in act) if act else "해당 없음")
-    others = " · ".join(f"{f['label']} {fval(f)}" for f in fl.get("all", []) if not f.get("active") and f.get("value") is not None)
+    seen, parts = set(), []
+    for f in fl.get("all", []):  # 급등/급락 쌍은 같은 시세라 한 번만
+        base = f["label"].split(" 급")[0].replace("순매도일", "").replace("순매수일", "").strip()
+        if f.get("active") or f.get("value") is None or base in seen:
+            continue
+        seen.add(base)
+        parts.append(f"{base} {fval(f)}")
+    others = " · ".join(parts)
 
     def th_cell(items, cls):
         return " · ".join(f"<span class='{cls}'>{t['theme']}</span> {t['part']:.0%}/{t['excess']:+.1f}%" for t in items) or "—"
