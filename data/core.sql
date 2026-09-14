@@ -9499,7 +9499,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-14','^GSPC','S&P500',7656.98,0.86,
 INSERT INTO "global_baseline" VALUES('2026-09-14','^IXIC','나스닥',26333.04,0.96,'2026-09-11 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-14','^SOX','필라델피아 반도체',11824.0,1.81,'2026-09-11 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-14','EWY','EWY(한국 ETF)',188.72,3.25,'2026-09-11 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-14','KRW=X','원/달러',1343.4,-0.35,'2026-09-13 23:30Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-14','KRW=X','원/달러',1346.38,-0.13,'2026-09-14 00:14Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-14','^KS11','코스피(전 거래일)',6909.91,-1.76,'2026-09-11 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-14','^KQ11','코스닥(전 거래일)',820.64,-1.95,'2026-09-11 09:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-14','KOSPI_REGIME','5일 +3.3% · 60일고점 -24.2%',-24.19,3.33,NULL,'yahoo/regime');
@@ -10105,6 +10105,7 @@ INSERT INTO "news_signals" VALUES(4088,'2026-09-12','2026-09-12 19:17','매경 �
 INSERT INTO "news_signals" VALUES(4089,'2026-09-12','2026-09-12 08:01','매경 기업','AI 반도체·기판','호재',NULL,'반도체 클러스터 급한데…‘운영허가심사 지연’ 한빛 2호기 멈췄다','40년 운영 허가기간 만료 심사 대기 걸려 멈춘 원전 4기 11월 월성 2호기도 수명 종료 반도체 클러스터등 전력 차질전남광주 영광에 있는 한빛 2호기가 운영허가 기간 만료에 따라..','https://www.mk.co.kr/news/economy/12150982',1.5);
 INSERT INTO "news_signals" VALUES(4090,'2026-09-12','2026-09-12 08:01','매경 기업','반도체 소부장','호재',NULL,'반도체 클러스터 급한데…‘운영허가심사 지연’ 한빛 2호기 멈췄다','40년 운영 허가기간 만료 심사 대기 걸려 멈춘 원전 4기 11월 월성 2호기도 수명 종료 반도체 클러스터등 전력 차질전남광주 영광에 있는 한빛 2호기가 운영허가 기간 만료에 따라..','https://www.mk.co.kr/news/economy/12150982',1.5);
 INSERT INTO "news_signals" VALUES(4091,'2026-09-12','2026-09-12 08:01','매경 기업','정책·정치','호재',NULL,'반도체 클러스터 급한데…‘운영허가심사 지연’ 한빛 2호기 멈췄다','40년 운영 허가기간 만료 심사 대기 걸려 멈춘 원전 4기 11월 월성 2호기도 수명 종료 반도체 클러스터등 전력 차질전남광주 영광에 있는 한빛 2호기가 운영허가 기간 만료에 따라..','https://www.mk.co.kr/news/economy/12150982',1.5);
+INSERT INTO "news_signals" VALUES(4112,'2026-09-14','2026-09-14 08:49','매일경제','방산','호재','한화에어로스페이스','“한화에어로스페이스, 단기수주 넘어 장기 수출 기반 마련”','한국투자증권은 14일 한화에어로스페이스에 대해 크로아티아와 맺은 국산 다연장로켓 ‘천무’ 수출 계약을 계기로 유럽 시장에서 추가 수주 기반이 강화될 것이라며 투자의견 ‘매수’와 목..','https://www.mk.co.kr/news/stock/12151682',2.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -11874,5 +11875,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4111);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4120);
 COMMIT;
