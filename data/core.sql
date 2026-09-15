@@ -9972,10 +9972,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-15','^GSPC','S&P500',7619.98,-0.48
 INSERT INTO "global_baseline" VALUES('2026-09-15','^IXIC','나스닥',26186.41,-0.56,'2026-09-14 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-15','^SOX','필라델피아 반도체',11131.28,-5.86,'2026-09-14 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-15','EWY','EWY(한국 ETF)',188.72,3.25,'2026-09-14 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-15','KRW=X','원/달러',1347.28,0.2,'2026-09-15 00:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-15','^KS11','코스피(전 거래일)',6909.91,-1.76,'2026-09-14 06:32Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-15','^KQ11','코스닥(전 거래일)',820.64,-1.95,'2026-09-14 06:32Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-15','KOSPI_REGIME','5일 +3.3% · 60일고점 -24.2%',-24.19,3.33,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-15','KRW=X','원/달러',1348.38,0.28,'2026-09-15 00:41Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-15','^KS11','코스피(전 거래일)',6645.74,-3.82,'2026-09-15 00:21Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-15','^KQ11','코스닥(전 거래일)',810.35,-1.25,'2026-09-15 00:21Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-15','KOSPI_REGIME','5일 -5.0% · 60일고점 -27.1%',-27.09,-5.0,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-15','AAOI','광통신',105.36,2.0,'2026-09-14 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-15','COHR','광통신',305.37,4.16,'2026-09-14 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-15','LITE','광통신',927.03,-0.93,'2026-09-14 20:00Z','yahoo/ticker');
@@ -10596,6 +10596,10 @@ INSERT INTO "news_signals" VALUES(4106,'2026-09-14','2026-09-14 15:29','매경 �
 INSERT INTO "news_signals" VALUES(4107,'2026-09-14','2026-09-14 13:28','매경 기업','알래스카LNG·철강·조선','호재','삼성중공업','“LNG선 주문 폭주 ‘잭팟’ 터졌다”…삼성중공업 1.6조원 선박 수주','삼성중공업이 총 1조6476억원 규모의 선박 6척을 연이어 수주하며 작년 상선 수주 실적을 넘어섰다. 삼성중공업은 오세아니아 지역 선주와 대형 LNG운반선 4척 10억달러에, 원유..','https://www.mk.co.kr/news/business/12151943',2.0);
 INSERT INTO "news_signals" VALUES(4108,'2026-09-14','2026-09-14 13:28','매경 기업','조선·해운','호재','삼성중공업','“LNG선 주문 폭주 ‘잭팟’ 터졌다”…삼성중공업 1.6조원 선박 수주','삼성중공업이 총 1조6476억원 규모의 선박 6척을 연이어 수주하며 작년 상선 수주 실적을 넘어섰다. 삼성중공업은 오세아니아 지역 선주와 대형 LNG운반선 4척 10억달러에, 원유..','https://www.mk.co.kr/news/business/12151943',2.0);
 INSERT INTO "news_signals" VALUES(4114,'2026-09-15','2026-09-15 08:20','연합뉴스','조선·해운','호재','한화오션','IBK증권, 한화오션 기업분석 개시…"원유운반선 수주확대 예상"','(서울=연합뉴스) 황철환 기자 = IBK투자증권은 한화오션[042660]에 대해 투자의견 ''매수'', 목표주가 12만원을 제시하며 커버리지(기업분...','https://www.yna.co.kr/view/AKR20260915025100008',2.0);
+INSERT INTO "news_signals" VALUES(4146,'2026-09-15','2026-09-15 09:15','연합뉴스','AI 반도체·기판','죽은테마','SK하이닉스,삼성전자','[특징주] 삼전·닉스, 美반도체 급락에도 장초반 보합권 등락','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 15일 장 초반 보합권에서 등락을 보이고 있다.','https://www.yna.co.kr/view/AKR20260915039500008',2.0);
+INSERT INTO "news_signals" VALUES(4147,'2026-09-15','2026-09-15 09:15','연합뉴스','반도체 소부장','죽은테마','SK하이닉스,삼성전자','[특징주] 삼전·닉스, 美반도체 급락에도 장초반 보합권 등락','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 15일 장 초반 보합권에서 등락을 보이고 있다.','https://www.yna.co.kr/view/AKR20260915039500008',2.0);
+INSERT INTO "news_signals" VALUES(4148,'2026-09-15','2026-09-15 09:00','연합뉴스','정책·정치','호재',NULL,'아산 영인일반산업단지 조성 본격화…17일 주민설명회','(아산=연합뉴스) 유의주 기자 = 충남 아산시는 15일 영인면 일대 영인일반산업단지의 산업단지계획 승인 절차에 들어갔다고 밝혔다.','https://www.yna.co.kr/view/AKR20260915029500063',1.0);
+INSERT INTO "news_signals" VALUES(4162,'2026-09-15','2026-09-15 00:02','DART','전력설비·전선','호재','효성중공업','(유가)효성중공업 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260915800149',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -12378,5 +12382,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4144);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4163);
 COMMIT;
