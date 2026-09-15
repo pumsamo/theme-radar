@@ -8627,7 +8627,7 @@ INSERT INTO "candidates" VALUES('2026-09-16','094820','일진파워','원전·SM
 INSERT INTO "candidates" VALUES('2026-09-16','051600','한전KPS','원전·SMR','news','pick','A급 자리 · 거래대금 63억 · 거래량 0.9배 · 고점 대비 -6% · 이격 1.03 · RSI 56','A급 자리',47850.0,45400.0,52800.0,55200.0,2.0,2.93,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','068270','셀트리온','제약바이오','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',180700.0,171300.0,199500.0,209000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','009420','한올바이오파마','제약바이오','news','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-16','000100','유한양행','제약바이오','news','pick','A급 자리 · 거래대금 197억 · 거래량 0.9배 · 고점 대비 -9% · 이격 0.97 · RSI 52','A급 자리',81700.0,75600.0,93900.0,100000.0,2.0,2.92,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-16','000100','유한양행','제약바이오','news','pick','A급 자리 · 거래대금 197억 · 거래량 0.9배 · 고점 대비 -9% · 이격 0.97 · RSI 52','A급 자리',81700.0,75600.0,93900.0,100000.0,2.0,2.95,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','086450','동국제약','제약바이오','news','pool','거래 위축','A급 자리',20950.0,18500.0,25850.0,28300.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','096530','씨젠','제약바이오','news','pool','거래 위축','A급 자리',32700.0,29800.0,38500.0,41400.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','326030','에스케이바이오팜','제약바이오','news','pool','거래 위축 · 자리 B급 (0/3 충족)','B급 (0/3 충족)',79400.0,73500.0,91200.0,97100.0,2.0,0.0,NULL,'ok');
@@ -8670,7 +8670,7 @@ INSERT INTO "candidates" VALUES('2026-09-16','445680','큐리옥스바이오시�
 INSERT INTO "candidates" VALUES('2026-09-16','128940','한미약품','제약바이오','news','pick','A급 자리 · 거래대금 991억 · 거래량 0.9배 · 고점 대비 -12% · 이격 1.04 · RSI 62','A급 자리',508000.0,453500.0,617000.0,672000.0,2.0,2.89,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','019170','신풍제약','제약바이오','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',10200.0,8880.0,12840.0,14160.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','008930','한미사이언스','제약바이오','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',53000.0,45200.0,68600.0,76400.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-16','253840','수젠텍','제약바이오','news','pool','거래 위축','A급 자리',4705.0,4230.0,5660.0,6130.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-16','253840','수젠텍','제약바이오','news','pool','거래 위축','A급 자리',4705.0,4225.0,5660.0,6140.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','142280','녹십자엠에스','제약바이오','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',3280.0,2870.0,4100.0,4510.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','475960','토모큐브','제약바이오','news','pool','60일 고점 대비 -33% — 검증상 승률 33% 이하 구간 · 유동성 미달(10억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-16','950220','네오이뮨텍','제약바이오','news','pool','60일 고점 대비 -45% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -10385,7 +10385,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-16','^GSPC','S&P500',7585.73,-0.45
 INSERT INTO "global_baseline" VALUES('2026-09-16','^IXIC','나스닥',25981.57,-0.78,'2026-09-15 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-16','^SOX','필라델피아 반도체',11175.55,0.4,'2026-09-15 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-16','EWY','EWY(한국 ETF)',176.49,0.15,'2026-09-15 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-16','KRW=X','원/달러',1362.3,1.24,'2026-09-15 23:10Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-16','KRW=X','원/달러',1362.89,1.28,'2026-09-15 23:44Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-16','^KS11','코스피(전 거래일)',6684.37,-3.26,'2026-09-15 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-16','^KQ11','코스닥(전 거래일)',806.79,-1.69,'2026-09-15 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-16','KOSPI_REGIME','5일 -4.4% · 60일고점 -26.7%',-26.66,-4.45,NULL,'yahoo/regime');
@@ -11037,6 +11037,7 @@ INSERT INTO "news_signals" VALUES(4184,'2026-09-15','2026-09-15 15:02','매경 �
 INSERT INTO "news_signals" VALUES(4185,'2026-09-15','2026-09-15 13:34','매경 기업','전력설비·전선','호재','효성중공업','효성 조현준 회장, 美 빅테크 뚫었다…9월에만 3865억원 수주 ‘쾌거’','효성중공업이 미국 유력 빅테크 기업들로부터 9월 한 달 동안에만 총 3865억 원 규모의 초고압변압기 공급계약을 체결했다고 15일 밝혔다. 조현준 효성그룹 회장이 공들여 온 미국 ..','https://www.mk.co.kr/news/business/12153029',1.5);
 INSERT INTO "news_signals" VALUES(4186,'2026-09-15','2026-09-15 13:28','매경 기업','연료전지','호재','두산퓨얼셀','두산퓨얼셀, 연료전지 3222억원 추가 수주','첫 계약 2주 만에 재발주 올해 국내외 수주 총 1.1조두산퓨얼셀은 ㈜두산의 미국 자회사 하이엑시엄과 3222억원 규모의 인산형 연료전지(PAFC) 공급계약을 체결했다고 15일 밝..','https://www.mk.co.kr/news/business/12153025',1.5);
 INSERT INTO "news_signals" VALUES(4187,'2026-09-15','2026-09-15 13:28','매경 기업','수소에너지·연료전지','호재','두산퓨얼셀','두산퓨얼셀, 연료전지 3222억원 추가 수주','첫 계약 2주 만에 재발주 올해 국내외 수주 총 1.1조두산퓨얼셀은 ㈜두산의 미국 자회사 하이엑시엄과 3222억원 규모의 인산형 연료전지(PAFC) 공급계약을 체결했다고 15일 밝..','https://www.mk.co.kr/news/business/12153025',2.0);
+INSERT INTO "news_signals" VALUES(4202,'2026-09-16','2026-09-16 08:08','연합뉴스','데이터센터 전력','호재',NULL,'한투증권 "초고압 변압기 수요 계속 증가할 것"','(서울=연합뉴스) 임은진 기자 = 한국투자증권은 16일 초고압 변압기 업체의 수주 성장 국면은 지속될 것이라면서 전력기기 업종에 대한 투자 의견...','https://www.yna.co.kr/view/AKR20260916022000008',1.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -12832,5 +12833,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4187);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4212);
 COMMIT;
