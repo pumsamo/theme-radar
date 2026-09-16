@@ -11009,7 +11009,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-17','^GSPC','S&P500',7551.81,-0.45
 INSERT INTO "global_baseline" VALUES('2026-09-17','^IXIC','나스닥',25978.42,-0.01,'2026-09-16 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-17','^SOX','필라델피아 반도체',11246.11,0.63,'2026-09-16 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-17','EWY','EWY(한국 ETF)',175.54,-0.54,'2026-09-16 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-17','KRW=X','원/달러',1377.14,1.0,'2026-09-16 23:17Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-17','KRW=X','원/달러',1377.43,1.02,'2026-09-16 23:52Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-17','^KS11','코스피(전 거래일)',6627.26,-0.85,'2026-09-16 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-17','^KQ11','코스닥(전 거래일)',812.41,0.7,'2026-09-16 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-17','KOSPI_REGIME','5일 -4.7% · 60일고점 -27.3%',-27.29,-4.71,NULL,'yahoo/regime');
@@ -11646,6 +11646,8 @@ INSERT INTO "news_signals" VALUES(4120,'2026-09-16','2026-09-16 17:54','매경 �
 INSERT INTO "news_signals" VALUES(4121,'2026-09-16','2026-09-16 16:51','매경 기업','AI 반도체·기판','호재',NULL,'“지금 잘된다고 공장 늘렸다간…” 없어서 못파는 반도체, 증설엔 신중한 까닭','AI發 수요 폭발, 업계선 증설 신중 일각선 반도체 수요폭 예전과 달라 국내선 공급과잉 우려, 아직 이르다“수요는 전례 없이 강하다. 하지만 사이클은 결국 돌아온다.” 인공지능(A..','https://www.mk.co.kr/news/business/12154436',1.5);
 INSERT INTO "news_signals" VALUES(4122,'2026-09-16','2026-09-16 16:51','매경 기업','반도체 소부장','호재',NULL,'“지금 잘된다고 공장 늘렸다간…” 없어서 못파는 반도체, 증설엔 신중한 까닭','AI發 수요 폭발, 업계선 증설 신중 일각선 반도체 수요폭 예전과 달라 국내선 공급과잉 우려, 아직 이르다“수요는 전례 없이 강하다. 하지만 사이클은 결국 돌아온다.” 인공지능(A..','https://www.mk.co.kr/news/business/12154436',1.5);
 INSERT INTO "news_signals" VALUES(4123,'2026-09-15','2026-09-15 21:26','매경 기업','조선·해운','호재','팬오션','“하루 뱃삯 11억씩 냅니다”…역대급 운임에 기업들 비명도 안나온다','중동리스크·파나마가뭄 겹쳐 컨테이너 운임 연중 최고치 유조선도 日 80만달러 육박 HMM·팬오션 실적 전망 상향 수출기업은 물류비 부담 커져국내 해운업계가 전방위 운임 강세에 힘입..','https://www.mk.co.kr/news/business/12153676',1.5);
+INSERT INTO "news_signals" VALUES(4138,'2026-09-17','2026-09-17 08:48','연합뉴스','이차전지·전해액','악재','롯데에너지머티리얼즈','NH증권 "롯데에너지머티, 목표가 상향하나 내년 1분기까지 적자"','(서울=연합뉴스) 김태종 기자 = NH투자증권은 17일 이차전지용 동박(구리로 만든 얇은 막) 등 생산업체 롯데에너지머티리얼즈[020150]에 ...','https://www.yna.co.kr/view/AKR20260917036800008',1.5);
+INSERT INTO "news_signals" VALUES(4139,'2026-09-17','2026-09-17 08:34','연합뉴스','그래핀','악재','상보','대신증권, LG디스플레이 목표가 하향…"3분기 실적 부진 전망"','(서울=연합뉴스) 경수현 기자 = 대신증권은 17일 LG디스플레이[034220]와 관련해 3분기 영업 실적이 애초 예상보다 부진할 것으로 보인다...','https://www.yna.co.kr/view/AKR20260917033000008',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -13527,5 +13529,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4133);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4145);
 COMMIT;
