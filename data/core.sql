@@ -9473,6 +9473,13 @@ INSERT INTO "candidates" VALUES('2026-09-18','060370','LS마린솔루션','데�
 INSERT INTO "candidates" VALUES('2026-09-18','109610','에스와이','데이터센터 전력','news','pool','60일 고점 대비 -37% — 검증상 승률 33% 이하 구간 · 유동성 미달(3억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','365330','에스와이스틸텍','데이터센터 전력','news','pool','60일 고점 대비 -32% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','033100','제룡전기','데이터센터 전력','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',47100.0,44150.0,53000.0,56000.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-18','222800','심텍','AI 반도체·기판','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',132500.0,116900.0,163700.0,179300.0,2.0,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','356860','티엘비','AI 반도체·기판','news','pool','거래 위축','A급 자리',38700.0,33950.0,48200.0,53000.0,2.0,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','000660','SK하이닉스','AI 반도체·기판','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','009150','삼성전기','AI 반도체·기판','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','353200','대덕전자','AI 반도체·기판','news','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','007660','이수페타시스','AI 반도체·기판','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',116800.0,96900.0,156600.0,176500.0,2.0,0.0,'죽은테마 신호 혼재','ok');
+INSERT INTO "candidates" VALUES('2026-09-18','007810','코리아써키트','AI 반도체·기판','news','pool','60일 고점 대비 -50% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','068270','셀트리온','제약바이오','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',182800.0,174700.0,199000.0,207000.0,2.0,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','009420','한올바이오파마','제약바이오','news','pool','60일 고점 대비 -31% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','000100','유한양행','제약바이오','news','pool','거래 위축','A급 자리',78400.0,74400.0,86400.0,90400.0,2.0,0.0,'죽은테마 신호 혼재','ok');
@@ -9549,13 +9556,6 @@ INSERT INTO "candidates" VALUES('2026-09-18','317690','퀀타매트릭스','제�
 INSERT INTO "candidates" VALUES('2026-09-18','365270','큐라클','제약바이오','news','pool','유동성 미달(6억) · 거래 위축','B급 (0/3 충족)',9630.0,8400.0,12090.0,13320.0,2.0,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','084650','랩지노믹스','제약바이오','news','pool','60일 고점 대비 -65% — 검증상 승률 33% 이하 구간 · 유동성 미달(21억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','001540','안국약품','제약바이오','news','pool','유동성 미달(4억) · 거래 위축','B급 (1/3 충족)',10420.0,9820.0,11620.0,12220.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','222800','심텍','AI 반도체·기판','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',132500.0,116900.0,163700.0,179300.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','356860','티엘비','AI 반도체·기판','news','pool','거래 위축','A급 자리',38700.0,33950.0,48200.0,53000.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','000660','SK하이닉스','AI 반도체·기판','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','009150','삼성전기','AI 반도체·기판','news','pool','60일 고점 대비 -41% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','353200','대덕전자','AI 반도체·기판','news','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','007660','이수페타시스','AI 반도체·기판','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',116800.0,96900.0,156600.0,176500.0,2.0,0.0,'죽은테마 신호 혼재','ok');
-INSERT INTO "candidates" VALUES('2026-09-18','007810','코리아써키트','AI 반도체·기판','news','pool','60일 고점 대비 -50% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,'죽은테마 신호 혼재','ok');
 INSERT INTO "candidates" VALUES('2026-09-18','354320','알멕','우주항공','news','pick','A급 자리 · 거래대금 46억 · 거래량 1.9배 · 고점 대비 -10% · 이격 1.15 · RSI 61','A급 자리',39300.0,31650.0,54600.0,62200.0,2.0,3.9,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','295310','에이치브이엠','우주항공','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',62000.0,56100.0,73800.0,79700.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','225190','LK삼양','우주항공','news','pool','60일 고점 대비 -44% — 검증상 승률 33% 이하 구간','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
@@ -9620,7 +9620,7 @@ INSERT INTO "candidates" VALUES('2026-09-18','439960','코스모로보틱스','�
 INSERT INTO "candidates" VALUES('2026-09-18','484810','티엑스알로보틱스','로봇·휴머노이드','news','pool','60일 고점 대비 -35% — 검증상 승률 33% 이하 구간 · 거래 위축','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','455900','엔젤로보틱스','로봇·휴머노이드','news','pool','유동성 미달(10억) · 거래 위축','B급 (1/3 충족)',20800.0,19060.0,24300.0,26000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','000150','두산','로봇·휴머노이드','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',1494000.0,1277000.0,1928000.0,2145000.0,2.0,0.0,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-18','319400','현대무벡스','로봇·휴머노이드','news','pool','거래 위축 · 자리 B급 (2/3 충족)','B급 (2/3 충족)',22000.0,20300.0,25400.0,27100.0,2.0,0.0,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-18','319400','현대무벡스','로봇·휴머노이드','news','pool','자리 B급 (2/3 충족)','B급 (2/3 충족)',22000.0,20300.0,25400.0,27100.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','270660','에브리봇','로봇·휴머노이드','news','pool','유동성 미달(8억) · 거래 위축','B급 (1/3 충족)',13570.0,12560.0,15590.0,16600.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','138360','앤로보틱스','로봇·휴머노이드','news','pool','60일 고점 대비 -36% — 검증상 승률 33% 이하 구간 · 유동성 미달(7억)','낙폭 과대',NULL,NULL,NULL,NULL,NULL,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-18','277810','레인보우로보틱스','로봇·휴머노이드','news','pool','거래 위축 · 자리 B급 (1/3 충족)','B급 (1/3 충족)',434500.0,395000.0,514000.0,553000.0,2.0,0.0,NULL,'ok');
@@ -11459,7 +11459,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-18','^GSPC','S&P500',7637.76,1.14,
 INSERT INTO "global_baseline" VALUES('2026-09-18','^IXIC','나스닥',26418.3,1.69,'2026-09-17 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-18','^SOX','필라델피아 반도체',11599.49,3.14,'2026-09-17 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-18','EWY','EWY(한국 ETF)',182.39,3.9,'2026-09-17 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-18','KRW=X','원/달러',1380.33,0.27,'2026-09-17 23:08Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-18','KRW=X','원/달러',1380.44,0.28,'2026-09-17 23:43Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-18','^KS11','코스피(전 거래일)',6717.97,1.37,'2026-09-17 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-18','^KQ11','코스닥(전 거래일)',815.98,0.44,'2026-09-17 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-18','KOSPI_REGIME','5일 -4.7% · 60일고점 -24.8%',-24.77,-4.73,NULL,'yahoo/regime');
@@ -12117,6 +12117,8 @@ INSERT INTO "news_signals" VALUES(4141,'2026-09-17','2026-09-17 17:49','매경 �
 INSERT INTO "news_signals" VALUES(4142,'2026-09-17','2026-09-17 17:49','매경 기업','AI 소프트웨어','호재',NULL,'두산 "AI칩 올라타자"…1조 들여 韓中 CCL설비 증설','두산이 인공지능(AI) 데이터센터용 동박적층판(CCL)에 약 9700억원을 투자한다. AI 가속기와 네트워크 스위치, 광모듈 등에 들어가는 고성능 CCL 생산 능력을 대폭 확대해 ..','https://www.mk.co.kr/news/business/12155718',1.0);
 INSERT INTO "news_signals" VALUES(4143,'2026-09-18','2026-09-18 07:51','매일경제','데이터센터 전력','호재','삼성전기','“삼성전기, 업황은 신고가인데 주가 저평가…저가 매수 기회”','KB증권은 18일 삼성전기에 대해 업황은 신고가인데 주가는 저평가라며 투가의견 ‘매수’와 목표주가 기존 300만원을 유지했다. 목표주가는 현금흐름할인모형(DCF) 방식으로 산출됐고..','https://www.mk.co.kr/news/stock/12156045',2.0);
 INSERT INTO "news_signals" VALUES(4144,'2026-09-18','2026-09-18 07:51','매일경제','AI 반도체·기판','호재','삼성전기','“삼성전기, 업황은 신고가인데 주가 저평가…저가 매수 기회”','KB증권은 18일 삼성전기에 대해 업황은 신고가인데 주가는 저평가라며 투가의견 ‘매수’와 목표주가 기존 300만원을 유지했다. 목표주가는 현금흐름할인모형(DCF) 방식으로 산출됐고..','https://www.mk.co.kr/news/stock/12156045',2.0);
+INSERT INTO "news_signals" VALUES(4164,'2026-09-18','2026-09-18 07:51','매일경제','AI 반도체·기판','호재','삼성전기','“주가 41% 빠졌지만 실적은 역대 최대”…삼성전기, 저가 매수 기회라는데','KB증권은 18일 삼성전기에 대해 업황은 신고가인데 주가는 저평가라며 투가의견 ‘매수’와 목표주가 기존 300만원을 유지했다. 목표주가는 현금흐름할인모형(DCF) 방식으로 산출됐고..','https://www.mk.co.kr/news/stock/12156045',1.5);
+INSERT INTO "news_signals" VALUES(4165,'2026-09-18','2026-09-18 07:51','매일경제','데이터센터 전력','호재','삼성전기','“주가 41% 빠졌지만 실적은 역대 최대”…삼성전기, 저가 매수 기회라는데','KB증권은 18일 삼성전기에 대해 업황은 신고가인데 주가는 저평가라며 투가의견 ‘매수’와 목표주가 기존 300만원을 유지했다. 목표주가는 현금흐름할인모형(DCF) 방식으로 산출됐고..','https://www.mk.co.kr/news/stock/12156045',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -14011,5 +14013,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4163);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4184);
 COMMIT;
