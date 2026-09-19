@@ -19,6 +19,11 @@
     ×2 = 같은 규칙에 k=2 (회전형, 승률 51% · 보유 6.9일)
   시총 구간(체결가 × 현재 상장주식수, data/mcap.json 근사)도 트레이드마다 붙여 R트랙을 구간별로 본다 (bt_mcap 전방 확인).
 
+정규장 기준 병기 (2026-09-19부터, 표시 전용 · 계약 판정 미반영 · 사용자 결정 9/19 '(다)'):
+  2026-09-14부터 일봉(네이버·다음)이 애프터마켓(15:30~20:00) 체결을 포함한다 — 종가 = 20시 체결가, 고저가에 애프터 체결 포함.
+  공식 채점은 일봉 그대로 두고, compute(regular_session=True)가 9/14 이후 봉만 정규장 값(data/sessions, sessions.py)으로 되돌려
+  같은 규칙으로 다시 채점한 값을 현황판에 나란히 보여준다. 11월 판정 때 두 값을 같이 본다.
+
 실행: python src/ledger.py  (저녁 루틴 ⑥단계)
 """
 from __future__ import annotations
@@ -86,10 +91,15 @@ def shadow_exit(bars: list[dict], i0: int, stop: float, k: float):
     return None, None, None
 
 
-def compute(seed: int = SEED, unconstrained: bool = False) -> dict:
+_BARS_MEMO: dict = {}  # (code, 조회 종료일) → 일봉. 같은 프로세스에서 compute를 여러 번 부를 때 재조회 방지 (결과 불변)
+
+
+def compute(seed: int = SEED, unconstrained: bool = False, regular_session: bool = False) -> dict:
     """unconstrained=True: R트랙(판정 기준)용 — 종목당 20% 상한·현금 한도를 적용하지 않는다 (체결된 픽은 전부 채점).
     2026-09-08 버그 수정: '무제약'을 종자돈 10억으로 흉내 냈으나 포지션 크기가 종자돈에 비례(리스크 1% × 손절폭)해
-    동시 보유 5종목쯤에서 현금이 바닥나 이후 픽이 '현금 부족'으로 조용히 버려지고 있었다 — 규모와 무관한 구조적 문제."""
+    동시 보유 5종목쯤에서 현금이 바닥나 이후 픽이 '현금 부족'으로 조용히 버려지고 있었다 — 규모와 무관한 구조적 문제.
+    regular_session=True: 표시 전용 병기 — 9/14부터 일봉에 섞인 애프터마켓 체결을 정규장 값(sessions.py)으로 되돌려 같은 규칙으로 채점.
+    공식 채점은 False(일봉 그대로) — 사용자 결정 2026-09-19 '(다)': 계약 끝까지 현행 유지, 정규장 기준은 나란히 보여주기만."""
     global RISK
     RISK = seed // 100
     db = connect()
@@ -106,13 +116,20 @@ def compute(seed: int = SEED, unconstrained: bool = False) -> dict:
         picks.append(r)
     codes = sorted({p[1] for p in picks})
 
+    end = _date.today().strftime("%Y%m%d")
+
     def get(code):
-        try:
-            return code, fetch_ohlc(code, FETCH_START, _date.today().strftime("%Y%m%d"))
-        except Exception:  # noqa: BLE001
-            return code, []
+        if (code, end) not in _BARS_MEMO:
+            try:
+                _BARS_MEMO[(code, end)] = fetch_ohlc(code, FETCH_START, end)
+            except Exception:  # noqa: BLE001
+                return code, []   # 실패는 기억하지 않는다 (다음 호출에서 재시도)
+        return code, _BARS_MEMO[(code, end)]
     with ThreadPoolExecutor(8) as ex:
         bars_all = dict(ex.map(get, codes))
+    if regular_session:
+        import sessions
+        bars_all = {c: sessions.regularize(c, b) for c, b in bars_all.items()}
     shares_out = load_shares()
 
     cash = seed

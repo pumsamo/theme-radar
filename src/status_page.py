@@ -755,6 +755,35 @@ D+k = D0 종가 → D+k 종가 누적수익 − 같은 기간 시장 중앙값 �
 <div class="twrap"><table><tr><th>일자</th><th>종목</th><th>유형</th><th>당일</th><th>D+1</th><th>D+5</th><th>D+20</th></tr>{rec}</table></div>"""
 
 
+def session_diff(off: dict, reg: dict) -> tuple[str, int]:
+    """공식(일봉 그대로) vs 정규장 기준 R트랙의 거래별 차이 표 (표시 전용). 반환: (표 행 HTML, 판정이 갈린 건수)."""
+    def keyed(res):
+        d = {}
+        for c in res["closed"]:
+            if c["label"] == "미체결 소멸":
+                d[(c["name"], c["date"].replace("-", ""))] = ("미체결 소멸", None, 0.0)
+            else:
+                d[(c["name"], c["fill_date"])] = (c["label"], c["date"], c["r"])
+        for p in res["open"]:
+            d[(p["name"], p["fill_date"])] = ("진행", None, p["r"])
+        return d
+    a, b = keyed(off), keyed(reg)
+    rows, flips = [], 0
+    for k in sorted(set(a) | set(b), key=lambda x: (x[1], x[0])):
+        x, y = a.get(k, ("없음", None, 0.0)), b.get(k, ("없음", None, 0.0))
+        flip = x[0] != y[0]
+        if not flip and abs(x[2] - y[2]) < 0.10:
+            continue
+        flips += flip
+        rows.append((not flip, -abs(x[2] - y[2]),
+                     f"<tr><td>{k[1][4:6]}/{k[1][6:]}</td><td>{k[0]}{' <b>★ 판정 갈림</b>' if flip else ''}</td>"
+                     f"<td>{x[0]} <span class='{pct_cls(x[2])}'>{x[2]:+.2f}R</span></td>"
+                     f"<td>{y[0]} <span class='{pct_cls(y[2])}'>{y[2]:+.2f}R</span></td>"
+                     f"<td class='{pct_cls(x[2] - y[2])}'>{x[2] - y[2]:+.2f}R</td></tr>"))
+    rows.sort(key=lambda r: (r[0], r[1]))
+    return "".join(r[2] for r in rows[:15]), flips
+
+
 def main() -> None:
     today = _date.today()
     db = connect()
@@ -768,12 +797,34 @@ def main() -> None:
     big = ledger.compute(1_000_000_000, unconstrained=True)  # R트랙: 현금·상한 제약 없음 (9/8 수정)
     a10 = ledger.compute(10_000_000)
     a30 = ledger.compute(30_000_000)
+    # 정규장 기준 병기 (표시 전용 — 사용자 결정 2026-09-19 '(다)'): 9/14~ 일봉에 섞인 애프터마켓 체결을 걷어내고 같은 규칙으로 재채점
+    big_rs = ledger.compute(1_000_000_000, unconstrained=True, regular_session=True)
+    a10_rs = ledger.compute(10_000_000, regular_session=True)
+    a30_rs = ledger.compute(30_000_000, regular_session=True)
 
     def r_of(c, risk):
         return 2.0 if c["label"] == "목표" else (-1.0 if c["label"] == "손절"
                                                 else c["pnl"] / risk)
     closed_r = [r_of(c, big["risk"]) for c in big["closed"] if c["label"] != "미체결 소멸"]
     open_r = [p["pnl"] / big["risk"] for p in big["open"]]
+    closed_rs = [r_of(c, big_rs["risk"]) for c in big_rs["closed"] if c["label"] != "미체결 소멸"]
+    open_rs = [p["pnl"] / big_rs["risk"] for p in big_rs["open"]]
+    tot_r, tot_rs = sum(closed_r) + sum(open_r), sum(closed_rs) + sum(open_rs)
+    diff_rows, flips = session_diff(big, big_rs)
+    import sessions
+    miss = sessions.missing_days(d for d, _ in a10["equity_series"])
+    miss_note = (f" <b class='down'>⚠ 세션 자료 없는 날 {len(miss)}일({', '.join(m[4:6] + '/' + m[6:] for m in miss[:6])}) — 그날은 일봉 그대로라 차이가 안 잡힌다.</b>"
+                 if miss else "")
+
+    def pair_row(label, x, y, fmt, dfmt=None):
+        return (f"<tr><td>{label}</td><td class='{pct_cls(x)}'>{fmt(x)}</td><td class='{pct_cls(y)}'>{fmt(y)}</td>"
+                f"<td class='{pct_cls(x - y)}'>{(dfmt or fmt)(x - y)}</td></tr>")
+    ret = lambda a: (a["equity"] / a["seed"] - 1) * 100  # noqa: E731
+    sess_rows = (pair_row("R트랙 합계", tot_r, tot_rs, lambda v: f"{v:+.2f}R")
+                 + pair_row(f"　종결 {len(closed_r)}건 / {len(closed_rs)}건", sum(closed_r), sum(closed_rs), lambda v: f"{v:+.2f}R")
+                 + pair_row(f"　진행 {len(open_r)}건 / {len(open_rs)}건", sum(open_r), sum(open_rs), lambda v: f"{v:+.2f}R")
+                 + pair_row("가상계좌 ① 수익률", ret(a10), ret(a10_rs), lambda v: f"{v:+.2f}%", lambda v: f"{v:+.2f}%p")
+                 + pair_row("가상계좌 ② 수익률", ret(a30), ret(a30_rs), lambda v: f"{v:+.2f}%", lambda v: f"{v:+.2f}%p"))
     lapsed = sum(1 for c in big["closed"] if c["label"] == "미체결 소멸")
     prog = min(100, int(run_days / CONTRACT_DAYS * 100))
     ss = ledger.summary(big)
@@ -816,6 +867,8 @@ def main() -> None:
     <div class="row">그림자 청산(표시만): ×5 <b class="{pct_cls(m5['total'])}">{m5['total']:+.2f}R</b>
       (종결 {m5['n_done']}·진행 {m5['n_open']}) · ×2 <b class="{pct_cls(m2['total'])}">{m2['total']:+.2f}R</b>
       (종결 {m2['n_done']}·진행 {m2['n_open']})</div>
+    <div class="row">정규장 기준(표시만 · 9/14~ 애프터마켓 제외): <b class="{pct_cls(tot_rs)}">{tot_rs:+.2f}R</b>
+      (공식과 {tot_r - tot_rs:+.2f}R 차이 · 판정 갈림 {flips}건)</div>
   </div>
   {acct_card(a10, "가상계좌 ① 1,000만")}
   {acct_card(a30, "가상계좌 ② 3,000만")}
@@ -826,7 +879,16 @@ def main() -> None:
 20일 평균의 5배·2배가 되는 첫날 종가 청산(손절 우선·20일 기한, 백테스트 ×5 +0.189R vs 기준 +0.128R).
 시총 = 체결가 × 현재 상장주식수(9/7 스냅샷) 근사, 백테스트에선 시총이 클수록 단조 개선(2조+ +0.250R).</div>
 <div class="twrap"><table><tr><th>시총 구간</th><th>체결</th><th>계약 합계</th><th>계약 평균</th><th>×5 합계</th><th>×2 합계</th></tr>
-{bucket_rows}</table></div>""",
+{bucket_rows}</table></div>
+<h2>정규장 기준 병기 <span class="row">(표시 전용 — 계약 판정 미반영, 2026-09-19부터)</span></h2>
+<div class="row">2026-09-14부터 네이버·다음 일봉이 애프터마켓(15:30~20:00) 체결을 포함한다 — 일봉 종가 = 20시 체결가, 고가·저가에도 호가 얇은 애프터 체결이 섞인다.
+규칙·백테스트는 정규장 일봉으로 만들어졌고 조건 주문도 정규장에서만 작동한다. 공식 채점은 계약 끝까지 일봉 그대로 두고(9/19 결정),
+9/14 이후 봉만 정규장 값(분봉에서 갈라 보존 · 고저가는 분봉 종가 근사)으로 되돌려 같은 규칙으로 다시 채점한 값을 나란히 둔다. 11월 판정 때 함께 본다.{miss_note}</div>
+<div class="twrap"><table><tr><th>구분</th><th>공식 (일봉 그대로)</th><th>정규장 기준</th><th>차이</th></tr>
+{sess_rows}</table></div>
+<div class="row" style="margin-top:.6rem">거래별 차이 — 판정이 갈린 건(★)과 평가 차이 0.10R 이상만, 최대 15건</div>
+<div class="twrap"><table><tr><th>체결일</th><th>종목</th><th>공식</th><th>정규장 기준</th><th>차이</th></tr>
+{diff_rows or "<tr><td colspan='5'>차이 0.10R 이상인 거래 없음</td></tr>"}</table></div>""",
         "아침 픽": picks_sheet(db),
         "계좌①": acct_sheet(a10, "가상계좌 ① — 종자돈 1,000만 (리스크 10만/건)"),
         "계좌②": acct_sheet(a30, "가상계좌 ② — 종자돈 3,000만 (리스크 30만/건)"),
@@ -895,7 +957,7 @@ document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {{
 </script>
 <div class="note">관찰·검증 기록용 — 매매 추천 아님 · 주문 기능 없음 · 최종 판단과 실행은 본인.<br>
 가상계좌 규칙: 리스크 1%/건 · 진입 3일 창 · 손절우선 · +2R 청산 · 20일 기한 · 왕복 비용 0.3% ·
-동일 종목 중복 금지 · 종목당 20% 상한. 그림자 청산(거래량 ×5/×2)·시총 구간은 표시 전용 — 계약 판정 미반영.
+동일 종목 중복 금지 · 종목당 20% 상한. 그림자 청산(거래량 ×5/×2)·시총 구간·정규장 기준 병기는 표시 전용 — 계약 판정 미반영.
 <a href="index.html">→ 장전 브리핑</a></div>
 </body></html>"""
 
