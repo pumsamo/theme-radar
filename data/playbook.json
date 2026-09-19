@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-12",
+ "generated": "2026-09-19",
  "window": {
-  "from": "20240813",
-  "to": "20260911",
+  "from": "20240821",
+  "to": "20260918",
   "days": 505
  },
  "params": {
@@ -28,10 +28,16 @@
    "mkt_next": -0.86,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.56,
+     "excess": 2.98,
+     "n": 5
+    },
+    {
      "theme": "게임",
-     "part": 0.57,
-     "excess": 0.96,
-     "n": 10
+     "part": 0.55,
+     "excess": 0.91,
+     "n": 12
     },
     {
      "theme": "조선·해운",
@@ -50,32 +56,26 @@
      "part": 0.51,
      "excess": 1.23,
      "n": 5
-    },
-    {
-     "theme": "정책·정치",
-     "part": 0.51,
-     "excess": 1.13,
-     "n": 15
     }
    ],
    "bottom_themes": [
     {
-     "theme": "AI 반도체·기판",
-     "part": 0.39,
-     "excess": -0.3,
-     "n": 7
-    },
-    {
-     "theme": "가상화폐",
-     "part": 0.37,
-     "excess": -0.26,
-     "n": 7
+     "theme": "우주항공",
+     "part": 0.38,
+     "excess": 0.26,
+     "n": 10
     },
     {
      "theme": "로봇·휴머노이드",
      "part": 0.37,
-     "excess": -0.59,
-     "n": 37
+     "excess": -0.57,
+     "n": 36
+    },
+    {
+     "theme": "기계",
+     "part": 0.37,
+     "excess": -0.82,
+     "n": 7
     }
    ],
    "top_stocks": [
@@ -84,7 +84,7 @@
      "code": "010950",
      "part": 0.73,
      "excess": 2.24,
-     "val": 658,
+     "val": 653,
      "cap": 177430,
      "themes": "석유·에너지",
      "star": true
@@ -94,7 +94,7 @@
      "code": "198440",
      "part": 0.73,
      "excess": 1.58,
-     "val": 110,
+     "val": 113,
      "cap": 1200,
      "themes": "반도체 소부장,정책·정치",
      "star": true
@@ -104,19 +104,9 @@
      "code": "012450",
      "part": 0.71,
      "excess": 2.14,
-     "val": 1623,
+     "val": 1337,
      "cap": 535744,
      "themes": "방산",
-     "star": true
-    },
-    {
-     "name": "남해화학",
-     "code": "025860",
-     "part": 0.71,
-     "excess": 2.13,
-     "val": 55,
-     "cap": 3105,
-     "themes": "",
      "star": true
     },
     {
@@ -124,7 +114,7 @@
      "code": "036460",
      "part": 0.71,
      "excess": 0.83,
-     "val": 58,
+     "val": 61,
      "cap": 32402,
      "themes": "",
      "star": true
@@ -134,29 +124,39 @@
      "code": "352820",
      "part": 0.71,
      "excess": 0.4,
-     "val": 312,
+     "val": 291,
      "cap": 77937,
      "themes": "엔터·미디어",
      "star": true
-    },
-    {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.68,
-     "excess": 0.84,
-     "val": 31,
-     "cap": 30512,
-     "themes": "",
-     "star": false
     },
     {
      "name": "흥구석유",
      "code": "024060",
      "part": 0.68,
      "excess": 4.96,
-     "val": 471,
+     "val": 599,
      "cap": 1684,
      "themes": "미국-이란 전쟁,미국·이란 전쟁,석유",
+     "star": false
+    },
+    {
+     "name": "한국석유공업",
+     "code": "004090",
+     "part": 0.68,
+     "excess": 3.01,
+     "val": 86,
+     "cap": 1460,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "HD현대",
+     "code": "267250",
+     "part": 0.68,
+     "excess": 0.91,
+     "val": 354,
+     "cap": 192348,
+     "themes": "석유화학",
      "star": false
     }
    ],
@@ -166,7 +166,7 @@
      "code": "376900",
      "part": 0.22,
      "excess": -0.98,
-     "val": 41,
+     "val": 37,
      "cap": 4709,
      "themes": "제약바이오",
      "star": false
@@ -176,7 +176,7 @@
      "code": "466100",
      "part": 0.23,
      "excess": -1.77,
-     "val": 129,
+     "val": 70,
      "cap": 7506,
      "themes": "로봇·휴머노이드",
      "star": false
@@ -186,19 +186,19 @@
      "code": "174900",
      "part": 0.24,
      "excess": -1.85,
-     "val": 51,
+     "val": 37,
      "cap": 4360,
      "themes": "제약바이오",
      "star": false
     },
     {
-     "name": "한솔아이원스",
-     "code": "114810",
-     "part": 0.24,
-     "excess": -1.55,
-     "val": 33,
-     "cap": 3906,
-     "themes": "반도체 소부장",
+     "name": "리가켐바이오",
+     "code": "141080",
+     "part": 0.27,
+     "excess": -1.32,
+     "val": 183,
+     "cap": 34169,
+     "themes": "제약바이오",
      "star": false
     }
    ]
@@ -212,110 +212,90 @@
    "rule": "USO 1일 ≤ -2.9% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260804",
     "20260805",
-    "20260826"
+    "20260826",
+    "20260917"
    ],
-   "mkt_next": -0.12,
+   "mkt_next": -0.11,
    "top_themes": [
     {
      "theme": "남북경협",
-     "part": 0.56,
-     "excess": 0.96,
-     "n": 8
+     "part": 0.55,
+     "excess": 0.83,
+     "n": 6
     },
     {
      "theme": "정책·정치",
      "part": 0.54,
-     "excess": 0.34,
-     "n": 15
+     "excess": 0.45,
+     "n": 13
     },
     {
      "theme": "원전·SMR",
      "part": 0.52,
-     "excess": 0.92,
-     "n": 18
+     "excess": 0.91,
+     "n": 20
+    },
+    {
+     "theme": "조선·해운",
+     "part": 0.51,
+     "excess": 0.49,
+     "n": 10
     },
     {
      "theme": "실적",
      "part": 0.51,
-     "excess": 0.51,
-     "n": 23
-    },
-    {
-     "theme": "화장품·소비재",
-     "part": 0.51,
      "excess": 0.48,
-     "n": 18
+     "n": 19
     }
    ],
    "bottom_themes": [
     {
-     "theme": "사이버보안",
-     "part": 0.44,
-     "excess": 0.56,
-     "n": 7
+     "theme": "광통신",
+     "part": 0.43,
+     "excess": 0.79,
+     "n": 16
     },
     {
      "theme": "우주항공",
-     "part": 0.44,
-     "excess": 0.03,
-     "n": 9
+     "part": 0.42,
+     "excess": -0.03,
+     "n": 10
     },
     {
-     "theme": "게임",
-     "part": 0.43,
-     "excess": -0.04,
-     "n": 10
+     "theme": "사이버보안",
+     "part": 0.41,
+     "excess": 0.42,
+     "n": 9
     }
    ],
    "top_stocks": [
     {
+     "name": "대한항공",
+     "code": "003490",
+     "part": 0.73,
+     "excess": 1.44,
+     "val": 821,
+     "cap": 111755,
+     "themes": "",
+     "star": true
+    },
+    {
      "name": "혜인",
      "code": "003010",
      "part": 0.71,
-     "excess": 2.24,
-     "val": 95,
+     "excess": 2.41,
+     "val": 66,
      "cap": 1131,
      "themes": "데이터센터 전력,신재생에너지,태양광",
-     "star": true
-    },
-    {
-     "name": "한국전력공사",
-     "code": "015760",
-     "part": 0.71,
-     "excess": 1.92,
-     "val": 645,
-     "cap": 210243,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "LG에너지솔루션",
-     "code": "373220",
-     "part": 0.71,
-     "excess": 1.66,
-     "val": 1158,
-     "cap": 848250,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "대한항공",
-     "code": "003490",
-     "part": 0.71,
-     "excess": 1.42,
-     "val": 849,
-     "cap": 111755,
-     "themes": "",
      "star": true
     },
     {
      "name": "현대엘리베이터",
      "code": "017800",
      "part": 0.71,
-     "excess": 1.09,
-     "val": 104,
+     "excess": 1.08,
+     "val": 66,
      "cap": 29515,
      "themes": "",
      "star": true
@@ -324,29 +304,49 @@
      "name": "BNK금융지주",
      "code": "138930",
      "part": 0.71,
-     "excess": 0.52,
-     "val": 148,
+     "excess": 0.54,
+     "val": 162,
      "cap": 48481,
      "themes": "",
      "star": true
     },
     {
-     "name": "한미사이언스",
-     "code": "008930",
+     "name": "한국전력공사",
+     "code": "015760",
      "part": 0.68,
-     "excess": 1.05,
-     "val": 310,
-     "cap": 37068,
-     "themes": "제약바이오",
+     "excess": 1.86,
+     "val": 622,
+     "cap": 210243,
+     "themes": "",
      "star": false
     },
     {
-     "name": "롯데쇼핑",
-     "code": "023530",
+     "name": "LG에너지솔루션",
+     "code": "373220",
      "part": 0.68,
-     "excess": 1.01,
-     "val": 171,
-     "cap": 31768,
+     "excess": 1.59,
+     "val": 1138,
+     "cap": 848250,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "오리온",
+     "code": "271560",
+     "part": 0.68,
+     "excess": 0.95,
+     "val": 132,
+     "cap": 48620,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "효성",
+     "code": "004800",
+     "part": 0.68,
+     "excess": 0.82,
+     "val": 37,
+     "cap": 28325,
      "themes": "",
      "star": false
     }
@@ -356,8 +356,8 @@
      "name": "흥구석유",
      "code": "024060",
      "part": 0.22,
-     "excess": -2.63,
-     "val": 471,
+     "excess": -2.55,
+     "val": 599,
      "cap": 1684,
      "themes": "미국-이란 전쟁,미국·이란 전쟁,석유",
      "star": false
@@ -366,30 +366,30 @@
      "name": "한국석유공업",
      "code": "004090",
      "part": 0.27,
-     "excess": -1.92,
-     "val": 75,
+     "excess": -1.87,
+     "val": 86,
      "cap": 1460,
      "themes": "",
      "star": false
     },
     {
-     "name": "케어젠",
-     "code": "214370",
-     "part": 0.29,
-     "excess": -0.86,
-     "val": 41,
-     "cap": 24279,
-     "themes": "",
+     "name": "덕산하이메탈",
+     "code": "077360",
+     "part": 0.32,
+     "excess": -1.24,
+     "val": 83,
+     "cap": 4576,
+     "themes": "반도체 소부장",
      "star": false
     },
     {
-     "name": "S-Oil",
-     "code": "010950",
+     "name": "해성디에스",
+     "code": "195870",
      "part": 0.32,
-     "excess": -1.35,
-     "val": 658,
-     "cap": 177430,
-     "themes": "석유·에너지",
+     "excess": -1.15,
+     "val": 64,
+     "cap": 8636,
+     "themes": "반도체 소부장",
      "star": false
     }
    ]
@@ -412,8 +412,8 @@
     {
      "theme": "게임",
      "part": 0.57,
-     "excess": 0.53,
-     "n": 10
+     "excess": 0.48,
+     "n": 12
     },
     {
      "theme": "방산",
@@ -424,34 +424,34 @@
     {
      "theme": "우주항공",
      "part": 0.51,
-     "excess": 0.73,
-     "n": 9
+     "excess": 0.93,
+     "n": 10
+    },
+    {
+     "theme": "정책·정치",
+     "part": 0.51,
+     "excess": 0.37,
+     "n": 13
     },
     {
      "theme": "알래스카LNG·철강·조선",
      "part": 0.51,
      "excess": 0.36,
      "n": 5
-    },
-    {
-     "theme": "엔터·미디어",
-     "part": 0.51,
-     "excess": 0.34,
-     "n": 9
     }
    ],
    "bottom_themes": [
     {
-     "theme": "가상화폐",
+     "theme": "보안",
      "part": 0.44,
-     "excess": 0.15,
-     "n": 6
+     "excess": 0.11,
+     "n": 10
     },
     {
-     "theme": "보안",
-     "part": 0.43,
-     "excess": -0.14,
-     "n": 6
+     "theme": "사이버보안",
+     "part": 0.44,
+     "excess": -0.3,
+     "n": 9
     },
     {
      "theme": "신재생에너지",
@@ -466,7 +466,7 @@
      "code": "089860",
      "part": 0.78,
      "excess": 0.61,
-     "val": 71,
+     "val": 56,
      "cap": 18264,
      "themes": "",
      "star": true
@@ -476,7 +476,7 @@
      "code": "006730",
      "part": 0.76,
      "excess": 1.12,
-     "val": 43,
+     "val": 31,
      "cap": 7122,
      "themes": "",
      "star": true
@@ -486,7 +486,7 @@
      "code": "055550",
      "part": 0.73,
      "excess": 0.73,
-     "val": 1202,
+     "val": 1212,
      "cap": 534704,
      "themes": "",
      "star": true
@@ -496,7 +496,7 @@
      "code": "035250",
      "part": 0.73,
      "excess": 0.57,
-     "val": 38,
+     "val": 35,
      "cap": 31642,
      "themes": "",
      "star": true
@@ -506,8 +506,18 @@
      "code": "007070",
      "part": 0.72,
      "excess": 0.7,
-     "val": 39,
+     "val": 46,
      "cap": 20985,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "현대지에프홀딩스",
+     "code": "005440",
+     "part": 0.71,
+     "excess": 1.4,
+     "val": 32,
+     "cap": 21953,
      "themes": "",
      "star": true
     },
@@ -516,7 +526,7 @@
      "code": "012750",
      "part": 0.71,
      "excess": 0.76,
-     "val": 54,
+     "val": 59,
      "cap": 30057,
      "themes": "AI 소프트웨어",
      "star": true
@@ -526,20 +536,10 @@
      "code": "024110",
      "part": 0.71,
      "excess": 0.49,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
-    },
-    {
-     "name": "HL만도",
-     "code": "204320",
-     "part": 0.68,
-     "excess": 1.16,
-     "val": 186,
-     "cap": 23572,
-     "themes": "",
-     "star": false
     }
    ],
    "bottom_stocks": [
@@ -548,7 +548,7 @@
      "code": "093370",
      "part": 0.27,
      "excess": 0.04,
-     "val": 372,
+     "val": 435,
      "cap": 13836,
      "themes": "반도체 소부장",
      "star": false
@@ -558,9 +558,19 @@
      "code": "027360",
      "part": 0.27,
      "excess": 0.2,
-     "val": 124,
+     "val": 112,
      "cap": 3816,
      "themes": "우주항공",
+     "star": false
+    },
+    {
+     "name": "아톤",
+     "code": "158430",
+     "part": 0.29,
+     "excess": -1.2,
+     "val": 91,
+     "cap": 1136,
+     "themes": "SW,사이버보안",
      "star": false
     },
     {
@@ -571,16 +581,6 @@
      "val": 33,
      "cap": 5658,
      "themes": "",
-     "star": false
-    },
-    {
-     "name": "싸이맥스",
-     "code": "160980",
-     "part": 0.32,
-     "excess": 0.08,
-     "val": 47,
-     "cap": 2518,
-     "themes": "반도체 소부장",
      "star": false
     }
    ]
@@ -594,61 +594,61 @@
    "rule": "HG=F 1일 ≥ +2.3% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260710",
     "20260722",
-    "20260731"
+    "20260731",
+    "20260918"
    ],
-   "mkt_next": 0.15,
+   "mkt_next": 0.13,
    "top_themes": [
     {
      "theme": "가상화폐",
-     "part": 0.59,
-     "excess": 0.8,
-     "n": 7
+     "part": 0.61,
+     "excess": 1.5,
+     "n": 6
+    },
+    {
+     "theme": "스테이블코인",
+     "part": 0.61,
+     "excess": 0.83,
+     "n": 5
     },
     {
      "theme": "로봇·휴머노이드",
-     "part": 0.57,
-     "excess": 1.67,
-     "n": 36
-    },
-    {
-     "theme": "AI 반도체·기판",
      "part": 0.56,
-     "excess": 1.06,
-     "n": 7
+     "excess": 1.79,
+     "n": 35
     },
     {
      "theme": "데이터센터 전력",
      "part": 0.56,
-     "excess": 0.9,
-     "n": 40
+     "excess": 1.01,
+     "n": 38
     },
     {
-     "theme": "방산",
+     "theme": "AI 반도체·기판",
      "part": 0.56,
-     "excess": 0.76,
+     "excess": 0.99,
      "n": 7
     }
    ],
    "bottom_themes": [
     {
      "theme": "제약바이오",
-     "part": 0.46,
-     "excess": 0.26,
+     "part": 0.45,
+     "excess": 0.2,
      "n": 55
     },
     {
      "theme": "화장품·소비재",
-     "part": 0.43,
-     "excess": -0.02,
-     "n": 18
+     "part": 0.44,
+     "excess": 0.0,
+     "n": 20
     },
     {
      "theme": "엔터·미디어",
-     "part": 0.41,
-     "excess": 0.12,
-     "n": 9
+     "part": 0.4,
+     "excess": -0.04,
+     "n": 8
     }
    ],
    "top_stocks": [
@@ -656,8 +656,8 @@
      "name": "LS",
      "code": "006260",
      "part": 0.78,
-     "excess": 2.21,
-     "val": 475,
+     "excess": 2.19,
+     "val": 359,
      "cap": 98748,
      "themes": "",
      "star": true
@@ -666,7 +666,7 @@
      "name": "풍산",
      "code": "103140",
      "part": 0.78,
-     "excess": 2.06,
+     "excess": 2.08,
      "val": 116,
      "cap": 21439,
      "themes": "",
@@ -676,18 +676,28 @@
      "name": "LG씨엔에스",
      "code": "064400",
      "part": 0.74,
-     "excess": 1.92,
-     "val": 518,
+     "excess": 1.89,
+     "val": 369,
      "cap": 73924,
      "themes": "",
+     "star": true
+    },
+    {
+     "name": "삼성전자",
+     "code": "005930",
+     "part": 0.73,
+     "excess": 2.08,
+     "val": 44646,
+     "cap": 15784952,
+     "themes": "반도체 소부장",
      "star": true
     },
     {
      "name": "대우건설",
      "code": "047040",
      "part": 0.73,
-     "excess": 1.61,
-     "val": 1615,
+     "excess": 1.63,
+     "val": 1699,
      "cap": 75648,
      "themes": "",
      "star": true
@@ -696,8 +706,8 @@
      "name": "LS ELECTRIC",
      "code": "010120",
      "part": 0.73,
-     "excess": 1.48,
-     "val": 1095,
+     "excess": 1.44,
+     "val": 988,
      "cap": 310500,
      "themes": "데이터센터 전력,실적",
      "star": true
@@ -706,8 +716,8 @@
      "name": "삼아알미늄",
      "code": "006110",
      "part": 0.71,
-     "excess": 2.83,
-     "val": 138,
+     "excess": 2.8,
+     "val": 123,
      "cap": 10118,
      "themes": "이차전지·전해액",
      "star": true
@@ -716,20 +726,10 @@
      "name": "KBI메탈",
      "code": "024840",
      "part": 0.71,
-     "excess": 2.59,
-     "val": 221,
+     "excess": 2.77,
+     "val": 213,
      "cap": 2299,
      "themes": "데이터센터 전력",
-     "star": true
-    },
-    {
-     "name": "삼성생명",
-     "code": "032830",
-     "part": 0.71,
-     "excess": 2.35,
-     "val": 1348,
-     "cap": 624000,
-     "themes": "삼성 그룹",
      "star": true
     }
    ],
@@ -738,40 +738,40 @@
      "name": "아모레퍼시픽",
      "code": "090430",
      "part": 0.29,
-     "excess": -0.13,
-     "val": 353,
+     "excess": -0.14,
+     "val": 361,
      "cap": 82358,
      "themes": "화장품·소비재",
+     "star": false
+    },
+    {
+     "name": "HLB",
+     "code": "028300",
+     "part": 0.34,
+     "excess": -1.47,
+     "val": 475,
+     "cap": 43889,
+     "themes": "제약바이오",
+     "star": false
+    },
+    {
+     "name": "HLB이노베이션",
+     "code": "024850",
+     "part": 0.34,
+     "excess": -1.03,
+     "val": 32,
+     "cap": 5176,
+     "themes": "",
      "star": false
     },
     {
      "name": "에스엠",
      "code": "041510",
      "part": 0.34,
-     "excess": -0.14,
-     "val": 83,
+     "excess": -0.15,
+     "val": 96,
      "cap": 18293,
      "themes": "엔터·미디어",
-     "star": false
-    },
-    {
-     "name": "롯데관광개발",
-     "code": "032350",
-     "part": 0.34,
-     "excess": -0.01,
-     "val": 49,
-     "cap": 9846,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "마녀공장",
-     "code": "439090",
-     "part": 0.34,
-     "excess": 0.12,
-     "val": 31,
-     "cap": 2618,
-     "themes": "화장품·소비재",
      "star": false
     }
    ]
@@ -782,114 +782,84 @@
    "group": "원자재",
    "note": "전선 피해",
    "symbol": "HG=F",
-   "rule": "HG=F 1일 ≤ -2.0% (상·하위 8%)",
+   "rule": "HG=F 1일 ≤ -2.1% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260625",
     "20260724",
-    "20260911"
+    "20260911",
+    "20260915"
    ],
    "mkt_next": -1.07,
    "top_themes": [
     {
      "theme": "화장품·소비재",
-     "part": 0.55,
-     "excess": 0.47,
-     "n": 18
+     "part": 0.54,
+     "excess": 0.52,
+     "n": 20
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.51,
+     "excess": 0.9,
+     "n": 5
     },
     {
      "theme": "알래스카LNG·철강·조선",
      "part": 0.51,
-     "excess": 0.26,
+     "excess": 0.25,
      "n": 5
     },
     {
-     "theme": "방산",
+     "theme": "엔터·미디어",
      "part": 0.5,
-     "excess": 0.39,
-     "n": 7
+     "excess": 0.47,
+     "n": 8
     },
     {
-     "theme": "조선·해운",
+     "theme": "정책·정치",
      "part": 0.49,
-     "excess": 0.46,
-     "n": 10
-    },
-    {
-     "theme": "광통신",
-     "part": 0.49,
-     "excess": 0.38,
+     "excess": 0.35,
      "n": 13
     }
    ],
    "bottom_themes": [
     {
      "theme": "게임",
-     "part": 0.38,
-     "excess": -0.61,
-     "n": 10
+     "part": 0.39,
+     "excess": -0.52,
+     "n": 12
     },
     {
-     "theme": "이차전지·전해액",
+     "theme": "IT서비스",
      "part": 0.37,
-     "excess": -0.35,
-     "n": 23
+     "excess": 0.01,
+     "n": 6
     },
     {
      "theme": "가상화폐",
-     "part": 0.35,
-     "excess": -0.45,
-     "n": 7
+     "part": 0.32,
+     "excess": -0.48,
+     "n": 6
     }
    ],
    "top_stocks": [
     {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.76,
-     "excess": 0.74,
-     "val": 31,
-     "cap": 30512,
-     "themes": "",
+     "name": "화신정공",
+     "code": "126640",
+     "part": 0.71,
+     "excess": 2.58,
+     "val": 57,
+     "cap": 1586,
+     "themes": "로봇·휴머노이드",
      "star": true
     },
     {
      "name": "맥쿼리인프라",
      "code": "088980",
-     "part": 0.73,
-     "excess": 0.85,
-     "val": 110,
+     "part": 0.71,
+     "excess": 0.83,
+     "val": 88,
      "cap": 47461,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "BNK금융지주",
-     "code": "138930",
-     "part": 0.73,
-     "excess": 0.73,
-     "val": 148,
-     "cap": 48481,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "한국카본",
-     "code": "017960",
-     "part": 0.71,
-     "excess": 1.54,
-     "val": 60,
-     "cap": 11679,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "iM금융지주",
-     "code": "139130",
-     "part": 0.71,
-     "excess": 0.73,
-     "val": 72,
-     "cap": 29535,
      "themes": "",
      "star": true
     },
@@ -897,29 +867,59 @@
      "name": "아모레퍼시픽",
      "code": "090430",
      "part": 0.71,
-     "excess": 0.71,
-     "val": 353,
+     "excess": 0.81,
+     "val": 361,
      "cap": 82358,
      "themes": "화장품·소비재",
      "star": true
     },
     {
-     "name": "화신정공",
-     "code": "126640",
+     "name": "BNK금융지주",
+     "code": "138930",
+     "part": 0.71,
+     "excess": 0.71,
+     "val": 162,
+     "cap": 48481,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "iM금융지주",
+     "code": "139130",
+     "part": 0.71,
+     "excess": 0.67,
+     "val": 71,
+     "cap": 29535,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "한국카본",
+     "code": "017960",
      "part": 0.68,
-     "excess": 2.48,
-     "val": 119,
-     "cap": 1586,
-     "themes": "로봇·휴머노이드",
+     "excess": 1.46,
+     "val": 46,
+     "cap": 11679,
+     "themes": "",
      "star": false
     },
     {
      "name": "코리안리",
      "code": "003690",
      "part": 0.68,
-     "excess": 1.01,
-     "val": 37,
+     "excess": 0.98,
+     "val": 33,
      "cap": 25819,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "미래에셋생명",
+     "code": "085620",
+     "part": 0.66,
+     "excess": 1.63,
+     "val": 68,
+     "cap": 26847,
      "themes": "",
      "star": false
     }
@@ -928,9 +928,9 @@
     {
      "name": "엔켐",
      "code": "348370",
-     "part": 0.22,
-     "excess": -1.5,
-     "val": 64,
+     "part": 0.24,
+     "excess": -1.58,
+     "val": 52,
      "cap": 4656,
      "themes": "이차전지·전해액",
      "star": false
@@ -938,31 +938,31 @@
     {
      "name": "로보스타",
      "code": "090360",
-     "part": 0.22,
-     "excess": -1.11,
-     "val": 103,
+     "part": 0.24,
+     "excess": -0.89,
+     "val": 83,
      "cap": 7546,
      "themes": "로봇·휴머노이드",
      "star": false
     },
     {
-     "name": "포스코엠텍",
-     "code": "009520",
-     "part": 0.24,
-     "excess": -0.62,
-     "val": 30,
-     "cap": 5293,
+     "name": "풍산",
+     "code": "103140",
+     "part": 0.27,
+     "excess": -1.45,
+     "val": 116,
+     "cap": 21439,
      "themes": "",
      "star": false
     },
     {
-     "name": "신성델타테크",
-     "code": "065350",
+     "name": "위메이드",
+     "code": "112040",
      "part": 0.27,
-     "excess": -1.18,
-     "val": 41,
-     "cap": 8479,
-     "themes": "",
+     "excess": -1.36,
+     "val": 36,
+     "cap": 5160,
+     "themes": "게임",
      "star": false
     }
    ]
@@ -974,186 +974,186 @@
    "note": "금 관련·고려아연",
    "symbol": "GC=F",
    "rule": "GC=F 1일 ≥ +2.0% (상·하위 8%)",
-   "n": 39,
+   "n": 40,
    "dates_last": [
     "20260820",
     "20260824",
     "20260904"
    ],
-   "mkt_next": 0.22,
+   "mkt_next": 0.17,
    "top_themes": [
     {
      "theme": "이차전지·전해액",
-     "part": 0.64,
-     "excess": 1.72,
+     "part": 0.62,
+     "excess": 1.48,
      "n": 23
     },
     {
      "theme": "방산",
      "part": 0.62,
-     "excess": 1.3,
+     "excess": 0.97,
      "n": 7
     },
     {
+     "theme": "실적",
+     "part": 0.57,
+     "excess": 1.01,
+     "n": 20
+    },
+    {
      "theme": "조선·해운",
-     "part": 0.59,
-     "excess": 0.84,
+     "part": 0.57,
+     "excess": 0.9,
      "n": 10
     },
     {
-     "theme": "광통신",
-     "part": 0.58,
-     "excess": 1.8,
-     "n": 13
-    },
-    {
      "theme": "원전·SMR",
-     "part": 0.56,
-     "excess": 0.85,
-     "n": 18
+     "part": 0.57,
+     "excess": 0.86,
+     "n": 20
     }
    ],
    "bottom_themes": [
     {
+     "theme": "폴더블폰",
+     "part": 0.45,
+     "excess": 0.59,
+     "n": 5
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.45,
+     "excess": -0.03,
+     "n": 5
+    },
+    {
      "theme": "화장품·소비재",
-     "part": 0.45,
-     "excess": -0.12,
-     "n": 18
-    },
-    {
-     "theme": "우주항공",
-     "part": 0.45,
-     "excess": 0.94,
-     "n": 9
-    },
-    {
-     "theme": "엔터·미디어",
-     "part": 0.41,
-     "excess": -0.42,
-     "n": 9
+     "part": 0.44,
+     "excess": -0.13,
+     "n": 20
     }
    ],
    "top_stocks": [
     {
-     "name": "SK아이이테크놀로지",
-     "code": "361610",
-     "part": 0.77,
-     "excess": 1.86,
-     "val": 156,
-     "cap": 13405,
+     "name": "HD현대마린엔진",
+     "code": "071970",
+     "part": 0.78,
+     "excess": 1.52,
+     "val": 82,
+     "cap": 17368,
      "themes": "",
      "star": true
     },
     {
-     "name": "HD현대마린엔진",
-     "code": "071970",
-     "part": 0.77,
-     "excess": 1.49,
-     "val": 81,
-     "cap": 17368,
+     "name": "SK아이이테크놀로지",
+     "code": "361610",
+     "part": 0.75,
+     "excess": 1.6,
+     "val": 167,
+     "cap": 13405,
      "themes": "",
      "star": true
     },
     {
      "name": "씨에스윈드",
      "code": "112610",
-     "part": 0.74,
-     "excess": 2.74,
-     "val": 163,
+     "part": 0.72,
+     "excess": 2.49,
+     "val": 158,
      "cap": 20664,
      "themes": "신재생에너지",
      "star": true
     },
     {
-     "name": "포스코인터내셔널",
-     "code": "047050",
-     "part": 0.74,
-     "excess": 1.6,
-     "val": 1471,
-     "cap": 96230,
+     "name": "이수스페셜티케미컬",
+     "code": "457190",
+     "part": 0.72,
+     "excess": 1.63,
+     "val": 83,
+     "cap": 19914,
      "themes": "",
      "star": true
     },
     {
      "name": "롯데케미칼",
      "code": "011170",
-     "part": 0.74,
-     "excess": 1.46,
-     "val": 111,
+     "part": 0.72,
+     "excess": 1.22,
+     "val": 126,
      "cap": 25152,
      "themes": "석유화학",
-     "star": true
-    },
-    {
-     "name": "GS건설",
-     "code": "006360",
-     "part": 0.72,
-     "excess": 1.56,
-     "val": 762,
-     "cap": 30125,
-     "themes": "데이터센터 전력",
-     "star": true
-    },
-    {
-     "name": "HL만도",
-     "code": "204320",
-     "part": 0.72,
-     "excess": 1.37,
-     "val": 186,
-     "cap": 23572,
-     "themes": "",
      "star": true
     },
     {
      "name": "이마트",
      "code": "139480",
      "part": 0.72,
-     "excess": 0.87,
-     "val": 83,
+     "excess": 0.99,
+     "val": 72,
      "cap": 20476,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "알테오젠",
+     "code": "196170",
+     "part": 0.72,
+     "excess": 0.86,
+     "val": 1695,
+     "cap": 199214,
+     "themes": "제약바이오",
+     "star": true
+    },
+    {
+     "name": "기업은행",
+     "code": "024110",
+     "part": 0.72,
+     "excess": 0.29,
+     "val": 183,
+     "cap": 166662,
      "themes": "",
      "star": true
     }
    ],
    "bottom_stocks": [
     {
-     "name": "JYP Ent.",
-     "code": "035900",
-     "part": 0.28,
-     "excess": -0.42,
-     "val": 98,
-     "cap": 14035,
-     "themes": "엔터·미디어",
-     "star": false
-    },
-    {
-     "name": "에스엠",
-     "code": "041510",
-     "part": 0.31,
-     "excess": -0.76,
-     "val": 83,
-     "cap": 18293,
-     "themes": "엔터·미디어",
-     "star": false
-    },
-    {
      "name": "제닉",
      "code": "123330",
      "part": 0.33,
-     "excess": -0.18,
-     "val": 114,
+     "excess": -0.3,
+     "val": 100,
      "cap": 2259,
      "themes": "화장품·소비재",
      "star": false
     },
     {
-     "name": "지아이이노베이션",
-     "code": "358570",
-     "part": 0.36,
-     "excess": 0.02,
-     "val": 33,
-     "cap": 5658,
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.33,
+     "excess": -0.01,
+     "val": 39,
+     "cap": 1237,
      "themes": "",
+     "star": false
+    },
+    {
+     "name": "에스엠",
+     "code": "041510",
+     "part": 0.35,
+     "excess": -0.52,
+     "val": 96,
+     "cap": 18293,
+     "themes": "엔터·미디어",
+     "star": false
+    },
+    {
+     "name": "JYP Ent.",
+     "code": "035900",
+     "part": 0.35,
+     "excess": -0.28,
+     "val": 71,
+     "cap": 14035,
+     "themes": "엔터·미디어",
      "star": false
     }
    ]
@@ -1167,91 +1167,101 @@
    "rule": "ZC=F 1일 ≥ +1.7% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260820",
     "20260826",
-    "20260827"
+    "20260827",
+    "20260916"
    ],
-   "mkt_next": -0.38,
+   "mkt_next": -0.39,
    "top_themes": [
     {
      "theme": "엔터·미디어",
-     "part": 0.63,
-     "excess": 0.89,
-     "n": 9
-    },
-    {
-     "theme": "신재생에너지",
-     "part": 0.56,
-     "excess": 1.32,
-     "n": 5
+     "part": 0.65,
+     "excess": 1.02,
+     "n": 8
     },
     {
      "theme": "방산",
-     "part": 0.56,
-     "excess": 1.22,
+     "part": 0.59,
+     "excess": 1.14,
      "n": 7
     },
     {
-     "theme": "게임",
-     "part": 0.55,
-     "excess": 0.81,
-     "n": 10
+     "theme": "신재생에너지",
+     "part": 0.54,
+     "excess": 1.19,
+     "n": 5
     },
     {
-     "theme": "원전·SMR",
+     "theme": "게임",
      "part": 0.54,
-     "excess": 0.99,
-     "n": 17
+     "excess": 0.5,
+     "n": 12
+    },
+    {
+     "theme": "AI 반도체·기판",
+     "part": 0.54,
+     "excess": 0.46,
+     "n": 7
     }
    ],
    "bottom_themes": [
     {
-     "theme": "로봇·휴머노이드",
+     "theme": "남북경협",
      "part": 0.44,
-     "excess": -0.13,
-     "n": 35
+     "excess": -0.27,
+     "n": 6
     },
     {
-     "theme": "우주항공",
-     "part": 0.41,
-     "excess": -0.09,
-     "n": 9
+     "theme": "미국-이란 전쟁",
+     "part": 0.4,
+     "excess": 0.2,
+     "n": 5
     },
     {
      "theme": "가상화폐",
-     "part": 0.4,
-     "excess": -0.2,
-     "n": 6
+     "part": 0.39,
+     "excess": -0.59,
+     "n": 5
     }
    ],
    "top_stocks": [
     {
-     "name": "한국항공우주",
-     "code": "047810",
+     "name": "LX인터내셔널",
+     "code": "001120",
      "part": 0.73,
-     "excess": 1.22,
-     "val": 406,
-     "cap": 126133,
-     "themes": "방산",
+     "excess": 1.02,
+     "val": 35,
+     "cap": 15465,
+     "themes": "",
      "star": true
     },
     {
      "name": "엔에프씨",
      "code": "265740",
      "part": 0.71,
-     "excess": 2.09,
-     "val": 33,
+     "excess": 2.02,
+     "val": 44,
      "cap": 1163,
      "themes": "",
      "star": true
     },
     {
-     "name": "파마리서치",
-     "code": "214450",
+     "name": "제이에스링크",
+     "code": "127120",
      "part": 0.71,
-     "excess": 1.82,
-     "val": 519,
-     "cap": 39117,
+     "excess": 1.99,
+     "val": 59,
+     "cap": 11870,
+     "themes": "희토류·핵심광물",
+     "star": true
+    },
+    {
+     "name": "코스맥스",
+     "code": "192820",
+     "part": 0.71,
+     "excess": 1.52,
+     "val": 405,
+     "cap": 31098,
      "themes": "화장품·소비재",
      "star": true
     },
@@ -1259,50 +1269,40 @@
      "name": "GS",
      "code": "078930",
      "part": 0.71,
-     "excess": 1.3,
-     "val": 638,
+     "excess": 1.26,
+     "val": 552,
      "cap": 116677,
      "themes": "",
      "star": true
     },
     {
-     "name": "삼양식품",
-     "code": "003230",
-     "part": 0.68,
-     "excess": 1.94,
-     "val": 838,
-     "cap": 100189,
-     "themes": "식품",
-     "star": false
+     "name": "한국항공우주",
+     "code": "047810",
+     "part": 0.71,
+     "excess": 1.14,
+     "val": 422,
+     "cap": 126133,
+     "themes": "방산",
+     "star": true
     },
     {
-     "name": "제이에스링크",
-     "code": "127120",
+     "name": "파마리서치",
+     "code": "214450",
      "part": 0.68,
-     "excess": 1.82,
-     "val": 54,
-     "cap": 11870,
-     "themes": "희토류·핵심광물",
-     "star": false
-    },
-    {
-     "name": "씨어스",
-     "code": "458870",
-     "part": 0.68,
-     "excess": 1.79,
-     "val": 43,
-     "cap": 8609,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "코스맥스",
-     "code": "192820",
-     "part": 0.68,
-     "excess": 1.41,
-     "val": 439,
-     "cap": 31098,
+     "excess": 1.68,
+     "val": 452,
+     "cap": 39117,
      "themes": "화장품·소비재",
+     "star": false
+    },
+    {
+     "name": "파크시스템스",
+     "code": "140860",
+     "part": 0.68,
+     "excess": 0.75,
+     "val": 62,
+     "cap": 18662,
+     "themes": "",
      "star": false
     }
    ],
@@ -1310,29 +1310,19 @@
     {
      "name": "한화투자증권",
      "code": "003530",
-     "part": 0.24,
-     "excess": -0.49,
-     "val": 115,
+     "part": 0.22,
+     "excess": -0.64,
+     "val": 102,
      "cap": 10545,
      "themes": "",
      "star": false
     },
     {
-     "name": "재영솔루텍",
-     "code": "049630",
-     "part": 0.29,
-     "excess": -0.84,
-     "val": 58,
-     "cap": 1650,
-     "themes": "휴대폰부품",
-     "star": false
-    },
-    {
      "name": "레이크머티리얼즈",
      "code": "281740",
-     "part": 0.29,
-     "excess": -0.27,
-     "val": 44,
+     "part": 0.27,
+     "excess": -0.35,
+     "val": 40,
      "cap": 7342,
      "themes": "",
      "star": false
@@ -1340,10 +1330,20 @@
     {
      "name": "우리기술투자",
      "code": "041190",
-     "part": 0.32,
-     "excess": -1.03,
-     "val": 466,
+     "part": 0.29,
+     "excess": -1.24,
+     "val": 412,
      "cap": 5065,
+     "themes": "가상화폐",
+     "star": false
+    },
+    {
+     "name": "갤럭시아머니트리",
+     "code": "094480",
+     "part": 0.29,
+     "excess": -0.78,
+     "val": 61,
+     "cap": 2334,
      "themes": "가상화폐",
      "star": false
     }
@@ -1367,14 +1367,8 @@
     {
      "theme": "원전·SMR",
      "part": 0.71,
-     "excess": 2.25,
-     "n": 17
-    },
-    {
-     "theme": "광통신",
-     "part": 0.63,
-     "excess": 2.92,
-     "n": 13
+     "excess": 2.21,
+     "n": 19
     },
     {
      "theme": "AI 반도체·기판",
@@ -1385,34 +1379,40 @@
     {
      "theme": "반도체 소부장",
      "part": 0.63,
-     "excess": 2.0,
-     "n": 89
+     "excess": 2.02,
+     "n": 95
     },
     {
      "theme": "방산",
      "part": 0.63,
      "excess": 1.77,
      "n": 7
+    },
+    {
+     "theme": "광통신",
+     "part": 0.62,
+     "excess": 2.66,
+     "n": 16
     }
    ],
    "bottom_themes": [
     {
-     "theme": "알래스카LNG·철강·조선",
+     "theme": "남북경협",
      "part": 0.46,
-     "excess": 0.23,
-     "n": 5
-    },
-    {
-     "theme": "정책·정치",
-     "part": 0.46,
-     "excess": -0.09,
-     "n": 15
+     "excess": 0.18,
+     "n": 6
     },
     {
      "theme": "게임",
-     "part": 0.43,
-     "excess": -0.13,
-     "n": 10
+     "part": 0.44,
+     "excess": -0.1,
+     "n": 12
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.41,
+     "excess": -0.52,
+     "n": 5
     }
    ],
    "top_stocks": [
@@ -1421,7 +1421,7 @@
      "code": "089970",
      "part": 0.83,
      "excess": 3.32,
-     "val": 306,
+     "val": 308,
      "cap": 14058,
      "themes": "반도체 소부장",
      "star": true
@@ -1431,7 +1431,7 @@
      "code": "388050",
      "part": 0.83,
      "excess": 2.35,
-     "val": 353,
+     "val": 253,
      "cap": 1957,
      "themes": "액침냉각,이차전지·전해액",
      "star": true
@@ -1441,7 +1441,7 @@
      "code": "005290",
      "part": 0.8,
      "excess": 2.4,
-     "val": 137,
+     "val": 106,
      "cap": 21178,
      "themes": "",
      "star": true
@@ -1451,9 +1451,9 @@
      "code": "375500",
      "part": 0.8,
      "excess": 2.2,
-     "val": 292,
+     "val": 362,
      "cap": 30181,
-     "themes": "",
+     "themes": "원전·SMR",
      "star": true
     },
     {
@@ -1461,7 +1461,7 @@
      "code": "034020",
      "part": 0.78,
      "excess": 3.46,
-     "val": 2660,
+     "val": 2775,
      "cap": 563053,
      "themes": "원전·SMR",
      "star": true
@@ -1471,7 +1471,7 @@
      "code": "051910",
      "part": 0.78,
      "excess": 1.65,
-     "val": 524,
+     "val": 537,
      "cap": 197306,
      "themes": "",
      "star": true
@@ -1481,7 +1481,7 @@
      "code": "006400",
      "part": 0.78,
      "excess": 1.55,
-     "val": 2532,
+     "val": 2450,
      "cap": 435968,
      "themes": "이차전지·전해액",
      "star": true
@@ -1491,7 +1491,7 @@
      "code": "175330",
      "part": 0.78,
      "excess": 1.26,
-     "val": 123,
+     "val": 140,
      "cap": 58568,
      "themes": "",
      "star": true
@@ -1499,11 +1499,21 @@
    ],
    "bottom_stocks": [
     {
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.27,
+     "excess": -0.5,
+     "val": 39,
+     "cap": 1237,
+     "themes": "",
+     "star": false
+    },
+    {
      "name": "금호전기",
      "code": "001210",
      "part": 0.29,
      "excess": -0.19,
-     "val": 999,
+     "val": 889,
      "cap": 1569,
      "themes": "디스플레이,반도체 소부장,정책·정치",
      "star": false
@@ -1513,7 +1523,7 @@
      "code": "035900",
      "part": 0.32,
      "excess": -0.35,
-     "val": 98,
+     "val": 71,
      "cap": 14035,
      "themes": "엔터·미디어",
      "star": false
@@ -1523,19 +1533,9 @@
      "code": "248170",
      "part": 0.34,
      "excess": -0.36,
-     "val": 57,
+     "val": 64,
      "cap": 1048,
      "themes": "",
-     "star": false
-    },
-    {
-     "name": "에스엠벡셀",
-     "code": "010580",
-     "part": 0.34,
-     "excess": -0.05,
-     "val": 58,
-     "cap": 1887,
-     "themes": "이차전지·전해액",
      "star": false
     }
    ]
@@ -1556,34 +1556,34 @@
    "mkt_next": 0.42,
    "top_themes": [
     {
-     "theme": "광통신",
-     "part": 0.61,
-     "excess": 2.72,
-     "n": 13
-    },
-    {
      "theme": "AI 반도체·기판",
      "part": 0.61,
      "excess": 1.22,
      "n": 7
     },
     {
+     "theme": "광통신",
+     "part": 0.6,
+     "excess": 2.16,
+     "n": 16
+    },
+    {
      "theme": "이차전지·전해액",
      "part": 0.59,
-     "excess": 1.69,
+     "excess": 1.41,
      "n": 23
     },
     {
-     "theme": "반도체 소부장",
-     "part": 0.56,
-     "excess": 1.12,
-     "n": 88
+     "theme": "스테이블코인",
+     "part": 0.59,
+     "excess": 0.56,
+     "n": 5
     },
     {
-     "theme": "방산",
-     "part": 0.55,
-     "excess": 0.6,
-     "n": 6
+     "theme": "가상화폐",
+     "part": 0.59,
+     "excess": 0.49,
+     "n": 5
     }
    ],
    "bottom_themes": [
@@ -1591,13 +1591,13 @@
      "theme": "사이버보안",
      "part": 0.44,
      "excess": 0.27,
-     "n": 7
+     "n": 9
     },
     {
-     "theme": "정책·정치",
+     "theme": "미국-이란 전쟁",
      "part": 0.44,
-     "excess": 0.02,
-     "n": 15
+     "excess": -0.16,
+     "n": 5
     },
     {
      "theme": "신재생에너지",
@@ -1612,7 +1612,7 @@
      "code": "028670",
      "part": 0.8,
      "excess": 1.58,
-     "val": 252,
+     "val": 231,
      "cap": 32395,
      "themes": "조선·해운",
      "star": true
@@ -1622,7 +1622,7 @@
      "code": "005880",
      "part": 0.8,
      "excess": 1.12,
-     "val": 44,
+     "val": 35,
      "cap": 6826,
      "themes": "",
      "star": true
@@ -1632,7 +1632,7 @@
      "code": "003670",
      "part": 0.76,
      "excess": 2.88,
-     "val": 615,
+     "val": 639,
      "cap": 162416,
      "themes": "이차전지·전해액",
      "star": true
@@ -1642,7 +1642,7 @@
      "code": "218410",
      "part": 0.76,
      "excess": 2.45,
-     "val": 183,
+     "val": 265,
      "cap": 12876,
      "themes": "",
      "star": true
@@ -1652,7 +1652,7 @@
      "code": "051910",
      "part": 0.76,
      "excess": 1.74,
-     "val": 524,
+     "val": 537,
      "cap": 197306,
      "themes": "",
      "star": true
@@ -1661,8 +1661,8 @@
      "name": "오이솔루션",
      "code": "138080",
      "part": 0.73,
-     "excess": 3.27,
-     "val": 59,
+     "excess": 3.28,
+     "val": 90,
      "cap": 2649,
      "themes": "광통신",
      "star": true
@@ -1672,7 +1672,7 @@
      "code": "000660",
      "part": 0.73,
      "excess": 2.6,
-     "val": 63172,
+     "val": 58513,
      "cap": 13024679,
      "themes": "AI 반도체·기판,반도체 소부장",
      "star": true
@@ -1682,7 +1682,7 @@
      "code": "247540",
      "part": 0.73,
      "excess": 1.88,
-     "val": 450,
+     "val": 434,
      "cap": 104385,
      "themes": "",
      "star": true
@@ -1690,11 +1690,21 @@
    ],
    "bottom_stocks": [
     {
+     "name": "지니언스",
+     "code": "263860",
+     "part": 0.27,
+     "excess": -0.28,
+     "val": 77,
+     "cap": 1386,
+     "themes": "AI 소프트웨어,보안,사이버보안",
+     "star": false
+    },
+    {
      "name": "크래프톤",
      "code": "259960",
      "part": 0.29,
      "excess": -1.05,
-     "val": 195,
+     "val": 173,
      "cap": 99731,
      "themes": "게임",
      "star": false
@@ -1704,19 +1714,9 @@
      "code": "018000",
      "part": 0.29,
      "excess": -0.13,
-     "val": 45,
+     "val": 40,
      "cap": 3220,
      "themes": "신재생에너지",
-     "star": false
-    },
-    {
-     "name": "SK가스",
-     "code": "018670",
-     "part": 0.32,
-     "excess": -1.21,
-     "val": 30,
-     "cap": 22200,
-     "themes": "",
      "star": false
     },
     {
@@ -1724,7 +1724,7 @@
      "code": "041510",
      "part": 0.34,
      "excess": -0.84,
-     "val": 83,
+     "val": 96,
      "cap": 18293,
      "themes": "엔터·미디어",
      "star": false
@@ -1749,62 +1749,62 @@
     {
      "theme": "남북경협",
      "part": 0.59,
-     "excess": 1.37,
-     "n": 8
+     "excess": 1.13,
+     "n": 6
     },
     {
      "theme": "정책·정치",
      "part": 0.57,
-     "excess": 1.35,
-     "n": 15
+     "excess": 1.4,
+     "n": 13
     },
     {
      "theme": "엔터·미디어",
      "part": 0.57,
-     "excess": 0.83,
-     "n": 9
+     "excess": 0.77,
+     "n": 8
     },
     {
      "theme": "화장품·소비재",
      "part": 0.53,
-     "excess": 0.59,
-     "n": 18
+     "excess": 0.56,
+     "n": 20
     },
     {
-     "theme": "알래스카LNG·철강·조선",
+     "theme": "미국-이란 전쟁",
      "part": 0.5,
-     "excess": 0.68,
+     "excess": 2.13,
      "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "보안",
-     "part": 0.39,
-     "excess": 0.26,
-     "n": 6
+     "theme": "이차전지·전해액",
+     "part": 0.35,
+     "excess": -0.7,
+     "n": 23
     },
     {
      "theme": "가상화폐",
-     "part": 0.38,
-     "excess": -0.36,
-     "n": 7
+     "part": 0.34,
+     "excess": -0.54,
+     "n": 6
     },
     {
-     "theme": "이차전지·전해액",
-     "part": 0.35,
-     "excess": -0.83,
-     "n": 23
+     "theme": "IT서비스",
+     "part": 0.31,
+     "excess": -0.61,
+     "n": 6
     }
    ],
    "top_stocks": [
     {
-     "name": "남해화학",
-     "code": "025860",
-     "part": 0.75,
-     "excess": 0.95,
-     "val": 55,
-     "cap": 3105,
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.78,
+     "excess": 0.75,
+     "val": 39,
+     "cap": 1237,
      "themes": "",
      "star": true
     },
@@ -1813,7 +1813,7 @@
      "code": "088980",
      "part": 0.75,
      "excess": 0.89,
-     "val": 110,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
@@ -1823,7 +1823,7 @@
      "code": "020120",
      "part": 0.72,
      "excess": 0.86,
-     "val": 70,
+     "val": 75,
      "cap": 2606,
      "themes": "엔터·미디어",
      "star": true
@@ -1833,7 +1833,7 @@
      "code": "053260",
      "part": 0.7,
      "excess": 0.96,
-     "val": 218,
+     "val": 239,
      "cap": 1200,
      "themes": "데이터센터 전력,알래스카LNG·철강·조선,철강",
      "star": true
@@ -1843,7 +1843,7 @@
      "code": "089860",
      "part": 0.7,
      "excess": 0.81,
-     "val": 71,
+     "val": 56,
      "cap": 18264,
      "themes": "",
      "star": true
@@ -1853,19 +1853,9 @@
      "code": "079650",
      "part": 0.69,
      "excess": 0.07,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
-     "star": false
-    },
-    {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.69,
-     "excess": 0.52,
-     "val": 31,
-     "cap": 30512,
-     "themes": "",
      "star": false
     },
     {
@@ -1873,9 +1863,19 @@
      "code": "126640",
      "part": 0.68,
      "excess": 3.28,
-     "val": 119,
+     "val": 57,
      "cap": 1586,
      "themes": "로봇·휴머노이드",
+     "star": false
+    },
+    {
+     "name": "넥사다이내믹스",
+     "code": "351320",
+     "part": 0.68,
+     "excess": 1.06,
+     "val": 47,
+     "cap": 1287,
+     "themes": "이차전지·전해액,화장품·소비재",
      "star": false
     }
    ],
@@ -1885,7 +1885,7 @@
      "code": "034220",
      "part": 0.17,
      "excess": -1.23,
-     "val": 475,
+     "val": 465,
      "cap": 46050,
      "themes": "",
      "star": false
@@ -1895,7 +1895,7 @@
      "code": "361610",
      "part": 0.17,
      "excess": -0.94,
-     "val": 156,
+     "val": 167,
      "cap": 13405,
      "themes": "",
      "star": false
@@ -1905,7 +1905,7 @@
      "code": "096770",
      "part": 0.2,
      "excess": -1.48,
-     "val": 1698,
+     "val": 1762,
      "cap": 233124,
      "themes": "석유·에너지",
      "star": false
@@ -1915,7 +1915,7 @@
      "code": "011210",
      "part": 0.2,
      "excess": -1.14,
-     "val": 36,
+     "val": 32,
      "cap": 15909,
      "themes": "",
      "star": false
@@ -1952,29 +1952,23 @@
     {
      "theme": "광통신",
      "part": 0.51,
-     "excess": 0.89,
-     "n": 13
-    },
-    {
-     "theme": "우주항공",
-     "part": 0.51,
-     "excess": 0.88,
-     "n": 9
+     "excess": 0.71,
+     "n": 16
     },
     {
      "theme": "데이터센터 전력",
      "part": 0.51,
-     "excess": 0.64,
-     "n": 40
+     "excess": 0.62,
+     "n": 38
+    },
+    {
+     "theme": "로봇·휴머노이드",
+     "part": 0.51,
+     "excess": 0.47,
+     "n": 34
     }
    ],
    "bottom_themes": [
-    {
-     "theme": "이차전지·전해액",
-     "part": 0.44,
-     "excess": 0.1,
-     "n": 23
-    },
     {
      "theme": "AI 소프트웨어",
      "part": 0.43,
@@ -1982,10 +1976,16 @@
      "n": 8
     },
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.41,
+     "excess": 0.65,
+     "n": 5
+    },
+    {
      "theme": "가상화폐",
      "part": 0.39,
-     "excess": -0.11,
-     "n": 6
+     "excess": 0.11,
+     "n": 5
     }
    ],
    "top_stocks": [
@@ -1994,7 +1994,7 @@
      "code": "257720",
      "part": 0.73,
      "excess": 1.25,
-     "val": 857,
+     "val": 681,
      "cap": 30919,
      "themes": "화장품·소비재",
      "star": true
@@ -2004,7 +2004,7 @@
      "code": "278470",
      "part": 0.72,
      "excess": 1.21,
-     "val": 1129,
+     "val": 1132,
      "cap": 143763,
      "themes": "화장품·소비재",
      "star": true
@@ -2014,7 +2014,7 @@
      "code": "024110",
      "part": 0.71,
      "excess": 0.5,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -2024,7 +2024,7 @@
      "code": "028670",
      "part": 0.71,
      "excess": 0.44,
-     "val": 252,
+     "val": 231,
      "cap": 32395,
      "themes": "조선·해운",
      "star": true
@@ -2034,7 +2034,7 @@
      "code": "000500",
      "part": 0.68,
      "excess": 2.22,
-     "val": 553,
+     "val": 847,
      "cap": 69828,
      "themes": "데이터센터 전력,실적",
      "star": false
@@ -2044,7 +2044,7 @@
      "code": "195940",
      "part": 0.68,
      "excess": 0.96,
-     "val": 54,
+     "val": 49,
      "cap": 11587,
      "themes": "",
      "star": false
@@ -2054,7 +2054,7 @@
      "code": "181710",
      "part": 0.68,
      "excess": 0.7,
-     "val": 182,
+     "val": 138,
      "cap": 23189,
      "themes": "실적",
      "star": false
@@ -2064,7 +2064,7 @@
      "code": "218410",
      "part": 0.66,
      "excess": 0.88,
-     "val": 183,
+     "val": 265,
      "cap": 12876,
      "themes": "",
      "star": false
@@ -2076,7 +2076,7 @@
      "code": "348370",
      "part": 0.27,
      "excess": -0.98,
-     "val": 64,
+     "val": 52,
      "cap": 4656,
      "themes": "이차전지·전해액",
      "star": false
@@ -2086,7 +2086,7 @@
      "code": "002380",
      "part": 0.29,
      "excess": -0.7,
-     "val": 127,
+     "val": 125,
      "cap": 42836,
      "themes": "",
      "star": false
@@ -2096,7 +2096,7 @@
      "code": "310210",
      "part": 0.29,
      "excess": -0.44,
-     "val": 133,
+     "val": 117,
      "cap": 28841,
      "themes": "제약바이오",
      "star": false
@@ -2106,7 +2106,7 @@
      "code": "332570",
      "part": 0.32,
      "excess": -0.85,
-     "val": 299,
+     "val": 229,
      "cap": 3583,
      "themes": "데이터센터 전력,휴대폰부품",
      "star": false
@@ -2137,26 +2137,26 @@
     {
      "theme": "엔터·미디어",
      "part": 0.56,
-     "excess": 0.35,
-     "n": 9
+     "excess": 0.24,
+     "n": 8
+    },
+    {
+     "theme": "IT서비스",
+     "part": 0.55,
+     "excess": 0.31,
+     "n": 6
     },
     {
      "theme": "정책·정치",
      "part": 0.54,
-     "excess": 0.35,
-     "n": 15
+     "excess": 0.6,
+     "n": 13
     },
     {
      "theme": "가상화폐",
-     "part": 0.52,
-     "excess": 0.69,
-     "n": 6
-    },
-    {
-     "theme": "실적",
      "part": 0.51,
-     "excess": 0.57,
-     "n": 23
+     "excess": 0.81,
+     "n": 5
     }
    ],
    "bottom_themes": [
@@ -2164,7 +2164,7 @@
      "theme": "원전·SMR",
      "part": 0.44,
      "excess": 0.09,
-     "n": 17
+     "n": 19
     },
     {
      "theme": "방산",
@@ -2175,8 +2175,8 @@
     {
      "theme": "우주항공",
      "part": 0.37,
-     "excess": -0.51,
-     "n": 9
+     "excess": -0.5,
+     "n": 10
     }
    ],
    "top_stocks": [
@@ -2185,7 +2185,7 @@
      "code": "138930",
      "part": 0.73,
      "excess": 0.88,
-     "val": 148,
+     "val": 162,
      "cap": 48481,
      "themes": "",
      "star": true
@@ -2195,7 +2195,7 @@
      "code": "032640",
      "part": 0.73,
      "excess": 0.83,
-     "val": 109,
+     "val": 120,
      "cap": 64046,
      "themes": "",
      "star": true
@@ -2205,18 +2205,8 @@
      "code": "024110",
      "part": 0.73,
      "excess": 0.54,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "대상",
-     "code": "001680",
-     "part": 0.73,
-     "excess": 0.47,
-     "val": 31,
-     "cap": 6521,
      "themes": "",
      "star": true
     },
@@ -2225,7 +2215,7 @@
      "code": "018260",
      "part": 0.71,
      "excess": 1.72,
-     "val": 483,
+     "val": 421,
      "cap": 187641,
      "themes": "IT서비스",
      "star": true
@@ -2235,7 +2225,7 @@
      "code": "015760",
      "part": 0.71,
      "excess": 1.09,
-     "val": 645,
+     "val": 622,
      "cap": 210243,
      "themes": "",
      "star": true
@@ -2245,20 +2235,30 @@
      "code": "079650",
      "part": 0.71,
      "excess": 0.79,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": true
     },
     {
-     "name": "에스에이엠티",
-     "code": "031330",
-     "part": 0.71,
-     "excess": 0.47,
-     "val": 47,
-     "cap": 8040,
+     "name": "한화갤러리아",
+     "code": "452260",
+     "part": 0.68,
+     "excess": 0.75,
+     "val": 53,
+     "cap": 4614,
      "themes": "",
-     "star": true
+     "star": false
+    },
+    {
+     "name": "iM금융지주",
+     "code": "139130",
+     "part": 0.68,
+     "excess": 0.7,
+     "val": 71,
+     "cap": 29535,
+     "themes": "",
+     "star": false
     }
    ],
    "bottom_stocks": [
@@ -2267,9 +2267,9 @@
      "code": "069540",
      "part": 0.24,
      "excess": -2.09,
-     "val": 475,
+     "val": 897,
      "cap": 3155,
-     "themes": "광통신",
+     "themes": "광통신,반도체 소부장",
      "star": false
     },
     {
@@ -2277,7 +2277,7 @@
      "code": "033100",
      "part": 0.29,
      "excess": -0.95,
-     "val": 43,
+     "val": 39,
      "cap": 7373,
      "themes": "데이터센터 전력",
      "star": false
@@ -2287,7 +2287,7 @@
      "code": "347700",
      "part": 0.29,
      "excess": 0.08,
-     "val": 139,
+     "val": 208,
      "cap": 9826,
      "themes": "우주항공",
      "star": false
@@ -2297,7 +2297,7 @@
      "code": "272210",
      "part": 0.32,
      "excess": -0.76,
-     "val": 223,
+     "val": 318,
      "cap": 133377,
      "themes": "우주항공",
      "star": false
@@ -2313,60 +2313,60 @@
    "rule": "KRW=X 1일 ≥ +0.8% (상·하위 8%)",
    "n": 42,
    "dates_last": [
-    "20260619",
-    "20260622",
-    "20260804"
+    "20260804",
+    "20260917",
+    "20260918"
    ],
-   "mkt_next": 0.01,
+   "mkt_next": 0.07,
    "top_themes": [
+    {
+     "theme": "가상화폐",
+     "part": 0.57,
+     "excess": 0.95,
+     "n": 5
+    },
     {
      "theme": "방산",
      "part": 0.57,
-     "excess": 1.1,
+     "excess": 0.93,
      "n": 7
+    },
+    {
+     "theme": "우주항공",
+     "part": 0.56,
+     "excess": 1.66,
+     "n": 10
     },
     {
      "theme": "조선·해운",
      "part": 0.56,
-     "excess": 0.89,
+     "excess": 0.78,
      "n": 10
     },
     {
-     "theme": "우주항공",
+     "theme": "스테이블코인",
      "part": 0.55,
-     "excess": 1.33,
-     "n": 9
-    },
-    {
-     "theme": "가상화폐",
-     "part": 0.55,
-     "excess": 0.64,
-     "n": 6
-    },
-    {
-     "theme": "엔터·미디어",
-     "part": 0.55,
-     "excess": 0.42,
-     "n": 9
+     "excess": 0.81,
+     "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "제약바이오",
-     "part": 0.46,
-     "excess": 0.23,
-     "n": 54
-    },
-    {
      "theme": "게임",
      "part": 0.46,
-     "excess": -0.09,
-     "n": 10
+     "excess": -0.11,
+     "n": 12
+    },
+    {
+     "theme": "이차전지·전해액",
+     "part": 0.45,
+     "excess": 0.22,
+     "n": 23
     },
     {
      "theme": "알래스카LNG·철강·조선",
      "part": 0.45,
-     "excess": 0.04,
+     "excess": -0.39,
      "n": 5
     }
    ],
@@ -2375,8 +2375,8 @@
      "name": "현대로템",
      "code": "064350",
      "part": 0.71,
-     "excess": 1.36,
-     "val": 440,
+     "excess": 1.28,
+     "val": 393,
      "cap": 138829,
      "themes": "방산",
      "star": true
@@ -2385,8 +2385,8 @@
      "name": "RFHIC",
      "code": "218410",
      "part": 0.69,
-     "excess": 1.0,
-     "val": 183,
+     "excess": 1.29,
+     "val": 265,
      "cap": 12876,
      "themes": "",
      "star": false
@@ -2395,19 +2395,9 @@
      "name": "JB금융지주",
      "code": "175330",
      "part": 0.69,
-     "excess": 0.58,
-     "val": 123,
+     "excess": 0.48,
+     "val": 140,
      "cap": 58568,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "GS리테일",
-     "code": "007070",
-     "part": 0.68,
-     "excess": 0.64,
-     "val": 39,
-     "cap": 20985,
      "themes": "",
      "star": false
     },
@@ -2415,82 +2405,92 @@
      "name": "피델릭스",
      "code": "032580",
      "part": 0.67,
-     "excess": 3.29,
-     "val": 40,
+     "excess": 3.33,
+     "val": 35,
      "cap": 1623,
      "themes": "반도체 소부장",
+     "star": false
+    },
+    {
+     "name": "지어소프트",
+     "code": "051160",
+     "part": 0.67,
+     "excess": 1.4,
+     "val": 39,
+     "cap": 1523,
+     "themes": "",
      "star": false
     },
     {
      "name": "삼성증권",
      "code": "016360",
      "part": 0.67,
-     "excess": 1.36,
-     "val": 370,
+     "excess": 1.39,
+     "val": 249,
      "cap": 78316,
      "themes": "",
      "star": false
     },
     {
-     "name": "롯데쇼핑",
-     "code": "023530",
+     "name": "케이씨씨",
+     "code": "002380",
      "part": 0.67,
-     "excess": 1.36,
-     "val": 171,
-     "cap": 31768,
+     "excess": 1.16,
+     "val": 125,
+     "cap": 42836,
      "themes": "",
      "star": false
     },
     {
-     "name": "한국항공우주",
-     "code": "047810",
+     "name": "HD현대마린솔루션",
+     "code": "443060",
      "part": 0.67,
-     "excess": 1.23,
-     "val": 406,
-     "cap": 126133,
-     "themes": "방산",
+     "excess": 1.11,
+     "val": 264,
+     "cap": 95047,
+     "themes": "",
      "star": false
     }
    ],
    "bottom_stocks": [
     {
+     "name": "지니언스",
+     "code": "263860",
+     "part": 0.29,
+     "excess": -0.54,
+     "val": 77,
+     "cap": 1386,
+     "themes": "AI 소프트웨어,보안,사이버보안",
+     "star": false
+    },
+    {
      "name": "바이오니아",
      "code": "064550",
      "part": 0.31,
-     "excess": -0.54,
-     "val": 109,
+     "excess": -0.6,
+     "val": 101,
      "cap": 2726,
      "themes": "제약바이오",
      "star": false
     },
     {
-     "name": "오스코텍",
-     "code": "039200",
-     "part": 0.33,
-     "excess": -0.45,
-     "val": 48,
-     "cap": 13754,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "에스앤에스텍",
-     "code": "101490",
-     "part": 0.33,
-     "excess": -0.1,
-     "val": 100,
-     "cap": 8886,
-     "themes": "",
-     "star": false
-    },
-    {
      "name": "금강철강",
      "code": "053260",
-     "part": 0.33,
-     "excess": 0.07,
-     "val": 218,
+     "part": 0.31,
+     "excess": -0.46,
+     "val": 239,
      "cap": 1200,
      "themes": "데이터센터 전력,알래스카LNG·철강·조선,철강",
+     "star": false
+    },
+    {
+     "name": "엘앤씨바이오",
+     "code": "290650",
+     "part": 0.33,
+     "excess": -0.31,
+     "val": 98,
+     "cap": 12635,
+     "themes": "",
      "star": false
     }
    ]
@@ -2512,33 +2512,33 @@
    "top_themes": [
     {
      "theme": "남북경협",
-     "part": 0.62,
-     "excess": 1.0,
-     "n": 8
+     "part": 0.63,
+     "excess": 1.11,
+     "n": 6
+    },
+    {
+     "theme": "스테이블코인",
+     "part": 0.59,
+     "excess": 1.71,
+     "n": 5
     },
     {
      "theme": "우주항공",
      "part": 0.56,
-     "excess": 1.35,
-     "n": 9
+     "excess": 1.17,
+     "n": 10
     },
     {
-     "theme": "가상화폐",
+     "theme": "IT서비스",
      "part": 0.56,
-     "excess": 1.9,
-     "n": 7
+     "excess": 0.93,
+     "n": 6
     },
     {
      "theme": "AI 소프트웨어",
      "part": 0.55,
      "excess": 0.95,
      "n": 8
-    },
-    {
-     "theme": "원전·SMR",
-     "part": 0.54,
-     "excess": 0.72,
-     "n": 17
     }
    ],
    "bottom_themes": [
@@ -2551,8 +2551,8 @@
     {
      "theme": "게임",
      "part": 0.46,
-     "excess": -0.0,
-     "n": 10
+     "excess": 0.04,
+     "n": 12
     },
     {
      "theme": "이차전지·전해액",
@@ -2567,7 +2567,7 @@
      "code": "103590",
      "part": 0.73,
      "excess": 1.16,
-     "val": 196,
+     "val": 193,
      "cap": 33666,
      "themes": "데이터센터 전력,실적",
      "star": true
@@ -2577,7 +2577,7 @@
      "code": "082920",
      "part": 0.71,
      "excess": 1.02,
-     "val": 134,
+     "val": 130,
      "cap": 13090,
      "themes": "데이터센터 전력",
      "star": true
@@ -2587,7 +2587,7 @@
      "code": "027360",
      "part": 0.68,
      "excess": 2.23,
-     "val": 124,
+     "val": 112,
      "cap": 3816,
      "themes": "우주항공",
      "star": false
@@ -2597,9 +2597,9 @@
      "code": "229640",
      "part": 0.68,
      "excess": 1.5,
-     "val": 36,
+     "val": 95,
      "cap": 14593,
-     "themes": "데이터센터 전력",
+     "themes": "데이터센터 전력,전기장비",
      "star": false
     },
     {
@@ -2607,7 +2607,7 @@
      "code": "059090",
      "part": 0.68,
      "excess": 1.44,
-     "val": 49,
+     "val": 50,
      "cap": 6252,
      "themes": "로봇·휴머노이드",
      "star": false
@@ -2617,7 +2617,7 @@
      "code": "003380",
      "part": 0.68,
      "excess": 0.74,
-     "val": 52,
+     "val": 46,
      "cap": 12567,
      "themes": "",
      "star": false
@@ -2627,7 +2627,7 @@
      "code": "050890",
      "part": 0.66,
      "excess": 2.41,
-     "val": 50,
+     "val": 100,
      "cap": 5104,
      "themes": "",
      "star": false
@@ -2637,7 +2637,7 @@
      "code": "000500",
      "part": 0.66,
      "excess": 2.3,
-     "val": 553,
+     "val": 847,
      "cap": 69828,
      "themes": "데이터센터 전력,실적",
      "star": false
@@ -2649,7 +2649,7 @@
      "code": "383310",
      "part": 0.24,
      "excess": -0.64,
-     "val": 36,
+     "val": 33,
      "cap": 4772,
      "themes": "",
      "star": false
@@ -2659,7 +2659,7 @@
      "code": "123330",
      "part": 0.27,
      "excess": -1.14,
-     "val": 114,
+     "val": 100,
      "cap": 2259,
      "themes": "화장품·소비재",
      "star": false
@@ -2669,7 +2669,7 @@
      "code": "010580",
      "part": 0.27,
      "excess": -0.66,
-     "val": 58,
+     "val": 101,
      "cap": 1887,
      "themes": "이차전지·전해액",
      "star": false
@@ -2679,7 +2679,7 @@
      "code": "048410",
      "part": 0.29,
      "excess": 0.5,
-     "val": 94,
+     "val": 102,
      "cap": 6061,
      "themes": "제약바이오",
      "star": false
@@ -2699,57 +2699,57 @@
     "20260907",
     "20260909"
    ],
-   "mkt_next": -0.01,
+   "mkt_next": 0.03,
    "top_themes": [
     {
      "theme": "남북경협",
-     "part": 0.56,
-     "excess": 0.81,
-     "n": 8
+     "part": 0.62,
+     "excess": 0.82,
+     "n": 6
+    },
+    {
+     "theme": "가상화폐",
+     "part": 0.57,
+     "excess": 1.9,
+     "n": 5
     },
     {
      "theme": "실적",
      "part": 0.55,
-     "excess": 0.67,
-     "n": 23
+     "excess": 0.88,
+     "n": 19
     },
     {
      "theme": "원전·SMR",
      "part": 0.55,
-     "excess": 0.65,
-     "n": 17
+     "excess": 0.61,
+     "n": 19
     },
     {
-     "theme": "광통신",
-     "part": 0.52,
-     "excess": 0.87,
-     "n": 13
-    },
-    {
-     "theme": "AI 소프트웨어",
-     "part": 0.52,
-     "excess": 0.77,
-     "n": 8
+     "theme": "사이버보안",
+     "part": 0.55,
+     "excess": 0.56,
+     "n": 9
     }
    ],
    "bottom_themes": [
     {
+     "theme": "IT서비스",
+     "part": 0.46,
+     "excess": 0.55,
+     "n": 6
+    },
+    {
      "theme": "화장품·소비재",
-     "part": 0.48,
-     "excess": 0.37,
-     "n": 18
+     "part": 0.46,
+     "excess": 0.21,
+     "n": 20
     },
     {
      "theme": "알래스카LNG·철강·조선",
-     "part": 0.48,
-     "excess": 0.2,
+     "part": 0.45,
+     "excess": 0.23,
      "n": 5
-    },
-    {
-     "theme": "조선·해운",
-     "part": 0.48,
-     "excess": 0.15,
-     "n": 10
     }
    ],
    "top_stocks": [
@@ -2757,28 +2757,18 @@
      "name": "리노공업",
      "code": "058470",
      "part": 0.74,
-     "excess": 1.26,
-     "val": 418,
+     "excess": 1.27,
+     "val": 386,
      "cap": 52129,
      "themes": "",
-     "star": true
-    },
-    {
-     "name": "디앤디파마텍",
-     "code": "347850",
-     "part": 0.71,
-     "excess": 1.84,
-     "val": 399,
-     "cap": 22781,
-     "themes": "제약바이오",
      "star": true
     },
     {
      "name": "미코",
      "code": "059090",
      "part": 0.71,
-     "excess": 1.63,
-     "val": 49,
+     "excess": 1.74,
+     "val": 50,
      "cap": 6252,
      "themes": "로봇·휴머노이드",
      "star": true
@@ -2788,61 +2778,91 @@
      "code": "137400",
      "part": 0.71,
      "excess": 1.42,
-     "val": 46,
+     "val": 43,
      "cap": 7060,
      "themes": "",
      "star": true
     },
     {
-     "name": "가온전선",
-     "code": "000500",
-     "part": 0.69,
-     "excess": 3.46,
-     "val": 553,
-     "cap": 69828,
-     "themes": "데이터센터 전력,실적",
-     "star": false
-    },
-    {
      "name": "갤럭시아머니트리",
      "code": "094480",
      "part": 0.69,
-     "excess": 2.73,
-     "val": 102,
+     "excess": 2.69,
+     "val": 61,
      "cap": 2334,
      "themes": "가상화폐",
+     "star": false
+    },
+    {
+     "name": "아주IB투자",
+     "code": "027360",
+     "part": 0.69,
+     "excess": 1.61,
+     "val": 112,
+     "cap": 3816,
+     "themes": "우주항공",
+     "star": false
+    },
+    {
+     "name": "디앤디파마텍",
+     "code": "347850",
+     "part": 0.69,
+     "excess": 1.54,
+     "val": 283,
+     "cap": 22781,
+     "themes": "제약바이오",
+     "star": false
+    },
+    {
+     "name": "가온전선",
+     "code": "000500",
+     "part": 0.67,
+     "excess": 3.37,
+     "val": 847,
+     "cap": 69828,
+     "themes": "데이터센터 전력,실적",
      "star": false
     },
     {
      "name": "미래에셋벤처투자",
      "code": "100790",
      "part": 0.67,
-     "excess": 3.21,
-     "val": 110,
+     "excess": 3.18,
+     "val": 113,
      "cap": 8074,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "LS",
-     "code": "006260",
-     "part": 0.67,
-     "excess": 2.04,
-     "val": 475,
-     "cap": 98748,
      "themes": "",
      "star": false
     }
    ],
    "bottom_stocks": [
     {
+     "name": "POSCO홀딩스",
+     "code": "005490",
+     "part": 0.31,
+     "excess": -0.36,
+     "val": 816,
+     "cap": 265855,
+     "themes": "",
+     "star": false
+    },
+    {
      "name": "JW신약",
      "code": "067290",
      "part": 0.31,
-     "excess": -0.32,
-     "val": 730,
+     "excess": -0.26,
+     "val": 836,
      "cap": 2006,
      "themes": "정책·정치,제약바이오",
+     "star": false
+    },
+    {
+     "name": "셀트리온",
+     "code": "068270",
+     "part": 0.31,
+     "excess": -0.24,
+     "val": 731,
+     "cap": 433366,
+     "themes": "제약바이오",
      "star": false
     },
     {
@@ -2850,29 +2870,9 @@
      "code": "010580",
      "part": 0.31,
      "excess": -0.2,
-     "val": 58,
+     "val": 101,
      "cap": 1887,
      "themes": "이차전지·전해액",
-     "star": false
-    },
-    {
-     "name": "POSCO홀딩스",
-     "code": "005490",
-     "part": 0.33,
-     "excess": -0.31,
-     "val": 837,
-     "cap": 265855,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "셀트리온",
-     "code": "068270",
-     "part": 0.33,
-     "excess": -0.13,
-     "val": 778,
-     "cap": 433366,
-     "themes": "제약바이오",
      "star": false
     }
    ]
@@ -2886,60 +2886,60 @@
    "rule": "DX-Y.NYB 1일 ≥ +0.5% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260618",
     "20260619",
-    "20260831"
+    "20260831",
+    "20260917"
    ],
-   "mkt_next": -0.91,
+   "mkt_next": -0.83,
    "top_themes": [
     {
-     "theme": "광통신",
+     "theme": "AI 반도체·기판",
      "part": 0.56,
-     "excess": 0.65,
-     "n": 13
+     "excess": 0.72,
+     "n": 7
+    },
+    {
+     "theme": "광통신",
+     "part": 0.55,
+     "excess": 0.61,
+     "n": 16
     },
     {
      "theme": "방산",
      "part": 0.54,
-     "excess": 0.99,
+     "excess": 1.02,
      "n": 7
     },
     {
-     "theme": "AI 반도체·기판",
+     "theme": "실적",
      "part": 0.54,
-     "excess": 0.64,
-     "n": 7
+     "excess": 0.42,
+     "n": 19
     },
     {
-     "theme": "게임",
-     "part": 0.52,
-     "excess": 0.23,
-     "n": 10
-    },
-    {
-     "theme": "화장품·소비재",
-     "part": 0.51,
-     "excess": 0.43,
-     "n": 18
+     "theme": "스테이블코인",
+     "part": 0.54,
+     "excess": 0.26,
+     "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "AI 소프트웨어",
-     "part": 0.4,
-     "excess": 0.39,
-     "n": 8
+     "theme": "이차전지·전해액",
+     "part": 0.41,
+     "excess": -0.01,
+     "n": 23
     },
     {
-     "theme": "가상화폐",
-     "part": 0.4,
-     "excess": 0.17,
-     "n": 6
+     "theme": "보안",
+     "part": 0.41,
+     "excess": -0.04,
+     "n": 10
     },
     {
      "theme": "신재생에너지",
      "part": 0.37,
-     "excess": -0.17,
+     "excess": -0.2,
      "n": 5
     }
    ],
@@ -2948,8 +2948,8 @@
      "name": "엘티씨",
      "code": "170920",
      "part": 0.71,
-     "excess": 1.5,
-     "val": 84,
+     "excess": 1.38,
+     "val": 70,
      "cap": 3951,
      "themes": "반도체 소부장",
      "star": true
@@ -2957,51 +2957,61 @@
     {
      "name": "싸이맥스",
      "code": "160980",
-     "part": 0.68,
-     "excess": 0.99,
-     "val": 47,
+     "part": 0.71,
+     "excess": 1.24,
+     "val": 35,
      "cap": 2518,
      "themes": "반도체 소부장",
-     "star": false
+     "star": true
     },
     {
-     "name": "코리안리",
-     "code": "003690",
-     "part": 0.68,
-     "excess": 0.43,
-     "val": 37,
-     "cap": 25819,
+     "name": "LX인터내셔널",
+     "code": "001120",
+     "part": 0.71,
+     "excess": 0.75,
+     "val": 35,
+     "cap": 15465,
      "themes": "",
-     "star": false
+     "star": true
     },
     {
      "name": "파두",
      "code": "440110",
-     "part": 0.68,
-     "excess": 1.85,
-     "val": 353,
+     "part": 0.7,
+     "excess": 2.08,
+     "val": 282,
      "cap": 35028,
      "themes": "반도체 소부장",
-     "star": false
-    },
-    {
-     "name": "서산",
-     "code": "079650",
-     "part": 0.68,
-     "excess": 1.61,
-     "val": 439,
-     "cap": 1342,
-     "themes": "반도체 소부장,정책·정치",
-     "star": false
+     "star": true
     },
     {
      "name": "피델릭스",
      "code": "032580",
-     "part": 0.66,
-     "excess": 1.48,
-     "val": 40,
+     "part": 0.68,
+     "excess": 1.76,
+     "val": 35,
      "cap": 1623,
      "themes": "반도체 소부장",
+     "star": false
+    },
+    {
+     "name": "티에스이",
+     "code": "131290",
+     "part": 0.66,
+     "excess": 1.26,
+     "val": 394,
+     "cap": 28926,
+     "themes": "반도체 소부장",
+     "star": false
+    },
+    {
+     "name": "SK하이닉스",
+     "code": "000660",
+     "part": 0.66,
+     "excess": 1.22,
+     "val": 58513,
+     "cap": 13024679,
+     "themes": "AI 반도체·기판,반도체 소부장",
      "star": false
     },
     {
@@ -3009,29 +3019,29 @@
      "code": "028670",
      "part": 0.66,
      "excess": 0.93,
-     "val": 252,
+     "val": 231,
      "cap": 32395,
      "themes": "조선·해운",
-     "star": false
-    },
-    {
-     "name": "맥쿼리인프라",
-     "code": "088980",
-     "part": 0.66,
-     "excess": 0.74,
-     "val": 110,
-     "cap": 47461,
-     "themes": "",
      "star": false
     }
    ],
    "bottom_stocks": [
     {
+     "name": "피아이이",
+     "code": "452450",
+     "part": 0.27,
+     "excess": -1.11,
+     "val": 34,
+     "cap": 1508,
+     "themes": "유리기판",
+     "star": false
+    },
+    {
      "name": "SK이터닉스",
      "code": "475150",
-     "part": 0.27,
-     "excess": -0.69,
-     "val": 1135,
+     "part": 0.29,
+     "excess": -0.59,
+     "val": 633,
      "cap": 17749,
      "themes": "데이터센터 전력,신재생에너지",
      "star": false
@@ -3040,29 +3050,19 @@
      "name": "지아이이노베이션",
      "code": "358570",
      "part": 0.29,
-     "excess": -0.66,
+     "excess": -0.57,
      "val": 33,
      "cap": 5658,
      "themes": "",
      "star": false
     },
     {
-     "name": "코오롱티슈진",
-     "code": "950160",
-     "part": 0.29,
-     "excess": -0.61,
-     "val": 488,
-     "cap": 14802,
-     "themes": "제약바이오",
-     "star": false
-    },
-    {
-     "name": "유진로봇",
-     "code": "056080",
-     "part": 0.29,
-     "excess": 0.15,
-     "val": 37,
-     "cap": 4669,
+     "name": "에코프로머티",
+     "code": "450080",
+     "part": 0.32,
+     "excess": -0.6,
+     "val": 96,
+     "cap": 25847,
      "themes": "",
      "star": false
     }
@@ -3084,48 +3084,48 @@
    "mkt_next": -1.1,
    "top_themes": [
     {
-     "theme": "정책·정치",
-     "part": 0.54,
-     "excess": 0.67,
-     "n": 15
-    },
-    {
-     "theme": "화장품·소비재",
-     "part": 0.54,
-     "excess": 0.41,
-     "n": 18
+     "theme": "미국-이란 전쟁",
+     "part": 0.61,
+     "excess": 1.19,
+     "n": 5
     },
     {
      "theme": "엔터·미디어",
      "part": 0.54,
-     "excess": 0.03,
-     "n": 9
+     "excess": 0.44,
+     "n": 8
+    },
+    {
+     "theme": "화장품·소비재",
+     "part": 0.54,
+     "excess": 0.27,
+     "n": 20
+    },
+    {
+     "theme": "정책·정치",
+     "part": 0.51,
+     "excess": 0.67,
+     "n": 13
     },
     {
      "theme": "알래스카LNG·철강·조선",
      "part": 0.49,
      "excess": 0.84,
      "n": 5
-    },
-    {
-     "theme": "남북경협",
-     "part": 0.49,
-     "excess": 0.59,
-     "n": 8
     }
    ],
    "bottom_themes": [
     {
-     "theme": "이차전지·전해액",
+     "theme": "가상화폐",
      "part": 0.37,
-     "excess": -0.4,
-     "n": 23
+     "excess": -0.55,
+     "n": 5
     },
     {
      "theme": "반도체 소부장",
      "part": 0.37,
-     "excess": -0.86,
-     "n": 89
+     "excess": -0.8,
+     "n": 95
     },
     {
      "theme": "AI 반도체·기판",
@@ -3140,7 +3140,7 @@
      "code": "079650",
      "part": 0.78,
      "excess": 2.36,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": true
@@ -3150,7 +3150,7 @@
      "code": "282330",
      "part": 0.73,
      "excess": 1.24,
-     "val": 86,
+     "val": 78,
      "cap": 25960,
      "themes": "실적",
      "star": true
@@ -3160,7 +3160,7 @@
      "code": "088980",
      "part": 0.73,
      "excess": 0.88,
-     "val": 110,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
@@ -3170,7 +3170,7 @@
      "code": "029780",
      "part": 0.73,
      "excess": 0.81,
-     "val": 53,
+     "val": 51,
      "cap": 54048,
      "themes": "",
      "star": true
@@ -3180,7 +3180,7 @@
      "code": "024110",
      "part": 0.73,
      "excess": 0.5,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -3190,7 +3190,7 @@
      "code": "005090",
      "part": 0.73,
      "excess": 0.48,
-     "val": 103,
+     "val": 91,
      "cap": 7795,
      "themes": "데이터센터 전력,실적",
      "star": true
@@ -3200,7 +3200,7 @@
      "code": "053260",
      "part": 0.71,
      "excess": 1.22,
-     "val": 218,
+     "val": 239,
      "cap": 1200,
      "themes": "데이터센터 전력,알래스카LNG·철강·조선,철강",
      "star": true
@@ -3210,7 +3210,7 @@
      "code": "032640",
      "part": 0.71,
      "excess": 1.07,
-     "val": 109,
+     "val": 120,
      "cap": 64046,
      "themes": "",
      "star": true
@@ -3222,7 +3222,7 @@
      "code": "402340",
      "part": 0.17,
      "excess": -2.03,
-     "val": 5871,
+     "val": 5050,
      "cap": 1484145,
      "themes": "반도체 소부장",
      "star": false
@@ -3232,7 +3232,7 @@
      "code": "090460",
      "part": 0.17,
      "excess": -1.14,
-     "val": 263,
+     "val": 279,
      "cap": 7214,
      "themes": "로봇·휴머노이드,폴더블폰",
      "star": false
@@ -3242,7 +3242,7 @@
      "code": "034220",
      "part": 0.17,
      "excess": -1.09,
-     "val": 475,
+     "val": 465,
      "cap": 46050,
      "themes": "",
      "star": false
@@ -3252,7 +3252,7 @@
      "code": "077360",
      "part": 0.17,
      "excess": -0.71,
-     "val": 79,
+     "val": 83,
      "cap": 4576,
      "themes": "반도체 소부장",
      "star": false
@@ -3268,60 +3268,60 @@
    "rule": "^GSPC 1일 ≥ +1.1% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260731",
     "20260804",
-    "20260805"
+    "20260805",
+    "20260918"
    ],
-   "mkt_next": 0.58,
+   "mkt_next": 0.57,
    "top_themes": [
     {
-     "theme": "광통신",
-     "part": 0.63,
-     "excess": 2.68,
-     "n": 13
-    },
-    {
      "theme": "AI 반도체·기판",
-     "part": 0.63,
-     "excess": 2.33,
+     "part": 0.66,
+     "excess": 2.3,
      "n": 7
     },
     {
      "theme": "반도체 소부장",
      "part": 0.61,
-     "excess": 1.52,
-     "n": 89
+     "excess": 1.55,
+     "n": 95
     },
     {
-     "theme": "보안",
+     "theme": "광통신",
      "part": 0.59,
-     "excess": 2.04,
-     "n": 6
+     "excess": 2.63,
+     "n": 16
     },
     {
-     "theme": "실적",
+     "theme": "방산",
      "part": 0.59,
-     "excess": 0.97,
-     "n": 23
+     "excess": 1.51,
+     "n": 7
+    },
+    {
+     "theme": "데이터센터 전력",
+     "part": 0.59,
+     "excess": 1.17,
+     "n": 38
     }
    ],
    "bottom_themes": [
     {
-     "theme": "화장품·소비재",
+     "theme": "엔터·미디어",
      "part": 0.43,
-     "excess": 0.0,
-     "n": 18
-    },
-    {
-     "theme": "신재생에너지",
-     "part": 0.41,
-     "excess": 0.65,
-     "n": 5
+     "excess": -0.31,
+     "n": 8
     },
     {
      "theme": "알래스카LNG·철강·조선",
-     "part": 0.41,
-     "excess": 0.46,
+     "part": 0.39,
+     "excess": 0.3,
+     "n": 5
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.39,
+     "excess": -0.35,
      "n": 5
     }
    ],
@@ -3330,8 +3330,8 @@
      "name": "SK스퀘어",
      "code": "402340",
      "part": 0.83,
-     "excess": 3.58,
-     "val": 5871,
+     "excess": 3.61,
+     "val": 5050,
      "cap": 1484145,
      "themes": "반도체 소부장",
      "star": true
@@ -3340,8 +3340,8 @@
      "name": "브이엠",
      "code": "089970",
      "part": 0.78,
-     "excess": 2.7,
-     "val": 306,
+     "excess": 2.76,
+     "val": 308,
      "cap": 14058,
      "themes": "반도체 소부장",
      "star": true
@@ -3350,38 +3350,38 @@
      "name": "삼성전기",
      "code": "009150",
      "part": 0.78,
-     "excess": 2.36,
-     "val": 9370,
+     "excess": 2.39,
+     "val": 8045,
      "cap": 1086046,
      "themes": "AI 반도체·기판,데이터센터 전력",
-     "star": true
-    },
-    {
-     "name": "LG전자",
-     "code": "066570",
-     "part": 0.78,
-     "excess": 0.89,
-     "val": 1635,
-     "cap": 348573,
-     "themes": "",
      "star": true
     },
     {
      "name": "RF머트리얼즈",
      "code": "327260",
      "part": 0.76,
-     "excess": 3.45,
-     "val": 296,
+     "excess": 3.58,
+     "val": 396,
      "cap": 6071,
      "themes": "광통신",
+     "star": true
+    },
+    {
+     "name": "효성중공업",
+     "code": "298040",
+     "part": 0.76,
+     "excess": 2.61,
+     "val": 1107,
+     "cap": 276473,
+     "themes": "전력설비·전선",
      "star": true
     },
     {
      "name": "SK하이닉스",
      "code": "000660",
      "part": 0.76,
-     "excess": 2.51,
-     "val": 63172,
+     "excess": 2.57,
+     "val": 58513,
      "cap": 13024679,
      "themes": "AI 반도체·기판,반도체 소부장",
      "star": true
@@ -3390,8 +3390,8 @@
      "name": "GST",
      "code": "083450",
      "part": 0.76,
-     "excess": 1.9,
-     "val": 54,
+     "excess": 1.96,
+     "val": 47,
      "cap": 8063,
      "themes": "",
      "star": true
@@ -3400,8 +3400,8 @@
      "name": "아진엑스텍",
      "code": "059120",
      "part": 0.76,
-     "excess": 1.35,
-     "val": 65,
+     "excess": 1.36,
+     "val": 59,
      "cap": 1304,
      "themes": "로봇·휴머노이드,반도체 소부장",
      "star": true
@@ -3409,11 +3409,21 @@
    ],
    "bottom_stocks": [
     {
+     "name": "CJ ENM",
+     "code": "035760",
+     "part": 0.29,
+     "excess": -0.75,
+     "val": 32,
+     "cap": 7368,
+     "themes": "",
+     "star": false
+    },
+    {
      "name": "빙그레",
      "code": "005180",
      "part": 0.29,
-     "excess": -0.64,
-     "val": 140,
+     "excess": -0.6,
+     "val": 74,
      "cap": 7981,
      "themes": "실적",
      "star": false
@@ -3422,8 +3432,8 @@
      "name": "샘표식품",
      "code": "248170",
      "part": 0.29,
-     "excess": -0.21,
-     "val": 57,
+     "excess": -0.23,
+     "val": 64,
      "cap": 1048,
      "themes": "",
      "star": false
@@ -3432,20 +3442,10 @@
      "name": "LG유플러스",
      "code": "032640",
      "part": 0.32,
-     "excess": -0.82,
-     "val": 109,
+     "excess": -0.87,
+     "val": 120,
      "cap": 64046,
      "themes": "",
-     "star": false
-    },
-    {
-     "name": "JYP Ent.",
-     "code": "035900",
-     "part": 0.32,
-     "excess": -0.65,
-     "val": 98,
-     "cap": 14035,
-     "themes": "엔터·미디어",
      "star": false
     }
    ]
@@ -3459,60 +3459,60 @@
    "rule": "^SOX 1일 ≥ +3.1% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260731",
     "20260805",
-    "20260907"
+    "20260907",
+    "20260918"
    ],
-   "mkt_next": 0.29,
+   "mkt_next": 0.28,
    "top_themes": [
     {
      "theme": "AI 반도체·기판",
      "part": 0.68,
-     "excess": 2.91,
+     "excess": 2.92,
      "n": 7
     },
     {
      "theme": "반도체 소부장",
      "part": 0.63,
-     "excess": 2.18,
-     "n": 89
+     "excess": 2.26,
+     "n": 95
+    },
+    {
+     "theme": "데이터센터 전력",
+     "part": 0.61,
+     "excess": 1.45,
+     "n": 38
     },
     {
      "theme": "광통신",
      "part": 0.6,
-     "excess": 3.21,
-     "n": 13
-    },
-    {
-     "theme": "데이터센터 전력",
-     "part": 0.59,
-     "excess": 1.35,
-     "n": 40
+     "excess": 2.68,
+     "n": 16
     },
     {
      "theme": "원전·SMR",
-     "part": 0.57,
-     "excess": 1.29,
-     "n": 18
+     "part": 0.59,
+     "excess": 1.42,
+     "n": 20
     }
    ],
    "bottom_themes": [
     {
-     "theme": "엔터·미디어",
-     "part": 0.44,
-     "excess": -0.33,
-     "n": 9
-    },
-    {
      "theme": "정책·정치",
      "part": 0.41,
-     "excess": 0.59,
-     "n": 15
+     "excess": 0.64,
+     "n": 13
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.37,
+     "excess": -0.45,
+     "n": 5
     },
     {
      "theme": "알래스카LNG·철강·조선",
-     "part": 0.39,
-     "excess": -0.35,
+     "part": 0.37,
+     "excess": -0.51,
      "n": 5
     }
    ],
@@ -3521,8 +3521,8 @@
      "name": "효성",
      "code": "004800",
      "part": 0.88,
-     "excess": 3.63,
-     "val": 36,
+     "excess": 3.6,
+     "val": 37,
      "cap": 28325,
      "themes": "",
      "star": true
@@ -3531,70 +3531,70 @@
      "name": "SK스퀘어",
      "code": "402340",
      "part": 0.85,
-     "excess": 4.99,
-     "val": 5871,
+     "excess": 5.03,
+     "val": 5050,
      "cap": 1484145,
      "themes": "반도체 소부장",
+     "star": true
+    },
+    {
+     "name": "효성중공업",
+     "code": "298040",
+     "part": 0.83,
+     "excess": 4.03,
+     "val": 1107,
+     "cap": 276473,
+     "themes": "전력설비·전선",
      "star": true
     },
     {
      "name": "SK하이닉스",
      "code": "000660",
      "part": 0.8,
-     "excess": 3.99,
-     "val": 63172,
+     "excess": 4.05,
+     "val": 58513,
      "cap": 13024679,
      "themes": "AI 반도체·기판,반도체 소부장",
-     "star": true
-    },
-    {
-     "name": "효성중공업",
-     "code": "298040",
-     "part": 0.8,
-     "excess": 3.96,
-     "val": 1113,
-     "cap": 276473,
-     "themes": "전력설비·전선",
      "star": true
     },
     {
      "name": "브이엠",
      "code": "089970",
      "part": 0.78,
-     "excess": 4.15,
-     "val": 306,
+     "excess": 4.22,
+     "val": 308,
      "cap": 14058,
      "themes": "반도체 소부장",
      "star": true
     },
     {
-     "name": "두산퓨얼셀",
-     "code": "336260",
+     "name": "케이씨텍",
+     "code": "281820",
      "part": 0.78,
-     "excess": 4.04,
-     "val": 576,
-     "cap": 32681,
-     "themes": "수소에너지·연료전지,연료전지",
+     "excess": 3.28,
+     "val": 116,
+     "cap": 13819,
+     "themes": "반도체 소부장",
      "star": true
     },
     {
      "name": "삼성전기",
      "code": "009150",
      "part": 0.78,
-     "excess": 3.19,
-     "val": 9370,
+     "excess": 3.23,
+     "val": 8045,
      "cap": 1086046,
      "themes": "AI 반도체·기판,데이터센터 전력",
      "star": true
     },
     {
-     "name": "성호전자",
-     "code": "043260",
-     "part": 0.76,
-     "excess": 4.89,
-     "val": 253,
-     "cap": 11654,
-     "themes": "광통신",
+     "name": "LS",
+     "code": "006260",
+     "part": 0.78,
+     "excess": 2.23,
+     "val": 359,
+     "cap": 98748,
+     "themes": "",
      "star": true
     }
    ],
@@ -3602,41 +3602,41 @@
     {
      "name": "금강철강",
      "code": "053260",
-     "part": 0.29,
-     "excess": -0.35,
-     "val": 218,
+     "part": 0.27,
+     "excess": -0.51,
+     "val": 239,
      "cap": 1200,
      "themes": "데이터센터 전력,알래스카LNG·철강·조선,철강",
      "star": false
     },
     {
-     "name": "빙그레",
-     "code": "005180",
-     "part": 0.32,
-     "excess": -0.7,
-     "val": 140,
-     "cap": 7981,
-     "themes": "실적",
+     "name": "코스메카코리아",
+     "code": "241710",
+     "part": 0.29,
+     "excess": -0.49,
+     "val": 165,
+     "cap": 13788,
+     "themes": "화장품·소비재",
      "star": false
     },
     {
      "name": "현대약품",
      "code": "004310",
      "part": 0.32,
-     "excess": -0.65,
-     "val": 627,
+     "excess": -0.69,
+     "val": 915,
      "cap": 2694,
      "themes": "낙태,정책·정치,제약바이오",
      "star": false
     },
     {
-     "name": "코스메카코리아",
-     "code": "241710",
+     "name": "빙그레",
+     "code": "005180",
      "part": 0.32,
-     "excess": -0.39,
-     "val": 184,
-     "cap": 13788,
-     "themes": "화장품·소비재",
+     "excess": -0.65,
+     "val": 74,
+     "cap": 7981,
+     "themes": "실적",
      "star": false
     }
    ]
@@ -3650,60 +3650,60 @@
    "rule": "^SOX 1일 ≤ -3.6% (상·하위 8%)",
    "n": 41,
    "dates_last": [
-    "20260729",
     "20260730",
-    "20260819"
+    "20260819",
+    "20260915"
    ],
-   "mkt_next": -1.35,
+   "mkt_next": -1.38,
    "top_themes": [
     {
      "theme": "엔터·미디어",
      "part": 0.59,
-     "excess": 0.9,
-     "n": 9
+     "excess": 0.85,
+     "n": 8
     },
     {
      "theme": "화장품·소비재",
      "part": 0.56,
-     "excess": 0.67,
-     "n": 18
+     "excess": 0.57,
+     "n": 20
     },
     {
      "theme": "알래스카LNG·철강·조선",
-     "part": 0.54,
-     "excess": 0.61,
+     "part": 0.51,
+     "excess": 0.46,
      "n": 5
     },
     {
      "theme": "게임",
-     "part": 0.5,
-     "excess": 0.32,
-     "n": 10
+     "part": 0.51,
+     "excess": 0.41,
+     "n": 12
     },
     {
-     "theme": "정책·정치",
+     "theme": "미국-이란 전쟁",
      "part": 0.49,
-     "excess": 0.64,
-     "n": 15
+     "excess": 1.58,
+     "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "이차전지·전해액",
-     "part": 0.32,
-     "excess": -0.78,
-     "n": 23
+     "theme": "반도체 소부장",
+     "part": 0.34,
+     "excess": -1.36,
+     "n": 95
     },
     {
-     "theme": "반도체 소부장",
-     "part": 0.32,
-     "excess": -1.33,
-     "n": 89
+     "theme": "기계",
+     "part": 0.3,
+     "excess": -0.22,
+     "n": 6
     },
     {
      "theme": "AI 반도체·기판",
-     "part": 0.27,
-     "excess": -2.0,
+     "part": 0.29,
+     "excess": -2.03,
      "n": 7
     }
    ],
@@ -3712,58 +3712,58 @@
      "name": "맥쿼리인프라",
      "code": "088980",
      "part": 0.76,
-     "excess": 1.01,
-     "val": 110,
+     "excess": 1.0,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
     },
     {
-     "name": "키다리스튜디오",
-     "code": "020120",
-     "part": 0.73,
-     "excess": 2.09,
-     "val": 70,
-     "cap": 2606,
-     "themes": "엔터·미디어",
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.76,
+     "excess": 0.97,
+     "val": 39,
+     "cap": 1237,
+     "themes": "",
      "star": true
     },
     {
      "name": "오리온",
      "code": "271560",
      "part": 0.73,
-     "excess": 1.51,
-     "val": 124,
+     "excess": 1.47,
+     "val": 132,
      "cap": 48620,
      "themes": "",
+     "star": true
+    },
+    {
+     "name": "키다리스튜디오",
+     "code": "020120",
+     "part": 0.71,
+     "excess": 2.07,
+     "val": 75,
+     "cap": 2606,
+     "themes": "엔터·미디어",
      "star": true
     },
     {
      "name": "BGF리테일",
      "code": "282330",
      "part": 0.71,
-     "excess": 1.0,
-     "val": 86,
+     "excess": 1.02,
+     "val": 78,
      "cap": 25960,
      "themes": "실적",
-     "star": true
-    },
-    {
-     "name": "제일기획",
-     "code": "030000",
-     "part": 0.71,
-     "excess": 0.95,
-     "val": 50,
-     "cap": 21858,
-     "themes": "",
      "star": true
     },
     {
      "name": "기업은행",
      "code": "024110",
      "part": 0.71,
-     "excess": 0.75,
-     "val": 186,
+     "excess": 0.73,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -3772,19 +3772,19 @@
      "name": "BNK금융지주",
      "code": "138930",
      "part": 0.71,
-     "excess": 0.43,
-     "val": 148,
+     "excess": 0.45,
+     "val": 162,
      "cap": 48481,
      "themes": "",
      "star": true
     },
     {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.7,
-     "excess": 0.66,
-     "val": 31,
-     "cap": 30512,
+     "name": "케이티앤지",
+     "code": "033780",
+     "part": 0.68,
+     "excess": 1.42,
+     "val": 352,
+     "cap": 176789,
      "themes": "",
      "star": false
     }
@@ -3794,8 +3794,8 @@
      "name": "네패스",
      "code": "033640",
      "part": 0.1,
-     "excess": -2.88,
-     "val": 34,
+     "excess": -2.6,
+     "val": 45,
      "cap": 5200,
      "themes": "반도체 소부장",
      "star": false
@@ -3804,8 +3804,8 @@
      "name": "비에이치",
      "code": "090460",
      "part": 0.1,
-     "excess": -1.65,
-     "val": 263,
+     "excess": -1.68,
+     "val": 279,
      "cap": 7214,
      "themes": "로봇·휴머노이드,폴더블폰",
      "star": false
@@ -3814,20 +3814,20 @@
      "name": "LS ELECTRIC",
      "code": "010120",
      "part": 0.15,
-     "excess": -2.47,
-     "val": 1095,
+     "excess": -2.38,
+     "val": 988,
      "cap": 310500,
      "themes": "데이터센터 전력,실적",
      "star": false
     },
     {
-     "name": "두산퓨얼셀",
-     "code": "336260",
+     "name": "산일전기",
+     "code": "062040",
      "part": 0.17,
-     "excess": -2.74,
-     "val": 576,
-     "cap": 32681,
-     "themes": "수소에너지·연료전지,연료전지",
+     "excess": -2.63,
+     "val": 604,
+     "cap": 60949,
+     "themes": "데이터센터 전력",
      "star": false
     }
    ]
@@ -3838,7 +3838,7 @@
    "group": "해외 증시",
    "note": "가상화폐·스테이블코인",
    "symbol": "BTC-USD",
-   "rule": "BTC-USD 1일 ≥ +3.0% (상·하위 8%)",
+   "rule": "BTC-USD 1일 ≥ +2.9% (상·하위 8%)",
    "n": 58,
    "dates_last": [
     "20260821",
@@ -3850,52 +3850,52 @@
     {
      "theme": "우주항공",
      "part": 0.58,
-     "excess": 1.86,
-     "n": 9
-    },
-    {
-     "theme": "보안",
-     "part": 0.58,
-     "excess": 1.1,
-     "n": 6
+     "excess": 1.81,
+     "n": 10
     },
     {
      "theme": "AI 반도체·기판",
      "part": 0.57,
-     "excess": 1.03,
-     "n": 7
-    },
-    {
-     "theme": "사이버보안",
-     "part": 0.57,
-     "excess": 0.55,
+     "excess": 1.02,
      "n": 7
     },
     {
      "theme": "반도체 소부장",
-     "part": 0.56,
-     "excess": 1.05,
-     "n": 88
+     "part": 0.55,
+     "excess": 1.03,
+     "n": 93
+    },
+    {
+     "theme": "로봇·휴머노이드",
+     "part": 0.54,
+     "excess": 0.96,
+     "n": 34
+    },
+    {
+     "theme": "이차전지·전해액",
+     "part": 0.53,
+     "excess": 0.51,
+     "n": 23
     }
    ],
    "bottom_themes": [
     {
-     "theme": "남북경협",
-     "part": 0.48,
-     "excess": 0.07,
-     "n": 8
-    },
-    {
      "theme": "게임",
-     "part": 0.44,
-     "excess": 0.0,
-     "n": 10
+     "part": 0.46,
+     "excess": 0.1,
+     "n": 12
     },
     {
      "theme": "정책·정치",
-     "part": 0.43,
-     "excess": 0.26,
-     "n": 15
+     "part": 0.45,
+     "excess": 0.32,
+     "n": 13
+    },
+    {
+     "theme": "미국-이란 전쟁",
+     "part": 0.41,
+     "excess": 0.05,
+     "n": 5
     }
    ],
    "top_stocks": [
@@ -3903,19 +3903,9 @@
      "name": "LG디스플레이",
      "code": "034220",
      "part": 0.76,
-     "excess": 0.96,
-     "val": 475,
+     "excess": 0.92,
+     "val": 465,
      "cap": 46050,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "LG전자",
-     "code": "066570",
-     "part": 0.72,
-     "excess": 0.82,
-     "val": 1635,
-     "cap": 348573,
      "themes": "",
      "star": true
     },
@@ -3923,8 +3913,8 @@
      "name": "JB금융지주",
      "code": "175330",
      "part": 0.72,
-     "excess": 0.66,
-     "val": 123,
+     "excess": 0.65,
+     "val": 140,
      "cap": 58568,
      "themes": "",
      "star": true
@@ -3933,19 +3923,39 @@
      "name": "우리기술투자",
      "code": "041190",
      "part": 0.71,
-     "excess": 2.74,
-     "val": 466,
+     "excess": 2.94,
+     "val": 412,
      "cap": 5065,
      "themes": "가상화폐",
+     "star": true
+    },
+    {
+     "name": "삼성전자",
+     "code": "005930",
+     "part": 0.71,
+     "excess": 1.48,
+     "val": 44646,
+     "cap": 15784952,
+     "themes": "반도체 소부장",
      "star": true
     },
     {
      "name": "대한항공",
      "code": "003490",
      "part": 0.71,
-     "excess": 0.91,
-     "val": 849,
+     "excess": 0.92,
+     "val": 821,
      "cap": 111755,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "LG전자",
+     "code": "066570",
+     "part": 0.71,
+     "excess": 0.72,
+     "val": 1333,
+     "cap": 348573,
      "themes": "",
      "star": true
     },
@@ -3953,29 +3963,19 @@
      "name": "기업은행",
      "code": "024110",
      "part": 0.71,
-     "excess": 0.4,
-     "val": 186,
+     "excess": 0.38,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
     },
     {
-     "name": "미래에셋증권",
-     "code": "006800",
+     "name": "삼성증권",
+     "code": "016360",
      "part": 0.69,
-     "excess": 1.7,
-     "val": 386,
-     "cap": 188428,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "한화",
-     "code": "000880",
-     "part": 0.69,
-     "excess": 1.54,
-     "val": 282,
-     "cap": 74127,
+     "excess": 1.12,
+     "val": 249,
+     "cap": 78316,
      "themes": "",
      "star": false
     }
@@ -3985,40 +3985,40 @@
      "name": "KBI메탈",
      "code": "024840",
      "part": 0.31,
-     "excess": -0.7,
-     "val": 221,
+     "excess": -0.72,
+     "val": 213,
      "cap": 2299,
      "themes": "데이터센터 전력",
      "star": false
     },
     {
-     "name": "동국제약",
-     "code": "086450",
-     "part": 0.34,
-     "excess": -0.08,
-     "val": 123,
-     "cap": 9408,
-     "themes": "제약바이오",
-     "star": false
-    },
-    {
      "name": "현대약품",
      "code": "004310",
-     "part": 0.36,
-     "excess": -0.07,
-     "val": 627,
+     "part": 0.34,
+     "excess": -0.15,
+     "val": 915,
      "cap": 2694,
      "themes": "낙태,정책·정치,제약바이오",
      "star": false
     },
     {
-     "name": "키다리스튜디오",
-     "code": "020120",
+     "name": "롯데관광개발",
+     "code": "032350",
      "part": 0.36,
-     "excess": 0.48,
-     "val": 70,
-     "cap": 2606,
-     "themes": "엔터·미디어",
+     "excess": -0.58,
+     "val": 42,
+     "cap": 9846,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "동국제약",
+     "code": "086450",
+     "part": 0.36,
+     "excess": -0.07,
+     "val": 122,
+     "cap": 9408,
+     "themes": "제약바이오",
      "star": false
     }
    ]
@@ -4032,61 +4032,61 @@
    "rule": "BTC-USD 1일 ≤ -2.8% (상·하위 8%)",
    "n": 56,
    "dates_last": [
-    "20260608",
     "20260803",
-    "20260831"
+    "20260831",
+    "20260916"
    ],
-   "mkt_next": -0.71,
+   "mkt_next": -0.74,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.57,
+     "excess": 0.55,
+     "n": 5
+    },
+    {
      "theme": "엔터·미디어",
-     "part": 0.52,
-     "excess": 0.37,
-     "n": 9
+     "part": 0.54,
+     "excess": 0.4,
+     "n": 8
     },
     {
      "theme": "광통신",
      "part": 0.5,
-     "excess": 0.75,
-     "n": 13
-    },
-    {
-     "theme": "정책·정치",
-     "part": 0.5,
-     "excess": 0.2,
-     "n": 15
+     "excess": 0.79,
+     "n": 16
     },
     {
      "theme": "화장품·소비재",
      "part": 0.5,
-     "excess": 0.14,
-     "n": 18
+     "excess": 0.24,
+     "n": 20
     },
     {
-     "theme": "남북경협",
-     "part": 0.47,
-     "excess": 0.13,
-     "n": 8
+     "theme": "실적",
+     "part": 0.48,
+     "excess": 0.23,
+     "n": 19
     }
    ],
    "bottom_themes": [
     {
+     "theme": "가상화폐",
+     "part": 0.36,
+     "excess": 0.13,
+     "n": 5
+    },
+    {
      "theme": "AI 소프트웨어",
-     "part": 0.38,
-     "excess": 0.18,
+     "part": 0.36,
+     "excess": 0.11,
      "n": 8
     },
     {
-     "theme": "원전·SMR",
-     "part": 0.38,
-     "excess": -0.38,
-     "n": 17
-    },
-    {
-     "theme": "보안",
-     "part": 0.37,
-     "excess": -0.3,
-     "n": 6
+     "theme": "스테이블코인",
+     "part": 0.36,
+     "excess": -0.08,
+     "n": 5
     }
    ],
    "top_stocks": [
@@ -4094,80 +4094,80 @@
      "name": "JB금융지주",
      "code": "175330",
      "part": 0.71,
-     "excess": 0.61,
-     "val": 123,
+     "excess": 0.65,
+     "val": 140,
      "cap": 58568,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "기업은행",
-     "code": "024110",
-     "part": 0.71,
-     "excess": 0.37,
-     "val": 186,
-     "cap": 166662,
      "themes": "",
      "star": true
     },
     {
      "name": "서산",
      "code": "079650",
-     "part": 0.68,
-     "excess": 0.84,
-     "val": 439,
+     "part": 0.7,
+     "excess": 0.89,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": false
     },
     {
-     "name": "케이티앤지",
-     "code": "033780",
-     "part": 0.68,
-     "excess": 0.71,
-     "val": 385,
-     "cap": 176789,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "롯데쇼핑",
-     "code": "023530",
-     "part": 0.66,
-     "excess": 0.79,
-     "val": 171,
-     "cap": 31768,
+     "name": "기업은행",
+     "code": "024110",
+     "part": 0.7,
+     "excess": 0.33,
+     "val": 183,
+     "cap": 166662,
      "themes": "",
      "star": false
     },
     {
      "name": "코리안리",
      "code": "003690",
-     "part": 0.66,
-     "excess": 0.76,
-     "val": 37,
+     "part": 0.68,
+     "excess": 0.77,
+     "val": 33,
      "cap": 25819,
      "themes": "",
      "star": false
     },
     {
-     "name": "SGC에너지",
-     "code": "005090",
-     "part": 0.66,
-     "excess": 0.57,
-     "val": 103,
-     "cap": 7795,
-     "themes": "데이터센터 전력,실적",
+     "name": "케이티앤지",
+     "code": "033780",
+     "part": 0.68,
+     "excess": 0.7,
+     "val": 352,
+     "cap": 176789,
+     "themes": "",
      "star": false
     },
     {
      "name": "에스원",
      "code": "012750",
-     "part": 0.66,
-     "excess": 0.51,
-     "val": 54,
+     "part": 0.68,
+     "excess": 0.53,
+     "val": 59,
      "cap": 30057,
      "themes": "AI 소프트웨어",
+     "star": false
+    },
+    {
+     "name": "롯데쇼핑",
+     "code": "023530",
+     "part": 0.66,
+     "excess": 0.82,
+     "val": 191,
+     "cap": 31768,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.66,
+     "excess": 0.79,
+     "val": 39,
+     "cap": 1237,
+     "themes": "",
      "star": false
     }
    ],
@@ -4175,9 +4175,9 @@
     {
      "name": "한화투자증권",
      "code": "003530",
-     "part": 0.21,
-     "excess": -1.23,
-     "val": 115,
+     "part": 0.2,
+     "excess": -1.33,
+     "val": 102,
      "cap": 10545,
      "themes": "",
      "star": false
@@ -4186,7 +4186,7 @@
      "name": "지엔씨에너지",
      "code": "119850",
      "part": 0.21,
-     "excess": -0.75,
+     "excess": -0.64,
      "val": 333,
      "cap": 7320,
      "themes": "데이터센터 전력",
@@ -4195,20 +4195,20 @@
     {
      "name": "우리기술투자",
      "code": "041190",
-     "part": 0.27,
-     "excess": -1.55,
-     "val": 466,
+     "part": 0.25,
+     "excess": -1.66,
+     "val": 412,
      "cap": 5065,
      "themes": "가상화폐",
      "star": false
     },
     {
-     "name": "에코프로에이치엔",
-     "code": "383310",
+     "name": "미래에셋증권",
+     "code": "006800",
      "part": 0.29,
-     "excess": -0.76,
-     "val": 36,
-     "cap": 4772,
+     "excess": -1.09,
+     "val": 348,
+     "cap": 188428,
      "themes": "",
      "star": false
     }
@@ -4242,10 +4242,10 @@
      "n": 10
     },
     {
-     "theme": "광통신",
-     "part": 0.55,
-     "excess": 1.0,
-     "n": 13
+     "theme": "미국-이란 전쟁",
+     "part": 0.53,
+     "excess": 1.33,
+     "n": 5
     },
     {
      "theme": "알래스카LNG·철강·조선",
@@ -4254,30 +4254,30 @@
      "n": 5
     },
     {
-     "theme": "AI 소프트웨어",
-     "part": 0.51,
-     "excess": 0.06,
-     "n": 8
+     "theme": "실적",
+     "part": 0.53,
+     "excess": 0.6,
+     "n": 19
     }
    ],
    "bottom_themes": [
     {
-     "theme": "가상화폐",
-     "part": 0.45,
-     "excess": 0.21,
-     "n": 6
-    },
-    {
      "theme": "원전·SMR",
-     "part": 0.44,
+     "part": 0.45,
      "excess": 0.08,
-     "n": 18
+     "n": 20
     },
     {
-     "theme": "게임",
+     "theme": "사이버보안",
+     "part": 0.45,
+     "excess": 0.05,
+     "n": 9
+    },
+    {
+     "theme": "기계",
      "part": 0.44,
-     "excess": -0.14,
-     "n": 10
+     "excess": 0.13,
+     "n": 6
     }
    ],
    "top_stocks": [
@@ -4286,7 +4286,7 @@
      "code": "064350",
      "part": 0.75,
      "excess": 2.02,
-     "val": 440,
+     "val": 393,
      "cap": 138829,
      "themes": "방산",
      "star": true
@@ -4296,7 +4296,7 @@
      "code": "023530",
      "part": 0.75,
      "excess": 1.5,
-     "val": 171,
+     "val": 191,
      "cap": 31768,
      "themes": "",
      "star": true
@@ -4306,7 +4306,7 @@
      "code": "007340",
      "part": 0.72,
      "excess": 1.78,
-     "val": 147,
+     "val": 59,
      "cap": 26622,
      "themes": "실적",
      "star": true
@@ -4316,9 +4316,9 @@
      "code": "448900",
      "part": 0.7,
      "excess": 2.28,
-     "val": 50,
+     "val": 39,
      "cap": 3010,
-     "themes": "로봇·휴머노이드",
+     "themes": "로봇·휴머노이드,자동차부품",
      "star": true
     },
     {
@@ -4326,7 +4326,7 @@
      "code": "079550",
      "part": 0.7,
      "excess": 1.97,
-     "val": 702,
+     "val": 643,
      "cap": 144980,
      "themes": "방산",
      "star": true
@@ -4336,7 +4336,7 @@
      "code": "207940",
      "part": 0.7,
      "excess": 0.96,
-     "val": 656,
+     "val": 607,
      "cap": 678625,
      "themes": "제약바이오",
      "star": true
@@ -4346,7 +4346,7 @@
      "code": "005880",
      "part": 0.7,
      "excess": 0.89,
-     "val": 44,
+     "val": 35,
      "cap": 6826,
      "themes": "",
      "star": true
@@ -4356,7 +4356,7 @@
      "code": "079650",
      "part": 0.68,
      "excess": 2.24,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": false
@@ -4368,9 +4368,9 @@
      "code": "452280",
      "part": 0.3,
      "excess": -1.72,
-     "val": 35,
+     "val": 102,
      "cap": 1961,
-     "themes": "배관",
+     "themes": "기계,배관",
      "star": false
     },
     {
@@ -4378,9 +4378,9 @@
      "code": "199430",
      "part": 0.3,
      "excess": -0.19,
-     "val": 41,
+     "val": 52,
      "cap": 2149,
-     "themes": "로봇·원전,로봇·휴머노이드",
+     "themes": "기계,로봇·원전,로봇·휴머노이드",
      "star": false
     },
     {
@@ -4388,19 +4388,19 @@
      "code": "122640",
      "part": 0.33,
      "excess": -0.32,
-     "val": 120,
+     "val": 106,
      "cap": 5943,
      "themes": "반도체 소부장",
      "star": false
     },
     {
-     "name": "펩트론",
-     "code": "087010",
-     "part": 0.35,
-     "excess": -0.72,
-     "val": 216,
-     "cap": 37354,
-     "themes": "제약바이오",
+     "name": "지니언스",
+     "code": "263860",
+     "part": 0.33,
+     "excess": -0.2,
+     "val": 77,
+     "cap": 1386,
+     "themes": "AI 소프트웨어,보안,사이버보안",
      "star": false
     }
    ]
@@ -4429,26 +4429,26 @@
     {
      "theme": "광통신",
      "part": 0.55,
-     "excess": 1.53,
-     "n": 13
+     "excess": 1.45,
+     "n": 16
+    },
+    {
+     "theme": "스테이블코인",
+     "part": 0.55,
+     "excess": 0.18,
+     "n": 5
+    },
+    {
+     "theme": "우주항공",
+     "part": 0.53,
+     "excess": 1.18,
+     "n": 10
     },
     {
      "theme": "이차전지·전해액",
      "part": 0.53,
      "excess": 0.56,
      "n": 23
-    },
-    {
-     "theme": "AI 반도체·기판",
-     "part": 0.53,
-     "excess": 0.43,
-     "n": 7
-    },
-    {
-     "theme": "원전·SMR",
-     "part": 0.53,
-     "excess": 0.37,
-     "n": 17
     }
    ],
    "bottom_themes": [
@@ -4460,15 +4460,15 @@
     },
     {
      "theme": "가상화폐",
-     "part": 0.41,
-     "excess": -0.25,
-     "n": 6
+     "part": 0.38,
+     "excess": 0.0,
+     "n": 5
     },
     {
      "theme": "사이버보안",
      "part": 0.38,
-     "excess": -0.07,
-     "n": 7
+     "excess": -0.12,
+     "n": 9
     }
    ],
    "top_stocks": [
@@ -4477,7 +4477,7 @@
      "code": "000210",
      "part": 0.72,
      "excess": 1.04,
-     "val": 33,
+     "val": 35,
      "cap": 11274,
      "themes": "",
      "star": true
@@ -4487,7 +4487,7 @@
      "code": "077360",
      "part": 0.68,
      "excess": 2.18,
-     "val": 79,
+     "val": 83,
      "cap": 4576,
      "themes": "반도체 소부장",
      "star": false
@@ -4497,7 +4497,7 @@
      "code": "089970",
      "part": 0.68,
      "excess": 2.15,
-     "val": 306,
+     "val": 308,
      "cap": 14058,
      "themes": "반도체 소부장",
      "star": false
@@ -4507,7 +4507,7 @@
      "code": "047810",
      "part": 0.68,
      "excess": 1.88,
-     "val": 406,
+     "val": 422,
      "cap": 126133,
      "themes": "방산",
      "star": false
@@ -4527,7 +4527,7 @@
      "code": "327260",
      "part": 0.68,
      "excess": 1.37,
-     "val": 296,
+     "val": 396,
      "cap": 6071,
      "themes": "광통신",
      "star": false
@@ -4537,7 +4537,7 @@
      "code": "285130",
      "part": 0.68,
      "excess": 0.82,
-     "val": 59,
+     "val": 49,
      "cap": 9480,
      "themes": "실적",
      "star": false
@@ -4547,7 +4547,7 @@
      "code": "024110",
      "part": 0.68,
      "excess": 0.13,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": false
@@ -4555,21 +4555,11 @@
    ],
    "bottom_stocks": [
     {
-     "name": "재영솔루텍",
-     "code": "049630",
-     "part": 0.25,
-     "excess": -0.95,
-     "val": 58,
-     "cap": 1650,
-     "themes": "휴대폰부품",
-     "star": false
-    },
-    {
      "name": "현대바이오",
      "code": "048410",
      "part": 0.28,
      "excess": -0.42,
-     "val": 94,
+     "val": 102,
      "cap": 6061,
      "themes": "제약바이오",
      "star": false
@@ -4579,7 +4569,7 @@
      "code": "097230",
      "part": 0.3,
      "excess": -0.37,
-     "val": 34,
+     "val": 32,
      "cap": 14312,
      "themes": "",
      "star": false
@@ -4589,9 +4579,19 @@
      "code": "094480",
      "part": 0.3,
      "excess": 0.0,
-     "val": 102,
+     "val": 61,
      "cap": 2334,
      "themes": "가상화폐",
+     "star": false
+    },
+    {
+     "name": "헥토파이낸셜",
+     "code": "234340",
+     "part": 0.33,
+     "excess": -0.97,
+     "val": 209,
+     "cap": 3521,
+     "themes": "STO,가상화폐,스테이블코인",
      "star": false
     }
    ]
@@ -4612,16 +4612,22 @@
    "mkt_next": -0.99,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.61,
+     "excess": 1.8,
+     "n": 5
+    },
+    {
      "theme": "엔터·미디어",
      "part": 0.59,
-     "excess": 0.81,
-     "n": 9
+     "excess": 0.83,
+     "n": 8
     },
     {
      "theme": "정책·정치",
      "part": 0.51,
-     "excess": 0.81,
-     "n": 15
+     "excess": 0.78,
+     "n": 13
     },
     {
      "theme": "신재생에너지",
@@ -4634,25 +4640,19 @@
      "part": 0.51,
      "excess": 0.56,
      "n": 7
-    },
-    {
-     "theme": "게임",
-     "part": 0.48,
-     "excess": 0.2,
-     "n": 10
     }
    ],
    "bottom_themes": [
     {
      "theme": "반도체 소부장",
      "part": 0.37,
-     "excess": -0.71,
-     "n": 89
+     "excess": -0.66,
+     "n": 94
     },
     {
-     "theme": "보안",
-     "part": 0.35,
-     "excess": -0.45,
+     "theme": "기계",
+     "part": 0.34,
+     "excess": -0.17,
      "n": 6
     },
     {
@@ -4668,7 +4668,7 @@
      "code": "079650",
      "part": 0.78,
      "excess": 2.4,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": true
@@ -4678,7 +4678,7 @@
      "code": "282330",
      "part": 0.73,
      "excess": 1.17,
-     "val": 86,
+     "val": 78,
      "cap": 25960,
      "themes": "실적",
      "star": true
@@ -4688,7 +4688,7 @@
      "code": "006730",
      "part": 0.73,
      "excess": 0.98,
-     "val": 43,
+     "val": 31,
      "cap": 7122,
      "themes": "",
      "star": true
@@ -4698,7 +4698,7 @@
      "code": "088980",
      "part": 0.73,
      "excess": 0.84,
-     "val": 110,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
@@ -4707,8 +4707,8 @@
      "name": "기업은행",
      "code": "024110",
      "part": 0.73,
-     "excess": 0.41,
-     "val": 186,
+     "excess": 0.42,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -4718,7 +4718,7 @@
      "code": "352820",
      "part": 0.71,
      "excess": 0.81,
-     "val": 312,
+     "val": 291,
      "cap": 77937,
      "themes": "엔터·미디어",
      "star": true
@@ -4728,7 +4728,7 @@
      "code": "004090",
      "part": 0.68,
      "excess": 0.83,
-     "val": 75,
+     "val": 86,
      "cap": 1460,
      "themes": "",
      "star": false
@@ -4738,7 +4738,7 @@
      "code": "030000",
      "part": 0.68,
      "excess": 0.82,
-     "val": 50,
+     "val": 70,
      "cap": 21858,
      "themes": "",
      "star": false
@@ -4750,7 +4750,7 @@
      "code": "007660",
      "part": 0.22,
      "excess": -1.75,
-     "val": 660,
+     "val": 628,
      "cap": 82145,
      "themes": "AI 반도체·기판,반도체 소부장",
      "star": false
@@ -4760,7 +4760,7 @@
      "code": "090460",
      "part": 0.22,
      "excess": -1.2,
-     "val": 263,
+     "val": 279,
      "cap": 7214,
      "themes": "로봇·휴머노이드,폴더블폰",
      "star": false
@@ -4770,19 +4770,19 @@
      "code": "094480",
      "part": 0.22,
      "excess": -0.97,
-     "val": 102,
+     "val": 61,
      "cap": 2334,
      "themes": "가상화폐",
      "star": false
     },
     {
-     "name": "두산퓨얼셀",
-     "code": "336260",
+     "name": "피아이이",
+     "code": "452450",
      "part": 0.24,
-     "excess": -1.72,
-     "val": 576,
-     "cap": 32681,
-     "themes": "수소에너지·연료전지,연료전지",
+     "excess": -1.48,
+     "val": 34,
+     "cap": 1508,
+     "themes": "유리기판",
      "star": false
     }
    ]
@@ -4803,16 +4803,22 @@
    "mkt_next": -0.83,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.56,
+     "excess": 1.34,
+     "n": 5
+    },
+    {
      "theme": "정책·정치",
      "part": 0.56,
      "excess": 0.32,
-     "n": 15
+     "n": 13
     },
     {
-     "theme": "방산",
-     "part": 0.51,
-     "excess": 0.63,
-     "n": 7
+     "theme": "엔터·미디어",
+     "part": 0.52,
+     "excess": 0.37,
+     "n": 8
     },
     {
      "theme": "제약바이오",
@@ -4821,24 +4827,18 @@
      "n": 55
     },
     {
-     "theme": "엔터·미디어",
-     "part": 0.51,
-     "excess": 0.42,
-     "n": 9
-    },
-    {
-     "theme": "화장품·소비재",
+     "theme": "방산",
      "part": 0.5,
-     "excess": 0.45,
-     "n": 18
+     "excess": 0.63,
+     "n": 7
     }
    ],
    "bottom_themes": [
     {
-     "theme": "이차전지·전해액",
+     "theme": "IT서비스",
      "part": 0.39,
-     "excess": -0.4,
-     "n": 23
+     "excess": -0.74,
+     "n": 6
     },
     {
      "theme": "AI 반도체·기판",
@@ -4848,9 +4848,9 @@
     },
     {
      "theme": "보안",
-     "part": 0.38,
-     "excess": 0.0,
-     "n": 6
+     "part": 0.37,
+     "excess": -0.06,
+     "n": 10
     }
    ],
    "top_stocks": [
@@ -4859,7 +4859,7 @@
      "code": "079650",
      "part": 0.76,
      "excess": 0.77,
-     "val": 439,
+     "val": 402,
      "cap": 1342,
      "themes": "반도체 소부장,정책·정치",
      "star": true
@@ -4869,7 +4869,7 @@
      "code": "033780",
      "part": 0.73,
      "excess": 1.21,
-     "val": 385,
+     "val": 352,
      "cap": 176789,
      "themes": "",
      "star": true
@@ -4879,7 +4879,7 @@
      "code": "175330",
      "part": 0.73,
      "excess": 1.17,
-     "val": 123,
+     "val": 140,
      "cap": 58568,
      "themes": "",
      "star": true
@@ -4889,7 +4889,7 @@
      "code": "024110",
      "part": 0.71,
      "excess": 0.59,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -4899,7 +4899,7 @@
      "code": "029780",
      "part": 0.71,
      "excess": 0.51,
-     "val": 53,
+     "val": 51,
      "cap": 54048,
      "themes": "",
      "star": true
@@ -4909,7 +4909,7 @@
      "code": "012450",
      "part": 0.68,
      "excess": 1.86,
-     "val": 1623,
+     "val": 1337,
      "cap": 535744,
      "themes": "방산",
      "star": false
@@ -4919,7 +4919,7 @@
      "code": "105560",
      "part": 0.68,
      "excess": 0.95,
-     "val": 1932,
+     "val": 1975,
      "cap": 623896,
      "themes": "",
      "star": false
@@ -4929,7 +4929,7 @@
      "code": "005090",
      "part": 0.68,
      "excess": 0.57,
-     "val": 103,
+     "val": 91,
      "cap": 7795,
      "themes": "데이터센터 전력,실적",
      "star": false
@@ -4940,8 +4940,8 @@
      "name": "SK",
      "code": "034730",
      "part": 0.2,
-     "excess": -0.6,
-     "val": 829,
+     "excess": -0.61,
+     "val": 761,
      "cap": 442992,
      "themes": "",
      "star": false
@@ -4951,7 +4951,7 @@
      "code": "064400",
      "part": 0.24,
      "excess": -0.96,
-     "val": 518,
+     "val": 369,
      "cap": 73924,
      "themes": "",
      "star": false
@@ -4961,7 +4961,7 @@
      "code": "005380",
      "part": 0.24,
      "excess": -1.29,
-     "val": 2406,
+     "val": 2075,
      "cap": 804698,
      "themes": "",
      "star": false
@@ -4971,7 +4971,7 @@
      "code": "281740",
      "part": 0.24,
      "excess": -1.19,
-     "val": 44,
+     "val": 40,
      "cap": 7342,
      "themes": "",
      "star": false
@@ -4987,80 +4987,100 @@
    "rule": "≤ -2.8%",
    "n": 41,
    "dates_last": [
-    "20260820",
     "20260825",
-    "20260903"
+    "20260903",
+    "20260915"
    ],
-   "mkt_next": 0.1,
+   "mkt_next": -0.02,
    "top_themes": [
     {
-     "theme": "광통신",
+     "theme": "우주항공",
      "part": 0.54,
-     "excess": 1.76,
-     "n": 13
+     "excess": 1.4,
+     "n": 11
     },
     {
-     "theme": "보안",
+     "theme": "IT서비스",
      "part": 0.54,
-     "excess": 0.55,
+     "excess": 1.0,
+     "n": 6
+    },
+    {
+     "theme": "기계",
+     "part": 0.54,
+     "excess": 0.86,
      "n": 7
-    },
-    {
-     "theme": "화장품·소비재",
-     "part": 0.54,
-     "excess": 0.53,
-     "n": 18
-    },
-    {
-     "theme": "실적",
-     "part": 0.54,
-     "excess": 0.45,
-     "n": 24
     },
     {
      "theme": "사이버보안",
      "part": 0.54,
-     "excess": 0.39,
-     "n": 7
+     "excess": 0.37,
+     "n": 9
+    },
+    {
+     "theme": "광통신",
+     "part": 0.52,
+     "excess": 1.6,
+     "n": 16
     }
    ],
    "bottom_themes": [
     {
-     "theme": "원전·SMR",
+     "theme": "데이터센터 전력",
      "part": 0.46,
-     "excess": 0.22,
-     "n": 18
+     "excess": 0.23,
+     "n": 39
+    },
+    {
+     "theme": "방산",
+     "part": 0.46,
+     "excess": 0.17,
+     "n": 7
     },
     {
      "theme": "신재생에너지",
      "part": 0.46,
-     "excess": -0.18,
+     "excess": -0.16,
      "n": 5
-    },
-    {
-     "theme": "남북경협",
-     "part": 0.45,
-     "excess": 0.28,
-     "n": 8
     }
    ],
    "top_stocks": [
     {
+     "name": "샘표",
+     "code": "007540",
+     "part": 0.68,
+     "excess": 0.43,
+     "val": 39,
+     "cap": 1237,
+     "themes": "",
+     "star": false
+    },
+    {
      "name": "화신정공",
      "code": "126640",
      "part": 0.66,
-     "excess": 2.51,
-     "val": 119,
+     "excess": 2.55,
+     "val": 57,
      "cap": 1586,
      "themes": "로봇·휴머노이드",
+     "star": false
+    },
+    {
+     "name": "지어소프트",
+     "code": "051160",
+     "part": 0.66,
+     "excess": 0.83,
+     "val": 39,
+     "cap": 1523,
+     "themes": "",
      "star": false
     },
     {
      "name": "JB금융지주",
      "code": "175330",
      "part": 0.66,
-     "excess": 0.5,
-     "val": 123,
+     "excess": 0.56,
+     "val": 140,
      "cap": 58568,
      "themes": "",
      "star": false
@@ -5069,101 +5089,81 @@
      "name": "현대엘리베이터",
      "code": "017800",
      "part": 0.66,
-     "excess": 0.28,
-     "val": 104,
+     "excess": 0.37,
+     "val": 66,
      "cap": 29515,
      "themes": "",
      "star": false
     },
     {
-     "name": "디아이",
-     "code": "003160",
+     "name": "광전자",
+     "code": "017900",
      "part": 0.63,
-     "excess": 1.31,
-     "val": 138,
-     "cap": 8830,
-     "themes": "반도체 소부장",
+     "excess": 3.5,
+     "val": 706,
+     "cap": 4108,
+     "themes": "광통신,반도체 소부장",
      "star": false
     },
     {
-     "name": "지엔씨에너지",
-     "code": "119850",
+     "name": "SK하이닉스",
+     "code": "000660",
      "part": 0.63,
-     "excess": 1.23,
-     "val": 333,
-     "cap": 7320,
-     "themes": "데이터센터 전력",
+     "excess": 1.83,
+     "val": 58513,
+     "cap": 13024679,
+     "themes": "AI 반도체·기판,반도체 소부장",
      "star": false
     },
     {
-     "name": "브이엠",
-     "code": "089970",
+     "name": "마이크로컨텍솔",
+     "code": "098120",
      "part": 0.63,
-     "excess": 1.18,
-     "val": 306,
-     "cap": 14058,
-     "themes": "반도체 소부장",
-     "star": false
-    },
-    {
-     "name": "SGC에너지",
-     "code": "005090",
-     "part": 0.63,
-     "excess": 1.06,
-     "val": 103,
-     "cap": 7795,
-     "themes": "데이터센터 전력,실적",
-     "star": false
-    },
-    {
-     "name": "키다리스튜디오",
-     "code": "020120",
-     "part": 0.63,
-     "excess": 0.73,
-     "val": 70,
-     "cap": 2606,
-     "themes": "엔터·미디어",
+     "excess": 1.81,
+     "val": 71,
+     "cap": 3870,
+     "themes": "반도체 소부장,실적",
      "star": false
     }
    ],
    "bottom_stocks": [
     {
-     "name": "지투지바이오",
-     "code": "456160",
-     "part": 0.26,
-     "excess": -0.76,
-     "val": 53,
-     "cap": 6369,
-     "themes": "제약바이오",
-     "star": false
-    },
-    {
      "name": "범한퓨얼셀",
      "code": "382900",
      "part": 0.27,
-     "excess": -1.2,
-     "val": 36,
+     "excess": -0.97,
+     "val": 54,
      "cap": 1624,
      "themes": "반도체 소부장,에너지,연료전지",
+     "star": false
+    },
+    {
+     "name": "지투지바이오",
+     "code": "456160",
+     "part": 0.28,
+     "excess": -0.48,
+     "val": 60,
+     "cap": 6369,
+     "themes": "제약바이오",
      "star": false
     },
     {
      "name": "에이프릴바이오",
      "code": "397030",
      "part": 0.32,
-     "excess": -2.17,
-     "val": 57,
+     "excess": -2.2,
+     "val": 38,
      "cap": 5010,
      "themes": "",
      "star": false
     },
     {
-     "name": "엔켐",
-     "code": "348370",
+     "name": "삼아알미늄",
+     "code": "006110",
      "part": 0.32,
-     "excess": -1.35,
-     "val": 64,
-     "cap": 4656,
+     "excess": -0.61,
+     "val": 123,
+     "cap": 10118,
      "themes": "이차전지·전해액",
      "star": false
     }
@@ -5186,15 +5186,15 @@
    "top_themes": [
     {
      "theme": "남북경협",
-     "part": 0.55,
+     "part": 0.57,
      "excess": 0.63,
-     "n": 8
+     "n": 6
     },
     {
      "theme": "실적",
-     "part": 0.53,
-     "excess": 0.94,
-     "n": 24
+     "part": 0.54,
+     "excess": 0.93,
+     "n": 20
     },
     {
      "theme": "알래스카LNG·철강·조선",
@@ -5212,21 +5212,21 @@
      "theme": "화장품·소비재",
      "part": 0.51,
      "excess": 0.18,
-     "n": 18
+     "n": 20
     }
    ],
    "bottom_themes": [
     {
-     "theme": "사이버보안",
-     "part": 0.39,
-     "excess": 0.66,
-     "n": 7
-    },
-    {
      "theme": "로봇·휴머노이드",
      "part": 0.37,
-     "excess": -0.01,
-     "n": 39
+     "excess": 0.05,
+     "n": 38
+    },
+    {
+     "theme": "기계",
+     "part": 0.37,
+     "excess": -0.8,
+     "n": 7
     },
     {
      "theme": "휴대폰부품",
@@ -5241,7 +5241,7 @@
      "code": "024110",
      "part": 0.78,
      "excess": 1.13,
-     "val": 186,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -5251,7 +5251,7 @@
      "code": "316140",
      "part": 0.78,
      "excess": 0.9,
-     "val": 973,
+     "val": 1112,
      "cap": 251981,
      "themes": "",
      "star": true
@@ -5261,7 +5261,7 @@
      "code": "029780",
      "part": 0.78,
      "excess": 0.81,
-     "val": 53,
+     "val": 51,
      "cap": 54048,
      "themes": "",
      "star": true
@@ -5271,7 +5271,7 @@
      "code": "055550",
      "part": 0.76,
      "excess": 1.16,
-     "val": 1202,
+     "val": 1212,
      "cap": 534704,
      "themes": "",
      "star": true
@@ -5281,7 +5281,7 @@
      "code": "271560",
      "part": 0.76,
      "excess": 1.15,
-     "val": 124,
+     "val": 132,
      "cap": 48620,
      "themes": "",
      "star": true
@@ -5301,7 +5301,7 @@
      "code": "105560",
      "part": 0.73,
      "excess": 0.97,
-     "val": 1932,
+     "val": 1975,
      "cap": 623896,
      "themes": "",
      "star": true
@@ -5311,7 +5311,7 @@
      "code": "035250",
      "part": 0.73,
      "excess": 0.72,
-     "val": 38,
+     "val": 35,
      "cap": 31642,
      "themes": "",
      "star": true
@@ -5319,11 +5319,31 @@
    ],
    "bottom_stocks": [
     {
+     "name": "한컴위드",
+     "code": "054920",
+     "part": 0.24,
+     "excess": -0.24,
+     "val": 89,
+     "cap": 1033,
+     "themes": "IT서비스",
+     "star": false
+    },
+    {
+     "name": "라이콤",
+     "code": "388790",
+     "part": 0.27,
+     "excess": -1.76,
+     "val": 36,
+     "cap": 1278,
+     "themes": "광통신",
+     "star": false
+    },
+    {
      "name": "이랜시스",
      "code": "264850",
      "part": 0.27,
      "excess": -0.33,
-     "val": 48,
+     "val": 32,
      "cap": 1703,
      "themes": "로봇·휴머노이드",
      "star": false
@@ -5333,29 +5353,9 @@
      "code": "484810",
      "part": 0.28,
      "excess": 0.21,
-     "val": 73,
+     "val": 61,
      "cap": 2112,
      "themes": "로봇·휴머노이드",
-     "star": false
-    },
-    {
-     "name": "가온칩스",
-     "code": "399720",
-     "part": 0.29,
-     "excess": -1.34,
-     "val": 39,
-     "cap": 5105,
-     "themes": "반도체 소부장",
-     "star": false
-    },
-    {
-     "name": "씨피시스템",
-     "code": "413630",
-     "part": 0.29,
-     "excess": -0.8,
-     "val": 104,
-     "cap": 1487,
-     "themes": "반도체 소부장",
      "star": false
     }
    ]
@@ -5367,144 +5367,144 @@
    "note": "반등이 이어지는 묶음",
    "symbol": null,
    "rule": "전날 ≤ -2.8% & 당일 ≥ +1%",
-   "n": 15,
+   "n": 14,
    "dates_last": [
     "20260722",
     "20260805",
     "20260821"
    ],
-   "mkt_next": -0.22,
+   "mkt_next": -0.45,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.64,
+     "excess": 1.12,
+     "n": 5
+    },
+    {
      "theme": "조선·해운",
-     "part": 0.57,
-     "excess": 0.49,
+     "part": 0.61,
+     "excess": 0.35,
      "n": 10
     },
     {
      "theme": "신재생에너지",
-     "part": 0.53,
-     "excess": 2.36,
+     "part": 0.57,
+     "excess": 2.16,
      "n": 5
     },
     {
-     "theme": "광통신",
-     "part": 0.53,
-     "excess": 2.16,
-     "n": 14
-    },
-    {
-     "theme": "방산",
-     "part": 0.53,
-     "excess": 1.06,
-     "n": 7
-    },
-    {
      "theme": "남북경협",
-     "part": 0.53,
-     "excess": 0.38,
-     "n": 8
+     "part": 0.57,
+     "excess": 0.41,
+     "n": 6
+    },
+    {
+     "theme": "광통신",
+     "part": 0.5,
+     "excess": 1.68,
+     "n": 17
     }
    ],
    "bottom_themes": [
     {
+     "theme": "우주항공",
+     "part": 0.36,
+     "excess": -0.52,
+     "n": 11
+    },
+    {
      "theme": "제약바이오",
-     "part": 0.33,
-     "excess": -0.68,
+     "part": 0.36,
+     "excess": -0.67,
      "n": 60
     },
     {
-     "theme": "우주항공",
-     "part": 0.33,
-     "excess": -0.69,
-     "n": 9
-    },
-    {
      "theme": "게임",
-     "part": 0.3,
-     "excess": -0.95,
-     "n": 10
+     "part": 0.32,
+     "excess": -0.66,
+     "n": 12
     }
    ],
    "top_stocks": [
     {
      "name": "탑코미디어",
      "code": "134580",
-     "part": 0.87,
-     "excess": 2.16,
-     "val": 39,
+     "part": 0.93,
+     "excess": 2.44,
+     "val": 41,
      "cap": 1651,
      "themes": "AI 소프트웨어,실적,엔터·미디어",
      "star": false
     },
     {
-     "name": "이마트",
-     "code": "139480",
-     "part": 0.87,
-     "excess": 1.52,
-     "val": 83,
-     "cap": 20476,
+     "name": "한화",
+     "code": "000880",
+     "part": 0.86,
+     "excess": 2.26,
+     "val": 323,
+     "cap": 74127,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "삼성화재해상보험",
+     "code": "000810",
+     "part": 0.86,
+     "excess": 1.79,
+     "val": 711,
+     "cap": 292887,
      "themes": "",
      "star": false
     },
     {
      "name": "자이에스앤디",
      "code": "317400",
-     "part": 0.87,
-     "excess": 1.34,
-     "val": 161,
+     "part": 0.86,
+     "excess": 1.39,
+     "val": 129,
      "cap": 4119,
      "themes": "건설,데이터센터 전력",
      "star": false
     },
     {
+     "name": "이마트",
+     "code": "139480",
+     "part": 0.86,
+     "excess": 1.37,
+     "val": 72,
+     "cap": 20476,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "금호건설",
+     "code": "002990",
+     "part": 0.79,
+     "excess": 3.33,
+     "val": 1131,
+     "cap": 6003,
+     "themes": "건설,반도체 소부장,정책·정치",
+     "star": false
+    },
+    {
+     "name": "롯데쇼핑",
+     "code": "023530",
+     "part": 0.79,
+     "excess": 2.81,
+     "val": 191,
+     "cap": 31768,
+     "themes": "",
+     "star": false
+    },
+    {
      "name": "DL이앤씨",
      "code": "375500",
-     "part": 0.8,
-     "excess": 2.35,
-     "val": 292,
+     "part": 0.79,
+     "excess": 2.5,
+     "val": 362,
      "cap": 30181,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "한국항공우주",
-     "code": "047810",
-     "part": 0.8,
-     "excess": 2.16,
-     "val": 406,
-     "cap": 126133,
-     "themes": "방산",
-     "star": false
-    },
-    {
-     "name": "한화",
-     "code": "000880",
-     "part": 0.8,
-     "excess": 1.89,
-     "val": 282,
-     "cap": 74127,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "한화오션",
-     "code": "042660",
-     "part": 0.8,
-     "excess": 1.89,
-     "val": 690,
-     "cap": 267499,
-     "themes": "조선·해운",
-     "star": false
-    },
-    {
-     "name": "한화엔진",
-     "code": "082740",
-     "part": 0.8,
-     "excess": 1.85,
-     "val": 301,
-     "cap": 38302,
-     "themes": "",
+     "themes": "원전·SMR",
      "star": false
     }
    ],
@@ -5514,39 +5514,39 @@
      "code": "293490",
      "part": 0.07,
      "excess": -2.16,
-     "val": 52,
+     "val": 49,
      "cap": 9500,
      "themes": "게임",
      "star": false
     },
     {
-     "name": "현대바이오",
-     "code": "048410",
-     "part": 0.13,
-     "excess": -3.18,
-     "val": 94,
-     "cap": 6061,
-     "themes": "제약바이오",
+     "name": "신성델타테크",
+     "code": "065350",
+     "part": 0.07,
+     "excess": -2.04,
+     "val": 37,
+     "cap": 8479,
+     "themes": "",
      "star": false
     },
     {
      "name": "에이비엘바이오",
      "code": "298380",
-     "part": 0.13,
-     "excess": -2.98,
-     "val": 176,
+     "part": 0.14,
+     "excess": -3.02,
+     "val": 197,
      "cap": 39807,
      "themes": "",
      "star": false
     },
     {
-     "name": "원익IPS",
-     "code": "240810",
-     "part": 0.13,
-     "excess": -2.11,
-     "val": 867,
-     "cap": 57723,
-     "themes": "반도체 소부장",
+     "name": "JW신약",
+     "code": "067290",
+     "part": 0.14,
+     "excess": -2.87,
+     "val": 836,
+     "cap": 2006,
+     "themes": "정책·정치,제약바이오",
      "star": false
     }
    ]
@@ -5567,42 +5567,42 @@
    "mkt_next": -0.49,
    "top_themes": [
     {
+     "theme": "미국-이란 전쟁",
+     "part": 0.59,
+     "excess": 2.36,
+     "n": 5
+    },
+    {
      "theme": "게임",
      "part": 0.54,
-     "excess": 0.56,
-     "n": 10
+     "excess": 0.51,
+     "n": 12
+    },
+    {
+     "theme": "IT서비스",
+     "part": 0.54,
+     "excess": 0.32,
+     "n": 6
     },
     {
      "theme": "보안",
      "part": 0.51,
-     "excess": 0.91,
-     "n": 7
+     "excess": 0.64,
+     "n": 11
     },
     {
      "theme": "사이버보안",
      "part": 0.51,
      "excess": 0.64,
-     "n": 7
-    },
-    {
-     "theme": "엔터·미디어",
-     "part": 0.51,
-     "excess": 0.43,
      "n": 9
-    },
-    {
-     "theme": "신재생에너지",
-     "part": 0.49,
-     "excess": 0.46,
-     "n": 5
     }
    ],
    "bottom_themes": [
     {
      "theme": "원전·SMR",
      "part": 0.4,
-     "excess": 0.19,
-     "n": 18
+     "excess": 0.12,
+     "n": 20
     },
     {
      "theme": "조선·해운",
@@ -5619,31 +5619,31 @@
    ],
    "top_stocks": [
     {
-     "name": "BNK금융지주",
-     "code": "138930",
+     "name": "지어소프트",
+     "code": "051160",
      "part": 0.71,
-     "excess": 0.62,
-     "val": 148,
-     "cap": 48481,
+     "excess": 1.15,
+     "val": 39,
+     "cap": 1523,
      "themes": "",
      "star": true
     },
     {
-     "name": "씨엠티엑스",
-     "code": "388210",
-     "part": 0.68,
-     "excess": 1.44,
-     "val": 31,
-     "cap": 7250,
+     "name": "BNK금융지주",
+     "code": "138930",
+     "part": 0.71,
+     "excess": 0.62,
+     "val": 162,
+     "cap": 48481,
      "themes": "",
-     "star": false
+     "star": true
     },
     {
      "name": "화신정공",
      "code": "126640",
      "part": 0.66,
      "excess": 0.9,
-     "val": 119,
+     "val": 57,
      "cap": 1586,
      "themes": "로봇·휴머노이드",
      "star": false
@@ -5653,9 +5653,19 @@
      "code": "090430",
      "part": 0.66,
      "excess": 0.83,
-     "val": 353,
+     "val": 361,
      "cap": 82358,
      "themes": "화장품·소비재",
+     "star": false
+    },
+    {
+     "name": "CJ ENM",
+     "code": "035760",
+     "part": 0.66,
+     "excess": 0.63,
+     "val": 32,
+     "cap": 7368,
+     "themes": "",
      "star": false
     },
     {
@@ -5663,7 +5673,7 @@
      "code": "134580",
      "part": 0.63,
      "excess": 2.66,
-     "val": 39,
+     "val": 41,
      "cap": 1651,
      "themes": "AI 소프트웨어,실적,엔터·미디어",
      "star": false
@@ -5673,7 +5683,7 @@
      "code": "031980",
      "part": 0.63,
      "excess": 1.7,
-     "val": 259,
+     "val": 264,
      "cap": 33637,
      "themes": "반도체 소부장",
      "star": false
@@ -5683,19 +5693,9 @@
      "code": "053260",
      "part": 0.63,
      "excess": 1.48,
-     "val": 218,
+     "val": 239,
      "cap": 1200,
      "themes": "데이터센터 전력,알래스카LNG·철강·조선,철강",
-     "star": false
-    },
-    {
-     "name": "원익IPS",
-     "code": "240810",
-     "part": 0.63,
-     "excess": 1.22,
-     "val": 867,
-     "cap": 57723,
-     "themes": "반도체 소부장",
      "star": false
     }
    ],
@@ -5705,7 +5705,7 @@
      "code": "348340",
      "part": 0.27,
      "excess": -1.59,
-     "val": 86,
+     "val": 68,
      "cap": 4232,
      "themes": "",
      "star": false
@@ -5715,7 +5715,7 @@
      "code": "249420",
      "part": 0.29,
      "excess": -0.96,
-     "val": 94,
+     "val": 96,
      "cap": 4758,
      "themes": "제약바이오",
      "star": false
@@ -5725,7 +5725,7 @@
      "code": "310210",
      "part": 0.29,
      "excess": -0.95,
-     "val": 133,
+     "val": 117,
      "cap": 28841,
      "themes": "제약바이오",
      "star": false
@@ -5735,7 +5735,7 @@
      "code": "079900",
      "part": 0.29,
      "excess": -0.61,
-     "val": 80,
+     "val": 84,
      "cap": 6056,
      "themes": "로봇·휴머노이드,재건",
      "star": false
@@ -5748,8 +5748,8 @@
    "group": "시장 내부",
    "note": "대형주 장세 지속 여부",
    "symbol": null,
-   "rule": "≤ -2.0%p",
-   "n": 41,
+   "rule": "≤ -2.1%p",
+   "n": 40,
    "dates_last": [
     "20260821",
     "20260824",
@@ -5759,52 +5759,52 @@
    "top_themes": [
     {
      "theme": "AI 반도체·기판",
-     "part": 0.59,
-     "excess": 1.42,
+     "part": 0.57,
+     "excess": 1.19,
      "n": 7
     },
     {
      "theme": "화장품·소비재",
-     "part": 0.56,
-     "excess": 0.34,
-     "n": 18
+     "part": 0.55,
+     "excess": 0.36,
+     "n": 20
     },
     {
-     "theme": "이차전지·전해액",
-     "part": 0.51,
-     "excess": 0.78,
-     "n": 23
-    },
-    {
-     "theme": "알래스카LNG·철강·조선",
-     "part": 0.51,
-     "excess": 0.67,
-     "n": 5
+     "theme": "엔터·미디어",
+     "part": 0.54,
+     "excess": 0.07,
+     "n": 8
     },
     {
      "theme": "실적",
-     "part": 0.51,
-     "excess": 0.65,
-     "n": 24
+     "part": 0.53,
+     "excess": 0.8,
+     "n": 20
+    },
+    {
+     "theme": "알래스카LNG·철강·조선",
+     "part": 0.53,
+     "excess": 0.71,
+     "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "로봇·휴머노이드",
-     "part": 0.41,
-     "excess": 0.28,
-     "n": 39
-    },
-    {
      "theme": "AI 소프트웨어",
      "part": 0.41,
-     "excess": 0.05,
+     "excess": 0.07,
      "n": 9
     },
     {
+     "theme": "기계",
+     "part": 0.4,
+     "excess": 0.22,
+     "n": 7
+    },
+    {
      "theme": "휴대폰부품",
-     "part": 0.34,
-     "excess": 0.71,
+     "part": 0.35,
+     "excess": 0.73,
      "n": 5
     }
    ],
@@ -5812,9 +5812,9 @@
     {
      "name": "롯데쇼핑",
      "code": "023530",
-     "part": 0.83,
-     "excess": 2.37,
-     "val": 171,
+     "part": 0.82,
+     "excess": 2.29,
+     "val": 191,
      "cap": 31768,
      "themes": "",
      "star": true
@@ -5822,9 +5822,9 @@
     {
      "name": "디케이티",
      "code": "290550",
-     "part": 0.76,
-     "excess": 2.09,
-     "val": 65,
+     "part": 0.78,
+     "excess": 2.16,
+     "val": 78,
      "cap": 3208,
      "themes": "로봇·휴머노이드",
      "star": true
@@ -5832,9 +5832,9 @@
     {
      "name": "농심",
      "code": "004370",
-     "part": 0.76,
-     "excess": 0.95,
-     "val": 173,
+     "part": 0.75,
+     "excess": 0.96,
+     "val": 133,
      "cap": 25243,
      "themes": "",
      "star": true
@@ -5842,9 +5842,9 @@
     {
      "name": "맥쿼리인프라",
      "code": "088980",
-     "part": 0.73,
-     "excess": 0.48,
-     "val": 110,
+     "part": 0.72,
+     "excess": 0.49,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
@@ -5852,9 +5852,9 @@
     {
      "name": "기업은행",
      "code": "024110",
-     "part": 0.73,
-     "excess": 0.43,
-     "val": 186,
+     "part": 0.72,
+     "excess": 0.39,
+     "val": 183,
      "cap": 166662,
      "themes": "",
      "star": true
@@ -5862,30 +5862,30 @@
     {
      "name": "삼아알미늄",
      "code": "006110",
-     "part": 0.71,
-     "excess": 3.4,
-     "val": 138,
+     "part": 0.7,
+     "excess": 3.33,
+     "val": 123,
      "cap": 10118,
      "themes": "이차전지·전해액",
      "star": true
     },
     {
-     "name": "두산밥캣",
-     "code": "241560",
-     "part": 0.71,
-     "excess": 1.04,
-     "val": 87,
-     "cap": 61060,
-     "themes": "",
+     "name": "코스맥스",
+     "code": "192820",
+     "part": 0.7,
+     "excess": 1.05,
+     "val": 405,
+     "cap": 31098,
+     "themes": "화장품·소비재",
      "star": true
     },
     {
-     "name": "이마트",
-     "code": "139480",
-     "part": 0.71,
-     "excess": 1.03,
-     "val": 83,
-     "cap": 20476,
+     "name": "두산밥캣",
+     "code": "241560",
+     "part": 0.7,
+     "excess": 1.04,
+     "val": 89,
+     "cap": 61060,
      "themes": "",
      "star": true
     }
@@ -5894,9 +5894,9 @@
     {
      "name": "신라젠",
      "code": "215600",
-     "part": 0.27,
-     "excess": -0.89,
-     "val": 101,
+     "part": 0.28,
+     "excess": -0.91,
+     "val": 83,
      "cap": 3311,
      "themes": "제약바이오",
      "star": false
@@ -5904,9 +5904,9 @@
     {
      "name": "에이치브이엠",
      "code": "295310",
-     "part": 0.29,
-     "excess": -1.13,
-     "val": 42,
+     "part": 0.3,
+     "excess": -1.0,
+     "val": 63,
      "cap": 5805,
      "themes": "스페이스X,우주항공",
      "star": false
@@ -5914,9 +5914,9 @@
     {
      "name": "오스코텍",
      "code": "039200",
-     "part": 0.29,
-     "excess": -0.5,
-     "val": 48,
+     "part": 0.3,
+     "excess": -0.45,
+     "val": 43,
      "cap": 13754,
      "themes": "",
      "star": false
@@ -5924,9 +5924,9 @@
     {
      "name": "제닉",
      "code": "123330",
-     "part": 0.29,
-     "excess": -0.37,
-     "val": 114,
+     "part": 0.3,
+     "excess": -0.33,
+     "val": 100,
      "cap": 2259,
      "themes": "화장품·소비재",
      "star": false
@@ -5940,62 +5940,62 @@
    "note": "과열 다음날 — 추격 위험 확인",
    "symbol": null,
    "rule": "≥ 15개",
-   "n": 42,
+   "n": 43,
    "dates_last": [
     "20260720",
     "20260722",
     "20260803"
    ],
-   "mkt_next": -0.52,
+   "mkt_next": -0.44,
    "top_themes": [
     {
      "theme": "화장품·소비재",
      "part": 0.57,
-     "excess": 0.83,
-     "n": 18
+     "excess": 0.8,
+     "n": 20
     },
     {
      "theme": "남북경협",
-     "part": 0.55,
-     "excess": 0.24,
-     "n": 8
+     "part": 0.57,
+     "excess": 0.29,
+     "n": 6
+    },
+    {
+     "theme": "게임",
+     "part": 0.52,
+     "excess": 0.41,
+     "n": 12
+    },
+    {
+     "theme": "스테이블코인",
+     "part": 0.51,
+     "excess": 0.56,
+     "n": 5
     },
     {
      "theme": "실적",
-     "part": 0.52,
-     "excess": 0.52,
-     "n": 23
-    },
-    {
-     "theme": "엔터·미디어",
-     "part": 0.52,
-     "excess": 0.48,
-     "n": 9
-    },
-    {
-     "theme": "AI 반도체·기판",
-     "part": 0.52,
-     "excess": -0.02,
-     "n": 7
+     "part": 0.51,
+     "excess": 0.49,
+     "n": 19
     }
    ],
    "bottom_themes": [
     {
-     "theme": "이차전지·전해액",
-     "part": 0.43,
-     "excess": 0.51,
-     "n": 23
+     "theme": "로봇·휴머노이드",
+     "part": 0.44,
+     "excess": 0.01,
+     "n": 35
     },
     {
-     "theme": "로봇·휴머노이드",
+     "theme": "IT서비스",
      "part": 0.43,
-     "excess": 0.07,
-     "n": 36
+     "excess": 0.46,
+     "n": 6
     },
     {
      "theme": "방산",
      "part": 0.37,
-     "excess": -0.51,
+     "excess": -0.42,
      "n": 7
     }
    ],
@@ -6004,8 +6004,8 @@
      "name": "샘씨엔에스",
      "code": "252990",
      "part": 0.74,
-     "excess": 1.6,
-     "val": 73,
+     "excess": 1.84,
+     "val": 97,
      "cap": 7840,
      "themes": "반도체 소부장",
      "star": true
@@ -6013,39 +6013,19 @@
     {
      "name": "에이피알",
      "code": "278470",
-     "part": 0.71,
-     "excess": 2.1,
-     "val": 1129,
+     "part": 0.7,
+     "excess": 1.94,
+     "val": 1132,
      "cap": 143763,
      "themes": "화장품·소비재",
-     "star": true
-    },
-    {
-     "name": "제닉",
-     "code": "123330",
-     "part": 0.67,
-     "excess": 2.51,
-     "val": 114,
-     "cap": 2259,
-     "themes": "화장품·소비재",
-     "star": false
-    },
-    {
-     "name": "티씨케이",
-     "code": "064760",
-     "part": 0.67,
-     "excess": 1.26,
-     "val": 194,
-     "cap": 30017,
-     "themes": "반도체 소부장",
      "star": false
     },
     {
      "name": "한미사이언스",
      "code": "008930",
      "part": 0.67,
-     "excess": 1.09,
-     "val": 310,
+     "excess": 1.12,
+     "val": 321,
      "cap": 37068,
      "themes": "제약바이오",
      "star": false
@@ -6054,30 +6034,50 @@
      "name": "휴젤",
      "code": "145020",
      "part": 0.67,
-     "excess": 0.99,
-     "val": 85,
+     "excess": 0.98,
+     "val": 87,
      "cap": 30412,
      "themes": "",
      "star": false
     },
     {
-     "name": "오리온",
-     "code": "271560",
-     "part": 0.67,
-     "excess": 0.73,
-     "val": 124,
-     "cap": 48620,
-     "themes": "",
+     "name": "제닉",
+     "code": "123330",
+     "part": 0.65,
+     "excess": 2.31,
+     "val": 100,
+     "cap": 2259,
+     "themes": "화장품·소비재",
      "star": false
     },
     {
-     "name": "롯데렌탈",
-     "code": "089860",
-     "part": 0.64,
-     "excess": 1.28,
-     "val": 71,
-     "cap": 18264,
-     "themes": "",
+     "name": "티씨케이",
+     "code": "064760",
+     "part": 0.65,
+     "excess": 1.18,
+     "val": 175,
+     "cap": 30017,
+     "themes": "반도체 소부장",
+     "star": false
+    },
+    {
+     "name": "삼성전기",
+     "code": "009150",
+     "part": 0.65,
+     "excess": 1.06,
+     "val": 8045,
+     "cap": 1086046,
+     "themes": "AI 반도체·기판,데이터센터 전력",
+     "star": false
+    },
+    {
+     "name": "코스메카코리아",
+     "code": "241710",
+     "part": 0.65,
+     "excess": 0.83,
+     "val": 165,
+     "cap": 13788,
+     "themes": "화장품·소비재",
      "star": false
     }
    ],
@@ -6085,29 +6085,19 @@
     {
      "name": "원익IPS",
      "code": "240810",
-     "part": 0.29,
-     "excess": -1.37,
-     "val": 867,
+     "part": 0.28,
+     "excess": -1.47,
+     "val": 845,
      "cap": 57723,
      "themes": "반도체 소부장",
      "star": false
     },
     {
-     "name": "디아이씨",
-     "code": "092200",
-     "part": 0.29,
-     "excess": -1.2,
-     "val": 54,
-     "cap": 2259,
-     "themes": "로봇·휴머노이드",
-     "star": false
-    },
-    {
      "name": "원익홀딩스",
      "code": "030530",
-     "part": 0.29,
+     "part": 0.28,
      "excess": -0.78,
-     "val": 445,
+     "val": 636,
      "cap": 17263,
      "themes": "로봇·휴머노이드,반도체 소부장",
      "star": false
@@ -6115,10 +6105,20 @@
     {
      "name": "에스앤에스텍",
      "code": "101490",
-     "part": 0.29,
-     "excess": -0.66,
-     "val": 100,
+     "part": 0.28,
+     "excess": -0.68,
+     "val": 92,
      "cap": 8886,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "넥스틸",
+     "code": "092790",
+     "part": 0.3,
+     "excess": -0.89,
+     "val": 156,
+     "cap": 3443,
      "themes": "",
      "star": false
     }
@@ -6140,16 +6140,16 @@
    "mkt_next": -0.18,
    "top_themes": [
     {
-     "theme": "화장품·소비재",
-     "part": 0.56,
-     "excess": 0.7,
-     "n": 18
-    },
-    {
      "theme": "알래스카LNG·철강·조선",
      "part": 0.56,
      "excess": 0.54,
      "n": 5
+    },
+    {
+     "theme": "화장품·소비재",
+     "part": 0.55,
+     "excess": 0.63,
+     "n": 20
     },
     {
      "theme": "조선·해운",
@@ -6166,22 +6166,22 @@
     {
      "theme": "원전·SMR",
      "part": 0.51,
-     "excess": 0.93,
-     "n": 18
+     "excess": 0.92,
+     "n": 20
     }
    ],
    "bottom_themes": [
     {
-     "theme": "로봇·휴머노이드",
-     "part": 0.41,
-     "excess": -0.35,
-     "n": 39
-    },
-    {
      "theme": "엔터·미디어",
      "part": 0.39,
-     "excess": -0.21,
-     "n": 9
+     "excess": -0.25,
+     "n": 8
+    },
+    {
+     "theme": "자동차부품",
+     "part": 0.39,
+     "excess": -1.07,
+     "n": 5
     },
     {
      "theme": "휴대폰부품",
@@ -6196,7 +6196,7 @@
      "code": "134580",
      "part": 0.76,
      "excess": 1.46,
-     "val": 39,
+     "val": 41,
      "cap": 1651,
      "themes": "AI 소프트웨어,실적,엔터·미디어",
      "star": true
@@ -6206,7 +6206,7 @@
      "code": "100090",
      "part": 0.73,
      "excess": 2.19,
-     "val": 167,
+     "val": 158,
      "cap": 8241,
      "themes": "데이터센터 전력",
      "star": true
@@ -6216,7 +6216,7 @@
      "code": "086790",
      "part": 0.71,
      "excess": 1.11,
-     "val": 1003,
+     "val": 1010,
      "cap": 381097,
      "themes": "",
      "star": true
@@ -6226,9 +6226,19 @@
      "code": "241710",
      "part": 0.68,
      "excess": 1.78,
-     "val": 184,
+     "val": 165,
      "cap": 13788,
      "themes": "화장품·소비재",
+     "star": false
+    },
+    {
+     "name": "LX인터내셔널",
+     "code": "001120",
+     "part": 0.68,
+     "excess": 1.22,
+     "val": 35,
+     "cap": 15465,
+     "themes": "",
      "star": false
     },
     {
@@ -6236,7 +6246,7 @@
      "code": "278470",
      "part": 0.68,
      "excess": 1.06,
-     "val": 1129,
+     "val": 1132,
      "cap": 143763,
      "themes": "화장품·소비재",
      "star": false
@@ -6246,7 +6256,7 @@
      "code": "055550",
      "part": 0.66,
      "excess": 0.98,
-     "val": 1202,
+     "val": 1212,
      "cap": 534704,
      "themes": "",
      "star": false
@@ -6256,19 +6266,9 @@
      "code": "012750",
      "part": 0.66,
      "excess": 0.68,
-     "val": 54,
+     "val": 59,
      "cap": 30057,
      "themes": "AI 소프트웨어",
-     "star": false
-    },
-    {
-     "name": "DN오토모티브",
-     "code": "007340",
-     "part": 0.63,
-     "excess": 1.57,
-     "val": 147,
-     "cap": 26622,
-     "themes": "실적",
      "star": false
     }
    ],
@@ -6278,19 +6278,9 @@
      "code": "007660",
      "part": 0.24,
      "excess": -1.62,
-     "val": 660,
+     "val": 628,
      "cap": 82145,
      "themes": "AI 반도체·기판,반도체 소부장",
-     "star": false
-    },
-    {
-     "name": "디아이씨",
-     "code": "092200",
-     "part": 0.24,
-     "excess": -1.11,
-     "val": 54,
-     "cap": 2259,
-     "themes": "로봇·휴머노이드",
      "star": false
     },
     {
@@ -6298,7 +6288,7 @@
      "code": "030530",
      "part": 0.27,
      "excess": -1.19,
-     "val": 445,
+     "val": 636,
      "cap": 17263,
      "themes": "로봇·휴머노이드,반도체 소부장",
      "star": false
@@ -6308,9 +6298,19 @@
      "code": "041510",
      "part": 0.27,
      "excess": -0.95,
-     "val": 83,
+     "val": 96,
      "cap": 18293,
      "themes": "엔터·미디어",
+     "star": false
+    },
+    {
+     "name": "나무가",
+     "code": "190510",
+     "part": 0.27,
+     "excess": -0.35,
+     "val": 33,
+     "cap": 2321,
+     "themes": "로봇·휴머노이드",
      "star": false
     }
    ]
@@ -6332,9 +6332,9 @@
    "top_themes": [
     {
      "theme": "화장품·소비재",
-     "part": 0.59,
-     "excess": 0.8,
-     "n": 18
+     "part": 0.57,
+     "excess": 0.71,
+     "n": 20
     },
     {
      "theme": "방산",
@@ -6352,26 +6352,26 @@
      "theme": "게임",
      "part": 0.51,
      "excess": 0.25,
-     "n": 10
+     "n": 12
     },
     {
-     "theme": "정책·정치",
+     "theme": "엔터·미디어",
      "part": 0.5,
-     "excess": 1.09,
-     "n": 16
+     "excess": 0.07,
+     "n": 8
     }
    ],
    "bottom_themes": [
     {
-     "theme": "AI 소프트웨어",
+     "theme": "스테이블코인",
      "part": 0.39,
-     "excess": -0.05,
-     "n": 9
+     "excess": -0.1,
+     "n": 5
     },
     {
-     "theme": "보안",
-     "part": 0.37,
-     "excess": -0.17,
+     "theme": "기계",
+     "part": 0.39,
+     "excess": -0.13,
      "n": 7
     },
     {
@@ -6387,7 +6387,7 @@
      "code": "088980",
      "part": 0.76,
      "excess": 0.76,
-     "val": 110,
+     "val": 88,
      "cap": 47461,
      "themes": "",
      "star": true
@@ -6407,7 +6407,7 @@
      "code": "004170",
      "part": 0.71,
      "excess": 1.79,
-     "val": 331,
+     "val": 349,
      "cap": 37450,
      "themes": "",
      "star": true
@@ -6417,18 +6417,8 @@
      "code": "021240",
      "part": 0.71,
      "excess": 1.08,
-     "val": 144,
+     "val": 196,
      "cap": 69140,
-     "themes": "",
-     "star": true
-    },
-    {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.71,
-     "excess": 0.96,
-     "val": 31,
-     "cap": 30512,
      "themes": "",
      "star": true
     },
@@ -6437,7 +6427,7 @@
      "code": "138930",
      "part": 0.71,
      "excess": 0.62,
-     "val": 148,
+     "val": 162,
      "cap": 48481,
      "themes": "",
      "star": true
@@ -6447,7 +6437,7 @@
      "code": "126640",
      "part": 0.68,
      "excess": 4.32,
-     "val": 119,
+     "val": 57,
      "cap": 1586,
      "themes": "로봇·휴머노이드",
      "star": false
@@ -6457,8 +6447,18 @@
      "code": "055550",
      "part": 0.68,
      "excess": 1.07,
-     "val": 1202,
+     "val": 1212,
      "cap": 534704,
+     "themes": "",
+     "star": false
+    },
+    {
+     "name": "케이티앤지",
+     "code": "033780",
+     "part": 0.68,
+     "excess": 1.05,
+     "val": 352,
+     "cap": 176789,
      "themes": "",
      "star": false
     }
@@ -6469,7 +6469,7 @@
      "code": "046120",
      "part": 0.29,
      "excess": -1.0,
-     "val": 67,
+     "val": 80,
      "cap": 1578,
      "themes": "원전·SMR",
      "star": false
@@ -6479,9 +6479,19 @@
      "code": "217590",
      "part": 0.29,
      "excess": -0.95,
-     "val": 56,
+     "val": 210,
      "cap": 2588,
-     "themes": "광통신",
+     "themes": "광통신,반도체 소부장",
+     "star": false
+    },
+    {
+     "name": "한컴위드",
+     "code": "054920",
+     "part": 0.29,
+     "excess": -0.8,
+     "val": 89,
+     "cap": 1033,
+     "themes": "IT서비스",
      "star": false
     },
     {
@@ -6489,19 +6499,9 @@
      "code": "077970",
      "part": 0.29,
      "excess": -0.39,
-     "val": 39,
+     "val": 35,
      "cap": 9575,
      "themes": "조선·해운",
-     "star": false
-    },
-    {
-     "name": "재영솔루텍",
-     "code": "049630",
-     "part": 0.32,
-     "excess": -1.29,
-     "val": 58,
-     "cap": 1650,
-     "themes": "휴대폰부품",
      "star": false
     }
    ]
@@ -6512,144 +6512,144 @@
    "group": "수급",
    "note": "대형주 vs 중소형 괴리, 방어주",
    "symbol": null,
-   "rule": "≤ -23,443억",
-   "n": 29,
+   "rule": "≤ -23,648억",
+   "n": 30,
    "dates_last": [
-    "20260825",
-    "20260826",
-    "20260911"
+    "20260911",
+    "20260915",
+    "20260918"
    ],
-   "mkt_next": -0.63,
+   "mkt_next": -0.67,
    "top_themes": [
     {
-     "theme": "엔터·미디어",
-     "part": 0.55,
-     "excess": 0.63,
-     "n": 9
-    },
-    {
-     "theme": "화장품·소비재",
+     "theme": "실적",
      "part": 0.53,
-     "excess": 1.15,
-     "n": 18
-    },
-    {
-     "theme": "정책·정치",
-     "part": 0.53,
-     "excess": 0.39,
-     "n": 16
+     "excess": 0.41,
+     "n": 20
     },
     {
      "theme": "게임",
      "part": 0.52,
-     "excess": 0.81,
-     "n": 10
+     "excess": 0.84,
+     "n": 12
+    },
+    {
+     "theme": "화장품·소비재",
+     "part": 0.5,
+     "excess": 0.97,
+     "n": 20
+    },
+    {
+     "theme": "엔터·미디어",
+     "part": 0.5,
+     "excess": 0.39,
+     "n": 8
     },
     {
      "theme": "AI 반도체·기판",
-     "part": 0.52,
-     "excess": 0.12,
+     "part": 0.5,
+     "excess": 0.2,
      "n": 7
     }
    ],
    "bottom_themes": [
     {
      "theme": "이차전지·전해액",
-     "part": 0.38,
-     "excess": -0.42,
+     "part": 0.4,
+     "excess": -0.5,
      "n": 23
     },
     {
-     "theme": "남북경협",
+     "theme": "조선·해운",
      "part": 0.38,
-     "excess": -0.45,
-     "n": 8
+     "excess": -0.99,
+     "n": 10
     },
     {
      "theme": "원전·SMR",
-     "part": 0.34,
-     "excess": -0.34,
-     "n": 18
+     "part": 0.37,
+     "excess": -0.23,
+     "n": 20
     }
    ],
    "top_stocks": [
     {
+     "name": "지어소프트",
+     "code": "051160",
+     "part": 0.77,
+     "excess": 1.23,
+     "val": 39,
+     "cap": 1523,
+     "themes": "",
+     "star": true
+    },
+    {
      "name": "인바디",
      "code": "041830",
-     "part": 0.72,
-     "excess": 2.76,
+     "part": 0.7,
+     "excess": 2.68,
      "val": 49,
      "cap": 8089,
      "themes": "실적",
-     "star": false
+     "star": true
+    },
+    {
+     "name": "와이지-원",
+     "code": "019210",
+     "part": 0.7,
+     "excess": 2.3,
+     "val": 64,
+     "cap": 5315,
+     "themes": "기계",
+     "star": true
+    },
+    {
+     "name": "맥쿼리인프라",
+     "code": "088980",
+     "part": 0.7,
+     "excess": 0.44,
+     "val": 88,
+     "cap": 47461,
+     "themes": "",
+     "star": true
     },
     {
      "name": "삼양식품",
      "code": "003230",
-     "part": 0.69,
-     "excess": 1.94,
-     "val": 838,
+     "part": 0.67,
+     "excess": 1.8,
+     "val": 734,
      "cap": 100189,
      "themes": "식품",
      "star": false
     },
     {
-     "name": "미스토홀딩스",
-     "code": "081660",
-     "part": 0.69,
-     "excess": 1.89,
-     "val": 42,
-     "cap": 21555,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "한국콜마",
-     "code": "161890",
-     "part": 0.69,
-     "excess": 1.61,
-     "val": 523,
-     "cap": 34062,
-     "themes": "화장품·소비재",
+     "name": "S-Oil",
+     "code": "010950",
+     "part": 0.67,
+     "excess": 1.57,
+     "val": 653,
+     "cap": 177430,
+     "themes": "석유·에너지",
      "star": false
     },
     {
      "name": "빙그레",
      "code": "005180",
-     "part": 0.69,
-     "excess": 1.22,
-     "val": 140,
+     "part": 0.67,
+     "excess": 1.16,
+     "val": 74,
      "cap": 7981,
      "themes": "실적",
      "star": false
     },
     {
-     "name": "농심",
-     "code": "004370",
-     "part": 0.69,
-     "excess": 1.09,
-     "val": 173,
-     "cap": 25243,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "우리금융지주",
-     "code": "316140",
-     "part": 0.69,
-     "excess": 0.94,
-     "val": 973,
-     "cap": 251981,
-     "themes": "",
-     "star": false
-    },
-    {
-     "name": "서울보증보험",
-     "code": "031210",
-     "part": 0.69,
-     "excess": 0.65,
-     "val": 31,
-     "cap": 30512,
+     "name": "톱텍",
+     "code": "108230",
+     "part": 0.67,
+     "excess": 0.98,
+     "val": 58,
+     "cap": 1285,
      "themes": "",
      "star": false
     }
@@ -6658,41 +6658,41 @@
     {
      "name": "에이프릴바이오",
      "code": "397030",
-     "part": 0.17,
-     "excess": -3.21,
-     "val": 57,
+     "part": 0.23,
+     "excess": -2.9,
+     "val": 38,
      "cap": 5010,
      "themes": "",
      "star": false
     },
     {
+     "name": "보로노이",
+     "code": "310210",
+     "part": 0.23,
+     "excess": -1.26,
+     "val": 117,
+     "cap": 28841,
+     "themes": "제약바이오",
+     "star": false
+    },
+    {
      "name": "삼성공조",
      "code": "006660",
-     "part": 0.21,
-     "excess": -1.15,
-     "val": 141,
+     "part": 0.23,
+     "excess": -0.96,
+     "val": 41,
      "cap": 1027,
      "themes": "데이터센터 전력",
      "star": false
     },
     {
-     "name": "하이젠알앤엠",
-     "code": "160190",
-     "part": 0.24,
-     "excess": -1.89,
-     "val": 47,
-     "cap": 6734,
-     "themes": "로봇·휴머노이드",
-     "star": false
-    },
-    {
-     "name": "원익홀딩스",
-     "code": "030530",
-     "part": 0.24,
-     "excess": -1.39,
-     "val": 445,
-     "cap": 17263,
-     "themes": "로봇·휴머노이드,반도체 소부장",
+     "name": "SNT에너지",
+     "code": "100840",
+     "part": 0.23,
+     "excess": -0.82,
+     "val": 122,
+     "cap": 7776,
+     "themes": "원전·SMR",
      "star": false
     }
    ]
@@ -6703,155 +6703,155 @@
    "group": "수급",
    "note": "외인 주도 묶음",
    "symbol": null,
-   "rule": "≥ +9,700억",
-   "n": 29,
+   "rule": "≥ +9,167억",
+   "n": 30,
    "dates_last": [
     "20260818",
     "20260821",
     "20260908"
    ],
-   "mkt_next": 0.2,
+   "mkt_next": 0.19,
    "top_themes": [
     {
      "theme": "원전·SMR",
-     "part": 0.59,
-     "excess": 1.72,
-     "n": 18
+     "part": 0.6,
+     "excess": 1.64,
+     "n": 20
+    },
+    {
+     "theme": "스테이블코인",
+     "part": 0.6,
+     "excess": 1.31,
+     "n": 5
+    },
+    {
+     "theme": "데이터센터 전력",
+     "part": 0.57,
+     "excess": 1.27,
+     "n": 39
     },
     {
      "theme": "AI 반도체·기판",
-     "part": 0.55,
-     "excess": 1.72,
+     "part": 0.53,
+     "excess": 1.53,
      "n": 7
     },
     {
      "theme": "방산",
-     "part": 0.55,
-     "excess": 1.35,
+     "part": 0.53,
+     "excess": 1.18,
      "n": 7
-    },
-    {
-     "theme": "데이터센터 전력",
-     "part": 0.55,
-     "excess": 1.33,
-     "n": 41
-    },
-    {
-     "theme": "알래스카LNG·철강·조선",
-     "part": 0.55,
-     "excess": 1.13,
-     "n": 5
     }
    ],
    "bottom_themes": [
     {
-     "theme": "정책·정치",
-     "part": 0.41,
-     "excess": 0.56,
-     "n": 16
-    },
-    {
      "theme": "엔터·미디어",
-     "part": 0.41,
-     "excess": 0.12,
-     "n": 9
+     "part": 0.43,
+     "excess": 0.0,
+     "n": 8
     },
     {
      "theme": "휴대폰부품",
-     "part": 0.38,
-     "excess": 0.9,
+     "part": 0.39,
+     "excess": 1.21,
+     "n": 5
+    },
+    {
+     "theme": "폴더블폰",
+     "part": 0.37,
+     "excess": -0.51,
      "n": 5
     }
    ],
    "top_stocks": [
     {
-     "name": "파마리서치",
-     "code": "214450",
-     "part": 0.79,
-     "excess": 1.82,
-     "val": 519,
-     "cap": 39117,
-     "themes": "화장품·소비재",
-     "star": false
-    },
-    {
      "name": "지엔씨에너지",
      "code": "119850",
-     "part": 0.76,
-     "excess": 3.65,
+     "part": 0.77,
+     "excess": 3.55,
      "val": 333,
      "cap": 7320,
      "themes": "데이터센터 전력",
-     "star": false
+     "star": true
     },
     {
-     "name": "한화생명",
-     "code": "088350",
-     "part": 0.76,
-     "excess": 2.48,
-     "val": 341,
-     "cap": 51156,
-     "themes": "",
-     "star": false
+     "name": "파마리서치",
+     "code": "214450",
+     "part": 0.77,
+     "excess": 1.7,
+     "val": 452,
+     "cap": 39117,
+     "themes": "화장품·소비재",
+     "star": true
     },
     {
      "name": "에이피알",
      "code": "278470",
-     "part": 0.76,
-     "excess": 1.6,
-     "val": 1129,
+     "part": 0.77,
+     "excess": 1.61,
+     "val": 1132,
      "cap": 143763,
      "themes": "화장품·소비재",
-     "star": false
+     "star": true
     },
     {
-     "name": "LB세미콘",
-     "code": "061970",
-     "part": 0.72,
-     "excess": 2.76,
-     "val": 43,
-     "cap": 2772,
-     "themes": "반도체 소부장",
-     "star": false
-    },
-    {
-     "name": "신한지주",
-     "code": "055550",
-     "part": 0.72,
-     "excess": 0.82,
-     "val": 1202,
-     "cap": 534704,
+     "name": "한화생명",
+     "code": "088350",
+     "part": 0.73,
+     "excess": 2.31,
+     "val": 296,
+     "cap": 51156,
      "themes": "",
-     "star": false
+     "star": true
     },
     {
      "name": "SK하이닉스",
      "code": "000660",
-     "part": 0.69,
-     "excess": 2.29,
-     "val": 63172,
+     "part": 0.7,
+     "excess": 2.26,
+     "val": 58513,
      "cap": 13024679,
      "themes": "AI 반도체·기판,반도체 소부장",
-     "star": false
+     "star": true
     },
     {
-     "name": "디케이티",
-     "code": "290550",
-     "part": 0.69,
-     "excess": 2.23,
-     "val": 65,
-     "cap": 3208,
-     "themes": "로봇·휴머노이드",
-     "star": false
+     "name": "리파인",
+     "code": "377450",
+     "part": 0.7,
+     "excess": 1.51,
+     "val": 33,
+     "cap": 2941,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "GS",
+     "code": "078930",
+     "part": 0.7,
+     "excess": 1.33,
+     "val": 552,
+     "cap": 116677,
+     "themes": "",
+     "star": true
+    },
+    {
+     "name": "삼성화재해상보험",
+     "code": "000810",
+     "part": 0.7,
+     "excess": 0.93,
+     "val": 711,
+     "cap": 292887,
+     "themes": "",
+     "star": true
     }
    ],
    "bottom_stocks": [
     {
      "name": "강동씨앤엘",
      "code": "198440",
-     "part": 0.28,
-     "excess": 0.58,
-     "val": 110,
+     "part": 0.27,
+     "excess": 0.53,
+     "val": 113,
      "cap": 1200,
      "themes": "반도체 소부장,정책·정치",
      "star": false
@@ -6859,31 +6859,31 @@
     {
      "name": "롯데에너지머티리얼즈",
      "code": "020150",
-     "part": 0.31,
-     "excess": -0.48,
-     "val": 98,
+     "part": 0.3,
+     "excess": -0.59,
+     "val": 116,
      "cap": 19820,
      "themes": "",
      "star": false
     },
     {
-     "name": "에스엠벡셀",
-     "code": "010580",
-     "part": 0.31,
-     "excess": -0.3,
-     "val": 58,
-     "cap": 1887,
-     "themes": "이차전지·전해액",
+     "name": "이랜시스",
+     "code": "264850",
+     "part": 0.3,
+     "excess": -0.35,
+     "val": 32,
+     "cap": 1703,
+     "themes": "로봇·휴머노이드",
      "star": false
     },
     {
-     "name": "이랜시스",
-     "code": "264850",
-     "part": 0.31,
-     "excess": -0.28,
-     "val": 48,
-     "cap": 1703,
-     "themes": "로봇·휴머노이드",
+     "name": "에스엠벡셀",
+     "code": "010580",
+     "part": 0.3,
+     "excess": -0.34,
+     "val": 101,
+     "cap": 1887,
+     "themes": "이차전지·전해액",
      "star": false
     }
    ]
@@ -7103,26 +7103,15 @@
   }
  ],
  "flags": {
-  "asof": "2026-09-16",
+  "asof": "2026-09-19",
   "active": [
    {
-    "key": "copper_up",
-    "label": "구리 급등",
-    "group": "원자재",
-    "asof": "20260916",
-    "value": 2.36,
-    "threshold": 2.32,
-    "side": "up",
-    "active": true
-   },
-   {
-    "key": "krw_up",
-    "label": "원/달러 급등(원화 약세)",
-    "group": "금리·환율",
-    "asof": "20260916",
-    "value": 1.58,
-    "threshold": 0.8,
-    "side": "up",
+    "key": "kq_gap_dn",
+    "label": "코스피 우위일(대형주 장)",
+    "group": "시장 내부",
+    "asof": "20260918",
+    "value": "-2.1%p",
+    "threshold": "≤ -2.1%p",
     "active": true
    }
   ],
@@ -7131,8 +7120,8 @@
     "key": "oil_up",
     "label": "유가 급등",
     "group": "원자재",
-    "asof": "20260915",
-    "value": 3.32,
+    "asof": "20260918",
+    "value": -0.96,
     "threshold": 3.45,
     "side": "up",
     "active": false
@@ -7141,8 +7130,8 @@
     "key": "oil_dn",
     "label": "유가 급락",
     "group": "원자재",
-    "asof": "20260915",
-    "value": 3.32,
+    "asof": "20260918",
+    "value": -0.96,
     "threshold": -2.92,
     "side": "dn",
     "active": false
@@ -7151,8 +7140,8 @@
     "key": "gas_up",
     "label": "천연가스 급등",
     "group": "원자재",
-    "asof": "20260916",
-    "value": 1.44,
+    "asof": "20260918",
+    "value": 0.38,
     "threshold": 5.65,
     "side": "up",
     "active": false
@@ -7161,18 +7150,18 @@
     "key": "copper_up",
     "label": "구리 급등",
     "group": "원자재",
-    "asof": "20260916",
-    "value": 2.36,
+    "asof": "20260918",
+    "value": 0.43,
     "threshold": 2.32,
     "side": "up",
-    "active": true
+    "active": false
    },
    {
     "key": "copper_dn",
     "label": "구리 급락",
     "group": "원자재",
-    "asof": "20260916",
-    "value": 2.36,
+    "asof": "20260918",
+    "value": 0.43,
     "threshold": -2.05,
     "side": "dn",
     "active": false
@@ -7181,8 +7170,8 @@
     "key": "gold_up",
     "label": "금 급등",
     "group": "원자재",
-    "asof": "20260916",
-    "value": 1.29,
+    "asof": "20260918",
+    "value": 0.57,
     "threshold": 2.0,
     "side": "up",
     "active": false
@@ -7191,8 +7180,8 @@
     "key": "grain_up",
     "label": "곡물 급등",
     "group": "원자재",
-    "asof": "20260916",
-    "value": -0.23,
+    "asof": "20260918",
+    "value": -0.57,
     "threshold": 1.71,
     "side": "up",
     "active": false
@@ -7201,8 +7190,8 @@
     "key": "uranium_up",
     "label": "우라늄 급등",
     "group": "원자재",
-    "asof": "20260915",
-    "value": -1.0,
+    "asof": "20260918",
+    "value": -2.41,
     "threshold": 4.09,
     "side": "up",
     "active": false
@@ -7211,8 +7200,8 @@
     "key": "lithium_up",
     "label": "리튬 급등",
     "group": "원자재",
-    "asof": "20260915",
-    "value": 0.07,
+    "asof": "20260918",
+    "value": -0.56,
     "threshold": 2.72,
     "side": "up",
     "active": false
@@ -7221,8 +7210,8 @@
     "key": "lithium_dn",
     "label": "리튬 급락",
     "group": "원자재",
-    "asof": "20260915",
-    "value": 0.07,
+    "asof": "20260918",
+    "value": -0.56,
     "threshold": -2.52,
     "side": "dn",
     "active": false
@@ -7231,8 +7220,8 @@
     "key": "tnx_up",
     "label": "미 10년 금리 급등",
     "group": "금리·환율",
-    "asof": "20260915",
-    "value": 0.71,
+    "asof": "20260918",
+    "value": 1.03,
     "threshold": 1.54,
     "side": "up",
     "active": false
@@ -7241,8 +7230,8 @@
     "key": "tnx_dn",
     "label": "미 10년 금리 급락",
     "group": "금리·환율",
-    "asof": "20260915",
-    "value": 0.71,
+    "asof": "20260918",
+    "value": 1.03,
     "threshold": -1.43,
     "side": "dn",
     "active": false
@@ -7251,18 +7240,18 @@
     "key": "krw_up",
     "label": "원/달러 급등(원화 약세)",
     "group": "금리·환율",
-    "asof": "20260916",
-    "value": 1.58,
+    "asof": "20260919",
+    "value": 0.4,
     "threshold": 0.8,
     "side": "up",
-    "active": true
+    "active": false
    },
    {
     "key": "krw_dn",
     "label": "원/달러 급락(원화 강세)",
     "group": "금리·환율",
-    "asof": "20260916",
-    "value": 1.58,
+    "asof": "20260919",
+    "value": 0.4,
     "threshold": -0.83,
     "side": "dn",
     "active": false
@@ -7271,8 +7260,8 @@
     "key": "jpy_up",
     "label": "엔화 급등(엔캐리 청산 경계)",
     "group": "금리·환율",
-    "asof": "20260916",
-    "value": 0.44,
+    "asof": "20260919",
+    "value": 0.46,
     "threshold": -0.73,
     "side": "dn",
     "active": false
@@ -7281,9 +7270,9 @@
     "key": "dxy_up",
     "label": "달러 인덱스 급등",
     "group": "금리·환율",
-    "asof": "20260916",
-    "value": 0.04,
-    "threshold": 0.51,
+    "asof": "20260918",
+    "value": 0.0,
+    "threshold": 0.52,
     "side": "up",
     "active": false
    },
@@ -7291,8 +7280,8 @@
     "key": "spx_dn",
     "label": "미국 증시 급락",
     "group": "해외 증시",
-    "asof": "20260915",
-    "value": -0.45,
+    "asof": "20260918",
+    "value": 0.17,
     "threshold": -1.17,
     "side": "dn",
     "active": false
@@ -7301,8 +7290,8 @@
     "key": "spx_up",
     "label": "미국 증시 급등",
     "group": "해외 증시",
-    "asof": "20260915",
-    "value": -0.45,
+    "asof": "20260918",
+    "value": 0.17,
     "threshold": 1.09,
     "side": "up",
     "active": false
@@ -7311,9 +7300,9 @@
     "key": "sox_up",
     "label": "미국 반도체 급등",
     "group": "해외 증시",
-    "asof": "20260915",
-    "value": 0.4,
-    "threshold": 3.15,
+    "asof": "20260918",
+    "value": 2.78,
+    "threshold": 3.14,
     "side": "up",
     "active": false
    },
@@ -7321,8 +7310,8 @@
     "key": "sox_dn",
     "label": "미국 반도체 급락",
     "group": "해외 증시",
-    "asof": "20260915",
-    "value": 0.4,
+    "asof": "20260918",
+    "value": 2.78,
     "threshold": -3.57,
     "side": "dn",
     "active": false
@@ -7331,8 +7320,8 @@
     "key": "btc_up",
     "label": "비트코인 급등",
     "group": "해외 증시",
-    "asof": "20260916",
-    "value": 0.55,
+    "asof": "20260919",
+    "value": 0.46,
     "threshold": 2.91,
     "side": "up",
     "active": false
@@ -7341,8 +7330,8 @@
     "key": "btc_dn",
     "label": "비트코인 급락",
     "group": "해외 증시",
-    "asof": "20260916",
-    "value": 0.55,
+    "asof": "20260919",
+    "value": 0.46,
     "threshold": -2.85,
     "side": "dn",
     "active": false
@@ -7351,8 +7340,8 @@
     "key": "sse_up",
     "label": "중국 증시 급등",
     "group": "해외 증시",
-    "asof": "20260916",
-    "value": 0.71,
+    "asof": "20260918",
+    "value": 0.94,
     "threshold": 1.22,
     "side": "up",
     "active": false
@@ -7361,8 +7350,8 @@
     "key": "hsi_up",
     "label": "홍콩 증시 급등",
     "group": "해외 증시",
-    "asof": "20260916",
-    "value": 0.19,
+    "asof": "20260918",
+    "value": 0.6,
     "threshold": 2.04,
     "side": "up",
     "active": false
@@ -7371,8 +7360,8 @@
     "key": "vix_up",
     "label": "VIX 급등(공포)",
     "group": "위험 선호",
-    "asof": "20260916",
-    "value": -2.44,
+    "asof": "20260918",
+    "value": -4.08,
     "threshold": 11.78,
     "side": "up",
     "active": false
@@ -7381,8 +7370,8 @@
     "key": "hyg_dn",
     "label": "하이일드 채권 급락(위험 회피)",
     "group": "위험 선호",
-    "asof": "20260915",
-    "value": -0.19,
+    "asof": "20260918",
+    "value": -0.24,
     "threshold": -0.4,
     "side": "dn",
     "active": false
@@ -7391,8 +7380,8 @@
     "key": "kospi_dn",
     "label": "코스피 급락일",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "+1.4%",
+    "asof": "20260918",
+    "value": "+2.7%",
     "threshold": "≤ -2.8%",
     "active": false
    },
@@ -7400,8 +7389,8 @@
     "key": "kospi_up",
     "label": "코스피 급등일",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "+1.4%",
+    "asof": "20260918",
+    "value": "+2.7%",
     "threshold": "≥ +2.7%",
     "active": false
    },
@@ -7409,8 +7398,8 @@
     "key": "rebound",
     "label": "급락 뒤 반등일",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "+1.4%(전날 -0.9%)",
+    "asof": "20260918",
+    "value": "+2.7%(전날 -0.0%)",
     "threshold": "전날 ≤ -2.8% & 당일 ≥ +1%",
     "active": false
    },
@@ -7418,8 +7407,8 @@
     "key": "kq_gap_up",
     "label": "코스닥 우위일(코스닥−코스피)",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "-0.9%p",
+    "asof": "20260918",
+    "value": "-2.1%p",
     "threshold": "≥ +1.6%p",
     "active": false
    },
@@ -7427,17 +7416,17 @@
     "key": "kq_gap_dn",
     "label": "코스피 우위일(대형주 장)",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "-0.9%p",
-    "threshold": "≤ -2.0%p",
-    "active": false
+    "asof": "20260918",
+    "value": "-2.1%p",
+    "threshold": "≤ -2.1%p",
+    "active": true
    },
    {
     "key": "limit_many",
     "label": "상한가 다수일(과열)",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "5개",
+    "asof": "20260918",
+    "value": "6개",
     "threshold": "≥ 15개",
     "active": false
    },
@@ -7445,35 +7434,35 @@
     "key": "big_many",
     "label": "급등주(+10%) 다수일",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "30개",
-    "threshold": "≥ 81개",
+    "asof": "20260918",
+    "value": "33개",
+    "threshold": "≥ 84개",
     "active": false
    },
    {
     "key": "tval_up",
     "label": "시장 거래대금 급증일",
     "group": "시장 내부",
-    "asof": "20260916",
-    "value": "22.0조",
-    "threshold": "≥ 52.8조",
+    "asof": "20260918",
+    "value": "32.6조",
+    "threshold": "≥ 53.0조",
     "active": false
    },
    {
     "key": "frgn_sell",
     "label": "외인 대량 순매도일",
     "group": "수급",
-    "asof": "20260916",
-    "value": "-16,677억",
-    "threshold": "≤ -23,443억",
+    "asof": "20260918",
+    "value": "+5,713억",
+    "threshold": "≤ -23,648억",
     "active": false
    },
    {
     "key": "frgn_buy",
     "label": "외인 대량 순매수일",
     "group": "수급",
-    "asof": "20260916",
-    "value": "-16,677억",
+    "asof": "20260918",
+    "value": "+5,713억",
     "threshold": "≥ +9,167억",
     "active": false
    }
