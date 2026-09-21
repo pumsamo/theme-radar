@@ -7103,15 +7103,26 @@
   }
  ],
  "flags": {
-  "asof": "2026-09-19",
+  "asof": "2026-09-21",
   "active": [
    {
-    "key": "kq_gap_dn",
-    "label": "코스피 우위일(대형주 장)",
-    "group": "시장 내부",
-    "asof": "20260918",
-    "value": "-2.1%p",
-    "threshold": "≤ -2.1%p",
+    "key": "copper_up",
+    "label": "구리 급등",
+    "group": "원자재",
+    "asof": "20260921",
+    "value": 3.2,
+    "threshold": 2.35,
+    "side": "up",
+    "active": true
+   },
+   {
+    "key": "btc_up",
+    "label": "비트코인 급등",
+    "group": "해외 증시",
+    "asof": "20260921",
+    "value": 5.0,
+    "threshold": 2.99,
+    "side": "up",
     "active": true
    }
   ],
@@ -7140,9 +7151,9 @@
     "key": "gas_up",
     "label": "천연가스 급등",
     "group": "원자재",
-    "asof": "20260918",
-    "value": 0.38,
-    "threshold": 5.65,
+    "asof": "20260921",
+    "value": -2.09,
+    "threshold": 5.55,
     "side": "up",
     "active": false
    },
@@ -7150,18 +7161,18 @@
     "key": "copper_up",
     "label": "구리 급등",
     "group": "원자재",
-    "asof": "20260918",
-    "value": 0.43,
-    "threshold": 2.32,
+    "asof": "20260921",
+    "value": 3.2,
+    "threshold": 2.35,
     "side": "up",
-    "active": false
+    "active": true
    },
    {
     "key": "copper_dn",
     "label": "구리 급락",
     "group": "원자재",
-    "asof": "20260918",
-    "value": 0.43,
+    "asof": "20260921",
+    "value": 3.2,
     "threshold": -2.05,
     "side": "dn",
     "active": false
@@ -7170,8 +7181,8 @@
     "key": "gold_up",
     "label": "금 급등",
     "group": "원자재",
-    "asof": "20260918",
-    "value": 0.57,
+    "asof": "20260921",
+    "value": -0.41,
     "threshold": 2.0,
     "side": "up",
     "active": false
@@ -7180,9 +7191,9 @@
     "key": "grain_up",
     "label": "곡물 급등",
     "group": "원자재",
-    "asof": "20260918",
-    "value": -0.57,
-    "threshold": 1.71,
+    "asof": "20260921",
+    "value": 1.14,
+    "threshold": 1.62,
     "side": "up",
     "active": false
    },
@@ -7240,8 +7251,8 @@
     "key": "krw_up",
     "label": "원/달러 급등(원화 약세)",
     "group": "금리·환율",
-    "asof": "20260919",
-    "value": 0.4,
+    "asof": "20260921",
+    "value": -0.57,
     "threshold": 0.8,
     "side": "up",
     "active": false
@@ -7250,8 +7261,8 @@
     "key": "krw_dn",
     "label": "원/달러 급락(원화 강세)",
     "group": "금리·환율",
-    "asof": "20260919",
-    "value": 0.4,
+    "asof": "20260921",
+    "value": -0.57,
     "threshold": -0.83,
     "side": "dn",
     "active": false
@@ -7260,8 +7271,8 @@
     "key": "jpy_up",
     "label": "엔화 급등(엔캐리 청산 경계)",
     "group": "금리·환율",
-    "asof": "20260919",
-    "value": 0.46,
+    "asof": "20260921",
+    "value": 0.71,
     "threshold": -0.73,
     "side": "dn",
     "active": false
@@ -7270,8 +7281,8 @@
     "key": "dxy_up",
     "label": "달러 인덱스 급등",
     "group": "금리·환율",
-    "asof": "20260918",
-    "value": 0.0,
+    "asof": "20260921",
+    "value": -0.0,
     "threshold": 0.52,
     "side": "up",
     "active": false
@@ -7320,18 +7331,18 @@
     "key": "btc_up",
     "label": "비트코인 급등",
     "group": "해외 증시",
-    "asof": "20260919",
-    "value": 0.46,
-    "threshold": 2.91,
+    "asof": "20260921",
+    "value": 5.0,
+    "threshold": 2.99,
     "side": "up",
-    "active": false
+    "active": true
    },
    {
     "key": "btc_dn",
     "label": "비트코인 급락",
     "group": "해외 증시",
-    "asof": "20260919",
-    "value": 0.46,
+    "asof": "20260921",
+    "value": 5.0,
     "threshold": -2.85,
     "side": "dn",
     "active": false
@@ -7340,8 +7351,8 @@
     "key": "sse_up",
     "label": "중국 증시 급등",
     "group": "해외 증시",
-    "asof": "20260918",
-    "value": 0.94,
+    "asof": "20260921",
+    "value": 0.97,
     "threshold": 1.22,
     "side": "up",
     "active": false
@@ -7350,8 +7361,8 @@
     "key": "hsi_up",
     "label": "홍콩 증시 급등",
     "group": "해외 증시",
-    "asof": "20260918",
-    "value": 0.6,
+    "asof": "20260921",
+    "value": 1.18,
     "threshold": 2.04,
     "side": "up",
     "active": false
@@ -7360,8 +7371,8 @@
     "key": "vix_up",
     "label": "VIX 급등(공포)",
     "group": "위험 선호",
-    "asof": "20260918",
-    "value": -4.08,
+    "asof": "20260921",
+    "value": 0.0,
     "threshold": 11.78,
     "side": "up",
     "active": false
@@ -7380,8 +7391,8 @@
     "key": "kospi_dn",
     "label": "코스피 급락일",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "+2.7%",
+    "asof": "20260921",
+    "value": "+1.6%",
     "threshold": "≤ -2.8%",
     "active": false
    },
@@ -7389,8 +7400,8 @@
     "key": "kospi_up",
     "label": "코스피 급등일",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "+2.7%",
+    "asof": "20260921",
+    "value": "+1.6%",
     "threshold": "≥ +2.7%",
     "active": false
    },
@@ -7398,8 +7409,8 @@
     "key": "rebound",
     "label": "급락 뒤 반등일",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "+2.7%(전날 -0.0%)",
+    "asof": "20260921",
+    "value": "+1.6%(전날 +2.7%)",
     "threshold": "전날 ≤ -2.8% & 당일 ≥ +1%",
     "active": false
    },
@@ -7407,8 +7418,8 @@
     "key": "kq_gap_up",
     "label": "코스닥 우위일(코스닥−코스피)",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "-2.1%p",
+    "asof": "20260921",
+    "value": "-0.5%p",
     "threshold": "≥ +1.6%p",
     "active": false
    },
@@ -7416,17 +7427,17 @@
     "key": "kq_gap_dn",
     "label": "코스피 우위일(대형주 장)",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "-2.1%p",
+    "asof": "20260921",
+    "value": "-0.5%p",
     "threshold": "≤ -2.1%p",
-    "active": true
+    "active": false
    },
    {
     "key": "limit_many",
     "label": "상한가 다수일(과열)",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "6개",
+    "asof": "20260921",
+    "value": "4개",
     "threshold": "≥ 15개",
     "active": false
    },
@@ -7434,8 +7445,8 @@
     "key": "big_many",
     "label": "급등주(+10%) 다수일",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "33개",
+    "asof": "20260921",
+    "value": "44개",
     "threshold": "≥ 84개",
     "active": false
    },
@@ -7443,8 +7454,8 @@
     "key": "tval_up",
     "label": "시장 거래대금 급증일",
     "group": "시장 내부",
-    "asof": "20260918",
-    "value": "32.6조",
+    "asof": "20260921",
+    "value": "25.9조",
     "threshold": "≥ 53.0조",
     "active": false
    },
@@ -7452,8 +7463,8 @@
     "key": "frgn_sell",
     "label": "외인 대량 순매도일",
     "group": "수급",
-    "asof": "20260918",
-    "value": "+5,713억",
+    "asof": "20260921",
+    "value": "-1,745억",
     "threshold": "≤ -23,648억",
     "active": false
    },
@@ -7461,8 +7472,8 @@
     "key": "frgn_buy",
     "label": "외인 대량 순매수일",
     "group": "수급",
-    "asof": "20260918",
-    "value": "+5,713억",
+    "asof": "20260921",
+    "value": "-1,745억",
     "threshold": "≥ +9,167억",
     "active": false
    }
