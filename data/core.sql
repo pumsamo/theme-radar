@@ -11940,7 +11940,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-21','^GSPC','S&P500',7650.5,0.17,'
 INSERT INTO "global_baseline" VALUES('2026-09-21','^IXIC','나스닥',26522.54,0.39,'2026-09-18 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-21','^SOX','필라델피아 반도체',11921.69,2.78,'2026-09-18 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-21','EWY','EWY(한국 ETF)',181.31,-0.59,'2026-09-18 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-21','KRW=X','원/달러',1385.62,0.44,'2026-09-20 23:33Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-21','KRW=X','원/달러',1385.58,0.44,'2026-09-21 00:18Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-21','^KS11','코스피(전 거래일)',6894.23,2.66,'2026-09-18 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-21','^KQ11','코스닥(전 거래일)',827.12,0.6,'2026-09-18 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-21','KOSPI_REGIME','5일 -0.2% · 60일고점 -22.8%',-22.8,-0.23,NULL,'yahoo/regime');
@@ -14571,5 +14571,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4154);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4158);
 COMMIT;
