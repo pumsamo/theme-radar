@@ -12886,7 +12886,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-23','^GSPC','S&P500',7764.64,0.0,'
 INSERT INTO "global_baseline" VALUES('2026-09-23','^IXIC','나스닥',27244.28,0.45,'2026-09-22 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-23','^SOX','필라델피아 반도체',12689.82,2.06,'2026-09-22 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-23','EWY','EWY(한국 ETF)',192.62,1.83,'2026-09-22 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-23','KRW=X','원/달러',1355.1,-1.35,'2026-09-22 23:17Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-23','KRW=X','원/달러',1352.5,-1.54,'2026-09-22 23:51Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-23','^KS11','코스피(전 거래일)',7007.72,1.65,'2026-09-22 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-23','^KQ11','코스닥(전 거래일)',836.27,1.11,'2026-09-22 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-23','KOSPI_REGIME','5일 +4.8% · 60일고점 -17.3%',-17.33,4.84,NULL,'yahoo/regime');
@@ -13595,6 +13595,9 @@ INSERT INTO "news_signals" VALUES(4196,'2026-09-22','2026-09-22 08:26','DART','�
 INSERT INTO "news_signals" VALUES(4197,'2026-09-22','2026-09-22 21:58','매일경제','AI 소프트웨어','죽은테마',NULL,'“아침에 분명 다 빨간색이었잖아”…메타에 웃고 유가에 발목잡힌 코스피','메타 AI에이전트 뮤즈 열풍에 장초반 반도체株 중심 급등세 7100 돌파 후 유가급등에 주춤 추석연휴 앞두고 개인 매도세 5거래일새 9조 넘게 주식 팔아메타의 인공지능(AI)에이전..','https://www.mk.co.kr/news/stock/12159838',1.0);
 INSERT INTO "news_signals" VALUES(4224,'2026-09-22','2026-09-22 22:59','매경 기업','IT서비스','호재','카카오','부담되는 데이터센터 전력비…카카오는 확 낮췄다, 비결이?','카카오가 별도의 설비 교체나 증설 없이 데이터센터의 냉방용 전력비를 유의미한 수준으로 감축했다. 카카오가 보유한 데이터센터 운영 요령과 에너지 효율 개선 노력을 바탕으로 장비 가동..','https://www.mk.co.kr/news/business/12159865',1.5);
 INSERT INTO "news_signals" VALUES(4225,'2026-09-22','2026-09-22 22:59','매경 기업','데이터센터 전력','호재','카카오','부담되는 데이터센터 전력비…카카오는 확 낮췄다, 비결이?','카카오가 별도의 설비 교체나 증설 없이 데이터센터의 냉방용 전력비를 유의미한 수준으로 감축했다. 카카오가 보유한 데이터센터 운영 요령과 에너지 효율 개선 노력을 바탕으로 장비 가동..','https://www.mk.co.kr/news/business/12159865',1.5);
+INSERT INTO "news_signals" VALUES(4282,'2026-09-23','2026-09-23 08:26','연합뉴스','증권','호재','SK증권','SK증권 "삼성물산 실적 개선세 지속에 배당 증가도 기대"','(서울=연합뉴스) 경수현 기자 = SK증권은 23일 삼성물산[028260]과 관련해 건설 부문 등의 실적 개선세가 이어질 전망인 데다 배당 확대...','https://www.yna.co.kr/view/AKR20260923027900008',2.0);
+INSERT INTO "news_signals" VALUES(4283,'2026-09-23','2026-09-23 08:17','연합뉴스','이차전지·전해액','호재','포스코퓨처엠','DS증권 "포스코퓨처엠, LFP 첫 공식수주…추가수주 기대 유효"','(서울=연합뉴스) 황철환 기자 = DS투자증권은 포스코퓨처엠[003670]이 리튬인산철(LFP) 양극재와 관련한 첫 공식 수주공시를 냈다며 "추...','https://www.yna.co.kr/view/AKR20260923026700008',2.0);
+INSERT INTO "news_signals" VALUES(4297,'2026-09-22','2026-09-22 23:26','DART','원전·SMR','호재','현대건설','(유가)현대건설 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260923800033',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -15632,5 +15635,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4262);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4297);
 COMMIT;
