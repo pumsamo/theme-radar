@@ -12419,10 +12419,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-22','^GSPC','S&P500',7764.7,1.49,'
 INSERT INTO "global_baseline" VALUES('2026-09-22','^IXIC','나스닥',27122.09,2.26,'2026-09-21 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-22','^SOX','필라델피아 반도체',12433.17,4.29,'2026-09-21 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-22','EWY','EWY(한국 ETF)',181.31,-0.59,'2026-09-21 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-22','KRW=X','원/달러',1367.48,-1.26,'2026-09-22 00:18Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-22','^KS11','코스피(전 거래일)',6894.23,2.66,'2026-09-21 11:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-22','^KQ11','코스닥(전 거래일)',827.12,0.6,'2026-09-21 11:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-22','KOSPI_REGIME','5일 -0.2% · 60일고점 -22.8%',-22.8,-0.23,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-22','KRW=X','원/달러',1360.58,-1.75,'2026-09-22 00:52Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-22','^KS11','코스피(전 거래일)',7164.82,3.92,'2026-09-22 00:32Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-22','^KQ11','코스닥(전 거래일)',842.98,1.92,'2026-09-22 00:32Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-22','KOSPI_REGIME','5일 +7.2% · 60일고점 -15.5%',-15.47,7.19,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-22','AAOI','광통신',105.17,7.25,'2026-09-21 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-22','COHR','광통신',317.36,7.22,'2026-09-21 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-22','LITE','광통신',930.91,4.17,'2026-09-21 20:00Z','yahoo/ticker');
@@ -13107,6 +13107,14 @@ INSERT INTO "news_signals" VALUES(4171,'2026-09-21','2026-09-21 11:35','매경 �
 INSERT INTO "news_signals" VALUES(4172,'2026-09-22','2026-09-22 08:53','매일경제','지주·밸류업','죽은테마',NULL,'NH투자증권 “KCC, 실리콘 사업 실적 개선…주주환원 확대도 긍정적”','NH투자증권은 22일 KCC에 대해 실적 개선과 맞물린 주주환원이 본격화된다며 투자의견 ‘매수’ 유지, 목표주가를 기존 68만원에서 73만원으로 상향했다. NH투자증권은 실리콘 사..','https://www.mk.co.kr/news/stock/12158870',1.0);
 INSERT INTO "news_signals" VALUES(4173,'2026-09-22','2026-09-22 08:50','매일경제','반도체 소부장','호재','삼성전자','56만전자 목표가 나왔다…“장기계약 구매가격 높다…HBM도 순항” [오늘 나온 보고서]','대신증권 “현재주가의 2배까지 여력” 높은 가격으로 장기계약 체결 가능성 2027년 HBM 시장 점유율 1위 예상일부 증권사가 목표주가를 하향하고 나선 가운데 대신증권이 삼성전자..','https://www.mk.co.kr/news/stock/12158866',1.5);
 INSERT INTO "news_signals" VALUES(4186,'2026-09-22','2026-09-22 08:53','연합뉴스','반도체 소부장','호재','삼성전자','KB증권 "삼성전자 HBM 증설로 범용 D램 공급 부족 장기화"','(서울=연합뉴스) 고은지 기자 = KB증권은 삼성전자[005930]의 고대역폭 메모리(HBM) 매출 비중이 내년 2배로 늘어날 것으로 예상되는 ...','https://www.yna.co.kr/view/AKR20260922028200008',2.0);
+INSERT INTO "news_signals" VALUES(4197,'2026-09-22','2026-09-22 09:32','매일경제','AI 소프트웨어','호재',NULL,'미 증시 급등과 외국인·기관 순매수에…코스피, 7100선 상승 출발','외국인·기관 장 초반 순매수 삼전닉스 2~3%대 동반 상승간밤 미국 뉴욕 증시가 인공지능(AI) 관련주 강세에 급등하며 마감한 가운데, 22일 코스피도 7100선에서 상승 출발했다..','https://www.mk.co.kr/news/stock/12158954',1.0);
+INSERT INTO "news_signals" VALUES(4198,'2026-09-22','2026-09-22 09:20','매일경제','반도체 소부장','호재','엠케이전자','[MK 골든크로스 돌파종목 : 엠케이전자(033160) & 오로스테크놀로지(322310)]','안녕하세요. 국내 핫 이슈 종목을 분석해드리는 AI 기자 ‘MK시그널’ 입니다. MK시그널이 오늘 분석한 핫 이슈 골든크로스 종목은 엠케이전자 & 오로스테크놀로지 입니다. - 엠케..','https://www.mk.co.kr/news/stock/12158934',2.0);
+INSERT INTO "news_signals" VALUES(4208,'2026-09-22','2026-09-22 09:49','연합뉴스','원전·SMR','호재',NULL,'삼성물산 차세대 SMR시장 공략…미국 카이로스 파워와 업무협약','(서울=연합뉴스) 서미숙 기자 = 삼성물산 건설부문이 차세대 소형모듈원자로(SMR) 시장 공략에 나선다.','https://www.yna.co.kr/view/AKR20260922050500003',1.5);
+INSERT INTO "news_signals" VALUES(4209,'2026-09-22','2026-09-22 09:40','연합뉴스','데이터센터 전력','호재',NULL,'[특징주] LG전자, ''ADIC 냉각 솔루션'' 엔비디아 규격 승인에 장 초반 강세','(서울=연합뉴스) 김유아 기자 = AI 데이터센터(DC) 열을 안정적으로 관리하는 LG전자[066570]의 핵심 냉각 솔루션이 엔비디아 규격 승...','https://www.yna.co.kr/view/AKR20260922051500008',1.0);
+INSERT INTO "news_signals" VALUES(4210,'2026-09-22','2026-09-22 09:40','연합뉴스','AI 반도체·기판','호재',NULL,'[특징주] LG전자, ''ADIC 냉각 솔루션'' 엔비디아 규격 승인에 장 초반 강세','(서울=연합뉴스) 김유아 기자 = AI 데이터센터(DC) 열을 안정적으로 관리하는 LG전자[066570]의 핵심 냉각 솔루션이 엔비디아 규격 승...','https://www.yna.co.kr/view/AKR20260922051500008',1.5);
+INSERT INTO "news_signals" VALUES(4211,'2026-09-22','2026-09-22 09:14','연합뉴스','AI 반도체·기판','호재','SK하이닉스,삼성전자','[특징주] 삼성전자, 장초반 2.4% 급등…SK하이닉스는 3% 뛰어','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 22일 장 초반 각각 2%와 3%대의 급등세를 보인다.','https://www.yna.co.kr/view/AKR20260922041100008',2.0);
+INSERT INTO "news_signals" VALUES(4212,'2026-09-22','2026-09-22 09:14','연합뉴스','반도체 소부장','호재','SK하이닉스,삼성전자','[특징주] 삼성전자, 장초반 2.4% 급등…SK하이닉스는 3% 뛰어','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 22일 장 초반 각각 2%와 3%대의 급등세를 보인다.','https://www.yna.co.kr/view/AKR20260922041100008',2.0);
+INSERT INTO "news_signals" VALUES(4224,'2026-09-22','2026-09-22 00:33','DART','건설','호재','HDC','(유가)HDC - 단일판매ㆍ공급계약체결 (자회사의 주요경영사항)',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260922800089',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -15110,5 +15118,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4196);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4224);
 COMMIT;
