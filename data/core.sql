@@ -13342,7 +13342,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-28','^GSPC','S&P500',7743.41,0.51,
 INSERT INTO "global_baseline" VALUES('2026-09-28','^IXIC','나스닥',27068.72,0.48,'2026-09-25 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','^SOX','필라델피아 반도체',12668.93,1.41,'2026-09-25 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','EWY','EWY(한국 ETF)',187.18,2.55,'2026-09-25 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-28','KRW=X','원/달러',1355.09,-0.9,'2026-09-27 23:25Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-28','KRW=X','원/달러',1355.01,-0.9,'2026-09-27 23:59Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','^KS11','코스피(전 거래일)',7080.92,0.9,'2026-09-23 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','^KQ11','코스닥(전 거래일)',844.48,1.21,'2026-09-23 11:05Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','KOSPI_REGIME','5일 +5.4% · 60일고점 -16.5%',-16.46,5.4,NULL,'yahoo/regime');
@@ -13359,7 +13359,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-28','TSM','반도체 소부장',45
 INSERT INTO "global_baseline" VALUES('2026-09-28','NVDA','AI 반도체·기판',225.07,0.22,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AVGO','AI 반도체·기판',352.81,0.7,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AMD','AI 반도체·기판',630.63,0.22,'2026-09-25 20:00Z','yahoo/ticker');
-INSERT INTO "global_baseline" VALUES('2026-09-28','MRVL','AI 반도체·기판',261.94,1.15,'2026-09-25 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-09-28','MRVL','AI 반도체·기판',261.93,1.15,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','SMCI','AI 반도체·기판',43.26,4.22,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','PLTR','AI 소프트웨어',189.67,-1.52,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AI','AI 소프트웨어',10.65,-1.02,'2026-09-25 20:00Z','yahoo/ticker');
@@ -16113,5 +16113,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4250);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4262);
 COMMIT;
