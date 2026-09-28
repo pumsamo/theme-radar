@@ -83,17 +83,32 @@ def main() -> int:
     if not args.skip_seed:
         step(log, "seed", seed_import.run, log=log)
 
-    step(log, "us/baseline", collect_us.baseline, date, log)
-    step(log, "us/regime", collect_us.market_regime, date, log)
-    step(log, "us/theme", collect_us.theme_moves, date, log)
+    # 지연 실행 판정을 미국 수집보다 먼저 한다 (2026-09-28 버그픽스).
+    # 9/22 사고: 08:42 첫 실행이 월요일 값으로 픽을 만든 뒤, 09:52 지연 실행이 미국 스냅샷을 다시 받아 썼는데
+    # 그 순간 야후가 월요일 봉이 빠진 응답을 줘서 theme_daily·global_baseline의 9/22 행이 금요일 값으로 덮였다
+    # (저녁 read-across 채점 오염). 21:20 로컬 지연 실행은 코스피(전 거래일) 행을 당일 종가로 덮었다.
+    # → 지연 실행인데 오늘 us_basket 행이 이미 있으면 미국 스냅샷은 다시 쓰지 않는다. 정시 실행 경로는 불변.
+    from datetime import datetime, timedelta, timezone
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    late = date == now_kst.date().isoformat() and now_kst.strftime("%H:%M") >= "08:50"
+    us_done = False
+    if late:
+        from db import connect as _connect
+        with _connect() as _conn:
+            us_done = _conn.execute(
+                "SELECT COUNT(*) FROM theme_daily WHERE date=? AND source='us_basket'", (date,)).fetchone()[0] > 0
+    if late and us_done:
+        print(f"지연 실행({now_kst.strftime('%H:%M')} KST) — 오늘 미국 스냅샷이 이미 있어 재수집 생략(덮어쓰기 방지)")
+    else:
+        step(log, "us/baseline", collect_us.baseline, date, log)
+        step(log, "us/regime", collect_us.market_regime, date, log)
+        step(log, "us/theme", collect_us.theme_moves, date, log)
     step(log, "news", collect_news_kr.run, date, log)
 
     # 크론 지연 가드 (2026-08-27 사고: 07:25 예약이 11:14에 실행돼 장중 시세로 픽이
     # 만들어졌고, 프리장 픽을 덮어썼다). 개장 후 실행이면 KR 스크리닝만 생략한다 —
     # 미국 스냅샷·뉴스는 장중에도 안 변하므로 위에서 이미 수집했다.
-    from datetime import datetime, timedelta, timezone
-    now_kst = datetime.now(timezone(timedelta(hours=9)))
-    if date == now_kst.date().isoformat() and now_kst.strftime("%H:%M") >= "08:50":
+    if late:
         # 로컬 07:30 백업이 이미 오늘 브리핑을 발행했다면(docs에 존재·지연문 아님)
         # 그걸 보존한다 — out/에 docs 내용을 복사해 워크플로 복사 단계가 무해해지게.
         docs = Path(__file__).resolve().parent / "docs"
