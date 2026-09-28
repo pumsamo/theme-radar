@@ -13342,10 +13342,10 @@ INSERT INTO "global_baseline" VALUES('2026-09-28','^GSPC','S&P500',7743.41,0.51,
 INSERT INTO "global_baseline" VALUES('2026-09-28','^IXIC','나스닥',27068.72,0.48,'2026-09-25 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','^SOX','필라델피아 반도체',12668.93,1.41,'2026-09-25 21:15Z','yahoo');
 INSERT INTO "global_baseline" VALUES('2026-09-28','EWY','EWY(한국 ETF)',187.18,2.55,'2026-09-25 20:00Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-28','KRW=X','원/달러',1355.01,-0.9,'2026-09-27 23:59Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-28','^KS11','코스피(전 거래일)',7080.92,0.9,'2026-09-23 11:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-28','^KQ11','코스닥(전 거래일)',844.48,1.21,'2026-09-23 11:05Z','yahoo');
-INSERT INTO "global_baseline" VALUES('2026-09-28','KOSPI_REGIME','5일 +5.4% · 60일고점 -16.5%',-16.46,5.4,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-09-28','KRW=X','원/달러',1357.58,-0.72,'2026-09-28 00:49Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-28','^KS11','코스피(전 거래일)',7041.18,-0.56,'2026-09-28 00:29Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-28','^KQ11','코스닥(전 거래일)',855.76,1.34,'2026-09-28 00:29Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-09-28','KOSPI_REGIME','5일 +4.9% · 60일고점 -15.2%',-15.2,4.85,NULL,'yahoo/regime');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AAOI','광통신',101.4,0.37,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','COHR','광통신',295.83,1.8,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','LITE','광통신',941.65,1.36,'2026-09-25 20:00Z','yahoo/ticker');
@@ -13359,7 +13359,7 @@ INSERT INTO "global_baseline" VALUES('2026-09-28','TSM','반도체 소부장',45
 INSERT INTO "global_baseline" VALUES('2026-09-28','NVDA','AI 반도체·기판',225.07,0.22,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AVGO','AI 반도체·기판',352.81,0.7,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AMD','AI 반도체·기판',630.63,0.22,'2026-09-25 20:00Z','yahoo/ticker');
-INSERT INTO "global_baseline" VALUES('2026-09-28','MRVL','AI 반도체·기판',261.93,1.15,'2026-09-25 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-09-28','MRVL','AI 반도체·기판',261.94,1.15,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','SMCI','AI 반도체·기판',43.26,4.22,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','PLTR','AI 소프트웨어',189.67,-1.52,'2026-09-25 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-28','AI','AI 소프트웨어',10.65,-1.02,'2026-09-25 20:00Z','yahoo/ticker');
@@ -14063,6 +14063,9 @@ INSERT INTO "news_signals" VALUES(4238,'2026-09-27','2026-09-27 16:51','매경 �
 INSERT INTO "news_signals" VALUES(4239,'2026-09-28','2026-09-28 08:23','매일경제','AI 소프트웨어','호재',NULL,'“추석도 지났고, 내 주식은 어디로 가나?”…美 물가·마이크론 실적에 쏠린 눈','인공지능(AI) 반도체 종목들의 반등으로 지난 주 코스피가 7000선을 탈환한 가운데 추석 연휴 이후에도 강세를 이어갈 수 있을지 주목된다. 이번주 증시에선 미국 물가 지표와 삼성..','https://www.mk.co.kr/news/stock/12162236',1.0);
 INSERT INTO "news_signals" VALUES(4244,'2026-09-28','2026-09-28 08:13','연합뉴스','AI 반도체·기판','호재','대덕전자','iM증권 "대덕전자, 장기공급계약 논의 긍정적"…목표가↑','(서울=연합뉴스) 김유아 기자 = iM증권은 반도체 인쇄회로기판(PCB) 제조업체인 대덕전자[353200]가 향후 주요 고객사와의 장기공급계약(...','https://www.yna.co.kr/view/AKR20260928018200008',2.0);
 INSERT INTO "news_signals" VALUES(4245,'2026-09-28','2026-09-28 08:13','연합뉴스','반도체 소부장','호재','대덕전자','iM증권 "대덕전자, 장기공급계약 논의 긍정적"…목표가↑','(서울=연합뉴스) 김유아 기자 = iM증권은 반도체 인쇄회로기판(PCB) 제조업체인 대덕전자[353200]가 향후 주요 고객사와의 장기공급계약(...','https://www.yna.co.kr/view/AKR20260928018200008',2.0);
+INSERT INTO "news_signals" VALUES(4263,'2026-09-28','2026-09-28 09:30','매일경제','제약바이오','호재','HLB','HLB, 담관암 신약 ‘리픽투’ FDA 허가 소식에 그룹주 줄줄이 상한가 직행','HLB가 미국 식품의약국(FDA) 품목허가 신약을 확보했다는 소식에 그룹주 전체가 상한가로 직행했다. 28일 오전 9시 20분 현재 HLB는 전일 대비 9150원(29.95%) 오..','https://www.mk.co.kr/news/stock/12162348',2.0);
+INSERT INTO "news_signals" VALUES(4269,'2026-09-28','2026-09-28 09:39','연합뉴스','제약바이오','죽은테마','한올바이오파마','[특징주] 한올바이오파마, 파트너사 CLE 개발중단에 장초반 급락','(서울=연합뉴스) 김유향 기자 = 한올바이오파마[009420] 주가가 28일 장 초반 5% 이상 급락 중이다.','https://www.yna.co.kr/view/AKR20260928041000008',2.0);
+INSERT INTO "news_signals" VALUES(4270,'2026-09-28','2026-09-28 09:00','연합뉴스','태양광','죽은테마',NULL,'지붕·태양광 공사 ''추락주의보''…노동부, 집중 안전관리','(서울=연합뉴스) 옥성구 기자 = 고용노동부는 가을철 지붕 보수와 태양광 설치 공사 중 발생하는 추락사고를 막기 위해 다음 달 27일까지 집중 ...','https://www.yna.co.kr/view/AKR20260927056100530',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -16113,5 +16116,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4262);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4276);
 COMMIT;
