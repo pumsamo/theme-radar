@@ -8,6 +8,10 @@ pushd "%~dp0"
 set PY=C:\Users\pumsa_yvvjwu4\AppData\Local\Programs\Python\Python312\python.exe
 if not exist logs mkdir logs
 
+REM The 07:22 wake lights the monitor and the power plan never turns it off.
+REM Switch it off again, but only when nobody has touched the PC for 5 minutes.
+powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File monitor_off_if_idle.ps1 >> "logs\run_%date:~0,4%%date:~5,2%.log" 2>&1
+
 REM Seed xlsx only needs re-importing when new files are added, so skip it on
 REM the daily run. After adding a new xlsx, run: python run_morning.py
 "%PY%" run_morning.py --skip-seed >> "logs\run_%date:~0,4%%date:~5,2%.log" 2>&1
