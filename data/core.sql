@@ -14672,6 +14672,11 @@ INSERT INTO "news_signals" VALUES(4381,'2026-09-29','2026-09-29 10:01','연합�
 INSERT INTO "news_signals" VALUES(4382,'2026-09-29','2026-09-29 09:50','연합뉴스','반도체 소부장','호재','SK하이닉스,삼성전자','[특징주] 전날 5%대 급락했던 삼전닉스, 1% 안팎 상승세','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 29일 장 초반 동반 강세를 나타내고 있다.','https://www.yna.co.kr/view/AKR20260929047700008',1.5);
 INSERT INTO "news_signals" VALUES(4383,'2026-09-29','2026-09-29 09:50','연합뉴스','AI 반도체·기판','호재','SK하이닉스,삼성전자','[특징주] 전날 5%대 급락했던 삼전닉스, 1% 안팎 상승세','(서울=연합뉴스) 황철환 기자 = 삼성전자[005930]와 SK하이닉스[000660]가 29일 장 초반 동반 강세를 나타내고 있다.','https://www.yna.co.kr/view/AKR20260929047700008',1.5);
 INSERT INTO "news_signals" VALUES(4384,'2026-09-29','2026-09-29 09:33','연합뉴스','제약바이오','죽은테마','셀트리온','셀트리온, 내달 세계 제약·바이오전시 참가…"협력사 발굴"','(서울=연합뉴스) 신선미 기자 = 셀트리온[068270]은 다음 달 6∼8일(현지 시간) 이탈리아 밀라노에서 열리는 ''2026 세계 제약·바이오...','https://www.yna.co.kr/view/AKR20260929044100017',1.5);
+INSERT INTO "news_signals" VALUES(4410,'2026-09-29','2026-09-29 10:47','매일경제','태양광','호재','OCI홀딩스,삼성전자','배당금 확정 삼성전자 던지고…숨 고르는 OCI홀딩스 쓸어담고 [주식 초고수는 지금]','주식 투자 수익률 상위 1% ‘초고수’들이 29일 장 초반 배당락을 맞은 삼성전자와 삼성전자우를 대거 처분하고, 전날 급등 뒤 숨 고르기에 들어간 OCI홀딩스를 가장 많이 사들였다..','https://www.mk.co.kr/news/stock/12163468',1.5);
+INSERT INTO "news_signals" VALUES(4411,'2026-09-29','2026-09-29 10:47','매일경제','실적','호재','OCI홀딩스,삼성전자','배당금 확정 삼성전자 던지고…숨 고르는 OCI홀딩스 쓸어담고 [주식 초고수는 지금]','주식 투자 수익률 상위 1% ‘초고수’들이 29일 장 초반 배당락을 맞은 삼성전자와 삼성전자우를 대거 처분하고, 전날 급등 뒤 숨 고르기에 들어간 OCI홀딩스를 가장 많이 사들였다..','https://www.mk.co.kr/news/stock/12163468',1.5);
+INSERT INTO "news_signals" VALUES(4451,'2026-09-29','2026-09-29 10:32','매경 기업','AI 소프트웨어','호재',NULL,'“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’ 승부수','펌프·밸브·배관 컨테이너에 미리 조립 현장선 칠러와 연결만…“냉각 즉시 가동” 엔비디아 승인 액체냉각 CDU도 공개 그룹 역량 묶어 ‘칩 투 칠러’ 시장 공략인공지능(AI) 데이터..','https://www.mk.co.kr/news/business/12163459',1.0);
+INSERT INTO "news_signals" VALUES(4452,'2026-09-29','2026-09-29 10:32','매경 기업','AI 반도체·기판','호재',NULL,'“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’ 승부수','펌프·밸브·배관 컨테이너에 미리 조립 현장선 칠러와 연결만…“냉각 즉시 가동” 엔비디아 승인 액체냉각 CDU도 공개 그룹 역량 묶어 ‘칩 투 칠러’ 시장 공략인공지능(AI) 데이터..','https://www.mk.co.kr/news/business/12163459',1.0);
+INSERT INTO "news_signals" VALUES(4459,'2026-09-29','2026-09-29 01:34','DART','반도체 소부장','호재','피델릭스','(코스닥)피델릭스 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260929900153',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -16761,5 +16766,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4409);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4459);
 COMMIT;
