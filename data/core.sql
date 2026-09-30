@@ -14827,6 +14827,13 @@ INSERT INTO "news_signals" VALUES(4336,'2026-09-29','2026-09-29 10:32','매경 �
 INSERT INTO "news_signals" VALUES(4337,'2026-09-29','2026-09-29 10:32','매경 기업','AI 소프트웨어','호재',NULL,'“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’ 승부수','펌프·밸브·배관 컨테이너에 미리 조립 현장선 칠러와 연결만…“냉각 즉시 가동” 엔비디아 승인 액체냉각 CDU도 공개 그룹 역량 묶어 ‘칩 투 칠러’ 시장 공략인공지능(AI) 데이터..','https://www.mk.co.kr/news/business/12163459',1.0);
 INSERT INTO "news_signals" VALUES(4340,'2026-09-29','2026-09-29 23:55','DART','알래스카LNG·철강·조선','호재','삼성중공업','(유가)삼성중공업 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800054',2.5);
 INSERT INTO "news_signals" VALUES(4341,'2026-09-29','2026-09-29 23:55','DART','조선·해운','호재','삼성중공업','(유가)삼성중공업 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800054',2.5);
+INSERT INTO "news_signals" VALUES(4342,'2026-09-30','2026-09-30 09:20','매일경제','화장품·소비재','호재','한국콜마','[MK 골든크로스 돌파종목 : 한국콜마(161890) & SGC E&C(016250)]','안녕하세요. 국내 핫 이슈 종목을 분석해드리는 AI 기자 ‘MK시그널’ 입니다. MK시그널이 오늘 분석한 핫 이슈 골든크로스 종목은 한국콜마 & SGC E&C 입니다. - 한국콜마..','https://www.mk.co.kr/news/stock/12164427',2.0);
+INSERT INTO "news_signals" VALUES(4343,'2026-09-30','2026-09-30 09:18','매일경제','AI 반도체·기판','호재','유진테크','[MK시그널] 유진테크, AI 반도체 투자 확대 및 무차입 증설 기대감 등에 주가 상승세... MK시그널 추천 후 상승률 23.37% 기록','9월 30일 유진테크(084370)가 상승 중이다. 전 거래일 유진테크 주가는 종가기준 167,000원 상승으로 마감했다. 현재 169,300원으로 (9시 6분 기준) 전일 종가 ..','https://www.mk.co.kr/news/stock/12164425',2.0);
+INSERT INTO "news_signals" VALUES(4344,'2026-09-30','2026-09-30 09:18','매일경제','반도체 소부장','호재','유진테크','[MK시그널] 유진테크, AI 반도체 투자 확대 및 무차입 증설 기대감 등에 주가 상승세... MK시그널 추천 후 상승률 23.37% 기록','9월 30일 유진테크(084370)가 상승 중이다. 전 거래일 유진테크 주가는 종가기준 167,000원 상승으로 마감했다. 현재 169,300원으로 (9시 6분 기준) 전일 종가 ..','https://www.mk.co.kr/news/stock/12164425',2.0);
+INSERT INTO "news_signals" VALUES(4353,'2026-09-30','2026-09-30 09:39','연합뉴스','AI 소프트웨어','호재',NULL,'[바이오스냅] 전문가용 디지털의료기기SW 심사 안내서 제정','(서울=연합뉴스) 신선미 기자 = 식품의약품안전평가원은 전문가용 디지털의료기기소프트웨어 허가·심사 기준을 제시한 안내서를 마련했다.','https://www.yna.co.kr/view/AKR20260930043600017',1.0);
+INSERT INTO "news_signals" VALUES(4354,'2026-09-30','2026-09-30 09:37','연합뉴스','AI 소프트웨어','호재',NULL,'[게시판] BC카드, 법률AI로 준법업무 혁신…리걸테크기업과 MOU','▲ BC카드는 리걸테크 스타트업 에이투디투(A2D2)와 인공지능(AI)을 기반으로 준법 업무를 혁신하기 위해 ''리걸 AI 플랫폼 구축 업무협약(...','https://www.yna.co.kr/view/AKR20260930047200002',1.0);
+INSERT INTO "news_signals" VALUES(4355,'2026-09-30','2026-09-30 09:15','연합뉴스','원전·SMR','호재','성광벤드','[특징주] 관이음쇠株, 트럼프 "韓 LNG 투자" 발언에 장초반 강세','(서울=연합뉴스) 임은진 기자 = 관 이음쇠 업체인 태광과 성광벤드[014620] 주가가 도널드 트럼프 미국 대통령의 알래스카 액화천연가스(LN...','https://www.yna.co.kr/view/AKR20260930041400008',1.5);
+INSERT INTO "news_signals" VALUES(4367,'2026-09-30','2026-09-30 00:16','DART','기계','호재','링크솔루션','(코스닥)링크솔루션 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930900065',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -16946,5 +16953,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4341);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4367);
 COMMIT;
