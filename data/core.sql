@@ -14834,6 +14834,10 @@ INSERT INTO "news_signals" VALUES(4353,'2026-09-30','2026-09-30 09:39','연합�
 INSERT INTO "news_signals" VALUES(4354,'2026-09-30','2026-09-30 09:37','연합뉴스','AI 소프트웨어','호재',NULL,'[게시판] BC카드, 법률AI로 준법업무 혁신…리걸테크기업과 MOU','▲ BC카드는 리걸테크 스타트업 에이투디투(A2D2)와 인공지능(AI)을 기반으로 준법 업무를 혁신하기 위해 ''리걸 AI 플랫폼 구축 업무협약(...','https://www.yna.co.kr/view/AKR20260930047200002',1.0);
 INSERT INTO "news_signals" VALUES(4355,'2026-09-30','2026-09-30 09:15','연합뉴스','원전·SMR','호재','성광벤드','[특징주] 관이음쇠株, 트럼프 "韓 LNG 투자" 발언에 장초반 강세','(서울=연합뉴스) 임은진 기자 = 관 이음쇠 업체인 태광과 성광벤드[014620] 주가가 도널드 트럼프 미국 대통령의 알래스카 액화천연가스(LN...','https://www.yna.co.kr/view/AKR20260930041400008',1.5);
 INSERT INTO "news_signals" VALUES(4367,'2026-09-30','2026-09-30 00:16','DART','기계','호재','링크솔루션','(코스닥)링크솔루션 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930900065',2.5);
+INSERT INTO "news_signals" VALUES(4387,'2026-09-30','2026-09-30 01:18','DART','로봇·휴머노이드','호재','현대무벡스','(코스닥)현대무벡스 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930900139',2.5);
+INSERT INTO "news_signals" VALUES(4388,'2026-09-30','2026-09-30 01:17','DART','석유화학','호재','HD현대','(유가)HD현대중공업 - [기재정정]단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800154',2.5);
+INSERT INTO "news_signals" VALUES(4389,'2026-09-30','2026-09-30 01:11','DART','로봇·휴머노이드','호재','액스비스','(코스닥)액스비스 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930900127',2.5);
+INSERT INTO "news_signals" VALUES(4390,'2026-09-30','2026-09-30 00:50','DART','건설','호재','남광토건','(유가)남광토건 - [기재정정]단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800113',2.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -16953,5 +16957,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4367);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4390);
 COMMIT;
