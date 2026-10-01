@@ -1,0 +1,2 @@
+# bash 스크립트는 CRLF로 바뀌면 Git Bash에서 깨진다 (2026-10-01 run_evening.sh)
+*.sh text eol=lf
