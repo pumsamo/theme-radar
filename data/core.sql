@@ -3593,7 +3593,7 @@ INSERT INTO "candidates" VALUES('2026-08-25','094480','갤럭시아머니트리'
 INSERT INTO "candidates" VALUES('2026-08-25','278470','에이피알','화장품·소비재','spot','watch','고점 대비 -8% · 이격 1.11 · RSI 63','자리 완성 (테마 신호 대기)',416000.0,369500.0,509000.0,556000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','096770','SK이노베이션','석유·에너지','spot','watch','고점 대비 -4% · 이격 1.09 · RSI 63','자리 완성 (테마 신호 대기)',134800.0,120000.0,164400.0,179200.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -12.8% · RSI 54 · 진입까지 +3.5%','저녁 A급 스캔',1141000.0,998000.0,1427000.0,1570000.0,2.0,2298.922542,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-25','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -14.2% · RSI 54 · 진입까지 +2.8%','저녁 A급 스캔',314000.0,268000.0,406000.0,452000.0,2.0,1.658881562462000147e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-25','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -14.2% · RSI 54 · 진입까지 +2.8%','저녁 A급 스캔',314000.0,268000.0,406000.0,452000.0,2.0,1.65888156246200014e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -10.6% · RSI 50 · 진입까지 +2.8%','저녁 A급 스캔',195000.0,179100.0,227000.0,242500.0,2.0,1437.04512485,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','006360','GS건설','데이터센터 전력','evenscan','escan','고점대비 -4.9% · RSI 55 · 진입까지 +1.4%','저녁 A급 스캔',35500.0,30850.0,44800.0,49450.0,2.0,999.009738425,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-25','207940','삼성바이오로직스','제약바이오','evenscan','escan','고점대비 -3.6% · RSI 60 · 진입까지 +0.9%','저녁 A급 스캔',1599000.0,1508000.0,1781000.0,1872000.0,2.0,911.125848,NULL,'ok');
@@ -3912,7 +3912,7 @@ INSERT INTO "candidates" VALUES('2026-08-26','251970','펌텍코리아','화장�
 INSERT INTO "candidates" VALUES('2026-08-26','123330','제닉','화장품·소비재','spot','watch','고점 대비 -5% · 이격 1.17 · RSI 61','자리 완성 (테마 신호 대기)',32400.0,27300.0,42600.0,47700.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','011200','HMM','조선·해운','spot','watch','고점 대비 -3% · 이격 1.06 · RSI 62','자리 완성 (테마 신호 대기)',23050.0,21250.0,26650.0,28450.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -14.0% · RSI 53 · 진입까지 +1.6%','저녁 A급 스캔',1104000.0,981000.0,1350000.0,1473000.0,2.0,2268.520501,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-26','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 56 · 진입까지 +2.9%','저녁 A급 스캔',320500.0,274000.0,413500.0,460000.0,2.0,1.733237405757999796e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-26','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 56 · 진입까지 +2.9%','저녁 A급 스캔',320500.0,274000.0,413500.0,460000.0,2.0,1.73323740575799979e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -8.8% · RSI 55 · 진입까지 +1.3%','저녁 A급 스캔',195900.0,183100.0,221500.0,234500.0,2.0,1352.67832225,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','119850','지엔씨에너지','데이터센터 전력','evenscan','escan','고점대비 -11.0% · RSI 61 · 진입까지 +2.1%','저녁 A급 스캔',52700.0,43400.0,71300.0,80600.0,2.0,517.472209975,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-26','010950','S-Oil','석유·에너지','evenscan','escan','고점대비 -10.4% · RSI 51 · 진입까지 +1.9%','저녁 A급 스캔',143700.0,126600.0,177900.0,195000.0,2.0,482.79244565,NULL,'ok');
@@ -4276,7 +4276,7 @@ INSERT INTO "candidates" VALUES('2026-08-27','013810','스페코','방산','read
 INSERT INTO "candidates" VALUES('2026-08-27','282330','BGF리테일','실적','spot','watch','고점 대비 -7% · 이격 1.04 · RSI 60','자리 완성 (테마 신호 대기)',153300.0,134400.0,191100.0,210000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','257720','실리콘투','화장품·소비재','spot','watch','고점 대비 -9% · 이격 1.15 · RSI 64','자리 완성 (테마 신호 대기)',49350.0,42500.0,63000.0,69900.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -9.0% · RSI 60 · 진입까지 +1.0%','저녁 A급 스캔',1161000.0,1044000.0,1395000.0,1512000.0,2.0,2230.343111,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-27','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 59 · 진입까지 +2.1%','저녁 A급 스캔',318000.0,276000.0,402000.0,444000.0,2.0,1.722366735647999803e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-27','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -12.5% · RSI 59 · 진입까지 +2.1%','저녁 A급 스캔',318000.0,276000.0,402000.0,444000.0,2.0,1.7223667356479998e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','006340','대원전선','데이터센터 전력','evenscan','escan','고점대비 -13.6% · RSI 52 · 진입까지 +4.9%','저녁 A급 스캔',14830.0,12420.0,19650.0,22050.0,2.0,1536.280357815,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','278470','에이피알','화장품·소비재','evenscan','escan','고점대비 -4.1% · RSI 65 · 진입까지 +3.3%','저녁 A급 스캔',449000.0,397500.0,552000.0,604000.0,2.0,1228.47287875,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-27','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -9.8% · RSI 53 · 진입까지 +2.4%','저녁 A급 스캔',195800.0,181100.0,225000.0,240000.0,2.0,1215.4144084,NULL,'ok');
@@ -4336,7 +4336,7 @@ INSERT INTO "candidates" VALUES('2026-08-28','045390','대아티아이','남북�
 INSERT INTO "candidates" VALUES('2026-08-28','251970','펌텍코리아','화장품·소비재','evenscan','escan','고점대비 -7.2% · RSI 64 · 진입까지 +0.3%','저녁 A급 스캔',61900.0,54200.0,77300.0,85000.0,2.0,59.867942875,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','014620','성광벤드','원전·SMR','evenscan','escan','고점대비 -8.5% · RSI 66 · 진입까지 +2.4%','저녁 A급 스캔',32600.0,28750.0,40300.0,44150.0,2.0,58.550175,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','019170','신풍제약','제약바이오','evenscan','escan','고점대비 -7.7% · RSI 62 · 진입까지 +8.5%','저녁 A급 스캔',10950.0,8980.0,14890.0,16860.0,2.0,47.097589105,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-28','289080','SV인베스트먼트','리벨리온','evenscan','escan','고점대비 -13.4% · RSI 62 · 진입까지 +5.7%','저녁 A급 스캔',2600.0,2110.0,3580.0,4070.0,2.0,4.685069261399999618e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-28','289080','SV인베스트먼트','리벨리온','evenscan','escan','고점대비 -13.4% · RSI 62 · 진입까지 +5.7%','저녁 A급 스캔',2600.0,2110.0,3580.0,4070.0,2.0,4.68506926139999961e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','468530','프로티나','제약바이오','evenscan','escan','고점대비 -12.8% · RSI 58 · 진입까지 +6.7%','저녁 A급 스캔',38300.0,28600.0,57700.0,67400.0,2.0,46.131805415,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','012750','에스원','AI 소프트웨어','evenscan','escan','고점대비 -8.0% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',84700.0,78900.0,96300.0,102100.0,2.0,44.56661465,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-28','441270','파인엠텍','폴더블폰','evenscan','escan','고점대비 -13.0% · RSI 57 · 진입까지 +3.5%','저녁 A급 스캔',8470.0,7220.0,10970.0,12220.0,2.0,40.46059306,NULL,'ok');
@@ -4522,7 +4522,7 @@ INSERT INTO "candidates" VALUES('2026-08-31','051900','LG생활건강','화장�
 INSERT INTO "candidates" VALUES('2026-08-31','018260','삼성에스디에스','IT서비스','spot','watch','고점 대비 -13% · 이격 1.06 · RSI 63','자리 완성 (테마 신호 대기)',245500.0,225000.0,286500.0,307000.0,2.0,0.0,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','006400','삼성SDI','이차전지·전해액','evenscan','escan','고점대비 -4.0% · RSI 67 · 진입까지 +2.8%','저녁 A급 스캔',593000.0,530000.0,719000.0,782000.0,2.0,2277.6882815,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','012450','한화에어로스페이스','방산','evenscan','escan','고점대비 -12.8% · RSI 53 · 진입까지 +6.3%','저녁 A급 스캔',1171000.0,997000.0,1519000.0,1693000.0,2.0,2166.930865,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-08-31','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -13.6% · RSI 57 · 진입까지 +1.3%','저녁 A급 스캔',311500.0,275000.0,384500.0,421000.0,2.0,1.81912365068049985e+03,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-08-31','196170','알테오젠','제약바이오','evenscan','escan','고점대비 -13.6% · RSI 57 · 진입까지 +1.3%','저녁 A급 스캔',311500.0,275000.0,384500.0,421000.0,2.0,1.81912365068049984e+03,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','096770','SK이노베이션','석유·에너지','evenscan','escan','고점대비 -7.6% · RSI 53 · 진입까지 +1.8%','저녁 A급 스캔',127700.0,113700.0,155700.0,169700.0,2.0,1144.84859545,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','006360','GS건설','데이터센터 전력','evenscan','escan','고점대비 -6.9% · RSI 58 · 진입까지 +1.5%','저녁 A급 스캔',36850.0,32450.0,45650.0,50000.0,2.0,1055.5221509,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-08-31','068270','셀트리온','제약바이오','evenscan','escan','고점대비 -10.9% · RSI 50 · 진입까지 +1.5%','저녁 A급 스캔',191700.0,179100.0,217000.0,229500.0,2.0,1037.21691415,NULL,'ok');
@@ -5791,7 +5791,7 @@ INSERT INTO "candidates" VALUES('2026-09-04','140410','메지온','제약바이�
 INSERT INTO "candidates" VALUES('2026-09-04','285130','SK케미칼','실적','evenscan','escan','고점대비 -3.2% · RSI 68 · 진입까지 +2.0%','저녁 A급 스캔',56300.0,50800.0,67300.0,72800.0,2.0,56.036269325,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','162300','신스틸','데이터센터 전력','evenscan','escan','고점대비 -6.0% · RSI 74 · 진입까지 +6.7%','저녁 A급 스캔',2245.0,1887.0,2960.0,3320.0,2.0,50.2372670375,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','107640','한중엔시에스','이차전지·전해액','evenscan','escan','고점대비 -13.4% · RSI 59 · 진입까지 +2.8%','저녁 A급 스캔',40900.0,34900.0,52900.0,58900.0,2.0,49.092550725,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-04','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.3% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',1257.0,1104.0,1563.0,1716.0,2.0,4.882779838850000687e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-04','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.3% · RSI 70 · 진입까지 +1.4%','저녁 A급 스캔',1257.0,1104.0,1563.0,1716.0,2.0,4.88277983885000068e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','012750','에스원','AI 소프트웨어','evenscan','escan','고점대비 -12.8% · RSI 55 · 진입까지 +2.8%','저녁 A급 스캔',81400.0,74300.0,95600.0,102700.0,2.0,45.74851285,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','079160','CJ CGV','엔터·미디어','evenscan','escan','고점대비 -6.7% · RSI 56 · 진입까지 +0.4%','저녁 A급 스캔',5420.0,4995.0,6270.0,6700.0,2.0,40.33477348,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-04','432470','케이엔에스','데이터센터 전력','evenscan','escan','고점대비 -13.7% · RSI 57 · 진입까지 +4.6%','저녁 A급 스캔',10310.0,8220.0,14490.0,16580.0,2.0,39.005573285,NULL,'ok');
@@ -7312,7 +7312,7 @@ INSERT INTO "candidates" VALUES('2026-09-10','012750','에스원','AI 소프트�
 INSERT INTO "candidates" VALUES('2026-09-10','107640','한중엔시에스','이차전지·전해액','evenscan','escan','고점대비 -5.8% · RSI 71 · 진입까지 +0.8%','저녁 A급 스캔',42800.0,38000.0,52400.0,57200.0,2.0,52.844041375,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','159010','아스플로','반도체 소부장','evenscan','escan','고점대비 -12.0% · RSI 67 · 진입까지 +4.5%','저녁 A급 스캔',24550.0,19960.0,33750.0,38300.0,2.0,48.39861574,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','059090','미코','로봇·휴머노이드','evenscan','escan','고점대비 -13.2% · RSI 62 · 진입까지 +6.1%','저녁 A급 스캔',20550.0,17620.0,26400.0,29350.0,2.0,45.911298405,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-10','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.9% · RSI 75 · 진입까지 +0.2%','저녁 A급 스캔',1233.0,1100.0,1499.0,1632.0,2.0,4.435863514949999598e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-10','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.9% · RSI 75 · 진입까지 +0.2%','저녁 A급 스캔',1233.0,1100.0,1499.0,1632.0,2.0,4.43586351494999959e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','432470','케이엔에스','데이터센터 전력','evenscan','escan','고점대비 -12.6% · RSI 63 · 진입까지 +3.9%','저녁 A급 스캔',10370.0,8580.0,13950.0,15740.0,2.0,43.5475125,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','199430','케이엔알시스템','로봇·원전','evenscan','escan','고점대비 -7.9% · RSI 58 · 진입까지 +4.5%','저녁 A급 스캔',19350.0,16050.0,25950.0,29250.0,2.0,41.631440015,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-10','192650','드림텍','반도체 소부장','evenscan','escan','고점대비 -5.7% · RSI 70 · 진입까지 +0.8%','저녁 A급 스캔',6330.0,5590.0,7810.0,8550.0,2.0,35.3817731125,NULL,'ok');
@@ -11492,7 +11492,7 @@ INSERT INTO "candidates" VALUES('2026-09-23','199430','케이엔알시스템','�
 INSERT INTO "candidates" VALUES('2026-09-23','051160','지어소프트','IT서비스','evenscan','escan','고점대비 -8.3% · RSI 60 · 진입까지 +5.3%','저녁 A급 스캔',12460.0,10500.0,16380.0,18340.0,2.0,41.95769159,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-23','014990','인디에프','남북경협','evenscan','escan','고점대비 -13.4% · RSI 68 · 진입까지 +1.9%','저녁 A급 스캔',4385.0,3710.0,5740.0,6410.0,2.0,40.601831955,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-23','189300','인텔리안테크','우주항공','evenscan','escan','고점대비 -14.4% · RSI 51 · 진입까지 +1.4%','저녁 A급 스캔',70700.0,65300.0,81500.0,86900.0,2.0,40.0986746,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-23','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -4.1% · RSI 74 · 진입까지 +1.6%','저녁 A급 스캔',1303.0,1212.0,1485.0,1576.0,2.0,3.991463950300000362e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-23','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -4.1% · RSI 74 · 진입까지 +1.6%','저녁 A급 스캔',1303.0,1212.0,1485.0,1576.0,2.0,3.99146395030000036e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-23','060370','LS마린솔루션','데이터센터 전력','evenscan','escan','고점대비 -7.5% · RSI 57 · 진입까지 +2.1%','저녁 A급 스캔',34200.0,31200.0,40200.0,43200.0,2.0,36.260059775,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-23','115500','케이씨에스','양자컴퓨팅','evenscan','escan','고점대비 -9.7% · RSI 59 · 진입까지 +4.6%','저녁 A급 스캔',10670.0,9010.0,13990.0,15650.0,2.0,35.789862345,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-23','056190','SFA','기계','evenscan','escan','고점대비 -4.4% · RSI 65 · 진입까지 +1.4%','저녁 A급 스캔',28550.0,26000.0,33650.0,36200.0,2.0,35.494705125,NULL,'ok');
@@ -11549,7 +11549,7 @@ INSERT INTO "candidates" VALUES('2026-09-28','112610','씨에스윈드','신재�
 INSERT INTO "candidates" VALUES('2026-09-28','417840','저스템','반도체 소부장','evenscan','escan','고점대비 -4.4% · RSI 63 · 진입까지 +4.7%','저녁 A급 스캔',17460.0,15090.0,22200.0,24550.0,2.0,155.64428791,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','441270','파인엠텍','폴더블폰','evenscan','escan','고점대비 -11.4% · RSI 49 · 진입까지 +3.2%','저녁 A급 스캔',8950.0,7710.0,11430.0,12670.0,2.0,140.34052295,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','011170','롯데케미칼','석유화학','evenscan','escan','고점대비 -12.6% · RSI 52 · 진입까지 +1.0%','저녁 A급 스캔',63000.0,56400.0,76200.0,82800.0,2.0,131.98123935,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-28','010580','에스엠벡셀','이차전지·전해액','evenscan','escan','고점대비 -13.2% · RSI 66 · 진입까지 +9.2%','저녁 A급 스캔',2900.0,2130.0,4440.0,5210.0,2.0,1.306058661379999819e+02,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-28','010580','에스엠벡셀','이차전지·전해액','evenscan','escan','고점대비 -13.2% · RSI 66 · 진입까지 +9.2%','저녁 A급 스캔',2900.0,2130.0,4440.0,5210.0,2.0,1.30605866137999981e+02,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','044490','태웅','원전·SMR','evenscan','escan','고점대비 -12.1% · RSI 52 · 진입까지 +5.4%','저녁 A급 스캔',38850.0,32900.0,50800.0,56700.0,2.0,129.9428799,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','086450','동국제약','제약바이오','evenscan','escan','고점대비 -10.7% · RSI 49 · 진입까지 +3.6%','저녁 A급 스캔',21650.0,19380.0,26200.0,28450.0,2.0,125.95322916,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','100840','SNT에너지','원전·SMR','evenscan','escan','고점대비 -9.6% · RSI 57 · 진입까지 +3.7%','저녁 A급 스캔',38000.0,33150.0,47700.0,52600.0,2.0,119.911869625,NULL,'ok');
@@ -11607,7 +11607,7 @@ INSERT INTO "candidates" VALUES('2026-09-28','452450','피아이이','유리기�
 INSERT INTO "candidates" VALUES('2026-09-28','036810','에프에스티','반도체 소부장','evenscan','escan','고점대비 -4.6% · RSI 61 · 진입까지 +5.0%','저녁 A급 스캔',31650.0,27950.0,39050.0,42750.0,2.0,35.03598645,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','190510','나무가','로봇·휴머노이드','evenscan','escan','고점대비 -13.5% · RSI 56 · 진입까지 +2.8%','저녁 A급 스캔',16030.0,14050.0,19990.0,21950.0,2.0,34.242852165,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','035510','신세계I&C','AI 소프트웨어','evenscan','escan','고점대비 -11.5% · RSI 60 · 진입까지 +3.0%','저녁 A급 스캔',16140.0,14250.0,19920.0,21800.0,2.0,33.621581055,NULL,'ok');
-INSERT INTO "candidates" VALUES('2026-09-28','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.8% · RSI 66 · 진입까지 +5.2%','저녁 A급 스캔',1297.0,1159.0,1573.0,1711.0,2.0,3.151107745449999698e+01,NULL,'ok');
+INSERT INTO "candidates" VALUES('2026-09-28','018000','유니슨','신재생에너지','evenscan','escan','고점대비 -7.8% · RSI 66 · 진입까지 +5.2%','저녁 A급 스캔',1297.0,1159.0,1573.0,1711.0,2.0,3.15110774544999969e+01,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','042700','한미반도체',NULL,'flows','fwatch','동반 4/5일 · 5일 순매수 879억','동반 순매수 지속',NULL,NULL,NULL,NULL,NULL,878.57642,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','053800','안랩',NULL,'flows','fwatch','동반 5/5일 · 5일 순매수 141억','동반 순매수 지속',NULL,NULL,NULL,NULL,NULL,141.398459,NULL,'ok');
 INSERT INTO "candidates" VALUES('2026-09-28','096530','씨젠',NULL,'flows','fwatch','동반 4/5일 · 5일 순매수 86억','동반 순매수 지속',NULL,NULL,NULL,NULL,NULL,85.7813715,NULL,'ok');
@@ -14210,6 +14210,65 @@ INSERT INTO "global_baseline" VALUES('2026-09-30','IBB','제약바이오',211.04
 INSERT INTO "global_baseline" VALUES('2026-09-30','LMT','방산',512.21,-1.14,'2026-09-29 20:02Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-30','RTX','방산',186.94,-0.38,'2026-09-29 20:00Z','yahoo/ticker');
 INSERT INTO "global_baseline" VALUES('2026-09-30','NOC','방산',504.61,-0.24,'2026-09-29 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^DJI','다우',50906.05,-0.86,'2026-09-30 20:48Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^GSPC','S&P500',7651.54,-0.25,'2026-09-30 20:38Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^IXIC','나스닥',26861.06,0.24,'2026-09-30 21:15Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^SOX','필라델피아 반도체',12628.62,0.0,'2026-09-30 21:15Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','EWY','EWY(한국 ETF)',187.1,1.92,'2026-09-30 20:00Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','KRW=X','원/달러',1359.18,0.64,'2026-10-01 00:11Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^KS11','코스피(전 거래일)',6870.81,-0.27,'2026-09-30 11:05Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','^KQ11','코스닥(전 거래일)',849.8,0.38,'2026-09-30 11:05Z','yahoo');
+INSERT INTO "global_baseline" VALUES('2026-10-01','KOSPI_REGIME','5일 -0.3% · 60일고점 -15.1%',-15.05,-0.34,NULL,'yahoo/regime');
+INSERT INTO "global_baseline" VALUES('2026-10-01','AAOI','광통신',100.67,3.98,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','COHR','광통신',292.21,3.46,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LITE','광통신',973.49,5.66,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','CIEN','광통신',354.92,3.12,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','MU','반도체 소부장',1065.08,1.05,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','KLAC','반도체 소부장',196.53,3.89,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','AMAT','반도체 소부장',512.01,5.19,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LRCX','반도체 소부장',323.86,2.99,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','ASML','반도체 소부장',1834.39,3.56,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','TSM','반도체 소부장',456.94,0.9,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','NVDA','AI 반도체·기판',227.21,-0.72,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','AVGO','AI 반도체·기판',355.1,1.58,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','AMD','AI 반도체·기판',607.57,-0.05,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','MRVL','AI 반도체·기판',263.27,4.51,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','SMCI','AI 반도체·기판',41.02,-1.82,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','PLTR','AI 소프트웨어',186.97,-0.27,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','AI','AI 소프트웨어',10.34,-0.67,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','SNOW','AI 소프트웨어',330.31,0.67,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','TEAM','AI 소프트웨어',175.96,-1.45,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','SYM','로봇·휴머노이드',41.51,-1.17,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','PATH','로봇·휴머노이드',12.32,1.07,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','ISRG','로봇·휴머노이드',412.18,-0.63,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','TER','로봇·휴머노이드',403.02,0.43,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','MP','희토류·핵심광물',45.43,-2.2,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','UUUU','희토류·핵심광물',10.99,-0.36,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','REMX','희토류·핵심광물',64.79,0.5,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','ALB','이차전지·전해액',107.62,0.21,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','SQM','이차전지·전해액',66.08,1.41,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LAC','이차전지·전해액',2.63,-1.87,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LIT','이차전지·전해액',68.54,0.38,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','VRT','데이터센터 전력',248.34,1.76,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','ETN','데이터센터 전력',433.27,0.43,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','PWR','데이터센터 전력',651.79,1.15,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','GEV','데이터센터 전력',962.49,1.34,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','NVT','데이터센터 전력',161.68,0.74,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','CEG','원전·SMR',264.58,1.59,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','VST','원전·SMR',140.83,2.04,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','SMR','원전·SMR',7.76,-1.9,'2026-09-30 20:03Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','OKLO','원전·SMR',37.11,0.0,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','RKLB','우주항공',69.7,-3.45,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','ASTS','우주항공',59.4,-2.62,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LUNR','우주항공',14.55,-4.28,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','IONQ','양자컴퓨팅',43.91,-1.5,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','RGTI','양자컴퓨팅',15.74,-1.32,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','QBTS','양자컴퓨팅',16.43,-2.09,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','XBI','제약바이오',156.81,0.13,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','IBB','제약바이오',211.04,0.16,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','LMT','방산',512.21,-1.14,'2026-09-30 20:02Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','RTX','방산',186.94,-0.38,'2026-09-30 20:00Z','yahoo/ticker');
+INSERT INTO "global_baseline" VALUES('2026-10-01','NOC','방산',504.61,-0.24,'2026-09-30 20:00Z','yahoo/ticker');
 CREATE TABLE news_signals (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     date        TEXT NOT NULL,
@@ -14952,6 +15011,24 @@ INSERT INTO "news_signals" VALUES(4387,'2026-09-30','2026-09-30 01:18','DART','�
 INSERT INTO "news_signals" VALUES(4388,'2026-09-30','2026-09-30 01:17','DART','석유화학','호재','HD현대','(유가)HD현대중공업 - [기재정정]단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800154',2.5);
 INSERT INTO "news_signals" VALUES(4389,'2026-09-30','2026-09-30 01:11','DART','로봇·휴머노이드','호재','액스비스','(코스닥)액스비스 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930900127',2.5);
 INSERT INTO "news_signals" VALUES(4390,'2026-09-30','2026-09-30 00:50','DART','건설','호재','남광토건','(유가)남광토건 - [기재정정]단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20260930800113',2.5);
+INSERT INTO "news_signals" VALUES(4391,'2026-10-01','2026-10-01 08:47','매일경제','반도체 소부장','호재','삼성전자','KB증권 “삼성전자, 하반기 70조 현금배당 가능”','삼성전자가 메모리 반도체 실적 개선을 바탕으로 올 하반기 총 70조원 규모의 현금배당을 실시할 수 있다는 전망이 나왔다. 김동원 KB증권 리서치본부장은 1일 보고서에서 최근 3개년..','https://www.mk.co.kr/news/stock/12165575',1.5);
+INSERT INTO "news_signals" VALUES(4392,'2026-09-30','2026-09-30 16:11','매일경제','원전·SMR','호재','두산에너빌리티,SK하이닉스,삼성전자,후성','하이닉스 순매수 전환…한화솔루션은 ‘팔자’ [주식 초고수는 지금]','삼전우·닉스 사들이고 한화솔루션은 매도세주식 투자 수익률 상위 1% ‘초고수’들은 30일 오후 삼성전자우, SK하이닉스, 두산에너빌리티 등을 순매수하고 한화솔루션, 삼성전자, 후성..','https://www.mk.co.kr/news/stock/12164975',1.5);
+INSERT INTO "news_signals" VALUES(4393,'2026-09-30','2026-09-30 15:52','매일경제','화장품·소비재','악재',NULL,'‘K뷰티 1세대’ 참존 인수전에 동원그룹 참전','1990년대 국내시장서 인기 2020년대 들어 적자폭 확대 동원, 뷰티 중심 신사업 확장[본 기사는 09월 30일(15:52) 매일경제 자본시장 전문 유료매체인 ‘레이더M’에 보도..','https://www.mk.co.kr/news/stock/12164936',1.0);
+INSERT INTO "news_signals" VALUES(4394,'2026-09-30','2026-09-30 14:17','매일경제','반도체 소부장','호재','이오테크닉스,덕산넵코어스,삼성전자','마이크로 실발 앞둔 시장…초고수, 새내기 ‘덕산넵코어스’ 매수 [주식 초고수는 지금]','삼성전자우, 덕산넵코어스 사고 LG전자, 하이닉스는 팔아치워주식 투자 수익률 상위 1% ‘초고수’들은 30일 장 초반 삼성전자우, 덕산넵코어스, 이오테크닉스 등을 순매수하고 LG전..','https://www.mk.co.kr/news/stock/12164810',1.5);
+INSERT INTO "news_signals" VALUES(4395,'2026-09-30','2026-09-30 10:39','매일경제','AI 반도체·기판','호재','주성엔지니어링','반도체 장비주, 장 초반 오름세…미국 증시서 관련주 훈풍에 영향','반도체 장비주가 간밤 미국 증시에서 관련주 강세에 영향을 받으며 장 초반 오름세를 보이고 있다. 한국거래소에 따르면 30일 오전 10시 17분 기준 주성엔지니어링은 전일 대비 75..','https://www.mk.co.kr/news/stock/12164584',2.0);
+INSERT INTO "news_signals" VALUES(4396,'2026-09-30','2026-09-30 10:39','매일경제','반도체 소부장','호재','주성엔지니어링','반도체 장비주, 장 초반 오름세…미국 증시서 관련주 훈풍에 영향','반도체 장비주가 간밤 미국 증시에서 관련주 강세에 영향을 받으며 장 초반 오름세를 보이고 있다. 한국거래소에 따르면 30일 오전 10시 17분 기준 주성엔지니어링은 전일 대비 75..','https://www.mk.co.kr/news/stock/12164584',2.0);
+INSERT INTO "news_signals" VALUES(4400,'2026-10-01','2026-10-01 08:13','연합뉴스','데이터센터 전력','호재',NULL,'LG전자, 미국에 AI 데이터센터용 칠러 공장 신설…국내도 증설','(서울=연합뉴스) 강태우 기자 = LG전자[066570]가 인공지능(AI) 데이터센터 냉각 설루션 수요 확대에 대응하기 위해 미국에 칠러 생산공...','https://www.yna.co.kr/view/AKR20261001023000003',1.5);
+INSERT INTO "news_signals" VALUES(4401,'2026-10-01','2026-10-01 08:13','연합뉴스','AI 소프트웨어','호재',NULL,'LG전자, 미국에 AI 데이터센터용 칠러 공장 신설…국내도 증설','(서울=연합뉴스) 강태우 기자 = LG전자[066570]가 인공지능(AI) 데이터센터 냉각 설루션 수요 확대에 대응하기 위해 미국에 칠러 생산공...','https://www.yna.co.kr/view/AKR20261001023000003',1.0);
+INSERT INTO "news_signals" VALUES(4402,'2026-10-01','2026-10-01 08:00','연합뉴스','AI 반도체·기판','호재',NULL,'내연→전기차공장 전환 행정절차 단축…반도체 팹 증설 속도↑','(세종=연합뉴스) 송정은 기자 = 정부는 내연차 공장의 전기차 전환을 지원하기 위해 현대자동차[005380]를 중심으로 인허가와 영향평가 등 각...','https://www.yna.co.kr/view/AKR20260930156400002',1.5);
+INSERT INTO "news_signals" VALUES(4403,'2026-10-01','2026-10-01 08:00','연합뉴스','반도체 소부장','호재',NULL,'내연→전기차공장 전환 행정절차 단축…반도체 팹 증설 속도↑','(세종=연합뉴스) 송정은 기자 = 정부는 내연차 공장의 전기차 전환을 지원하기 위해 현대자동차[005380]를 중심으로 인허가와 영향평가 등 각...','https://www.yna.co.kr/view/AKR20260930156400002',1.5);
+INSERT INTO "news_signals" VALUES(4404,'2026-09-30','2026-09-30 17:18','연합뉴스','석유화학','호재','HD현대,광무','울산상의 "HD현대중 임단협 잠정합의 환영…노사 협력 기대"','(울산=연합뉴스) 허광무 기자 = HD현대중공업 노사가 30일 올해 임금 및 단체협약에 잠정 합의한 것과 관련, 울산상공회의소는 "진통 끝에 잠...','https://www.yna.co.kr/view/AKR20260930167500057',1.5);
+INSERT INTO "news_signals" VALUES(4405,'2026-10-01','2026-10-01 06:22','매경 기업','알래스카LNG','호재',NULL,'韓 알래스카LNG사업 참여 못박은 트럼프 “美 사상 최대 에너지 투자”','백악관 집무실서 韓 대미투자 발표 “한국과 합의 덕분에 2천억불 투자” 한국 알래스카LNG 투자 기정사실화 알래스카 상·하원의원, 주지사 총출동도널드 트럼프 미국 대통령이 30일(..','https://www.mk.co.kr/news/business/12165518',1.5);
+INSERT INTO "news_signals" VALUES(4406,'2026-09-30','2026-09-30 14:19','매경 기업','정책·정치','호재',NULL,'대한항공, 영종 ‘항공정비(MRO) 클러스터’ 2031년 가동 잰걸음','인천시 등과 클러스터 조성·투자협약 체결 대한항공 연 정비물량 88대→502대로 ‘쑥’인천 영종항공일반산업단지의 일부 용지를 경쟁자 없이 우선 확보한 대한항공이 이르면 2031년께..','https://www.mk.co.kr/news/business/12164813',1.0);
+INSERT INTO "news_signals" VALUES(4407,'2026-09-30','2026-09-30 13:05','매경 기업','정책·정치','호재','현대무벡스,금호타이어','현대무벡스, 금호타이어 스마트물류 720억 수주','현대무벡스가 금호타이어 함평 신공장의 스마트 물류 구축 사업을 수주했다. 현대무벡스는 금호타이어와 720억원 규모의 물류자동화 시스템 공급 계약을 체결했다고 30일 밝혔다. 전남 ..','https://www.mk.co.kr/news/business/12164743',2.0);
+INSERT INTO "news_signals" VALUES(4408,'2026-09-30','2026-09-30 13:05','매경 기업','타이어','호재','현대무벡스,금호타이어','현대무벡스, 금호타이어 스마트물류 720억 수주','현대무벡스가 금호타이어 함평 신공장의 스마트 물류 구축 사업을 수주했다. 현대무벡스는 금호타이어와 720억원 규모의 물류자동화 시스템 공급 계약을 체결했다고 30일 밝혔다. 전남 ..','https://www.mk.co.kr/news/business/12164743',2.0);
+INSERT INTO "news_signals" VALUES(4409,'2026-09-30','2026-09-30 13:05','매경 기업','로봇·휴머노이드','호재','현대무벡스,금호타이어','현대무벡스, 금호타이어 스마트물류 720억 수주','현대무벡스가 금호타이어 함평 신공장의 스마트 물류 구축 사업을 수주했다. 현대무벡스는 금호타이어와 720억원 규모의 물류자동화 시스템 공급 계약을 체결했다고 30일 밝혔다. 전남 ..','https://www.mk.co.kr/news/business/12164743',2.0);
+INSERT INTO "news_signals" VALUES(4410,'2026-09-30','2026-09-30 23:59','DART','원전·SMR','호재','두산에너빌리티','(유가)두산에너빌리티 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20261001800034',2.5);
+INSERT INTO "news_signals" VALUES(4411,'2026-09-30','2026-09-30 23:57','DART','조선·해운','호재',NULL,'(유가)대한해운 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20261001800028',2.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -16952,6 +17029,19 @@ INSERT INTO "theme_daily" VALUES('2026-09-30','알래스카LNG',6,23.1,'seed_xls
 INSERT INTO "theme_daily" VALUES('2026-09-30','제약바이오',5,15.3,'seed_xlsx');
 INSERT INTO "theme_daily" VALUES('2026-09-30','신규상장주',2,26.54,'seed_xlsx');
 INSERT INTO "theme_daily" VALUES('2026-09-30','광통신',2,11.97,'seed_xlsx');
+INSERT INTO "theme_daily" VALUES('2026-10-01','광통신',4,3.72,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','반도체 소부장',6,3.28,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','AI 반도체·기판',5,-0.05,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','AI 소프트웨어',4,-0.47,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','로봇·휴머노이드',4,-0.1,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','희토류·핵심광물',3,-0.36,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','이차전지·전해액',4,0.29,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','데이터센터 전력',5,1.15,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','원전·SMR',4,0.8,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','우주항공',3,-3.45,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','양자컴퓨팅',3,-1.5,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','제약바이오',2,0.15,'us_basket');
+INSERT INTO "theme_daily" VALUES('2026-10-01','방산',3,-0.38,'us_basket');
 CREATE TABLE themes (
     kr_theme    TEXT PRIMARY KEY,
     us_theme    TEXT,
@@ -17089,5 +17179,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4390);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4411);
 COMMIT;
