@@ -385,6 +385,7 @@ def render(view: dict) -> str:
 <div class="baseline">{bl}</div>
 
 {f'<div style="border:1px solid var(--warn);background:var(--warnbg);color:var(--warn);padding:9px 14px;margin-bottom:18px;font-size:13.5px;font-weight:600">⚠ 시장 급락 국면 — 코스피 최근 5일 {v["regime"]["ret5"]:+.1f}%. 과거 2년 이 국면에서 픽 기대값이 3분의 1로 줄었다 (+0.154R→+0.053R). 오늘은 쉬거나 비중 축소를 검토할 것. (정보 표시일 뿐 픽 선정에는 반영 안 됨)</div>' if v.get("regime") and v["regime"]["caution"] else ''}
+{f'<div style="border:1px solid var(--warn);background:var(--warnbg);color:var(--warn);padding:9px 14px;margin-bottom:18px;font-size:13.5px;font-weight:600">⚠ 휴장 뒤 첫 거래일 — {e(v["holiday_gap"])}. 기준선·해외발·픽은 규칙대로 마지막 하루 등락만 본 값이다. (정보 표시일 뿐 픽 선정에는 반영 안 됨)</div>' if v.get("holiday_gap") else ''}
 {lede}
 
 {_us_map(v)}

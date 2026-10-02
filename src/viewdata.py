@@ -66,6 +66,10 @@ def build(date: str, notes: list[str] | None = None) -> dict:
                WHERE date=? AND symbol='KOSPI_REGIME'""", (date,)).fetchone()
         regime = (dict(regime_row) | {"caution": regime_row["ret5"] <= -3.0}
                   if regime_row else None)
+        # 휴장 뒤 첫 거래일 참고 줄 (collect_us.holiday_gap, 2026-10-02) — 표시 전용, 픽 규칙과 무관
+        gap_row = conn.execute(
+            "SELECT label FROM global_baseline WHERE date=? AND symbol='HOLIDAY_GAP'", (date,)).fetchone()
+        holiday_gap = gap_row["label"] if gap_row else None
 
         baseline = [dict(r) for r in conn.execute(
             """SELECT label, symbol, close, change_pct, asof FROM global_baseline
@@ -177,6 +181,7 @@ def build(date: str, notes: list[str] | None = None) -> dict:
         "weekday": WEEKDAY[d.weekday()],
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "regime": regime,
+        "holiday_gap": holiday_gap,
         "baseline": baseline,
         # 미국장 지도 + 검증 통계 기반 함의문. 임계값은 verify_themes.py 결과 그대로:
         # +5%↑ → 다음날 한국 상승확률 64.5% / +3~5% → 55.8% / -3%↓ → 26.7% (기준선 44.3%)
@@ -217,6 +222,10 @@ def headline(view: dict) -> list[str]:
     ewy = next((b for b in view["baseline"] if b["label"] == "EWY(한국 ETF)"), None)
     parts = [f"{b['label']} {b['change_pct']:+.2f}%" for b in (naz, sox, ewy) if b]
     lines.append("· 기준선: " + (" / ".join(parts) if parts else "데이터 부재 — 확인 필요"))
+
+    if view.get("holiday_gap"):
+        lines.append(f"· ⚠ 휴장 뒤 첫 거래일 — {view['holiday_gap']}. "
+                     "위 기준선과 아래 해외발·픽은 규칙대로 마지막 하루 등락만 본 값이다(이 줄은 참고 표시).")
 
     rg = view.get("regime")
     if rg and rg["caution"]:

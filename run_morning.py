@@ -103,6 +103,8 @@ def main() -> int:
         step(log, "us/baseline", collect_us.baseline, date, log)
         step(log, "us/regime", collect_us.market_regime, date, log)
         step(log, "us/theme", collect_us.theme_moves, date, log)
+        # 휴장 뒤 첫 거래일이면 쉬는 동안의 미국 누적 등락을 참고 줄로 남긴다 (2026-10-02, 표시 전용 — 픽 규칙 불변)
+        step(log, "us/holiday", collect_us.holiday_gap, date, log)
     step(log, "news", collect_news_kr.run, date, log)
 
     # 크론 지연 가드 (2026-08-27 사고: 07:25 예약이 11:14에 실행돼 장중 시세로 픽이

@@ -6,9 +6,12 @@
 """
 from __future__ import annotations
 
+import json
 import statistics
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import date as _date
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import boot  # noqa: F401
 import themes_cfg
@@ -16,6 +19,8 @@ from db import connect
 from net import RunLog, fetch_json
 
 CHART = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=5d&interval=1d"
+HIST = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=1mo&interval=1d"   # holiday_gap 전용
+HOLIDAYS = Path(__file__).resolve().parent.parent / "config" / "holidays_kr.json"
 
 BASELINE = [
     ("^DJI", "다우"),
@@ -205,6 +210,85 @@ def market_regime(date: str, log: RunLog) -> dict | None:
     log.ok("us/regime", f"코스피 5일 {ret5:+.1f}% · 고점대비 {draw60:+.1f}%"
                         + (" ⚠ 급락 국면" if regime["caution"] else ""))
     return regime
+
+
+def _kr_prev_trading_day(date: str) -> str:
+    """date 직전의 한국 거래일 (주말·config/holidays_kr.json 제외)."""
+    hol = json.loads(HOLIDAYS.read_text(encoding="utf-8"))["dates"]
+    d = _date.fromisoformat(date) - timedelta(days=1)
+    while d.weekday() >= 5 or d.isoformat() in hol:
+        d -= timedelta(days=1)
+    return d.isoformat()
+
+
+def _history(symbol: str) -> dict[str, float]:
+    """최근 1개월 일봉 종가 {미국 세션 날짜: 종가}. 실패하면 빈 dict."""
+    try:
+        res = fetch_json(HIST.format(sym=symbol.replace("^", "%5E")), timeout=15)["chart"]["result"][0]
+        return {datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d"): c
+                for ts, c in zip(res.get("timestamp") or [], res["indicators"]["quote"][0].get("close") or [])
+                if c is not None}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def holiday_gap(date: str, log: RunLog, store: bool = True) -> dict | None:
+    """휴장 뒤 첫 거래일 표시 — 한국이 쉬는 동안 미국장이 2거래일 이상 열렸으면 그 누적 등락을 남긴다.
+
+    브리핑의 '정보 줄' 전용이다. 픽 규칙(해외발 = 마지막 미국 세션 하루 등락)에는 쓰지 않는다(검증 동결).
+    배경(2026-10-02 확인): quote()는 마지막 종가 ÷ 직전 종가라 한국이 며칠 쉬어도 마지막 하루만 본다.
+      추석 뒤 9/28 아침 — 하루 기준으론 미국 테마 13개 중 8개가 플러스였지만 한국이 쉰 3거래일(9/23~25) 누적으론
+      2개뿐이었다 (광통신 하루 +0.9% vs 누적 −3.9%, EWY 하루 +2.6% vs 누적 −2.8%). 그날 한국장은 누적 쪽으로 움직였다.
+    평소(주말 포함)에는 한국이 못 본 미국 세션이 1개라 None을 돌려주고 아무것도 남기지 않는다.
+    """
+    kr_prev = _kr_prev_trading_day(date)
+    spx = _history("^GSPC")
+    unseen = sorted(d for d in spx if kr_prev <= d < date)   # 한국 직전 거래일 장 마감 뒤에 열린 미국 세션들
+    if len(unseen) < 2:
+        return None
+    seen = sorted(d for d in spx if d < kr_prev)
+    if not seen:
+        raise RuntimeError("휴장 전 미국 종가를 찾지 못함")
+    base, last, prev = seen[-1], unseen[-1], unseen[-2]
+
+    themes = themes_cfg.readacross_themes()
+    heads = [("^IXIC", "나스닥"), ("^SOX", "필라델피아 반도체"), ("EWY", "EWY(한국 ETF)")]
+    symbols = [s for s, _ in heads] + sorted({t for th in themes for t in th["us_tickers"]})
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        hist = dict(zip(symbols, pool.map(_history, symbols)))
+
+    def chg(sym: str, a: str, b: str) -> float | None:
+        h = hist.get(sym) or {}
+        return (h[a] / h[b] - 1) * 100 if a in h and b in h else None
+
+    base_rows = [(lab, chg(sym, last, base)) for sym, lab in heads]
+    rows = []
+    for th in themes:
+        one = [x for x in (chg(t, last, prev) for t in th["us_tickers"]) if x is not None]
+        cum = [x for x in (chg(t, last, base) for t in th["us_tickers"]) if x is not None]
+        if one and cum:
+            rows.append((th["kr_theme"], statistics.median(one), statistics.median(cum)))
+    flips = sorted((r for r in rows if (r[1] > 0) != (r[2] > 0)), key=lambda r: -abs(r[2] - r[1]))
+
+    days = "·".join(f"{int(d[5:7])}/{int(d[8:])}" for d in unseen)
+    label = (f"한국 휴장 중 미국 {len(unseen)}거래일({days}) 누적: "
+             + " / ".join(f"{lab} {v:+.2f}%" for lab, v in base_rows if v is not None))
+    if rows:
+        label += (f" · 미국 테마 {len(rows)}개 중 플러스 — 하루 기준 {sum(1 for r in rows if r[1] > 0)}개, "
+                  f"누적 기준 {sum(1 for r in rows if r[2] > 0)}개")
+    if flips:
+        label += " · 방향이 갈린 테마: " + ", ".join(f"{t}(하루 {o:+.1f}% → 누적 {c:+.1f}%)" for t, o, c in flips[:4])
+    nasdaq = base_rows[0][1]
+    if store:
+        with connect() as conn:
+            conn.execute(
+                """INSERT OR REPLACE INTO global_baseline
+                   (date, symbol, label, close, change_pct, asof, source)
+                   VALUES (?,'HOLIDAY_GAP',?,?,?,NULL,'yahoo/holiday')""",
+                (date, label, len(unseen), None if nasdaq is None else round(nasdaq, 2)))
+            conn.commit()
+    log.ok("us/holiday", label)
+    return {"sessions": unseen, "base": base, "label": label, "themes": rows, "flips": flips}
 
 
 if __name__ == "__main__":
