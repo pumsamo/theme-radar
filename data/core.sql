@@ -15553,6 +15553,10 @@ INSERT INTO "news_signals" VALUES(4499,'2026-10-01','2026-10-01 14:58','매경 �
 INSERT INTO "news_signals" VALUES(4510,'2026-10-02','2026-10-02 08:47','연합뉴스','원전·SMR','호재','현대건설','키움증권 "대미투자 수혜 가장 클 국내 건설주는 현대건설"','(서울=연합뉴스) 김유향 기자 = 키움증권은 최근 한국과 미국 정부의 전략적 투자 양해각서(MOU)에 포함된 3개 프로젝트별로 건설사 수혜 규모...','https://www.yna.co.kr/view/AKR20261002026800008',2.0);
 INSERT INTO "news_signals" VALUES(4532,'2026-10-01','2026-10-01 22:36','DART','실적','호재','일진전기','(유가)일진전기 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20261002800002',2.5);
 INSERT INTO "news_signals" VALUES(4533,'2026-10-01','2026-10-01 22:36','DART','데이터센터 전력','호재','일진전기','(유가)일진전기 - 단일판매ㆍ공급계약체결',NULL,'https://dart.fss.or.kr/api/link.jsp?rcpNo=20261002800002',2.5);
+INSERT INTO "news_signals" VALUES(4534,'2026-10-02','2026-10-02 09:59','매일경제','데이터센터 전력','호재','머큐리','광통신주, AI 데이터센터 확산세에 일제히 급등…머큐리, 상한가 직행','인공지능(AI) 데이터센터 확산으로 초고속 네트워크와 광통신 인프라의 중요성이 커지면서 관련주가 일제히 강세를 보이고 있다. 2일 오전 9시 35분 현재 머큐리는 전일 대비 143..','https://www.mk.co.kr/news/stock/12166898',2.0);
+INSERT INTO "news_signals" VALUES(4535,'2026-10-02','2026-10-02 09:59','매일경제','AI 소프트웨어','호재','머큐리','광통신주, AI 데이터센터 확산세에 일제히 급등…머큐리, 상한가 직행','인공지능(AI) 데이터센터 확산으로 초고속 네트워크와 광통신 인프라의 중요성이 커지면서 관련주가 일제히 강세를 보이고 있다. 2일 오전 9시 35분 현재 머큐리는 전일 대비 143..','https://www.mk.co.kr/news/stock/12166898',1.5);
+INSERT INTO "news_signals" VALUES(4536,'2026-10-02','2026-10-02 09:59','매일경제','광통신','호재','머큐리','광통신주, AI 데이터센터 확산세에 일제히 급등…머큐리, 상한가 직행','인공지능(AI) 데이터센터 확산으로 초고속 네트워크와 광통신 인프라의 중요성이 커지면서 관련주가 일제히 강세를 보이고 있다. 2일 오전 9시 35분 현재 머큐리는 전일 대비 143..','https://www.mk.co.kr/news/stock/12166898',2.0);
+INSERT INTO "news_signals" VALUES(4545,'2026-10-02','2026-10-02 09:38','연합뉴스','광통신','호재',NULL,'[특징주] 광통신주, 美광통신 강세 등에 장초반 줄상승','(서울=연합뉴스) 김유향 기자 = 국내 광통신 관련 종목들이 2일 장 초반 동반 강세를 보이고 있다.','https://www.yna.co.kr/view/AKR20261002044000008',1.5);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -17739,5 +17743,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4533);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4558);
 COMMIT;
