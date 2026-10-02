@@ -15557,6 +15557,7 @@ INSERT INTO "news_signals" VALUES(4534,'2026-10-02','2026-10-02 09:59','매일�
 INSERT INTO "news_signals" VALUES(4535,'2026-10-02','2026-10-02 09:59','매일경제','AI 소프트웨어','호재','머큐리','광통신주, AI 데이터센터 확산세에 일제히 급등…머큐리, 상한가 직행','인공지능(AI) 데이터센터 확산으로 초고속 네트워크와 광통신 인프라의 중요성이 커지면서 관련주가 일제히 강세를 보이고 있다. 2일 오전 9시 35분 현재 머큐리는 전일 대비 143..','https://www.mk.co.kr/news/stock/12166898',1.5);
 INSERT INTO "news_signals" VALUES(4536,'2026-10-02','2026-10-02 09:59','매일경제','광통신','호재','머큐리','광통신주, AI 데이터센터 확산세에 일제히 급등…머큐리, 상한가 직행','인공지능(AI) 데이터센터 확산으로 초고속 네트워크와 광통신 인프라의 중요성이 커지면서 관련주가 일제히 강세를 보이고 있다. 2일 오전 9시 35분 현재 머큐리는 전일 대비 143..','https://www.mk.co.kr/news/stock/12166898',2.0);
 INSERT INTO "news_signals" VALUES(4545,'2026-10-02','2026-10-02 09:38','연합뉴스','광통신','호재',NULL,'[특징주] 광통신주, 美광통신 강세 등에 장초반 줄상승','(서울=연합뉴스) 김유향 기자 = 국내 광통신 관련 종목들이 2일 장 초반 동반 강세를 보이고 있다.','https://www.yna.co.kr/view/AKR20261002044000008',1.5);
+INSERT INTO "news_signals" VALUES(4569,'2026-10-02','2026-10-02 10:06','연합뉴스','게임','호재',NULL,'파리바게뜨 "초코쫀득츄러스 출시 한 달 만에 170만개 판매"','(서울=연합뉴스) 한주홍 기자 = 파리바게뜨는 지난달 2일 출시한 ''초코쫀득츄러스''가 한 달 만에 누적 판매량 170만개를 돌파했다고 2일 밝혔...','https://www.yna.co.kr/view/AKR20261002056400030',1.0);
 CREATE TABLE outcomes (
     date        TEXT NOT NULL,
     code        TEXT NOT NULL,
@@ -17743,5 +17744,5 @@ CREATE INDEX idx_news_date  ON news_signals (date);
 CREATE INDEX idx_cand_date  ON candidates (date);
 CREATE INDEX idx_theme_date ON theme_daily (date);
 DELETE FROM "sqlite_sequence";
-INSERT INTO "sqlite_sequence" VALUES('news_signals',4558);
+INSERT INTO "sqlite_sequence" VALUES('news_signals',4578);
 COMMIT;
