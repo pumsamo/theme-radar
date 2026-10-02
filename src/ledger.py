@@ -7,6 +7,8 @@
   시작: 2026-08-11 · 종자돈 10,000,000원
   리스크: 1건당 100,000원 고정 (시작자금의 1%, 복리 없음 — 단순·투명 우선)
   포지션 주수 = 리스크 / (진입가 − 손절가), 매수금액이 가용현금 초과 시 현금만큼 축소
+    가용현금 = 그 체결일 전날까지 실제로 들어온 돈 — 매도 대금은 매도일 다음 거래일부터 쓴다
+    (2026-10-02 버그 수정: 종전 코드는 매도 대금을 매도일보다 먼저 썼다. compute의 '시간순 현금 관리' 주석 참고)
   진입: 픽 기록 후 3거래일 내 진입가(전일 고가 돌파) 터치 시 그 가격, 미돌파 소멸
   청산: 손절 우선 → 목표(진입+2×리스크폭) → 20거래일 종가 청산
   비용: 왕복 0.3% (수수료+거래세+슬리피지 근사) — 매도 시 일괄 차감
@@ -170,12 +172,22 @@ def compute(seed: int = SEED, unconstrained: bool = False, regular_session: bool
                        "cap_eok": cap, "bucket": bucket(cap)})
 
     # 시간순 현금 관리: 체결일 기준 정렬해 현금 한도 적용
+    # 2026-10-02 버그 수정 (사용자 승인 '가상계좌 결함 고쳐'): 종전에는 청산이 확인된 포지션의 매도 대금을 그 픽을 처리하는 순간
+    #   (= 체결일 시점)에 cash에 더했다. 실제 매도일은 며칠~몇 주 뒤라 그 사이에 체결되는 다른 픽이 아직 들어오지 않은 돈으로
+    #   사졌고(현금 미래 참조), 오래된 포지션이 청산되는 날마다 과거 체결 내역이 통째로 바뀌었다 (10/1 → 10/2 기준 23건).
+    #   이제 매도 대금은 pending에 매도일과 함께 쌓아 두고 매도일 '다음 거래일' 이후의 체결에만 쓴다
+    #   (같은 날은 매수·매도의 장중 선후를 알 수 없어 보수적으로 제외). 확인: python src/check_ledger_cash.py
+    #   R트랙(unconstrained=True)은 현금 한도를 쓰지 않아 결과가 달라지지 않는다.
     events.sort(key=lambda e: e["bars"][e["fill_i"]]["date"])
     holding: dict[str, str] = {}  # code → 청산일 (그 전엔 같은 종목 재진입 금지)
+    pending: list[tuple[str, float]] = []  # (매도일, 순매도대금) — 매도일이 지난 뒤에야 cash로 들어온다
     txns = []       # (일자, 현금흐름) — 잔고 시계열 재구성용
     intervals = []  # {closes, shares, start, end} — 보유 구간 평가용
     for e in events:
         fill_dt = e["bars"][e["fill_i"]]["date"]
+        if pending:
+            cash += sum(amt for dt, amt in pending if dt < fill_dt)
+            pending = [(dt, amt) for dt, amt in pending if dt >= fill_dt]
         if e["code"] in holding and fill_dt <= holding[e["code"]]:
             skipped.append((e["name"], e["pdate"], "동일 종목 보유 중 — 재진입 스킵"))
             continue
@@ -221,7 +233,7 @@ def compute(seed: int = SEED, unconstrained: bool = False, regular_session: bool
         if exit_px is not None:
             proceeds = exit_px * e["shares"]
             fee = (notional + proceeds) * COST / 2
-            cash += proceeds - fee
+            pending.append((exit_dt, proceeds - fee))
             pnl = proceeds - notional - fee
             closed.append({"name": e["name"], "date": exit_dt, "pnl": pnl, "label": label,
                            "r": 2.0 if label == "목표" else (-1.0 if label == "손절" else pnl / RISK), **meta})
@@ -238,6 +250,8 @@ def compute(seed: int = SEED, unconstrained: bool = False, regular_session: bool
             txns.append((fill_dt, -notional))
             intervals.append({"closes": {b["date"]: b["close"] for b in e["bars"]},
                               "shares": e["shares"], "start": fill_dt, "end": None})
+
+    cash += sum(amt for _, amt in pending)  # 오늘까지 매도된 대금은 평가 시점엔 전부 현금
 
     # 평가
     unreal = 0.0

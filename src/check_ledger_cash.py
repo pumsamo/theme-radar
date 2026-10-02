@@ -1,17 +1,19 @@
-"""가상 계좌 현금 처리 점검 — 연구·표시 전용 (2026-10-02 신설, ledger.py는 건드리지 않는다).
+"""가상 계좌 현금 처리 점검 — 연구·표시 전용 (2026-10-02 신설).
 
-발견(10/2): ledger.compute는 체결일 순으로 픽을 처리하면서, 청산이 확인된 포지션의 매도 대금을
-'그 픽을 처리하는 순간'(= 체결일 시점)에 현금에 더한다. 실제 매도일은 며칠~몇 주 뒤라
-그 사이에 체결되는 다른 픽이 아직 들어오지 않은 돈으로 사진다(현금 미래 참조).
-→ 오래된 포지션이 청산되는 날마다 가상 계좌의 과거 체결 내역이 통째로 바뀐다.
+발견(10/2): 그때까지의 ledger.compute는 체결일 순으로 픽을 처리하면서, 청산이 확인된 포지션의 매도 대금을
+'그 픽을 처리하는 순간'(= 체결일 시점)에 현금에 더했다. 실제 매도일은 며칠~몇 주 뒤라
+그 사이에 체결되는 다른 픽이 아직 들어오지 않은 돈으로 사졌다(현금 미래 참조).
+→ 오래된 포지션이 청산되는 날마다 가상 계좌의 과거 체결 내역이 통째로 바뀌었다.
   (10/1 저녁 기준 체결 50건 vs 10/2 저녁 기준 57건 — 10/1까지의 체결 중 23건이 다름)
+수정(10/2 저녁, 사용자 승인): ledger.py가 매도 대금을 매도일 다음 거래일부터 쓰도록 고쳤다(= 아래 strict).
 
-R트랙(무제약 — 검증 계약의 판정 기준)은 현금 제약이 없어 영향이 없다. 이 스크립트가 둘 다 확인한다.
+R트랙(무제약 — 검증 계약의 판정 기준)은 현금 제약이 없어 수정 전후가 같다. 이 스크립트가 둘 다 확인한다.
 
-mode:  current = 지금 ledger.py와 같은 방식 / strict = 매도 대금은 매도일 다음 거래일부터 사용 / sameday = 매도 당일부터 사용
+mode:  old = 10/2까지의 방식(매도 대금을 체결일 시점에 미리 사용) / strict = 매도일 다음 거래일부터 사용(현행 ledger.py)
+       / sameday = 매도 당일부터 사용(참고)
 asof:  YYYYMMDD — 그날까지의 봉·픽만으로 다시 계산(그날 저녁에 돌린 것과 같은 조건)
 
-실행: python src/check_ledger_cash.py                (최근 4거래일 기준일 비교)
+실행: python src/check_ledger_cash.py                (최근 4거래일 기준일 비교 + ledger.py 현행값과 strict 일치 확인)
       python src/check_ledger_cash.py 20261001 20261002
 """
 from __future__ import annotations
@@ -22,6 +24,7 @@ from datetime import date as _date
 
 import boot  # noqa: F401
 from db import connect
+import ledger
 from ledger import COST, ENTRY_WINDOW, FETCH_START, HOLD, START_DATE
 from prices_kr import fetch_ohlc
 
@@ -93,7 +96,7 @@ def account(picks, seed, mode, asof):
     pending, holding, trades = [], {}, []  # pending = (매도일, 금액)
     open_val = 0.0
     for e in events_asof(picks, seed // 100, asof):
-        if mode != "current":
+        if mode != "old":
             keep = []
             for dt, amt in pending:
                 if (dt < e["fill_dt"]) if mode == "strict" else (dt <= e["fill_dt"]):
@@ -115,7 +118,7 @@ def account(picks, seed, mode, asof):
         px, dt, _ = find_exit(e)
         if px is not None:
             net = px * shares - (notional + px * shares) * COST / 2
-            if mode == "current":
+            if mode == "old":
                 cash += net
             else:
                 pending.append((dt, net))
@@ -148,16 +151,22 @@ def rtrack(picks, asof, risk=10_000_000):
 def main() -> None:
     picks = load()
     days = sys.argv[1:] or [b["date"] for b in _BARS.get("005930") or next(iter(_BARS.values()))][-4:]
+    last = max(b["date"] for bars in _BARS.values() for b in bars[-1:])
+    print("━━ ledger.py 현행값 vs strict 재현 (같아야 정상)")
+    for seed in (10_000_000, 30_000_000):
+        live = ledger.compute(seed)["equity"]
+        mine = account(picks, seed, "strict", last)[0]
+        print(f"  종자돈 {seed:,}: ledger.py {live:,.0f} · strict {mine:,.0f} · 차이 {live - mine:+,.0f}원 {'✓' if abs(live - mine) < 1 else '✗ 불일치'}")
     for seed in (10_000_000, 30_000_000):
         print(f"\n━━ 가상 계좌 · 종자돈 {seed:,}")
         for asof in days:
             cells = []
-            for mode in ("current", "strict", "sameday"):
+            for mode in ("old", "strict", "sameday"):
                 eq, tr = account(picks, seed, mode, asof)
                 cells.append(f"{mode} {eq:,.0f}({(eq / seed - 1) * 100:+.2f}%) 체결 {len(tr)}")
             print(f"  {asof[4:6]}/{asof[6:]} 기준 | " + " | ".join(cells))
     print("\n━━ 기준일이 하루 지나면 과거 체결(체결일·종목·주수)이 바뀌는가")
-    for mode in ("current", "strict", "sameday"):
+    for mode in ("old", "strict", "sameday"):
         for a, b in zip(days, days[1:]):
             ta = set(account(picks, 10_000_000, mode, a)[1])
             tb = {x for x in account(picks, 10_000_000, mode, b)[1] if x[0] <= a}
